@@ -4,6 +4,10 @@
     .container {
         width: 95%;
     }
+    header .brand-logo .logo-img{
+        display: none;
+    }
+   
 }
 
 /*中等屏幕下(平板类)的样式*/
@@ -593,7 +597,7 @@ header .go-back i {
     font-weight: 400;
 }
 
-@-webkit-keyframes rainbow {
+/* @-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -683,7 +687,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+} */
 
 .index-card {
     margin-top: -10px;
@@ -1147,6 +1151,13 @@ article .article-tags .chip {
     line-height: 2;
     transition: box-shadow 0.3s ease-in-out
 }
+
+.reprint__type{
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+ }
+ 
 
 #artDetail .reprint-info {
     word-break: break-word;
@@ -2293,4 +2304,10 @@ body.DarkMode .theme-btn:hover {
     font-family:'Font Awesome 5 Free';
     font-weight: 900;
     color: #d9534f;
+}
+
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv{
+   display: inline !important;
 }
