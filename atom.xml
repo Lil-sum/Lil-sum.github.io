@@ -6,7 +6,7 @@
   <link href="https://lil-sum.github.io/atom.xml" rel="self"/>
   
   <link href="https://lil-sum.github.io/"/>
-  <updated>2022-07-13T11:28:48.335Z</updated>
+  <updated>2022-07-14T02:35:26.333Z</updated>
   <id>https://lil-sum.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub注册教程</title>
+    <link href="https://lil-sum.github.io/2022/07/14/3.0/"/>
+    <id>https://lil-sum.github.io/2022/07/14/3.0/</id>
+    <published>2022-07-14T02:29:36.000Z</published>
+    <updated>2022-07-14T02:35:26.333Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一、注册github流程&lt;br&gt;1.首先进入github官网 &lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2.点击绿色框Sign up for</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>浅玩vscode</title>
@@ -39,8 +61,8 @@
   
   <entry>
     <title>关于树的定义</title>
-    <link href="https://lil-sum.github.io/2022/03/06/1-0/"/>
-    <id>https://lil-sum.github.io/2022/03/06/1-0/</id>
+    <link href="https://lil-sum.github.io/2022/03/06/1.0/"/>
+    <id>https://lil-sum.github.io/2022/03/06/1.0/</id>
     <published>2022-03-06T12:36:20.000Z</published>
     <updated>2022-07-13T02:27:57.802Z</updated>
     
