@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>github注册教程</title>
-    <url>/2022/07/17/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。</p>
-<p>想要成为一个合格的程序员必须要掌握 GitHub 的用法！</p>
-<p>由于github是半墙状态，有条件的可以开ssh，科学上网<br>优先推荐使用chrome（谷歌浏览器）或者微软edge浏览器</p>
-<h3 id="一、注册github流程"><a href="#一、注册github流程" class="headerlink" title="一、注册github流程"></a>一、注册github流程</h3><p>1.首先进入github官网 <a href="https://github.com/">https://github.com/</a></p>
-<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/1.png"></p>
-<p>2.点击绿色框Sign up for GitHub进行注册<br>注意：<br>Sign in，登录<br>Sign up，注册</p>
-<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/2.png"></p>
-<p>3.注册页面第一栏email（邮箱），第二栏password（密码），第三栏username（用户名）</p>
-<p>进行验证后即可完成注册</p>
-<h4 id="ps：愉快地开启github之旅吧！哈哈"><a href="#ps：愉快地开启github之旅吧！哈哈" class="headerlink" title="ps：愉快地开启github之旅吧！哈哈"></a>ps：愉快地开启github之旅吧！哈哈</h4>]]></content>
+    <title>关于树的定义</title>
+    <url>/2022/03/06/%E5%85%B3%E4%BA%8E%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
+    <content><![CDATA[<h2 id="二叉树的种类"><a href="#二叉树的种类" class="headerlink" title="二叉树的种类"></a>二叉树的种类</h2><hr>
+<h3 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h3><hr>
+<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
+<h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><hr>
+<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
+<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
+<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
+<hr>
+<h2 id="二叉树的最大宽度"><a href="#二叉树的最大宽度" class="headerlink" title="二叉树的最大宽度"></a>二叉树的最大宽度</h2><h3 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h3><h3 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h3><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
+<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
+<p>它的左、右子树也分别为二叉排序树</p>
+<h3 id="平衡二叉搜索树"><a href="#平衡二叉搜索树" class="headerlink" title="平衡二叉搜索树"></a>平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
+<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
+<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><p>验证二叉搜索树</p>
+<p>二叉搜索树迭代器</p>
+<p>二叉树的遍历</p>
+<p>一个中心</p>
+<h3 id="树的遍历："><a href="#树的遍历：" class="headerlink" title="树的遍历："></a>树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
+<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
+<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
+<p>有两个知识点：</p>
+<p>DFS（深度优先遍历）</p>
+<p>BFS（宽度优先遍历）</p>
+<h4 id="ps：善用搜索"><a href="#ps：善用搜索" class="headerlink" title="ps：善用搜索"></a>ps：善用搜索</h4>]]></content>
       <tags>
-        <tag>教程类</tag>
+        <tag>术语定义类</tag>
       </tags>
   </entry>
   <entry>
@@ -124,34 +138,20 @@
       </tags>
   </entry>
   <entry>
-    <title>关于树的定义</title>
-    <url>/2022/03/06/%E5%85%B3%E4%BA%8E%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
-    <content><![CDATA[<h2 id="二叉树的种类"><a href="#二叉树的种类" class="headerlink" title="二叉树的种类"></a>二叉树的种类</h2><hr>
-<h3 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h3><hr>
-<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
-<h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><hr>
-<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
-<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
-<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
-<hr>
-<h2 id="二叉树的最大宽度"><a href="#二叉树的最大宽度" class="headerlink" title="二叉树的最大宽度"></a>二叉树的最大宽度</h2><h3 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h3><h3 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h3><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
-<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
-<p>它的左、右子树也分别为二叉排序树</p>
-<h3 id="平衡二叉搜索树"><a href="#平衡二叉搜索树" class="headerlink" title="平衡二叉搜索树"></a>平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
-<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
-<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><p>验证二叉搜索树</p>
-<p>二叉搜索树迭代器</p>
-<p>二叉树的遍历</p>
-<p>一个中心</p>
-<h3 id="树的遍历："><a href="#树的遍历：" class="headerlink" title="树的遍历："></a>树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
-<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
-<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
-<p>有两个知识点：</p>
-<p>DFS（深度优先遍历）</p>
-<p>BFS（宽度优先遍历）</p>
-<h4 id="ps：善用搜索"><a href="#ps：善用搜索" class="headerlink" title="ps：善用搜索"></a>ps：善用搜索</h4>]]></content>
+    <title>github注册教程</title>
+    <url>/2020/06/18/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。</p>
+<p>想要成为一个合格的程序员必须要掌握 GitHub 的用法！</p>
+<p>由于github是半墙状态，有条件的可以开ssh，科学上网<br>优先推荐使用chrome（谷歌浏览器）或者微软edge浏览器</p>
+<h3 id="一、注册github流程"><a href="#一、注册github流程" class="headerlink" title="一、注册github流程"></a>一、注册github流程</h3><p>1.首先进入github官网 <a href="https://github.com/">https://github.com/</a></p>
+<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/1.png"></p>
+<p>2.点击绿色框Sign up for GitHub进行注册<br>注意：<br>Sign in，登录<br>Sign up，注册</p>
+<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/2.png"></p>
+<p>3.注册页面第一栏email（邮箱），第二栏password（密码），第三栏username（用户名）</p>
+<p>进行验证后即可完成注册</p>
+<h4 id="ps：愉快地开启github之旅吧！哈哈"><a href="#ps：愉快地开启github之旅吧！哈哈" class="headerlink" title="ps：愉快地开启github之旅吧！哈哈"></a>ps：愉快地开启github之旅吧！哈哈</h4>]]></content>
       <tags>
-        <tag>术语定义类</tag>
+        <tag>教程类</tag>
       </tags>
   </entry>
 </search>

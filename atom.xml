@@ -6,7 +6,7 @@
   <link href="https://lil-sum.github.io/atom.xml" rel="self"/>
   
   <link href="https://lil-sum.github.io/"/>
-  <updated>2022-07-17T06:12:13.021Z</updated>
+  <updated>2022-07-17T06:12:30.027Z</updated>
   <id>https://lil-sum.github.io/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>github注册教程</title>
-    <link href="https://lil-sum.github.io/2022/07/17/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/"/>
-    <id>https://lil-sum.github.io/2022/07/17/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</id>
-    <published>2022-07-17T03:47:56.000Z</published>
-    <updated>2022-07-17T06:12:13.021Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名</summary>
-        
-      
-    
-    
-    
-    
-    <category term="教程类" scheme="https://lil-sum.github.io/tags/%E6%95%99%E7%A8%8B%E7%B1%BB/"/>
-    
-  </entry>
   
   <entry>
     <title>浅玩vscode</title>
@@ -84,6 +61,29 @@
     
     
     <category term="术语定义类" scheme="https://lil-sum.github.io/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github注册教程</title>
+    <link href="https://lil-sum.github.io/2020/06/18/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/"/>
+    <id>https://lil-sum.github.io/2020/06/18/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</id>
+    <published>2020-06-18T12:36:28.000Z</published>
+    <updated>2022-07-17T07:08:13.931Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名</summary>
+        
+      
+    
+    
+    
+    
+    <category term="教程类" scheme="https://lil-sum.github.io/tags/%E6%95%99%E7%A8%8B%E7%B1%BB/"/>
     
   </entry>
   
