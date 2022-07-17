@@ -5,7 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="浅玩vscode, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
-    <meta name="description" content="工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,其中VSCode以其轻量且">
+    <meta name="description" content="工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。
+但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,
+其中VSCode以其轻">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -453,16 +455,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端工师的青睐。活不多说，开启教程</p>
+                <p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。</p>
+<p>但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,</p>
+<p>其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端工师的青睐。</p>
+<p>活不多说，开启教程：</p>
 <hr>
-<p>软件下载<br>直接在官网进行下载</p>
-<p>Visual Studio Code - Code Editing. Redefined<br>​code.visualstudio.com/</p>
-<p>首页</p>
-<p>vscode设置成中文</p>
-<p>vscode默认的语言是英文，对于英文不好的小伙伴可能不太友好。<br>简单几步教大家如何将vscode设置成中文。</p>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><h3 id="直接在官网进行下载"><a href="#直接在官网进行下载" class="headerlink" title="直接在官网进行下载"></a>直接在官网进行下载</h3><p>Visual Studio Code - Code Editing. Redefined<br>​code.visualstudio.com/</p>
+<h3 id="可以将vscode设置成中文"><a href="#可以将vscode设置成中文" class="headerlink" title="可以将vscode设置成中文"></a>可以将vscode设置成中文</h3><p>vscode默认的语言是英文，对于英文不好的小伙伴可能不太友好。<br>简单几步教大家如何将vscode设置成中文。</p>
 <p>按快捷键“Ctrl+Shift+P”。<br>在“vscode”顶部会出现一个搜索框。<br>输入“configure language”，然后回车。<br>“vscode”里面就会打开一个语言配置文件。<br>将“en-us”修改成“zh-cn”。<br>按“Ctrl+S”保存设置。<br>关闭“vscode”，再次打开就可以看到中文界面了。<br>当然如果你不愿意设置，也可以直接安装它的中文插件，还是很人性化的。</p>
-<p>VScode用户设置</p>
-<ol>
+<h3 id="VScode用户设置"><a href="#VScode用户设置" class="headerlink" title="VScode用户设置"></a>VScode用户设置</h3><ol>
 <li>打开设置</li>
 </ol>
 <p>文件–首选项–设置，打开用户设置。VScode支持选择配置，也支持编辑setting.json文件修改默认配置。个人更倾向于编写json的方式进行配置，下面会附上我个人的配置代码</p>
@@ -476,8 +477,7 @@
 <p>{<br>  “files.associations”: {<br>  “<em>.vue”: “vue”,<br>  “</em>.wpy”: “vue”,<br>  “<em>.wxml”: “html”,<br>  “</em>.wxss”: “css”<br>  },<br>  “terminal.integrated.shell.windows”: “C:\Windows\System32\cmd.exe”,<br>  “git.enableSmartCommit”: true,<br>  “git.autofetch”: true,<br>  “emmet.triggerExpansionOnTab”: true,<br>  “emmet.showAbbreviationSuggestions”: true,<br>  “emmet.showExpandedAbbreviation”: “always”,<br>  “emmet.includeLanguages”: {<br>  “vue-html”: “html”,<br>  “vue”: “html”,<br>  “wpy”: “html”<br>  },<br>  //主题颜色<br>  //“workbench.colorTheme”: “Monokai”,<br>  “git.confirmSync”: false,<br>  “explorer.confirmDelete”: false,<br>  “editor.fontSize”: 14,<br>  “window.zoomLevel”: 1,<br>  “editor.wordWrap”: “on”,<br>  “editor.detectIndentation”: false,<br>  // 重新设定tabsize<br>  “editor.tabSize”: 2,<br>  //失去焦点后自动保存<br>  “files.autoSave”: “onFocusChange”,<br>  // #值设置为true时，每次保存的时候自动格式化；<br>  “editor.formatOnSave”: false,<br>   //每120行就显示一条线<br>  “editor.rulers”: [<br>  ],<br>  // 在使用搜索功能时，将这些文件夹/文件排除在外<br>  “search.exclude”: {<br>      “<strong>/node_modules”: true,<br>      “</strong>/bower_components”: true,<br>      “<strong>/target”: true,<br>      “</strong>/logs”: true,<br>  },<br>  // 这些文件将不会显示在工作空间中<br>  “files.exclude”: {<br>      “<strong>/.git”: true,<br>      “</strong>/.svn”: true,<br>      “<strong>/.hg”: true,<br>      “</strong>/CVS”: true,<br>      “<strong>/.DS_Store”: true,<br>      “</strong>/*.js”: {<br>          “when”: “$(basename).ts” //ts编译后生成的js文件将不会显示在工作空中<br>      },<br>      “**/node_modules”: true<br>  },<br>  // #让vue中的js按”prettier”格式进行格式化<br>  “vetur.format.defaultFormatter.html”: “js-beautify-html”,<br>  “vetur.format.defaultFormatter.js”: “prettier”,<br>  “vetur.format.defaultFormatterOptions”: {<br>      “js-beautify-html”: {<br>          // #vue组件中html代码格式化样式<br>          “wrap_attributes”: “force-aligned”, //也可以设置为“auto”，效果会不一样<br>          “wrap_line_length”: 200,<br>          “end_with_newline”: false,<br>          “semi”: false,<br>          “singleQuote”: true<br>      },<br>      “prettier”: {<br>          “semi”: false,<br>          “singleQuote”: true<br>      }<br>  }<br>}</p>
 <p>新版的vscode设置默认为UI的设置，而非之前的json设置。如果你想复制我上面这段代码进行配置，可以进行下面的修改</p>
 <p>文件&gt;首选项&gt;设置 &gt; 搜索workbench.settings.editor，选中json即可改成json设置；</p>
-<p>禁用自动更新</p>
-<p>文件 &gt; 首选项 &gt; 设置（macOS：代码 &gt; 首选项 &gt; 设置，搜索update mode并将设置更改为none。</p>
+<h3 id="禁用自动更新"><a href="#禁用自动更新" class="headerlink" title="禁用自动更新"></a>禁用自动更新</h3><p>文件 &gt; 首选项 &gt; 设置（macOS：代码 &gt; 首选项 &gt; 设置，搜索update mode并将设置更改为none。</p>
 <p>开启代码提示设置</p>
 <p>第一步：点击左下角点击设置图标，找到并点击“setting”</p>
 <p>第二步：到搜索框里搜索“prevent”—&gt;并取消此项的勾选</p>
@@ -498,9 +498,8 @@
 <p>Ctrl + Shift + ] 展开区域代码</p>
 <p>Ctrl + / 添加关闭行注释</p>
 <p>Shift + Alt +A 块区域注释</p>
-<p>插件安装<br>在输入框中输入想要安装的插件名称，点击安装即可。安装后没有效果，可以重启vscode</p>
-<p>必备插件</p>
-<p>1、View In Browser</p>
+<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><p>在输入框中输入想要安装的插件名称，点击安装即可。安装后没有效果，可以重启vscode</p>
+<h4 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h4><p>1、View In Browser</p>
 <p>在浏览器里预览网页必备。运行html文件</p>
 <p>动图封面<br>2、vscode-icons<br>改变编辑器里面的文件图标</p>
 <p>3、Bracket Pair Colorizer<br>给嵌套的各种括号加上不同的颜色。</p>
@@ -511,7 +510,8 @@
 <p>8、Import Cost<br>引入包大小计算,对于项目打包后体积掌握很有帮助</p>
 <p>动图封面<br>9、Prettier<br>比Beautify更好用的代码格式化插件<br>Vue插件<br>vetur<br>语法高亮、智能感知、Emmet等</p>
 <p>VueHelper<br>snippet代码片段</p>
-<p>动图封面<br>其它插件<br>1、CSScomb</p>
+<p>动图封面</p>
+<h4 id="其它插件"><a href="#其它插件" class="headerlink" title="其它插件"></a>其它插件</h4><p>1、CSScomb</p>
 <p>CSS 书写顺序规则，这里我推荐腾讯 AollyTeam 团队的规范：</p>
 <p><a target="_blank" rel="noopener" href="http://alloyteam.github.io/CodeGuide/#css-declaration-order">http://alloyteam.github.io/CodeGuide/#css-declaration-order</a><br>​alloyteam.github.io/CodeGuide/#css-declaration-order<br>简单说下这个插件怎么用：</p>
 <p>在项目的根目录下创建一个名为csscomb.json的文件，然后添加一些配置项。也可以将配置项写入项目的 package.json 文件中的 csscombConfig 字段。</p>
@@ -533,7 +533,7 @@
 <p>处理 JSON 文件，用法看图：</p>
 <p>动图封面<br>8、Regex Previewer<br>实时预览正则表达式的效果。</p>
 <p>动图封面</p>
-<p>设置同步<br>花了一天终于把vscode配置成自己满意的样子，如果每换一次电脑就要重新来一次，大家一定会手撕了我。放心，早就帮大家准备好了。Settings Sync，在不同电脑间同步你的插件。</p>
+<h3 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h3><p>花了一天终于把vscode配置成自己满意的样子，如果每换一次电脑就要重新来一次，大家一定会手撕了我。放心，早就帮大家准备好了。Settings Sync，在不同电脑间同步你的插件。</p>
 <p>首先要想在不同的设备间同步你的插件, 需要用到 Token 和Gist id</p>
 <p>Token 就是你把插件上传到 github 上时, 让你保存的那段字符，Gist id 在你上传插件的那台电脑上保存着。</p>
 <p>先给大家来三个快捷键，后面会用到</p>
@@ -543,20 +543,17 @@
 <p>5、Ctrl+Shift+P打开命令框–&gt;输入sync–&gt;找到update/upload settings，上传成功后会返回Gist ID，保存此Gist ID.</p>
 <p>动图封面<br>6、在 VSCode 里，依次打开: 文件 -&gt; 首选项 -&gt; 设置，然后输入 Sync 进行搜索:能找到你gist id</p>
 <p>7、若需在其他机器上DownLoad插件的话，同样，Ctrl+Shift+P打开命令框，输入sync，找到Download settings，会跳转到Github的Token编辑界面，点Edit，regenerate token，保存新生成的token，在vscode命令框中输入此Token，回车，再输入之前的Gist ID，即可同步插件和设置</p>
-<p>开启一个本地服务<br>第一种方式</p>
-<p>1.安装Debugger for Chrome插件</p>
+<h3 id="开启本地服务"><a href="#开启本地服务" class="headerlink" title="开启本地服务"></a>开启本地服务</h3><h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><p>1.安装Debugger for Chrome插件</p>
 <p>2.使用ctrl+`快捷键打开终端，然后输入npm install -g live-server</p>
 <p>3.在命令行里输入 live-server即可</p>
-<p>第二种方式</p>
-<p>在写前端页面中，经常会在浏览器运行HTML页面，从本地文件夹中直接打开的一般都是file协议，当代码中存在http或https的链接时，HTML页面就无法正常打开，为了解决这种情况，需要在在本地开启一个本地的服务器。 本文是利用node.js中的http-server，开启本地服务，步骤如下：</p>
+<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>在写前端页面中，经常会在浏览器运行HTML页面，从本地文件夹中直接打开的一般都是file协议，当代码中存在http或https的链接时，HTML页面就无法正常打开，为了解决这种情况，需要在在本地开启一个本地的服务器。 本文是利用node.js中的http-server，开启本地服务，步骤如下：</p>
 <p>1.安装http-server</p>
 <p>在终端输入： $ npm install http-server -g</p>
 <p>2.开启 http-server服务</p>
 <p>终端进入目标文件夹，然后在终端输入：</p>
 <p>$ http-server -c-1   （⚠️只输入http-server的话，更新了代码后，页面不会同步更新）<br>Starting up http-server, serving ./<br>Available on:<br>  <a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>  <a target="_blank" rel="noopener" href="http://192.168.8.196:8080/">http://192.168.8.196:8080</a><br>Hit CTRL-C to stop the server<br>3.关闭 http-server服务</p>
 <p>按快捷键CTRL-C 终端显示^Chttp-server stopped.即关闭服务成功。</p>
-<p>愉快地开启vscode，书写你的人生吧，哈哈！</p>
-
+<h4 id="ps：愉快地打开vscode，敲写你的人生吧！"><a href="#ps：愉快地打开vscode，敲写你的人生吧！" class="headerlink" title="ps：愉快地打开vscode，敲写你的人生吧！"></a>ps：愉快地打开vscode，敲写你的人生吧！</h4>
                 
             </div>
             <hr/>
