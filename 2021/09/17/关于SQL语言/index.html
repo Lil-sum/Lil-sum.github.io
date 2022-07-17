@@ -554,7 +554,8 @@
 <li>time：时间类型，格式为：hh:mm:ss</li>
 <li>datetime:日期时间类型 yyyy-MM-dd hh:mm:ss</li>
 </ul>
-<h3 id="在mysql中，字符串类型和日期类型都要用单引号括起来。’Myxq’-‘2020-01-01’"><a href="#在mysql中，字符串类型和日期类型都要用单引号括起来。’Myxq’-‘2020-01-01’" class="headerlink" title="在mysql中，字符串类型和日期类型都要用单引号括起来。’Myxq’  ‘2020-01-01’"></a>在mysql中，字符串类型和日期类型都要用单引号括起来。’Myxq’  ‘2020-01-01’</h3><h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
+<h3 id="在mysql中，字符串类型和日期类型都要用单引号括起来。"><a href="#在mysql中，字符串类型和日期类型都要用单引号括起来。" class="headerlink" title="在mysql中，字符串类型和日期类型都要用单引号括起来。"></a>在mysql中，字符串类型和日期类型都要用单引号括起来。</h3><p>‘Myxq’  ‘2020-01-01’</p>
+<h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
 <li>create database 数据库名  character set utf8;</li>
 </ul>
 <h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><ul>
@@ -812,15 +813,26 @@
 <h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
 <li><p>创建表</p>
 <ul>
-<li>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL</li>
-</ul>
+<li><p>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL<br>  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1001, ‘张三’, ‘男’, ‘1991-7-25’, 2000, 200, 500, ‘营销部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1002, ‘李四’, ‘男’, ‘2017-7-5’, 4000, 500, NULL, ‘营销部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1003, ‘王五’, ‘女’, ‘2018-5-1’, 6000, 100, 5000, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1004, ‘赵六’, ‘男’, ‘1991-6-1’, 1000, 3000, 4000, ‘财务部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1005, ‘孙七’, ‘女’, ‘2018-3-23’, 8000, 1000, NULL, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1006, ‘周八’, ‘男’, ‘2010-9-8’, 5000, 500, 1000, ‘人事部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1007, ‘吴九’, ‘女’, ‘2017-7-5’, 8000, 601, NULL, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1008, ‘郑十’, ‘女’, ‘2014-4-6’, 4000, 1801, NULL, ‘人事部’);</p>
 </li>
 </ul>
-<p>) ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
-<pre><code>    - INSERT INTO `employee` VALUES (1001, '张三', '男', '1991-7-25', 2000, 200, 500, '营销部');
-</code></pre>
-<p>INSERT INTO <code>employee</code> VALUES (1002, ‘李四’, ‘男’, ‘2017-7-5’, 4000, 500, NULL, ‘营销部’);<br>INSERT INTO <code>employee</code> VALUES (1003, ‘王五’, ‘女’, ‘2018-5-1’, 6000, 100, 5000, ‘研发部’);<br>INSERT INTO <code>employee</code> VALUES (1004, ‘赵六’, ‘男’, ‘1991-6-1’, 1000, 3000, 4000, ‘财务部’);<br>INSERT INTO <code>employee</code> VALUES (1005, ‘孙七’, ‘女’, ‘2018-3-23’, 8000, 1000, NULL, ‘研发部’);<br>INSERT INTO <code>employee</code> VALUES (1006, ‘周八’, ‘男’, ‘2010-9-8’, 5000, 500, 1000, ‘人事部’);<br>INSERT INTO <code>employee</code> VALUES (1007, ‘吴九’, ‘女’, ‘2017-7-5’, 8000, 601, NULL, ‘研发部’);<br>INSERT INTO <code>employee</code> VALUES (1008, ‘郑十’, ‘女’, ‘2014-4-6’, 4000, 1801, NULL, ‘人事部’);</p>
-<ul>
+</li>
 <li><p>对查询的结果进行排序</p>
 </li>
 <li><p>使用关键字ORDER BY</p>
@@ -938,8 +950,7 @@
 </ul>
 </li>
 </ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>ps：<br>资料参考于课本和讲解<br>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</p>
-
+<h4 id="以上就是对sql语句使用的详细操作说明"><a href="#以上就是对sql语句使用的详细操作说明" class="headerlink" title="以上就是对sql语句使用的详细操作说明"></a>以上就是对sql语句使用的详细操作说明</h4><h3 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h3><h3 id="资料参考于课本和讲解"><a href="#资料参考于课本和讲解" class="headerlink" title="资料参考于课本和讲解"></a>资料参考于课本和讲解</h3><h3 id="转载请注明出处https-lil-sum-github-io-，-感谢配合"><a href="#转载请注明出处https-lil-sum-github-io-，-感谢配合" class="headerlink" title="转载请注明出处https://lil-sum.github.io/， 感谢配合."></a>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</h3>
                 
             </div>
             <hr/>
