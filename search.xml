@@ -24,7 +24,7 @@
   </entry>
   <entry>
     <title>关于Hadoop大数据技术</title>
-    <url>/2022/03/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
+    <url>/2021/12/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术"></a>关于Hadoop大数据技术</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
 <h2 id="1-2-Hadoop-优势"><a href="#1-2-Hadoop-优势" class="headerlink" title="1.2 Hadoop 优势"></a>1.2 Hadoop 优势</h2><p>（1）高可靠性：Hadoop底层维护多个数据副本，所以即使Hadoop某个计算元素或存储出现故障，也不会导致数据的丢失。<br>（2）高扩展性：在集群间分配任务数据，可方便的扩展数以千计的节点。<br>（3）高效性：在MapReduce的思想下，Hadoop是并行工作的，以加快任务处理速度。<br>（4）高容错性：能够自动将失败的任务重新分配。</p>
 <h2 id="1-3-Hadoop-组成★★★★★"><a href="#1-3-Hadoop-组成★★★★★" class="headerlink" title="1.3 Hadoop 组成★★★★★"></a>1.3 Hadoop 组成★★★★★</h2><p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/1.png"></p>
@@ -56,7 +56,7 @@
   </entry>
   <entry>
     <title>关于SQL语言</title>
-    <url>/2021/09/17/%E5%85%B3%E4%BA%8ESQL%E8%AF%AD%E8%A8%80/</url>
+    <url>/2021/09/18/%E5%85%B3%E4%BA%8ESQL%E8%AF%AD%E8%A8%80/</url>
     <content><![CDATA[<h1 id="关于SQL语言"><a href="#关于SQL语言" class="headerlink" title="关于SQL语言"></a>关于SQL语言</h1><h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><h3 id="字符集的由来"><a href="#字符集的由来" class="headerlink" title="字符集的由来"></a>字符集的由来</h3><ul>
 <li>计算机只能识别二进制代码无论是计算机程序还是数据，最终都会转换成二进制，计算机才能认识。</li>
 <li>为了计算机不只能做科学计算，也能处理文字信息。<br>人们想出了给每一个文字符号编码以便于计算识别处理的办法，这就是计算机字符集的由来。</li>
@@ -586,7 +586,7 @@
   </entry>
   <entry>
     <title>关于Spark大数据开发</title>
-    <url>/2021/12/18/%E5%85%B3%E4%BA%8ESpark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/</url>
+    <url>/2022/03/18/%E5%85%B3%E4%BA%8ESpark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/</url>
     <content><![CDATA[<h1 id="关于Spark大数据开发"><a href="#关于Spark大数据开发" class="headerlink" title="关于Spark大数据开发"></a>关于Spark大数据开发</h1><h1 id="一、Spark概述"><a href="#一、Spark概述" class="headerlink" title="一、Spark概述"></a>一、Spark概述</h1><h2 id="（1）概述"><a href="#（1）概述" class="headerlink" title="（1）概述"></a>（1）概述</h2><p>Spark，是一种”One Stack to rule them all”的大数据计算框架，期望使用一个技术堆栈就完美地解决大数据领域的各种计算任务。Apache官方，对Spark的定义就是：通用的大数据快速处理引擎。<br>Spark使用Spark RDD、Spark SQL、 Spark Streaming，MLlib，GraphX成功解决了大数据领城中，离线批处理、交互式查询、实时流计算、机器学习与图计算等最重要的任务和问题。<br>Spark除了一站式的特点之外，另外一个最重要的特点，就是基于内存进行计算，从而让它的速度可以达到MapReduce、Hive的数倍甚至数十倍！<br>现在已经有很多大公司正在生产环境下深度地使用Spark作为大数据的计算框架，包括eBay.Yahool、 BAT、网易、京东、华为、大众点评、优酷土豆、搜狗等等。<br>Spark同时也获得了多个世界顶级IT厂商的支持，包括IBM、 Intel等。</p>
 <p>Spark，是一种通用的大数据计算框架，I正如传统大数据技术Hadoop的MapReduce、Hive引擎，以及Storm流式实时计算引擎等，<br>Spark包含了大数据领城常见的各种计算框架：比如Spark Core用于离线计算，Spark SQL用于交互式查询，Spark Streaming用于实时流式计算，Spark MILlib用于机器学习，Spark GraphX用于图计算。<br>Spark主要用于大数据的计算，而Hadoop以后主要用于大数据的存储（比如HDFS、Hive，HBase等），以及资源调度（Yarn）。</p>
 <p>Spark+Hadoop的组合，是未来大数据领域最热门的组合，也是最有前景的组合！</p>
@@ -730,6 +730,35 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">spark : 1</span><br><span class="line">hive : 3</span><br><span class="line">hadoop : 3</span><br><span class="line">python : 1</span><br><span class="line">flink : 2</span><br><span class="line">java : 5</span><br><span class="line">storm : 1</span><br><span class="line">hbase : 1</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Spark大数据技术的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于二叉树的定义</title>
+    <url>/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
+    <content><![CDATA[<h2 id="关于二叉树的种类"><a href="#关于二叉树的种类" class="headerlink" title="关于二叉树的种类"></a>关于二叉树的种类</h2><hr>
+<h3 id="一、满二叉树"><a href="#一、满二叉树" class="headerlink" title="一、满二叉树"></a>一、满二叉树</h3><hr>
+<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
+<h3 id="二、完全二叉树"><a href="#二、完全二叉树" class="headerlink" title="二、完全二叉树"></a>二、完全二叉树</h3><hr>
+<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
+<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
+<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
+<hr>
+<h2 id="2-二叉树的最大宽度"><a href="#2-二叉树的最大宽度" class="headerlink" title="(2)二叉树的最大宽度"></a>(2)二叉树的最大宽度</h2><h3 id="一、序列化二叉树"><a href="#一、序列化二叉树" class="headerlink" title="一、序列化二叉树"></a>一、序列化二叉树</h3><h5 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h5><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
+<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
+<p>它的左、右子树也分别为二叉排序树</p>
+<h3 id="二、平衡二叉搜索树"><a href="#二、平衡二叉搜索树" class="headerlink" title="二、平衡二叉搜索树"></a>二、平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
+<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
+<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h5 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h5><h6 id="验证二叉搜索树"><a href="#验证二叉搜索树" class="headerlink" title="验证二叉搜索树"></a>验证二叉搜索树</h6><h6 id="二叉搜索树迭代器"><a href="#二叉搜索树迭代器" class="headerlink" title="二叉搜索树迭代器"></a>二叉搜索树迭代器</h6><h6 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h6><h6 id="一个中心"><a href="#一个中心" class="headerlink" title="一个中心"></a>一个中心</h6><h3 id="三、树的遍历："><a href="#三、树的遍历：" class="headerlink" title="三、树的遍历："></a>三、树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
+<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
+<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
+<h5 id="其中有两个重要知识点："><a href="#其中有两个重要知识点：" class="headerlink" title="其中有两个重要知识点："></a>其中有两个重要知识点：</h5><h6 id="DFS（深度优先遍历）"><a href="#DFS（深度优先遍历）" class="headerlink" title="DFS（深度优先遍历）"></a>DFS（深度优先遍历）</h6><h6 id="BFS（宽度优先遍历）"><a href="#BFS（宽度优先遍历）" class="headerlink" title="BFS（宽度优先遍历）"></a>BFS（宽度优先遍历）</h6><h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对二叉树的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
@@ -891,35 +920,6 @@
 <p><strong>请注意”写的顺序,先使用数据库,再去查有多少张表”</strong></p>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对MySQL数据库的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于二叉树的定义</title>
-    <url>/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
-    <content><![CDATA[<h2 id="关于二叉树的种类"><a href="#关于二叉树的种类" class="headerlink" title="关于二叉树的种类"></a>关于二叉树的种类</h2><hr>
-<h3 id="一、满二叉树"><a href="#一、满二叉树" class="headerlink" title="一、满二叉树"></a>一、满二叉树</h3><hr>
-<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
-<h3 id="二、完全二叉树"><a href="#二、完全二叉树" class="headerlink" title="二、完全二叉树"></a>二、完全二叉树</h3><hr>
-<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
-<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
-<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
-<hr>
-<h2 id="2-二叉树的最大宽度"><a href="#2-二叉树的最大宽度" class="headerlink" title="(2)二叉树的最大宽度"></a>(2)二叉树的最大宽度</h2><h3 id="一、序列化二叉树"><a href="#一、序列化二叉树" class="headerlink" title="一、序列化二叉树"></a>一、序列化二叉树</h3><h5 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h5><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
-<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
-<p>它的左、右子树也分别为二叉排序树</p>
-<h3 id="二、平衡二叉搜索树"><a href="#二、平衡二叉搜索树" class="headerlink" title="二、平衡二叉搜索树"></a>二、平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
-<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
-<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h5 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h5><h6 id="验证二叉搜索树"><a href="#验证二叉搜索树" class="headerlink" title="验证二叉搜索树"></a>验证二叉搜索树</h6><h6 id="二叉搜索树迭代器"><a href="#二叉搜索树迭代器" class="headerlink" title="二叉搜索树迭代器"></a>二叉搜索树迭代器</h6><h6 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h6><h6 id="一个中心"><a href="#一个中心" class="headerlink" title="一个中心"></a>一个中心</h6><h3 id="三、树的遍历："><a href="#三、树的遍历：" class="headerlink" title="三、树的遍历："></a>三、树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
-<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
-<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
-<h5 id="其中有两个重要知识点："><a href="#其中有两个重要知识点：" class="headerlink" title="其中有两个重要知识点："></a>其中有两个重要知识点：</h5><h6 id="DFS（深度优先遍历）"><a href="#DFS（深度优先遍历）" class="headerlink" title="DFS（深度优先遍历）"></a>DFS（深度优先遍历）</h6><h6 id="BFS（宽度优先遍历）"><a href="#BFS（宽度优先遍历）" class="headerlink" title="BFS（宽度优先遍历）"></a>BFS（宽度优先遍历）</h6><h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对二叉树的详细介绍了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
@@ -1221,7 +1221,7 @@
   </entry>
   <entry>
     <title>前端网页开发工具之VSCode使用教程</title>
-    <url>/2020/10/16/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BVSCode%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <url>/2020/10/18/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BVSCode%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="VSCode开发工具安装教程"><a href="#VSCode开发工具安装教程" class="headerlink" title="VSCode开发工具安装教程"></a>VSCode开发工具安装教程</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。</p>
 <p>但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,</p>
 <p>其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端开发者的青睐。</p>
