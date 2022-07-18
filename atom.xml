@@ -6,7 +6,7 @@
   <link href="https://lil-sum.github.io/atom.xml" rel="self"/>
   
   <link href="https://lil-sum.github.io/"/>
-  <updated>2022-07-17T15:05:32.471Z</updated>
+  <updated>2022-07-18T05:29:43.345Z</updated>
   <id>https://lil-sum.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于spark大数据开发</title>
+    <link href="https://lil-sum.github.io/2021/12/18/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/"/>
+    <id>https://lil-sum.github.io/2021/12/18/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/</id>
+    <published>2021-12-18T04:11:38.000Z</published>
+    <updated>2022-07-18T05:29:43.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;关于Spark大数据开发&quot;&gt;&lt;a href=&quot;#关于Spark大数据开发&quot; class=&quot;headerlink&quot; title=&quot;关于Spark大数据开发&quot;&gt;&lt;/a&gt;关于Spark大数据开发&lt;/h1&gt;&lt;h1 id=&quot;一、Spark概述&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="术语定义类" scheme="https://lil-sum.github.io/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>关于SQL语言</title>
