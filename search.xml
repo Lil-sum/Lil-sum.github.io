@@ -553,157 +553,28 @@
       </tags>
   </entry>
   <entry>
-    <title>关于数据库</title>
-    <url>/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="关于数据库"><a href="#关于数据库" class="headerlink" title="关于数据库:"></a>关于数据库:</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h3><ul>
-<li>是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，简称DBMS。<br>它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。<br>用户通过DBMS访问数据库中的数据，数据库管理员也通过dbms进行数据库的维护工作。<br>数据库管理系统是数据库系统的核心，是管理数据库的软件。<br>我们一般说的数据库,就是指的DBMS: 数据库管理系统</li>
-</ul>
-<h3 id="常见的数据库"><a href="#常见的数据库" class="headerlink" title="常见的数据库"></a>常见的数据库</h3><ul>
-<li><p>Oracle</p>
-<ul>
-<li>运行稳定，可移植性高，功能齐全，性能超群！适用于大型企业领域。</li>
-</ul>
-</li>
-<li><p>DB2</p>
-<ul>
-<li>速度快、可靠性好，适于海量数据，恢复性极强。适用于大中型企业领域。</li>
-</ul>
-</li>
-<li><p>MySQL</p>
-<ul>
-<li>开源，跨平台、体积小，速度快。适用于于中小型企业领域。</li>
-</ul>
-</li>
-<li><p>SQL Server</p>
-<ul>
-<li>全面，效率高，界面友好，操作容易，但是不跨平台。适用于于中小型企业领域。</li>
-</ul>
-</li>
-</ul>
-<h3 id="结构化查询语言SQL"><a href="#结构化查询语言SQL" class="headerlink" title="结构化查询语言SQL"></a>结构化查询语言SQL</h3><ul>
-<li>SQL语言的功能包括查询、操纵、定义和控制，是一个综合的、通用的关系数据库语言，同时又是一种高度非过程化的语言，只要求用户指出做什么而不需要指出怎么做。</li>
-</ul>
-<h3 id="非关系型数据库NoSql"><a href="#非关系型数据库NoSql" class="headerlink" title="非关系型数据库NoSql"></a>非关系型数据库NoSql</h3><ul>
-<li>MongoDB,Redis,HBase…</li>
-</ul>
-<h2 id="RDBMS专业术语"><a href="#RDBMS专业术语" class="headerlink" title="RDBMS专业术语"></a>RDBMS专业术语</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
-<li>具有固定的列数,和任意的行数</li>
-</ul>
-<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
-<li>数据库是一些关联表的集合</li>
-</ul>
-<h3 id="列"><a href="#列" class="headerlink" title="列"></a>列</h3><ul>
-<li>一个数据项 Field   字段</li>
-</ul>
-<h3 id="行"><a href="#行" class="headerlink" title="行"></a>行</h3><ul>
-<li>一条记录  row</li>
-</ul>
-<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><ul>
-<li>主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据。</li>
-</ul>
-<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><ul>
-<li>外键用于关联两个表</li>
-</ul>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
-<li>使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录。</li>
-</ul>
-<h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><h3 id="MySQL介绍"><a href="#MySQL介绍" class="headerlink" title="MySQL介绍"></a>MySQL介绍</h3><ul>
-<li>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</li>
-<li>MySQL是开源的，所以你不需要支付额外的费用。</li>
-<li>MySQL支持大型的数据库。可以处理拥有上千万条记录的大型数据库。</li>
-<li>MySQL使用标准的SQL数据语言形式。</li>
-<li>MySQL可以安装在多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等。</li>
-</ul>
-<h3 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h3><ul>
-<li>windows安装</li>
-<li>Mac安装</li>
-</ul>
-<h3 id="MySQL的存储引擎"><a href="#MySQL的存储引擎" class="headerlink" title="MySQL的存储引擎"></a>MySQL的存储引擎</h3><ul>
-<li><p>什么是存储引擎</p>
-<ul>
-<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。这些技术中的每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
-<li>不同的存储引擎性能是不一样的</li>
-</ul>
-</li>
-<li><p>什么是事务</p>
-<ul>
-<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
-</ul>
-</li>
-<li><p>存储引擎分类</p>
-<ul>
-<li><p>MYISAM</p>
-<ul>
-<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
-</li>
-<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
-<ul>
-<li>.frm(存储表定义)</li>
-<li>MYD(MYData，存储数据)</li>
-<li>MYI(MYIndex，存储索引)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>INNODB</p>
-<ul>
-<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
-</ul>
-</li>
-<li><p>MEMORY</p>
-<ul>
-<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
-<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="常用数据库命令"><a href="#常用数据库命令" class="headerlink" title="常用数据库命令"></a>常用数据库命令</h2><h3 id="MySQL数据库分为两种"><a href="#MySQL数据库分为两种" class="headerlink" title="MySQL数据库分为两种"></a>MySQL数据库分为两种</h3><h4 id="一、系统数据库-数据库服务器自带的-自带的4个"><a href="#一、系统数据库-数据库服务器自带的-自带的4个" class="headerlink" title="一、系统数据库(数据库服务器自带的,自带的4个)"></a>一、系统数据库(数据库服务器自带的,自带的4个)</h4><ul>
-<li><p>information_schema</p>
-<ul>
-<li>存储数据库对象信息</li>
-</ul>
-</li>
-</ul>
-<p>如用户表信息,列信息,根除,字符,分区<br>里面的内容我们不能动.</p>
-<ul>
-<li><p>performance_schema</p>
-<ul>
-<li>存储数据库服务器性能参数信息</li>
-</ul>
-</li>
-<li><p>MySQL</p>
-<ul>
-<li>存储数据库用户权限信息</li>
-</ul>
-</li>
-<li><p>test</p>
-<ul>
-<li>一个空的数据库，用户可以使用它也可以不使用它</li>
-</ul>
-</li>
-</ul>
-<h4 id="二、用户数据库"><a href="#二、用户数据库" class="headerlink" title="二、用户数据库"></a>二、用户数据库</h4><ul>
-<li>用户自己创建的数据库,一个项目用一个数据库</li>
-</ul>
-<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
-<li>create database 数据库名称;</li>
-</ul>
-<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
-<li>drop database 数据库名称;</li>
-</ul>
-<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><ul>
-<li>show databases;</li>
-</ul>
-<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><ul>
-<li>use 数据库名;</li>
-</ul>
-<h3 id="查看数据库当中有多少张表"><a href="#查看数据库当中有多少张表" class="headerlink" title="查看数据库当中有多少张表"></a>查看数据库当中有多少张表</h3><ul>
-<li>show  tables;</li>
-</ul>
-<p><strong>请注意”写的顺序,先使用数据库,再去查有多少张表”</strong></p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对MySQL数据库的详细介绍了，</strong></p>
+    <title>关于Hadoop大数据技术</title>
+    <url>/2021/12/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术:"></a>关于Hadoop大数据技术:</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
+<h2 id="1-2-Hadoop-优势"><a href="#1-2-Hadoop-优势" class="headerlink" title="1.2 Hadoop 优势"></a>1.2 Hadoop 优势</h2><p>（1）高可靠性：Hadoop底层维护多个数据副本，所以即使Hadoop某个计算元素或存储出现故障，也不会导致数据的丢失。<br>（2）高扩展性：在集群间分配任务数据，可方便的扩展数以千计的节点。<br>（3）高效性：在MapReduce的思想下，Hadoop是并行工作的，以加快任务处理速度。<br>（4）高容错性：能够自动将失败的任务重新分配。</p>
+<h2 id="1-3-Hadoop-组成★★★★★"><a href="#1-3-Hadoop-组成★★★★★" class="headerlink" title="1.3 Hadoop 组成★★★★★"></a>1.3 Hadoop 组成★★★★★</h2><p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/1.png"></p>
+<p>在Hadoop1.x 时代，Hadoop中的MapReduce同时处理业务逻辑运算和资源的调度，耦合性较大。<br>在Hadoop2.x时代，增加了Yarn。Yarn只负责资源的调度，MapReduce 只负责运算。<br>Hadoop3.x在组成上没有变化。</p>
+<h3 id="1-3-1-HDFS-架构概述"><a href="#1-3-1-HDFS-架构概述" class="headerlink" title="1.3.1 HDFS 架构概述"></a>1.3.1 HDFS 架构概述</h3><p>Hadoop Distributed File System，简称HDFS，是一个分布式文件系统。</p>
+<p>（1）NameNode（nn）：存储文件的元数据，如文件名，文件目录结构，文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和块所在的DataNode等。<br>（2）DataNode(dn)：在本地文件系统存储文件块数据，以及块数据的校验和。<br>（3）Secondary NameNode(2nn)：每隔一段时间对NameNode元数据备份。</p>
+<h3 id="1-3-2-YARN-架构概述"><a href="#1-3-2-YARN-架构概述" class="headerlink" title="1.3.2 YARN 架构概述"></a>1.3.2 YARN 架构概述</h3><p>Yet Another Resource Negotiator 简称YARN ，另一种资源协调者，是Hadoop 的资源管理器。</p>
+<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/2.png"></p>
+<p>ResourceManager(RM)：整个集群资源（内存、CPU等）的管理者<br>NodeManager(NM)：单个节点服务器资源的管理者。<br>ApplicationMaster(AM)：单个任务运行的管理者。<br>Container：容器，相当于一台独立的服务器，里面封装了任务运行所需要的资源，如内存、CPU、磁盘、网络等。</p>
+<p>说明：<br>（1）客户端可以有多个<br>（2）集群上可以运行多个ApplicationMaster<br>（3）每个NodeManager上可以有多个Container</p>
+<h3 id="1-3-3-MapReduce-架构概述"><a href="#1-3-3-MapReduce-架构概述" class="headerlink" title="1.3.3 MapReduce 架构概述"></a>1.3.3 MapReduce 架构概述</h3><p>MapReduce 将计算过程分为两个阶段：Map 和Reduce<br>1）Map 阶段并行处理输入数据<br>2）Reduce 阶段对Map 结果进行汇总</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/3.png"></h3><h3 id="1-3-4-HDFS、YARN、MapReduce-三者关系"><a href="#1-3-4-HDFS、YARN、MapReduce-三者关系" class="headerlink" title="1.3.4 HDFS、YARN、MapReduce 三者关系"></a>1.3.4 HDFS、YARN、MapReduce 三者关系</h3><p>如图所示：</p>
+<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/4.png"></p>
+<h3 id="1-3-5-大数据技术生态体系"><a href="#1-3-5-大数据技术生态体系" class="headerlink" title="1.3.5 大数据技术生态体系"></a>1.3.5 大数据技术生态体系</h3><p>如图所示：</p>
+<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/5.png"></p>
+<p>图中涉及的技术名词解释如下：</p>
+<p>（1）Sqoop：Sqoop 是一款开源的工具，主要用于在Hadoop、Hive 与传统的数据库（MySQL）间进行数据的传递，可以将一个关系型数据库（例如 ：MySQL，Oracle 等）中的数据导进到Hadoop 的HDFS 中，也可以将HDFS 的数据导进到关系型数据库中。<br>（2）Flume：Flume 是一个高可用的，高可靠的，分布式的海量日志采集、聚合和传输的系统，Flume 支持在日志系统中定制各类数据发送方，用于收集数据。<br>（3）Kafka：Kafka 是一种高吞吐量的分布式发布订阅消息系统。<br>（4）Spark：Spark 是当前最流行的开源大数据内存计算框架。可以基于Hadoop 上存储的大数据进行计算。<br>（5）Flink：Flink 是当前最流行的开源大数据内存计算框架。用于实时计算的场景较多。<br>（6）Oozie：Oozie 是一个管理Hadoop 作业（job）的工作流程调度管理系统。<br>（7）HBase：HBase 是一个分布式的、面向列的开源数据库。HBase 不同于一般的关系数据库，它是一个适合于非结构化数据存储的数据库。<br>（8）Hive：Hive 是基于Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的SQL 查询功能，可以将SQL 语句转换为MapReduce 任务进行运行。其优点是学习成本低，可以通过类SQL 语句快速实现简单的MapReduce 统计，不必开发专门的MapReduce 应用，十分适合数据仓库的统计分析。<br>（9）ZooKeeper：它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。</p>
+<h3 id="1-3-6-推荐系统框架图"><a href="#1-3-6-推荐系统框架图" class="headerlink" title="1.3.6 推荐系统框架图"></a>1.3.6 推荐系统框架图</h3><p>推荐系统项目框架<br><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/6.png"></p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Hadoop的详细介绍了，</strong></p>
+<p><strong>详细的环境搭建教程，可以上csdn开发者论坛，博客园或者百度进行搜索，这里就不过多演示了.</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
@@ -868,38 +739,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于Hadoop大数据技术</title>
-    <url>/2021/12/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
-    <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术:"></a>关于Hadoop大数据技术:</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
-<h2 id="1-2-Hadoop-优势"><a href="#1-2-Hadoop-优势" class="headerlink" title="1.2 Hadoop 优势"></a>1.2 Hadoop 优势</h2><p>（1）高可靠性：Hadoop底层维护多个数据副本，所以即使Hadoop某个计算元素或存储出现故障，也不会导致数据的丢失。<br>（2）高扩展性：在集群间分配任务数据，可方便的扩展数以千计的节点。<br>（3）高效性：在MapReduce的思想下，Hadoop是并行工作的，以加快任务处理速度。<br>（4）高容错性：能够自动将失败的任务重新分配。</p>
-<h2 id="1-3-Hadoop-组成★★★★★"><a href="#1-3-Hadoop-组成★★★★★" class="headerlink" title="1.3 Hadoop 组成★★★★★"></a>1.3 Hadoop 组成★★★★★</h2><p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/1.png"></p>
-<p>在Hadoop1.x 时代，Hadoop中的MapReduce同时处理业务逻辑运算和资源的调度，耦合性较大。<br>在Hadoop2.x时代，增加了Yarn。Yarn只负责资源的调度，MapReduce 只负责运算。<br>Hadoop3.x在组成上没有变化。</p>
-<h3 id="1-3-1-HDFS-架构概述"><a href="#1-3-1-HDFS-架构概述" class="headerlink" title="1.3.1 HDFS 架构概述"></a>1.3.1 HDFS 架构概述</h3><p>Hadoop Distributed File System，简称HDFS，是一个分布式文件系统。</p>
-<p>（1）NameNode（nn）：存储文件的元数据，如文件名，文件目录结构，文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和块所在的DataNode等。<br>（2）DataNode(dn)：在本地文件系统存储文件块数据，以及块数据的校验和。<br>（3）Secondary NameNode(2nn)：每隔一段时间对NameNode元数据备份。</p>
-<h3 id="1-3-2-YARN-架构概述"><a href="#1-3-2-YARN-架构概述" class="headerlink" title="1.3.2 YARN 架构概述"></a>1.3.2 YARN 架构概述</h3><p>Yet Another Resource Negotiator 简称YARN ，另一种资源协调者，是Hadoop 的资源管理器。</p>
-<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/2.png"></p>
-<p>ResourceManager(RM)：整个集群资源（内存、CPU等）的管理者<br>NodeManager(NM)：单个节点服务器资源的管理者。<br>ApplicationMaster(AM)：单个任务运行的管理者。<br>Container：容器，相当于一台独立的服务器，里面封装了任务运行所需要的资源，如内存、CPU、磁盘、网络等。</p>
-<p>说明：<br>（1）客户端可以有多个<br>（2）集群上可以运行多个ApplicationMaster<br>（3）每个NodeManager上可以有多个Container</p>
-<h3 id="1-3-3-MapReduce-架构概述"><a href="#1-3-3-MapReduce-架构概述" class="headerlink" title="1.3.3 MapReduce 架构概述"></a>1.3.3 MapReduce 架构概述</h3><p>MapReduce 将计算过程分为两个阶段：Map 和Reduce<br>1）Map 阶段并行处理输入数据<br>2）Reduce 阶段对Map 结果进行汇总</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/3.png"></h3><h3 id="1-3-4-HDFS、YARN、MapReduce-三者关系"><a href="#1-3-4-HDFS、YARN、MapReduce-三者关系" class="headerlink" title="1.3.4 HDFS、YARN、MapReduce 三者关系"></a>1.3.4 HDFS、YARN、MapReduce 三者关系</h3><p>如图所示：</p>
-<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/4.png"></p>
-<h3 id="1-3-5-大数据技术生态体系"><a href="#1-3-5-大数据技术生态体系" class="headerlink" title="1.3.5 大数据技术生态体系"></a>1.3.5 大数据技术生态体系</h3><p>如图所示：</p>
-<p><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/5.png"></p>
-<p>图中涉及的技术名词解释如下：</p>
-<p>（1）Sqoop：Sqoop 是一款开源的工具，主要用于在Hadoop、Hive 与传统的数据库（MySQL）间进行数据的传递，可以将一个关系型数据库（例如 ：MySQL，Oracle 等）中的数据导进到Hadoop 的HDFS 中，也可以将HDFS 的数据导进到关系型数据库中。<br>（2）Flume：Flume 是一个高可用的，高可靠的，分布式的海量日志采集、聚合和传输的系统，Flume 支持在日志系统中定制各类数据发送方，用于收集数据。<br>（3）Kafka：Kafka 是一种高吞吐量的分布式发布订阅消息系统。<br>（4）Spark：Spark 是当前最流行的开源大数据内存计算框架。可以基于Hadoop 上存储的大数据进行计算。<br>（5）Flink：Flink 是当前最流行的开源大数据内存计算框架。用于实时计算的场景较多。<br>（6）Oozie：Oozie 是一个管理Hadoop 作业（job）的工作流程调度管理系统。<br>（7）HBase：HBase 是一个分布式的、面向列的开源数据库。HBase 不同于一般的关系数据库，它是一个适合于非结构化数据存储的数据库。<br>（8）Hive：Hive 是基于Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的SQL 查询功能，可以将SQL 语句转换为MapReduce 任务进行运行。其优点是学习成本低，可以通过类SQL 语句快速实现简单的MapReduce 统计，不必开发专门的MapReduce 应用，十分适合数据仓库的统计分析。<br>（9）ZooKeeper：它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。</p>
-<h3 id="1-3-6-推荐系统框架图"><a href="#1-3-6-推荐系统框架图" class="headerlink" title="1.3.6 推荐系统框架图"></a>1.3.6 推荐系统框架图</h3><p>推荐系统项目框架<br><img src="/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/6.png"></p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Hadoop的详细介绍了，</strong></p>
-<p><strong>详细的环境搭建教程，可以上csdn开发者论坛，博客园或者百度进行搜索，这里就不过多演示了.</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于二叉树的定义</title>
     <url>/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
     <content><![CDATA[<h2 id="关于二叉树的种类"><a href="#关于二叉树的种类" class="headerlink" title="关于二叉树的种类:"></a>关于二叉树的种类:</h2><hr>
@@ -920,6 +759,167 @@
 <p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
 <h5 id="其中有两个重要知识点："><a href="#其中有两个重要知识点：" class="headerlink" title="其中有两个重要知识点："></a>其中有两个重要知识点：</h5><h6 id="DFS（深度优先遍历）"><a href="#DFS（深度优先遍历）" class="headerlink" title="DFS（深度优先遍历）"></a>DFS（深度优先遍历）</h6><h6 id="BFS（宽度优先遍历）"><a href="#BFS（宽度优先遍历）" class="headerlink" title="BFS（宽度优先遍历）"></a>BFS（宽度优先遍历）</h6><h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对二叉树的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于数据库</title>
+    <url>/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="关于数据库"><a href="#关于数据库" class="headerlink" title="关于数据库:"></a>关于数据库:</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h3><ul>
+<li>是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，简称DBMS。<br>它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。<br>用户通过DBMS访问数据库中的数据，数据库管理员也通过dbms进行数据库的维护工作。<br>数据库管理系统是数据库系统的核心，是管理数据库的软件。<br>我们一般说的数据库,就是指的DBMS: 数据库管理系统</li>
+</ul>
+<h3 id="常见的数据库"><a href="#常见的数据库" class="headerlink" title="常见的数据库"></a>常见的数据库</h3><ul>
+<li><p>Oracle</p>
+<ul>
+<li>运行稳定，可移植性高，功能齐全，性能超群！适用于大型企业领域。</li>
+</ul>
+</li>
+<li><p>DB2</p>
+<ul>
+<li>速度快、可靠性好，适于海量数据，恢复性极强。适用于大中型企业领域。</li>
+</ul>
+</li>
+<li><p>MySQL</p>
+<ul>
+<li>开源，跨平台、体积小，速度快。适用于于中小型企业领域。</li>
+</ul>
+</li>
+<li><p>SQL Server</p>
+<ul>
+<li>全面，效率高，界面友好，操作容易，但是不跨平台。适用于于中小型企业领域。</li>
+</ul>
+</li>
+</ul>
+<h3 id="结构化查询语言SQL"><a href="#结构化查询语言SQL" class="headerlink" title="结构化查询语言SQL"></a>结构化查询语言SQL</h3><ul>
+<li>SQL语言的功能包括查询、操纵、定义和控制，是一个综合的、通用的关系数据库语言，同时又是一种高度非过程化的语言，只要求用户指出做什么而不需要指出怎么做。</li>
+</ul>
+<h3 id="非关系型数据库NoSql"><a href="#非关系型数据库NoSql" class="headerlink" title="非关系型数据库NoSql"></a>非关系型数据库NoSql</h3><ul>
+<li>MongoDB,Redis,HBase…</li>
+</ul>
+<h2 id="RDBMS专业术语"><a href="#RDBMS专业术语" class="headerlink" title="RDBMS专业术语"></a>RDBMS专业术语</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
+<li>具有固定的列数,和任意的行数</li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
+<li>数据库是一些关联表的集合</li>
+</ul>
+<h3 id="列"><a href="#列" class="headerlink" title="列"></a>列</h3><ul>
+<li>一个数据项 Field   字段</li>
+</ul>
+<h3 id="行"><a href="#行" class="headerlink" title="行"></a>行</h3><ul>
+<li>一条记录  row</li>
+</ul>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><ul>
+<li>主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据。</li>
+</ul>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><ul>
+<li>外键用于关联两个表</li>
+</ul>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
+<li>使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录。</li>
+</ul>
+<h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><h3 id="MySQL介绍"><a href="#MySQL介绍" class="headerlink" title="MySQL介绍"></a>MySQL介绍</h3><ul>
+<li>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</li>
+<li>MySQL是开源的，所以你不需要支付额外的费用。</li>
+<li>MySQL支持大型的数据库。可以处理拥有上千万条记录的大型数据库。</li>
+<li>MySQL使用标准的SQL数据语言形式。</li>
+<li>MySQL可以安装在多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等。</li>
+</ul>
+<h3 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h3><ul>
+<li>windows安装</li>
+<li>Mac安装</li>
+</ul>
+<h3 id="MySQL的存储引擎"><a href="#MySQL的存储引擎" class="headerlink" title="MySQL的存储引擎"></a>MySQL的存储引擎</h3><ul>
+<li><p>什么是存储引擎</p>
+<ul>
+<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。这些技术中的每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
+<li>不同的存储引擎性能是不一样的</li>
+</ul>
+</li>
+<li><p>什么是事务</p>
+<ul>
+<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
+</ul>
+</li>
+<li><p>存储引擎分类</p>
+<ul>
+<li><p>MYISAM</p>
+<ul>
+<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
+</li>
+<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
+<ul>
+<li>.frm(存储表定义)</li>
+<li>MYD(MYData，存储数据)</li>
+<li>MYI(MYIndex，存储索引)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>INNODB</p>
+<ul>
+<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
+</ul>
+</li>
+<li><p>MEMORY</p>
+<ul>
+<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
+<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="常用数据库命令"><a href="#常用数据库命令" class="headerlink" title="常用数据库命令"></a>常用数据库命令</h2><h3 id="MySQL数据库分为两种"><a href="#MySQL数据库分为两种" class="headerlink" title="MySQL数据库分为两种"></a>MySQL数据库分为两种</h3><h4 id="一、系统数据库-数据库服务器自带的-自带的4个"><a href="#一、系统数据库-数据库服务器自带的-自带的4个" class="headerlink" title="一、系统数据库(数据库服务器自带的,自带的4个)"></a>一、系统数据库(数据库服务器自带的,自带的4个)</h4><ul>
+<li><p>information_schema</p>
+<ul>
+<li>存储数据库对象信息</li>
+</ul>
+</li>
+</ul>
+<p>如用户表信息,列信息,根除,字符,分区<br>里面的内容我们不能动.</p>
+<ul>
+<li><p>performance_schema</p>
+<ul>
+<li>存储数据库服务器性能参数信息</li>
+</ul>
+</li>
+<li><p>MySQL</p>
+<ul>
+<li>存储数据库用户权限信息</li>
+</ul>
+</li>
+<li><p>test</p>
+<ul>
+<li>一个空的数据库，用户可以使用它也可以不使用它</li>
+</ul>
+</li>
+</ul>
+<h4 id="二、用户数据库"><a href="#二、用户数据库" class="headerlink" title="二、用户数据库"></a>二、用户数据库</h4><ul>
+<li>用户自己创建的数据库,一个项目用一个数据库</li>
+</ul>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
+<li>create database 数据库名称;</li>
+</ul>
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
+<li>drop database 数据库名称;</li>
+</ul>
+<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><ul>
+<li>show databases;</li>
+</ul>
+<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><ul>
+<li>use 数据库名;</li>
+</ul>
+<h3 id="查看数据库当中有多少张表"><a href="#查看数据库当中有多少张表" class="headerlink" title="查看数据库当中有多少张表"></a>查看数据库当中有多少张表</h3><ul>
+<li>show  tables;</li>
+</ul>
+<p><strong>请注意”写的顺序,先使用数据库,再去查有多少张表”</strong></p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对MySQL数据库的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
@@ -1030,43 +1030,6 @@
 <p>$ http-server -c-1   （⚠️只输入http-server的话，更新了代码后，页面不会同步更新）<br>Starting up http-server, serving ./<br>Available on:<br>  <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>  <a href="http://192.168.8.196:8080/">http://192.168.8.196:8080</a><br>Hit CTRL-C to stop the server<br>3.关闭 http-server服务</p>
 <p>按快捷键CTRL-C 终端显示^Chttp-server stopped.即关闭服务成功。</p>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是VSCode的安装和介绍教程了,</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>工具浅玩类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>后端开发工具之IDEA安装教程</title>
-    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
-<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
-<p>(厉害的开发者都用记事本，哈哈)</p>
-<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
-<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。</p>
-<p>活不多说，开启教程：</p>
-<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
-<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.jpg"></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.jpg"></p>
-<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
-<p><strong>双击下载的安装包打开安装即可：</strong></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png"></p>
-<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpg"></p>
-<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
-<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png"></p>
-<h1 id="四、关于中文汉化问题解决方案"><a href="#四、关于中文汉化问题解决方案" class="headerlink" title="四、关于中文汉化问题解决方案"></a>四、关于中文汉化问题解决方案</h1><p><strong>汉化插件对于英文不是很好的开发者来说，开发项目简直不要太轻松</strong></p>
-<p><strong>IDEA可以加载插件，</strong></p>
-<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
-<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)->Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)->MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese->选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/6.png"></p>
-<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
-<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
-<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
-<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
@@ -1358,6 +1321,43 @@
 <p>[3] Latex 方程组表示： <a href="https://blog.csdn.net/lemolemac/article/details/9057471">https://blog.csdn.net/lemolemac/article/details/9057471</a></p>
 <p>[4] 菜鸟HTML教程：<a href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是Typora的安装和介绍教程了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>工具浅玩类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>后端开发工具之IDEA安装教程</title>
+    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
+<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
+<p>(厉害的开发者都用记事本，哈哈)</p>
+<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
+<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。</p>
+<p>活不多说，开启教程：</p>
+<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
+<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.jpg"></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.jpg"></p>
+<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
+<p><strong>双击下载的安装包打开安装即可：</strong></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png"></p>
+<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpg"></p>
+<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
+<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png"></p>
+<h1 id="四、关于中文汉化问题解决方案"><a href="#四、关于中文汉化问题解决方案" class="headerlink" title="四、关于中文汉化问题解决方案"></a>四、关于中文汉化问题解决方案</h1><p><strong>汉化插件对于英文不是很好的开发者来说，开发项目简直不要太轻松</strong></p>
+<p><strong>IDEA可以加载插件，</strong></p>
+<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
+<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)->Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)->MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese->选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/6.png"></p>
+<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
+<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
+<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
+<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
