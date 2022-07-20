@@ -1,0 +1,1877 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端网页开发工具之Typora使用教程, HTML, Python,CSS, JavaScript, JQuery, React, Vue.js，Java,java,mysql,MySQL,Tomcat,navicat">
+    <meta name="description" content="Typora开发工具安装教程:一、Markdown与Typora介绍1.1 Markdown介绍Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
+Markdown 语言在 2004 由约翰·格鲁伯（英语：">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>前端网页开发工具之Typora使用教程 | Welcome*＾-＾*</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Welcome*＾-＾*" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/favicon.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Welcome*＾-＾*</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/favicon.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Welcome*＾-＾*</div>
+        <div class="logo-desc">
+            
+            个人技术Blog记录网站
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://Lil-sum.github.io/SZsum-Profile/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://Lil-sum.github.io/SZsum-Profile/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前端网页开发工具之Typora使用教程</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%B7%A5%E5%85%B7%E6%B5%85%E7%8E%A9%E7%B1%BB/">
+                                <span class="chip bg-color">工具浅玩类</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-18
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.4k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Typora开发工具安装教程"><a href="#Typora开发工具安装教程" class="headerlink" title="Typora开发工具安装教程:"></a>Typora开发工具安装教程:</h1><h1 id="一、Markdown与Typora介绍"><a href="#一、Markdown与Typora介绍" class="headerlink" title="一、Markdown与Typora介绍"></a>一、Markdown与Typora介绍</h1><h2 id="1-1-Markdown介绍"><a href="#1-1-Markdown介绍" class="headerlink" title="1.1 Markdown介绍"></a>1.1 Markdown介绍</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 .md, .markdown。</p>
+<h2 id="1-2-Typora介绍与下载"><a href="#1-2-Typora介绍与下载" class="headerlink" title="1.2 Typora介绍与下载"></a>1.2 Typora介绍与下载</h2><p>Typora编辑器让人们能更简单地用Markdown语言书写文字，解决了使用传统的Markdown编辑器写文的痛点，并且界面简洁优美，实现了实时预览等功能。</p>
+<p>Typora官网： <a target="_blank" rel="noopener" href="https://typora.io/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%8E%BB%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E4%B8%8B%E8%BD%BD%E4%B8%AD%E6%96%87%E7%A0%B4%E8%A7%A3%E7%89%88%EF%BC%8C%E5%96%84%E7%94%A8%E6%90%9C%E7%B4%A2">https://typora.io/，可以去吾爱破解下载中文破解版，善用搜索</a></p>
+<p>windos版本下载地址：<a target="_blank" rel="noopener" href="https://typora.io/#windows">https://typora.io/#windows</a></p>
+<p>请根据自己的电脑配置自行下载安装，过程简单，在此不多做介绍。</p>
+<h1 id="二、Markdown语法"><a href="#二、Markdown语法" class="headerlink" title="二、Markdown语法"></a>二、Markdown语法</h1><h2 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h2><p>使用 # 可以表示标题，一级标题对应一个 # ，二级标题对应两个 # 号，最多至六级标题。在Typora中，# 后要紧接着一个空格才能表示标题，否则就是普通字符。</p>
+<p>在Typora中，也可以使用快捷键Ctrl+1（2，3，4，5，6）表示相对应的标题。Ctrl+0表示段落。标题快捷键信息可在菜单栏中的段落选项下查看。</p>
+<h2 id="2-2-字体"><a href="#2-2-字体" class="headerlink" title="2.2 字体"></a>2.2 字体</h2><p>用一对星号<em>括住的文本表示斜体文本，如：</em>要变斜体的文本*，斜体文本 ；<br>也可以用一对下划线_括住文本来表示斜体文本，如：_要变斜体的文本_，斜体文本 ；<br>也可以使用Typora的快捷键Ctrl+I来表示斜体文本。</p>
+<p>用一对<strong>括住的文本表示粗体文本，如：</strong>要变粗体的文本**，粗体文本；<br>也可以用一对__括住的文本来表示粗体文本，如：__要变粗体的文本__，粗体文本；<br>也可以使用Typora的快捷键Ctrl+B来表示粗体文本。</p>
+<p>用一对<em><strong>括住的文本表示粗斜体文本，如：</strong></em>要变粗斜体的文本***，粗斜体文本；<br>也可以用一对___括住的文本来表示粗斜体文本，如：___要变粗斜体的文本___，粗斜体文本；</p>
+<h2 id="2-3-各种线"><a href="#2-3-各种线" class="headerlink" title="2.3 各种线"></a>2.3 各种线</h2><p>分割线，可以使用三个及以上的 + 号或 * 号或 - 来表示一条分割线；<br>由三个*号表示的分割线：</p>
+<p>由三个+号表示的分割线：</p>
+<p>+++(可能不代表分割线）</p>
+<p>由三个-号表示的分割线：</p>
+<p>删除线，可以使用一对<del>括住的文本来表示删除文本，如：</del>要加删除线的文本~~，删除文本；在Typora中，也可以使用快捷键Alt+Shift+5来加删除线，语法相同，删除线。<br>下划线，可以使用HTML的标签<u>和</u>表示增加下划线的文本，如：<u>要增加下划线的文本</u>，下划线；在Typora中，也可以使用快捷键Ctrl+U来增加下划线，语法也是相同的，下划线。</p>
+<h2 id="2-4-列表"><a href="#2-4-列表" class="headerlink" title="2.4 列表"></a>2.4 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>可以使用*，+或-标记符号来表示无序列表项，记住要在标记符号后添加一个空格，显示如下：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>可以使用数字加上.再加上空格来表示有序列表</p>
+<p>结果如下：</p>
+<p>第一项<br>第二项<br>第三项<br>从结果可以看出，数字并不重要。</p>
+<h3 id="嵌套列表"><a href="#嵌套列表" class="headerlink" title="嵌套列表"></a>嵌套列表</h3><p>一<br>1.1<br>1.1.1<br>1.1.1.2<br>1.1.1.3<br>二<br>2.1<br>2.1.1<br>有序列表第一项<br>有序列表第二项<br>首先使用*、+或-进入列表，然后回车换行，会发现系统自动生成列表第二项，此时按下Tab键，列表第二项变为第一项的子列表。按回车退出当前列表。可以在无序列表中嵌套有序列表。</p>
+<p>一<br>一、一<br>一、一、一<br>一、一、一、一<br>一、一、一、二<br>二<br>二、一<br>无序列表第一项<br>无序列表第二项<br>也可以在有序列表中嵌套无序列表。</p>
+<h2 id="2-5-区块"><a href="#2-5-区块" class="headerlink" title="2.5 区块"></a>2.5 区块</h2><p>当我们想要引用别人的文章内容时，可以将其放在区块内。</p>
+<p>可以使用&gt;加空格来表示区块。</p>
+<p>这是区块</p>
+<p>区块也可以嵌套</p>
+<p>二级区块</p>
+<p>三级区块</p>
+<p>要退出区块，同样使用Enter键即可。</p>
+<h2 id="2-6-代码"><a href="#2-6-代码" class="headerlink" title="2.6 代码"></a>2.6 代码</h2><p>如果是一行代码，可以使用段内代码块来表示，用一对 `（数字1旁边的符号）括住代码。</p>
+<p>比如printf(“Hello World!”)</p>
+<p>如果是代码段，那么可以使用三个 ` 加Enter/空格+编程语言来表示。如：</p>
+<p>include &lt;stdio.h&gt;</p>
+<p>void main(){<br>    printf(“Hello world!\n”);<br>}</p>
+<p>可以在代码块的右下角选择编程语言。</p>
+<h2 id="2-7-链接"><a href="#2-7-链接" class="headerlink" title="2.7 链接"></a>2.7 链接</h2><p>链接的使用方式有两种语法，如下：</p>
+<p><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接文字</a><br>或<br>&lt;链接地址&gt;</p>
+<p>我们可以使用链接打开网页，示例如下：</p>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a><br><a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a><br>显示效果如下：</p>
+<p>百度<br><a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a></p>
+<p>当鼠标移到相应的链接文字时，按住Ctrl+鼠标左键点击访问。</p>
+<p>链接除了可以打开相应的网页外，还可以打开本地文件，使用方式类似，不过链接地址需要使用本地文件的地址，相对地址、绝对地址均可：</p>
+<p>示例：</p>
+<p><a href="./LinkTest.md">打开LinkTest.md文档</a><br><a href="./img/LinkTest.png">打开LinkTest.png照片</a><br>1<br>2<br>结果如下：</p>
+<p>打开LinkTest.md文档</p>
+<p>打开LinkTest.png照片</p>
+<p>经测试可以打开相应的文件。但是不能使用&lt;要打开的文件地址&gt;来打开相应的文件，比如&lt;./LinkTest.md&gt;并没有表现为可链接状态。</p>
+<p>补充知识：</p>
+<p>一个小圆点.表示当前目录，故./LinkTest.md表示当前目录下的LinkTest.md文件，./img/LinkTest.png表示当前目录下的img文件下的LinkTest.png文件。</p>
+<p>两个小圆点..表示上一级目录。</p>
+<p>我们也可以使用链接来实现页内跳转，语法为：</p>
+<p><a href="#%E6%A0%87%E9%A2%98%E6%96%87%E5%AD%97">链接文字</a><br>1<br>示例：</p>
+<p>[跳转到第一章第一节](#1.1 Markdown介绍)<br>1<br>结果如下：<br>[跳转到第一章第一节](#1.1 Markdown介绍)</p>
+<p>经测试，可以成功跳转。</p>
+<h2 id="2-8-图片"><a href="#2-8-图片" class="headerlink" title="2.8 图片"></a>2.8 图片</h2><p>我们也可以在Markdown文档中插入图片，语法如下：</p>
+<p><img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本"></p>
+<p><img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="alt 属性文本" title="可选标题"></p>
+<p>首先一个感叹号<br>然后中括号里面写属性文本<br>小括号里面写图片地址，后可接标题</p>
+<p>示例语法：</p>
+<p><img src="/./img/PictureTest.png" alt="本地png图片PictureTest.png"></p>
+<p><img src="/./img/PictureTest.jpg" alt="本地jpg图片"></p>
+<p>结果如下：</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="网络图片" title="菜鸟教程"></p>
+<p>在Typora中，也可以直接使用Ctrl+C，Ctrl+V来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
+<p>点击文件 –&gt; 偏好设置 –&gt; 图像，如下：</p>
+<p>可以自行设置选择将图片复制到哪个文件夹。</p>
+<p>这里选择复制到指定路径，然后在下面一栏中填写./img，表示将图片复制到你正在编辑的文档同一级的img文件夹下。在下面的选项中，勾选第一、二、三项。正因为勾选了第二项，所以当我们在插入网络图片时，Typora会自动帮我们将网络图片下载到指定的路径下，前面的”菜鸟教程”图片便是如此。</p>
+<p>由于Markdown的特殊语法，故经常会出现图片加载失败的情况，很大的可能就是因为在指定的路径上找不到相应的图片，当然，有时候也是由于Typora的原因，重启Typora即可。</p>
+<h2 id="2-9-表格"><a href="#2-9-表格" class="headerlink" title="2.9 表格"></a>2.9 表格</h2><p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
+<p>结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<p>我们可以设置对齐方式：</p>
+<p>:-表示左对齐<br>-:表示右对齐<br>:-:表示中间对齐<br>示例如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">中间对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+</tbody></table>
+<p>在Typora中，我们可以使用快捷键Ctrl+T来插入表格，并选择行列，当选中表格某一单元格时，可以在表格左上角手动设置对齐方式，右上角选择更多操作。</p>
+<h1 id="三、Typora与数学公式"><a href="#三、Typora与数学公式" class="headerlink" title="三、Typora与数学公式"></a>三、Typora与数学公式</h1><p>在本章中，重点不在于介绍如何插入数学公式，而在于如何表示数学符号。</p>
+<h3 id="3-1-如何插入数学公式"><a href="#3-1-如何插入数学公式" class="headerlink" title="3.1 如何插入数学公式"></a>3.1 如何插入数学公式</h3><p>在Typora中，有两种方法插入数学公式，语法为：</p>
+<p>第一种方法：$数学公式$<br>第二种方法：<br>$$<br>数学公式<br>$$<br>1<br>2<br>3<br>4<br>5<br>第一种方法表示插入行内公式（内联公式），即可以将公式插入到一行中，比如1 + 2 = 3 1+2=31+2=3这样的公式。</p>
+<p>第二种方法表示插入行间公式（外联公式），即可以将公式插入到行与行之间，单独占据一行或者数行的空间，并且居中放置。<br>1 + 2 = 3 1+2=3<br>1+2=3</p>
+<p>如果要在行间公式内换行，在换行的位置使用\。</p>
+<p>接下来重点介绍如何表示数学符号。</p>
+<h3 id="3-2-上标下标"><a href="#3-2-上标下标" class="headerlink" title="3.2 上标下标"></a>3.2 上标下标</h3><p>上下标可以使用^，_后跟相应的符号来实现。如：</p>
+<p>上 标 ： a 1 ， 下 标 ： a 1 上标：a^1，下标：a_1上标：a<br>1<br> ，下标：a<br>1</p>
+<p>如果作为上标、下标的符号不止一个，则需要用花括号{}将其括起来。如：</p>
+<p>上 标 为 12 ： a 12 , 下 标 为 34 ： a 34 上标为12：a^{12},下标为34：a_{34}上标为12：a<br>12<br> ,下标为34：a<br>34</p>
+<p>更多例子：<br>f ( x ) = x x x e x 2 e x 2 f(x)=x^{x^x}\ e^{x2}\ e^{x^2}\<br>f(x)=x<br>x<br>x</p>
+<p>e<br>x2</p>
+<p>e<br>x<br>2</p>
+<h3 id="3-3-根号"><a href="#3-3-根号" class="headerlink" title="3.3 根号"></a>3.3 根号</h3><p>我们可以使用\sqrt{}来表示根号。如：</p>
+<p>\sqrt{2},\sqrt{5}<br>1<br>结果为：</p>
+<p>2 , 5 \sqrt{2},\sqrt{5}<br>2</p>
+<p> ,<br>5</p>
+<p>我们也可以使用\sqrt[]{}来表示更具体的根号信息：</p>
+<p>\sqrt[3]{4}，\sqrt[4]{10}<br>1<br>4 3 ， 10 4 \sqrt[3]{4}，\sqrt[4]{10}<br>3</p>
+<p>4</p>
+<p> ，<br>4</p>
+<p>10</p>
+<h3 id="3-4-上下水平线"><a href="#3-4-上下水平线" class="headerlink" title="3.4 上下水平线"></a>3.4 上下水平线</h3><p>我们可以使用\underline{},\overline{}来表示上下水平线，如：</p>
+<p>$下水平线：\underline{a+b}$<br>$上水平线：\overline{a+b}$<br>1<br>2<br>结果为：</p>
+<p>下 水 平 线 ： a + b ‾ 下水平线：\underline{a+b}下水平线：<br>a+b</p>
+<p>上 水 平 线 ： a + b ‾ 上水平线：\overline{a+b}上水平线：<br>a+b</p>
+<h3 id="3-5-上下水平大括号"><a href="#3-5-上下水平大括号" class="headerlink" title="3.5 上下水平大括号"></a>3.5 上下水平大括号</h3><p>我们可以使用\overbrace{} 和 \underbrace{} 在表达式的上、下方给出一水平的大括号</p>
+<p>$\overbrace{x_1+x_2+x_3}$<br>$\underbrace{x_1+x_2+x_3}$<br>1<br>2<br>结果为：</p>
+<p>x 1 + x 2 + x 3 ⏞ \overbrace{x_1+x_2+x_3}<br>x<br>1</p>
+<p> +x<br>2</p>
+<p> +x<br>3</p>
+<p>x 1 + x 2 + x 3 ⏟ \underbrace{x_1+x_2+x_3}<br>x<br>1</p>
+<p> +x<br>2</p>
+<p> +x<br>3</p>
+<p>当然，我们也可以在括号上添加说明，使用语法为\overbrace{}^{}和\underbrace{}_{}</p>
+<p>$\overbrace{x_1+x_2+x_3}^{3个元素}$<br>$\underbrace{x_1+x_2+x_3}_{3个元素}$<br>1<br>2<br>x 1 + x 2 + x 3 ⏞ 3 个 元 素 \overbrace{x_1+x_2+x_3}^{3个元素}<br>x<br>1</p>
+<p> +x<br>2</p>
+<p> +x<br>3</p>
+<p>3个元素</p>
+<p>x 1 + x 2 + x 3 ⏟ 3 个 元 素 \underbrace{x_1+x_2+x_3}_{3个元素}<br>3个元素<br>x<br>1</p>
+<p> +x<br>2</p>
+<p> +x<br>3</p>
+<h3 id="3-6-向量符号"><a href="#3-6-向量符号" class="headerlink" title="3.6 向量符号"></a>3.6 向量符号</h3><p>我们可以使用\vec{}来表示单个字母向量，其实也可以表示多个字母，但不美观，另两个命令\overrightarrow{} 和\overleftarrow{}在定义从A 到B 的向量时非常有用。如：</p>
+<p>$\vec{a}$<br>$\vec{AB}$<br>$\vec{ABC}$<br>$\overrightarrow{AB}$<br>$\overleftarrow{AB}$<br>1<br>2<br>3<br>4<br>5<br>结果为：</p>
+<p>a ⃗ \vec{a}<br>a</p>
+<p>A B ⃗ \vec{AB}<br>AB</p>
+<p>A B C ⃗ \vec{ABC}<br>ABC</p>
+<p>A B → \overrightarrow{AB}<br>AB</p>
+<p>A B ← \overleftarrow{AB}<br>AB</p>
+<h3 id="3-7-分数"><a href="#3-7-分数" class="headerlink" title="3.7 分数"></a>3.7 分数</h3><p>我们可以使用\frac{}{}来表示分数，如：</p>
+<p>$\frac{1}{2}$<br>$\frac{\sqrt{3}}{4}$<br>1<br>2<br>结果为：</p>
+<p>1 2 \frac{1}{2}<br>2<br>1</p>
+<p>3 4 \frac{\sqrt{3}}{4}<br>4<br>3</p>
+<h3 id="3-8-积分运算符"><a href="#3-8-积分运算符" class="headerlink" title="3.8 积分运算符"></a>3.8 积分运算符</h3><p>积分运算符用\int 来生成 ，用\int_{}^{}来表示积分上下界，如：</p>
+<p>$\int$<br>$\int_{1}^{2}$<br>1<br>2<br>结果为：</p>
+<p>∫ \int∫<br>∫ 1 2 \int_{1}^{2}∫<br>1<br>2</p>
+<h3 id="3-9-求和运算符"><a href="#3-9-求和运算符" class="headerlink" title="3.9 求和运算符"></a>3.9 求和运算符</h3><p>求和运算符可以使用\sum来生成，用\sum_{}^{}来表示求和上下界，如：</p>
+<p>$\sum$<br>$\sum_{i=1}^{10}x_i$<br>1<br>2<br>结果为：</p>
+<p>∑ \sum∑<br>∑ i = 1 10 x i \sum_{i=1}^{10}x_i∑<br>i=1<br>10</p>
+<p> x<br>i</p>
+<p>求和符号的上下标在内联公式里，表现为上面那样，当在外联公式里时，表现如下：<br>∑ i = 1 10 x i \sum_{i=1}^{10}x_i<br>i=1<br>∑<br>10</p>
+<p> x<br>i</p>
+<h3 id="3-10-连乘运算符"><a href="#3-10-连乘运算符" class="headerlink" title="3.10 连乘运算符"></a>3.10 连乘运算符</h3><p>连乘运算符用\prod{}表示，同样地，上下标用prod_{}^{}表示，如：</p>
+<p>$\prod$<br>$\prod_{i=1}^{10}x_i$<br>$$<br>\prod_{i=1}^{10}x_i<br>$$<br>1<br>2<br>3<br>4<br>5<br>结果为：</p>
+<p>∏ \prod∏<br>∏ i = 1 10 x i \prod_{i=1}^{10}x_i∏<br>i=1<br>10</p>
+<p> x<br>i</p>
+<p>∏ i = 1 10 x i \prod_{i=1}^{10}x_i<br>i=1<br>∏<br>10</p>
+<p> x<br>i</p>
+<h3 id="3-11-特殊符号"><a href="#3-11-特殊符号" class="headerlink" title="3.11 特殊符号"></a>3.11 特殊符号</h3><p>希腊字母</p>
+<p>α \alphaα为\alpha，β \betaβ为\beta，γ \gammaγ为\gamma，θ \thetaθ为\theta，ρ \rhoρ为\rho，λ \lambdaλ为\lambda，μ \muμ为\mu</p>
+<p>Δ \DeltaΔ为\Delta，π \piπ为\pi，Ω \OmegaΩ为\Omega</p>
+<p>关系运算符</p>
+<p>大于&gt;，大于等于≥ \geq≥为\geq或\ge</p>
+<p>小于&lt;，小于等于≤ \leq≤为\leq或\le</p>
+<p>等于=，不等于≠ \neq<br></p>
+<p> =为\neq或\ne</p>
+<p>加减乘除</p>
+<p>加+ 减-</p>
+<p>乘× \times×为\times 除÷ \div÷为\div</p>
+<h3 id="3-12-矩阵表示"><a href="#3-12-矩阵表示" class="headerlink" title="3.12 矩阵表示"></a>3.12 矩阵表示</h3><p>我们可以使用以下格式来显示矩阵：<br>$$<br>\begin{matrix}<br>1 &amp; 2 &amp; 3\<br>4 &amp; 5 &amp; 6\<br>\end{matrix}<br>$$<br>1<br>2<br>3<br>4<br>5<br>6<br>结果为：<br>1 2 3 4 5 6<br>142536<br>123456<br>1<br>4</p>
+<p>2<br>5</p>
+<p>3<br>6</p>
+<p>可是这并不是我们常见的矩阵啊，旁边的中括号呢？</p>
+<p>别急，我们先把上面的公式说明一下：</p>
+<p>\begin{matrix}和\end{matrix}说明在它们之间的是矩阵</p>
+<p>1 &amp; 2 &amp; 3\表示第一行的元素，其中用&amp;来分割每一个元素，用\来换行</p>
+<p>现在我们来加括号，很简单，语法如下：</p>
+<p>$$<br>\left[\begin{matrix}<br>1 &amp; 2 &amp; 3\<br>4 &amp; 5 &amp; 6<br>\end{matrix}\right]<br>$$<br>1<br>2<br>3<br>4<br>5<br>6<br>结果为：<br>[ 1 2 3 4 5 6 ] \left[<br>142536<br>123456<br>\right]<br>[<br>1<br>4</p>
+<p>2<br>5</p>
+<p>3<br>6</p>
+<p> ]</p>
+<p>其实我们仅仅在\begin{matrix}前面加了\left[，在\end{matrix}后面加了\right]，这样就能正确显示括号了，那我们可以将[]改为||吗，当然可以，就简单地把\left[，\right]改为\left|和\right|即可。</p>
+<p>$$<br>\left|\begin{matrix}<br>1 &amp; 2 &amp; 3\<br>4 &amp; 5 &amp; 6<br>\end{matrix}\right|<br>$$<br>1<br>2<br>3<br>4<br>5<br>6<br>结果就能显示为行列式了。<br>∣ 1 2 3 4 5 6 ∣ \left|<br>142536<br>123456<br>\right|<br>∣<br>∣<br>∣<br>∣</p>
+<p>1<br>4</p>
+<p>2<br>5</p>
+<p>3<br>6</p>
+<p>∣<br>∣<br>∣<br>∣</p>
+<p>这里仅仅介绍简单的矩阵表示，如果要了解更多矩阵表示法，请自行搜索了解，网上的资料很多。</p>
+<h3 id="3-13-方程组"><a href="#3-13-方程组" class="headerlink" title="3.13 方程组"></a>3.13 方程组</h3><p>$$<br>\begin{equation}<br>\left{<br>             \begin{array}{lr}<br>             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &amp;  \<br>             y=s, &amp; 0\leq s\leq L,|t|\leq1.\<br>             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &amp;<br>             \end{array}<br>\right.<br>\end{equation}<br>$$</p>
+<p>结果如下：<br>KaTeX parse error: No such environment: equation at position 8: \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲ \left{ …</p>
+<p>现在我们一一来解释：</p>
+<p>begin{equation}与\end{euqation}表示它们之间的为方程组。</p>
+<p>\left{和\right.表示在方程组的左边加上{，在右边加上.，因为{在外联公式中有特殊的意义，因此需要在其前面加上转义字符\。</p>
+<p>\begin{array}和\end{array}表示它们之间的是数组，其实这也可以用来表示矩阵。</p>
+<p>{lr}表示有两列，第一列的值靠左排列，用l表示，第二列的值靠右排列，用r表示，如果是中间对齐则为c。</p>
+<p>然后下面三行是方程式，用&amp;分割，用\换行。</p>
+<h3 id="3-14-分段函数"><a href="#3-14-分段函数" class="headerlink" title="3.14 分段函数"></a>3.14 分段函数</h3><p>其实分段函数与方程组类似，示例如下：<br>$$<br>y=<br>\begin{equation}<br>    \left{<br>        \begin{array}{lr}<br>        x-1 &amp; x \leq 0<br>        x+1 &amp; x&gt;0<br>        \end{array}<br>    \right.<br>\end{equation}<br>$$</p>
+<p>结果如下：<br>KaTeX parse error: No such environment: equation at position 11: y= \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲ \left{ \be…<br>就是在\begin{equation}前加y=即可。</p>
+<h1 id="四、Typora与HTML"><a href="#四、Typora与HTML" class="headerlink" title="四、Typora与HTML"></a>四、Typora与HTML</h1><h3 id="4-1-改变字体颜色及大小"><a href="#4-1-改变字体颜色及大小" class="headerlink" title="4.1 改变字体颜色及大小"></a>4.1 改变字体颜色及大小</h3><p>我们可以使用<font> </font>标签来改变字体的颜色及大小，如：</p>
+<p><font size="3" color="red">字体颜色为红色，大小为3</font></p>
+<p><font size="4" color="blue">字体颜色为蓝色，大小为4</font></p>
+<p><font size="6" color="violet">字体颜色为紫罗兰，大小为6</font></p>
+<p>属性size表示字体大小，color表示颜色。</p>
+<h3 id="4-2-改变对齐方式"><a href="#4-2-改变对齐方式" class="headerlink" title="4.2 改变对齐方式"></a>4.2 改变对齐方式</h3><p>我们可以改变字体的对齐方式，用标签</p><p> </p>加上属性align，如：<p></p>
+<p>1 </p><p align="left">左对齐</p><br>2 <p align="center">中间对齐</p><br>3 <p align="right">右对齐</p><br>结果为：<p></p>
+<p align="left">左对齐</p>
+<p align="center">中间对齐</p>
+<p align="right">右对齐</p>
+
+<h3 id="4-3-插入图像"><a href="#4-3-插入图像" class="headerlink" title="4.3 插入图像"></a>4.3 插入图像</h3><p>大家可以自己在Typora中测试。<br>我们可以通过标签<img src="url">来插入图片，如：</p>
+<img src="img/1.jpg">
+结果为：
+
+
+
+<p><img src="/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B9%8BTypora%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/%E6%9C%89%E5%BF%97%E8%80%85%EF%BC%8C%E4%BA%8B%E7%AB%9F%E6%88%90.png"></p>
+<p>我们可以改变<img>标签的属性，来改变图片的大小。</p>
+<img src="img/1.jpg" width="100" height="100/">
+1
+将图片的宽高均设为100
+
+
+
+<p>也可以改变图片的位置，如：</p>
+<p><img src="img/1.jpg" width="30" height="30" style="float:left">图片在左边<br><img src="img/1.jpg" width="30" height="30" style="float:right">图片在右边</p>
+<h1 id="五、扩展用法"><a href="#五、扩展用法" class="headerlink" title="五、扩展用法"></a>五、扩展用法</h1><h3 id="5-1-插入emoji表情"><a href="#5-1-插入emoji表情" class="headerlink" title="5.1 插入emoji表情"></a>5.1 插入emoji表情</h3><p>我们可以使用:emoji:的语法来插入表情，比如：</p>
+<p>:happy:的语法为:happy:</p>
+<p>🦀的语法为<span class="github-emoji"><span>🦀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f980.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>🐴的语法为<span class="github-emoji"><span>🐴</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f434.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<h3 id="5-2-插入目录"><a href="#5-2-插入目录" class="headerlink" title="5.2 插入目录"></a>5.2 插入目录</h3><p>当我们为使用标题将文分章节后，可以在输入[toc]命令的地方自动根据标题生成目录。</p>
+<h3 id="5-3-导出"><a href="#5-3-导出" class="headerlink" title="5.3 导出"></a>5.3 导出</h3><p>选择文件 –&gt; 导出，可以选择导出的文件格式，有pdf,html,word等格式。</p>
+<h3 id="5-4-文本高亮"><a href="#5-4-文本高亮" class="headerlink" title="5.4 文本高亮"></a>5.4 文本高亮</h3><p>在Typora中，可以用一对==将要高亮的文本括起来，如：</p>
+<p>==要高亮的文本==<br>==背景会用黄色填充==<br>1<br>2<br>结果为：</p>
+<p>要高亮的文本<br>背景会用黄色填充</p>
+<p>这个功能可在偏好设置 –&gt; Markdown扩展语法中设置。</p>
+<h3 id="5-5-上下标"><a href="#5-5-上下标" class="headerlink" title="5.5 上下标"></a>5.5 上下标</h3><p>在Typora中，可以用一对<del>将下标括起来，如：H</del>2~O表示H2O</p>
+<p>同样，我们也可以用一对^将上标括起来，如：X^2^表示X2</p>
+<p>上下标可在偏好设置 –&gt; Markdown扩展语法中设置。</p>
+<p><strong>六、参考资料</strong></p>
+<p>[1] 菜鸟Markdown教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p>
+<p>[2] 更多数学符号表达式：<a target="_blank" rel="noopener" href="http://mohu.org/info/symbols/symbols.htm">http://mohu.org/info/symbols/symbols.htm</a></p>
+<p>[3] Latex 方程组表示： <a target="_blank" rel="noopener" href="https://blog.csdn.net/lemolemac/article/details/9057471">https://blog.csdn.net/lemolemac/article/details/9057471</a></p>
+<p>[4] 菜鸟HTML教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是Typora的安装和介绍教程了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://Lil-sum.github.io" rel="external nofollow noreferrer">鵬0755</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://Lil-sum.github.io/2020/12/18/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BTypora%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">https://Lil-sum.github.io/2020/12/18/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BTypora%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://Lil-sum.github.io" target="_blank">鵬0755</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%B7%A5%E5%85%B7%E6%B5%85%E7%8E%A9%E7%B1%BB/">
+                                    <span class="chip bg-color">工具浅玩类</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #vcomments table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #vcomments table td {
+        min-width: 80px;
+    }
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+    #vcomments dfn {
+        font-style: italic;
+    }
+    #vcomments small {
+        font-size: 85%;
+    }
+    #vcomments cite {
+        font-style: normal;
+    }
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #vcomments table td {
+        min-width: 80px;
+    }
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    .v[data-class="v"] .vwrap .vheader .vinput {
+      width: 32%;
+      border-bottom: 1px dashed #dedede;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+
+    let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填，需要用到头像)","link":"商务广告网址(https://)(可不填)"} ;
+    //这里要换行
+
+    new Valine({
+        el: '#vcomments',
+        appId: 'dTgkXVNjiunckFH6GqExJxQW-9Nh9j0Va',
+        appKey: 'scWzQCtamDMmHsmwhQSSED9c',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: '留下你的足迹--',
+        meta: ["nick", "mail,", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["1a1c2170543403965fa466dd94003ca5"],
+        master: ["1a1c2170543403965fa466dd94003ca5"],
+        tagMeta: ["主人", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vsubmit')) {
+            const email = document.querySelector('input[type=email]');
+            const nick = document.querySelector('input[name=nick]');
+            const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            if (!email.value || !nick.value || !reg.test(email.value)) {
+                const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+                const vmark = document.querySelector('.vmark');
+                vmark.innerHTML = str;
+                vmark.style.display = 'block';
+                e.stopPropagation();
+                setTimeout(function() {
+                    vmark.style.display = 'none';
+                    vmark.innerHTML = '';
+                }, 2500);
+            }
+        }
+        }, true);
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="关于数据库">
+                        
+                        <span class="card-title">关于数据库</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            鵬0755
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/">
+                        <span class="chip bg-color">术语定义类</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="关于二叉树">
+                        
+                        <span class="card-title">关于二叉树</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            鵬0755
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/">
+                        <span class="chip bg-color">术语定义类</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('20')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Welcome*＾-＾*<br />'
+            + '文章作者: 鵬0755<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="song"
+                   id="1886371882"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='one'
+                   order='list'
+                   preload='metadata'
+                   volume='0.6'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+    
+             Copyright&nbsp;&copy;
+             
+            <span id="year">2020-2022</span>
+            
+            <a href="/about" target="_blank">鵬0755</a>
+            |&nbsp;Powered by&nbsp;<a href="https://github.com/Lil-sum/SZsum-Profile" target="_blank">鵬0755</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">38.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 网站运行天数统计. -->
+            
+                <span id="sitetime"> 已运行..</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2020";
+                        var startMonth = "6";
+                        var startDate = "9";
+                        var startHour = "14";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已安全运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已安全運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已安全运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已安全運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Lil-sum/SZsum-Profile/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://mail.qq.com/" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://mobile.twitter.com/" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="http://asn.qq.com/" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1244675628" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7259718006" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7259718006" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://blog.csdn.net/Lil_sum0755" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN: https://blog.csdn.net/Lil_sum0755" data-position="top" data-delay="50">
+        <i class="fab fa-csdn">C</i>
+    </a>
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+     <!-- 点击特效  -->
+        <script src="/js/click_show_text.js"></script>
+    
+    
+
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
