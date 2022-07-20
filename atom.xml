@@ -6,7 +6,7 @@
   <link href="https://lil-sum.github.io/atom.xml" rel="self"/>
   
   <link href="https://lil-sum.github.io/"/>
-  <updated>2022-07-18T13:49:32.606Z</updated>
+  <updated>2022-07-20T03:04:43.915Z</updated>
   <id>https://lil-sum.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于JVM</title>
+    <link href="https://lil-sum.github.io/2022/07/18/%E5%85%B3%E4%BA%8EJVM/"/>
+    <id>https://lil-sum.github.io/2022/07/18/%E5%85%B3%E4%BA%8EJVM/</id>
+    <published>2022-07-18T01:46:05.000Z</published>
+    <updated>2022-07-20T03:04:43.915Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;JVM总结&lt;br&gt;一、JVM概述&lt;br&gt;定义&lt;br&gt;Java Virtual</summary>
+        
+      
+    
+    
+    
+    
+    <category term="术语定义类" scheme="https://lil-sum.github.io/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Spark大数据开发</title>
