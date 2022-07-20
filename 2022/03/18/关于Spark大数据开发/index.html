@@ -35,7 +35,8 @@
 <meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Welcome*＾-＾*" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -428,11 +429,6 @@
         
 
         
-        <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
-        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -563,20 +559,123 @@
 <p>下图是yarn-cluster运行模式：<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/17.png"></p>
 <p>client 向yarn提交应用程序，包含ApplicationMaster程序、启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster程序启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster向ResourceManager注册，这样用户可以直接通过ResourceManage查看应用程序的运行状态。<br>ApplicationMaster申请到资源（也就是Container）后，便与对应的NodeManager通信，启动Task。<br>Task向ApplicationMaster汇报运行的状态和进度，以让ApplicationMaster随时掌握各个任务的运行状态，从而可以在任务失败时重新启动任务。<br>应用程序运行完成后，ApplicationMaster向ResourceManager申请注销并关闭自己。</p>
 <h1 id="五、基于WordCount程序开发"><a href="#五、基于WordCount程序开发" class="headerlink" title="五、基于WordCount程序开发"></a>五、基于WordCount程序开发</h1><p>下面使用Java和Scala语言编写WordCount程序</p>
-<h2 id="（1）Java开发WordCount程序"><a href="#（1）Java开发WordCount程序" class="headerlink" title="（1）Java开发WordCount程序"></a>（1）Java开发WordCount程序</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">package com.kfk.spark;</span><br><span class="line"></span><br><span class="line">import org.apache.spark.SparkConf;</span><br><span class="line">import org.apache.spark.api.java.JavaPairRDD;</span><br><span class="line">import org.apache.spark.api.java.JavaRDD;</span><br><span class="line">import org.apache.spark.api.java.JavaSparkContext;</span><br><span class="line">import org.apache.spark.api.java.function.FlatMapFunction;</span><br><span class="line">import org.apache.spark.api.java.function.Function2;</span><br><span class="line">import org.apache.spark.api.java.function.PairFunction;</span><br><span class="line">import org.apache.spark.api.java.function.VoidFunction;</span><br><span class="line">import scala.Tuple2;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author : </span><br><span class="line"> * @email :</span><br><span class="line"> * @date : </span><br><span class="line"> * @time : </span><br><span class="line"> */</span><br><span class="line">public class WordCountJava {</span><br><span class="line">    public static void main(String[] args) {</span><br><span class="line"></span><br><span class="line">        SparkConf sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local");</span><br><span class="line"></span><br><span class="line">        JavaSparkContext sc = new JavaSparkContext(sparkConf);</span><br><span class="line"></span><br><span class="line">        JavaRDD lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt");</span><br><span class="line"></span><br><span class="line">        JavaRDD words = lines.flatMap(new FlatMapFunction&lt;String,String&gt;() {</span><br><span class="line">            public Iterator call(String line) throws Exception {</span><br><span class="line">                return Arrays.asList(line.split(" ")).iterator();</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        JavaPairRDD word = words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() {</span><br><span class="line">            public Tuple2 call(String word) throws Exception {</span><br><span class="line">                return new Tuple2(word,1);</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        JavaPairRDD wordcount = word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() {</span><br><span class="line">            public Integer call(Integer v1, Integer v2) throws Exception {</span><br><span class="line">                return v1+ v2;</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() {</span><br><span class="line">            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception {</span><br><span class="line">                System.out.println(o._1 + " : " + o._2);</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="（1）Java开发WordCount程序"><a href="#（1）Java开发WordCount程序" class="headerlink" title="（1）Java开发WordCount程序"></a>（1）Java开发WordCount程序</h2><pre><code>package com.kfk.spark;
 
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.FlatMapFunction;
+import org.apache.spark.api.java.function.Function2;
+import org.apache.spark.api.java.function.PairFunction;
+import org.apache.spark.api.java.function.VoidFunction;
+import scala.Tuple2;
+
+import java.util.Arrays;
+import java.util.Iterator;
+
+/**
+ * @author : 
+ * @email :
+ * @date : 
+ * @time : 
+ */
+public class WordCountJava {
+    public static void main(String[] args) {
+
+        SparkConf sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local");
+
+        JavaSparkContext sc = new JavaSparkContext(sparkConf);
+
+        JavaRDD lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt");
+
+        JavaRDD words = lines.flatMap(new FlatMapFunction&lt;String,String&gt;() {
+            public Iterator call(String line) throws Exception {
+                return Arrays.asList(line.split(" ")).iterator();
+            }
+        });
+
+        JavaPairRDD word = words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() {
+            public Tuple2 call(String word) throws Exception {
+                return new Tuple2(word,1);
+            }
+        });
+
+        JavaPairRDD wordcount = word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() {
+            public Integer call(Integer v1, Integer v2) throws Exception {
+                return v1+ v2;
+            }
+        });
+
+        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() {
+            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception {
+                System.out.println(o._1 + " : " + o._2);
+            }
+        });
+
+    }
+}
+</code></pre>
 <p>运行结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">spark : 1</span><br><span class="line">hive : 3</span><br><span class="line">hadoop : 3</span><br><span class="line">python : 1</span><br><span class="line">flink : 2</span><br><span class="line">java : 5</span><br><span class="line">storm : 1</span><br><span class="line">hbase : 1</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<pre><code>spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
+<h2 id="（2）Scala开发WordCount程序"><a href="#（2）Scala开发WordCount程序" class="headerlink" title="（2）Scala开发WordCount程序"></a>（2）Scala开发WordCount程序</h2><pre><code>package com.kfk.spark
 
-<h2 id="（2）Scala开发WordCount程序"><a href="#（2）Scala开发WordCount程序" class="headerlink" title="（2）Scala开发WordCount程序"></a>（2）Scala开发WordCount程序</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package com.kfk.spark</span><br><span class="line"></span><br><span class="line">import org.apache.spark.{SparkConf, SparkContext}</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author : </span><br><span class="line"> * @email :</span><br><span class="line"> * @date : </span><br><span class="line"> * @time : </span><br><span class="line"> */</span><br><span class="line">object WordCountScala {</span><br><span class="line">    def main(args: Array[String]): Unit = {</span><br><span class="line">        val sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local")</span><br><span class="line">        val sc = new SparkContext(sparkConf)</span><br><span class="line">        val lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt")</span><br><span class="line"></span><br><span class="line">        // val wordcount = lines.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word,1)).reduceByKey((x,y) =&gt; (x+y)).foreach((_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))</span><br><span class="line"></span><br><span class="line">        val words = lines.flatMap(line =&gt; line.split(" "))</span><br><span class="line">        val word = words.map(word =&gt; (word,1))</span><br><span class="line">        val wordcount = word.reduceByKey((x,y) =&gt; (x+y))</span><br><span class="line"></span><br><span class="line">        // println(wordcount.collect().toList)</span><br><span class="line"></span><br><span class="line">        wordcount.foreach(_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+import org.apache.spark.{SparkConf, SparkContext}
 
+/**
+ * @author : 
+ * @email :
+ * @date : 
+ * @time : 
+ */
+object WordCountScala {
+    def main(args: Array[String]): Unit = {
+        val sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local")
+        val sc = new SparkContext(sparkConf)
+        val lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt")
+
+        // val wordcount = lines.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word,1)).reduceByKey((x,y) =&gt; (x+y)).foreach((_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
+
+        val words = lines.flatMap(line =&gt; line.split(" "))
+        val word = words.map(word =&gt; (word,1))
+        val wordcount = word.reduceByKey((x,y) =&gt; (x+y))
+
+        // println(wordcount.collect().toList)
+
+        wordcount.foreach(_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
+    }
+}
+</code></pre>
 <p>运行结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">spark : 1</span><br><span class="line">hive : 3</span><br><span class="line">hadoop : 3</span><br><span class="line">python : 1</span><br><span class="line">flink : 2</span><br><span class="line">java : 5</span><br><span class="line">storm : 1</span><br><span class="line">hbase : 1</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit --class com.kfk.spark.WordCountJava --master local[2] /opt/jars/wordcountjava.jar </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code>spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
+<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><pre><code>bin/spark-submit --class com.kfk.spark.WordCountJava --master local[2] /opt/jars/wordcountjava.jar 
+</code></pre>
 <p>运行结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">spark : 1</span><br><span class="line">hive : 3</span><br><span class="line">hadoop : 3</span><br><span class="line">python : 1</span><br><span class="line">flink : 2</span><br><span class="line">java : 5</span><br><span class="line">storm : 1</span><br><span class="line">hbase : 1</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<pre><code>spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Spark大数据技术的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
