@@ -400,7 +400,7 @@
                                         'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
                                         'href': jsonObject.href,
                                         'info': jsonObject.info,
-                                        'speed': jsonObject.speed
+                                        
                                     });
                                     index++;
                                 }
@@ -421,11 +421,11 @@
                         const barrager = new Barrager();
                         barrager.set('href', href);
                         barrager.set('info', info);
-                        barrager.set('speed', speed);
+                        
                         barrager.save().then((todo) => {
                             $(" input[ name='info' ] ").val("")
                             $(" input[ name='href' ] ").val("")
-                            $(" input[ name='speed' ] ").val("")
+                           
                         });
                     }
     
