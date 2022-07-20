@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="video, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="标签, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="个人Blog记录网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
 
     
 
-    <title>video | Welcome*＾-＾*</title>
+    <title>标签 | Welcome*＾-＾*</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -264,21 +264,121 @@
 
 </header>
 
-    <!-- vlog模块 -->
-<div style="position: relative; padding: 30% 45%;">
-    <iframe style="
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;" 
-        src="" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true">
-    </iframe>
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Write the Code. Change the World.
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "It is never too old to learn",
+                            
+                        ],
+                        startDelay: 60,
+                        typeSpeed: 30,
+                        loop: true,
+                        backSpeed: 25,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<script>
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+</script>
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/%E6%95%99%E7%A8%8B%E7%B1%BB/" title="教程类: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="教程类" style="background-color: #F9EBEA;">教程类
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/" title="术语定义类: 6">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="术语定义类" style="background-color: #F5EEF8;">术语定义类
+                        <span class="tag-length">6</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%B7%A5%E5%85%B7%E6%B5%85%E7%8E%A9%E7%B1%BB/" title="工具浅玩类: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="工具浅玩类" style="background-color: #D5F5E3;">工具浅玩类
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"教程类","weight":1,"link":"/tags/教程类/"},{"text":"术语定义类","weight":6,"link":"/tags/术语定义类/"},{"text":"工具浅玩类","weight":3,"link":"/tags/工具浅玩类/"}], {
+        autoResize: true
+    });
+</script>
+
+    
+
+</main>
 
 
     <footer class="page-footer bg-color">

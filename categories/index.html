@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="video, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="分类, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="个人Blog记录网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
 
     
 
-    <title>video | Welcome*＾-＾*</title>
+    <title>分类 | Welcome*＾-＾*</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -264,21 +264,73 @@
 
 </header>
 
-    <!-- vlog模块 -->
-<div style="position: relative; padding: 30% 45%;">
-    <iframe style="
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;" 
-        src="" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true">
-    </iframe>
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Write the Code. Change the World.
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "It is never too old to learn",
+                            
+                        ],
+                        startDelay: 60,
+                        typeSpeed: 30,
+                        loop: true,
+                        backSpeed: 25,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<script>
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+</script>
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                你目前还没有对文章进行分类.
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</main>
 
 
     <footer class="page-footer bg-color">
