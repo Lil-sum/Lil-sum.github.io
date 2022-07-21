@@ -434,7 +434,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-18
+                    2021-06-18
                 </div>
                 
 
@@ -465,11 +465,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <div id="articleContent">
                 <p>JVM总结<br>一、JVM概述<br>定义<br>Java Virtual Machine，JAVA程序的运行环境（JAVA二进制字节码的运行环境）</p>
 <p>好处<br>一次编写，到处运行（多系统运行）<br>自动内存管理，垃圾回收机制<br>数组下标越界检查<br>比较<br>JVM、JRE、JDK的意义和区别</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/1.png" class="">                                                                                                                   
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/1.png" class="">                                                                                                                   
 
 <p>​                                                               </p>
 <p>​                                                                   <strong>JVM、JRE、JDK的意义与区别</strong></p>
-<h2 id="二、JVM内存结构"><a href="#二、JVM内存结构" class="headerlink" title="二、JVM内存结构"></a>二、JVM内存结构</h2><h3 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a><strong>整体架构</strong></h3><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/2.png" class="">
+<h2 id="二、JVM内存结构"><a href="#二、JVM内存结构" class="headerlink" title="二、JVM内存结构"></a>二、JVM内存结构</h2><h3 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a><strong>整体架构</strong></h3><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/2.png" class="">
 
 
 
@@ -535,7 +535,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </ul>
 </li>
 </ul>
-<h3 id="2-5、方法区"><a href="#2-5、方法区" class="headerlink" title="2.5、方法区"></a>2.5、方法区</h3><h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a><strong>结构</strong></h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/3.png" class="">
+<h3 id="2-5、方法区"><a href="#2-5、方法区" class="headerlink" title="2.5、方法区"></a>2.5、方法区</h3><h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a><strong>结构</strong></h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/3.png" class="">
 
 
 
@@ -635,13 +635,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <li>分配回收成本较高，但读写性能高</li>
 <li>不受JVM内存回收管理</li>
 </ul>
-<h4 id="文件读写流程"><a href="#文件读写流程" class="headerlink" title="文件读写流程"></a>文件读写流程</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/4.png" class="">
+<h4 id="文件读写流程"><a href="#文件读写流程" class="headerlink" title="文件读写流程"></a>文件读写流程</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/4.png" class="">
 
 
 
 <p>​                                                                                <strong>文件读写流程</strong></p>
 <p><strong>使用了DirectBuffer</strong></p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/5.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/5.png" class="">
 
 <p>​                                                                              <strong>文件读写流程</strong></p>
 <p>直接内存是操作系统和Java代码<strong>都可以访问的一块区域</strong>，无需将代码从系统内存复制到Java堆内存，从而提高 了效率</p>
@@ -720,7 +720,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 </ul>
 <h2 id="三、JVM垃圾回收机制"><a href="#三、JVM垃圾回收机制" class="headerlink" title="三、JVM垃圾回收机制"></a>三、JVM垃圾回收机制</h2><h3 id="1、如何判断对象可以被回收？"><a href="#1、如何判断对象可以被回收？" class="headerlink" title="1、如何判断对象可以被回收？"></a>1、如何判断对象可以被回收？</h3><h4 id="引用计数法"><a href="#引用计数法" class="headerlink" title="引用计数法"></a>引用计数法</h4><p>若对象被引用则该对象的计数加1</p>
 <p>弊端：循环引用时，两个对象的计数都为1，导致两个对象都无法被释放</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/6.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/6.png" class="">
 
 
 
@@ -740,7 +740,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 </ul>
 </li>
 </ul>
-<h4 id="五种引用"><a href="#五种引用" class="headerlink" title="五种引用"></a>五种引用</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/7.png" class="">
+<h4 id="五种引用"><a href="#五种引用" class="headerlink" title="五种引用"></a>五种引用</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/7.png" class="">
 
 
 
@@ -802,25 +802,25 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li><p>虚引用和终结器引用必须配合引用队列</p>
 </li>
 </ul>
-<h3 id="2、垃圾回收算法"><a href="#2、垃圾回收算法" class="headerlink" title="2、垃圾回收算法"></a>2、垃圾回收算法</h3><h4 id="标记—清除算法"><a href="#标记—清除算法" class="headerlink" title="标记—清除算法"></a>标记—清除算法</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/8.png" class="">
+<h3 id="2、垃圾回收算法"><a href="#2、垃圾回收算法" class="headerlink" title="2、垃圾回收算法"></a>2、垃圾回收算法</h3><h4 id="标记—清除算法"><a href="#标记—清除算法" class="headerlink" title="标记—清除算法"></a>标记—清除算法</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/8.png" class="">
 
 
 
 <p>​                                                                           <strong>标记清除算法图解</strong></p>
 <h5 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a><strong>定义</strong></h5><p>标记清除算法顾名思义，是指在虚拟机执行垃圾回收的过程中，先采用标记算法确定可回收对象，然后 垃圾收集器根据标识清除相应的内容，给堆内存腾出相应的空间</p>
 <h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h5><p><strong>容易产生大量的内存碎片</strong>，可能无法满足大对象的内存分配，一旦导致无法分配对象，那就会导致jvm 启动gc，一旦启动gc，我们的应用程序就会暂停，这就导致应用的响应速度变慢</p>
-<h4 id="标记—整理算法"><a href="#标记—整理算法" class="headerlink" title="标记—整理算法"></a>标记—整理算法</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/9.png" class="">
+<h4 id="标记—整理算法"><a href="#标记—整理算法" class="headerlink" title="标记—整理算法"></a>标记—整理算法</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/9.png" class="">
 
 
 
 <p>​                                                                          <strong>标记整理算法图解</strong></p>
 <h5 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a><strong>定义</strong></h5><p>标记-整理会将不被GC Root引用的对象回收，清除其占用的内存空间。然后整理剩余的对象，可以有效避免因内存碎片而导致的问题，但是因为整体需要消耗一定的时间，所以效率较低</p>
-<h4 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/10.png" class="">
+<h4 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/10.png" class="">
 
 <p>​                                     </p>
 <p>​                                                                            <strong>复制算法图解</strong></p>
 <h5 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a><strong>定义</strong></h5><p>将内存分为等大小的两个区域，FROM和TO（TO中为空）。先将被GC Root引用的对象从FROM放入TO 中，再回收不被GC Root引用的对象。然后交换FROM和TO。这样也可以避免内存碎片的问题，但是会占用 双倍的内存空间。</p>
-<h3 id="3、分代回收"><a href="#3、分代回收" class="headerlink" title="3、分代回收"></a>3、分代回收</h3><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/11.png" class="">
+<h3 id="3、分代回收"><a href="#3、分代回收" class="headerlink" title="3、分代回收"></a>3、分代回收</h3><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/11.png" class="">
 
 
 
@@ -828,22 +828,22 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <h4 id="回收流程"><a href="#回收流程" class="headerlink" title="回收流程"></a>回收流程</h4><p>1、新创建的对象都被放在了新生代的伊甸园中</p>
 <p>2、当伊甸园中的内存不足时，就会进行一次垃圾回收，这时的回收叫做 <strong>Minor GC</strong></p>
 <p><strong>Minor GC</strong> 会将<strong>伊甸园和幸存区FROM</strong>存活的对象<strong>先复制到幸存区 TO中</strong>， 并让其寿命加1，再<strong>交换两个幸存区</strong></p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/12.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/12.png" class="">
 
 
 
 <p>​                                                                             <strong>Minor GC 图解</strong></p>
 <p>3、再次创建对象，若<strong>新生代的伊甸园又满了</strong>，则会<strong>再次触发 Minor GC</strong>（会触发 <strong>stop the world</strong>， 暂停其他用 户线程，只让垃圾回收线程工作），这时不仅会回收伊甸园中的垃圾，<strong>还会回收幸存区中的垃圾</strong>，再将活跃对象复制到幸存区TO中。回收以后会交换两个幸存区，并让幸存区中的<strong>对象寿命加1</strong></p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/13.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/13.png" class="">
 
 <p>4、如果幸存区中的对象的<strong>寿命超过某个阈值</strong>（最大为15，4bit），就会被放入老年代中</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/14.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/14.png" class="">
 
 
 
 <p>​                                                                              <strong>对象晋升老年代</strong></p>
 <p>5、如果新生代老年代中的内存都满了，就会先触发<strong>Minor GC</strong>，再触发<strong>Full GC</strong>，扫描新生代和老年代中所有不再使用的对象并回收</p>
-<h4 id="相关参数"><a href="#相关参数" class="headerlink" title="相关参数"></a>相关参数</h4><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/15.png" class="">
+<h4 id="相关参数"><a href="#相关参数" class="headerlink" title="相关参数"></a>相关参数</h4><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/15.png" class="">
 
 
 
@@ -861,7 +861,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>单线程</li>
 <li>内存较小，一般用于个人电脑（CPU核数较少）</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/16.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/16.png" class="">
 
 
 
@@ -897,7 +897,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 </ul>
 </li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/17.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/17.png" class="">
 
 
 
@@ -931,7 +931,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 </ul>
 </li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/18.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/18.png" class="">
 
 
 
@@ -954,7 +954,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <p>CMS收集器的内存回收过程是与用户线程一起<strong>并发执行</strong>的</p>
 <h4 id="G1"><a href="#G1" class="headerlink" title="G1"></a>G1</h4><h5 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a><strong>定义</strong></h5><p><strong>Garbage First</strong></p>
 <p>JDK 9以后默认使用，而且替代了CMS 收集器</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/19.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/19.png" class="">
 
 <h5 id="适用场景和特点"><a href="#适用场景和特点" class="headerlink" title="适用场景和特点"></a><strong>适用场景和特点</strong></h5><ul>
 <li>同时注重吞吐量和低延迟（响应时间）</li>
@@ -962,12 +962,12 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>整体上是<strong>标记-整理</strong>算法，两个区域之间是<strong>复制算法</strong></li>
 </ul>
 <h5 id="相关参数-1"><a href="#相关参数-1" class="headerlink" title="相关参数"></a><strong>相关参数</strong></h5><p>JDK8 并不是默认开启的，所需要参数开启</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/21.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/21.png" class="">
 
 
 
 <p>​                                                                    <strong>G1垃圾回收器相关参数</strong></p>
-<h5 id="G1垃圾回收步骤"><a href="#G1垃圾回收步骤" class="headerlink" title="G1垃圾回收步骤"></a><strong>G1垃圾回收步骤</strong></h5><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/22.png" class="">
+<h5 id="G1垃圾回收步骤"><a href="#G1垃圾回收步骤" class="headerlink" title="G1垃圾回收步骤"></a><strong>G1垃圾回收步骤</strong></h5><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/22.png" class="">
 
 
 
@@ -980,16 +980,16 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <ul>
 <li><strong>会产生STW</strong></li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/23.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/23.png" class="">
 
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/24.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/24.png" class="">
 
 <h6 id="Young-Collection-CM"><a href="#Young-Collection-CM" class="headerlink" title="Young Collection + CM"></a><strong>Young Collection + CM</strong></h6><p>CM：并发标记</p>
 <ul>
 <li>在 Young GC 时会对 <strong>GC Root 进行初始标记</strong></li>
 <li>在老年代<strong>占用堆内存的比例</strong>达到阈值时，对进行并发标记（不会STW），阈值可以根据用户来进行设定</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/25.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/25.png" class="">
 
 <h6 id="Mixed-Collection"><a href="#Mixed-Collection" class="headerlink" title="Mixed Collection"></a><strong>Mixed Collection</strong></h6><p>会对E S O 进行<strong>全面的回收</strong></p>
 <ul>
@@ -999,7 +999,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <p><code>-XX:MaxGCPauseMills:xxx</code> 用于指定最长的停顿时间</p>
 <p><strong>问：</strong>为什么有的老年代被拷贝了，有的没拷贝？</p>
 <p>因为指定了最大停顿时间，如果对所有老年代都进行回收，耗时可能过高。为了保证时间不超过设定的停顿时间，会<strong>回收最有价值的老年代</strong>（回收后能够得到更多内存）</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/26.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/26.png" class="">
 
 <h6 id="Full-GC"><a href="#Full-GC" class="headerlink" title="Full GC"></a>Full GC</h6><p>G1在老年代内存不足时（老年代所占内存超过阈值）</p>
 <ul>
@@ -1009,7 +1009,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <h6 id="Young-Collection-跨代引用"><a href="#Young-Collection-跨代引用" class="headerlink" title="Young Collection 跨代引用"></a><strong>Young Collection 跨代引用</strong></h6><ul>
 <li>新生代回收的跨代引用（老年代引用新生代）问题</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/27.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/27.png" class="">
 
 <ul>
 <li>卡表与Remembered Set<ul>
@@ -1022,14 +1022,14 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>在引用变更时通过post-write barried + dirty card queue</li>
 <li>concurrent refinement threads 更新 Remembered Set</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/28.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/28.png" class="">
 
 <h6 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a><strong>Remark</strong></h6><p>重新标记阶段</p>
 <p>在垃圾回收时，收集器处理对象的过程中 :</p>
 <p>黑色：已被处理，需要保留的</p>
 <p>灰色：正在处理中的</p>
 <p>白色：还未处理的</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/29.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/29.png" class="">
 
 <p>但是在<strong>并发标记</strong>过程中，有可能A被处理了以后未引用C，但该处理过程还未结束，在处理过程结束之前A引用 了C，这时就会用到remark</p>
 <p><strong>过程如下：</strong></p>
@@ -1037,7 +1037,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>之前C未被引用，这时A引用了C，就会给C加一个写屏障，写屏障的指令会被执行，将C放入一个队列当 中，并将C变为 处理中 状态</li>
 <li>在<strong>并发标记</strong>阶段结束以后，重新标记阶段会STW，然后将放在该队列中的对象重新处理，发现有强引用 引用它，就会处理它</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/30.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/30.png" class="">
 
 <h5 id="JDK-8u20-字符串去重"><a href="#JDK-8u20-字符串去重" class="headerlink" title="JDK 8u20 字符串去重"></a>JDK 8u20 字符串去重</h5><p><strong>过程</strong></p>
 <ul>
@@ -1063,7 +1063,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>回收时被优先考虑</li>
 <li>G1会跟踪老年代所有incoming引用，如果老年代incoming引用为0的巨型对象就可以在新生代垃圾回收 时处理掉</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/31.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/31.png" class="">
 
 <h3 id="5、GC调优"><a href="#5、GC调优" class="headerlink" title="5、GC调优"></a>5、GC调优</h3><h4 id="查看虚拟机参数命令"><a href="#查看虚拟机参数命令" class="headerlink" title="查看虚拟机参数命令"></a><strong>查看虚拟机参数命令</strong></h4><pre class="language-none"><code class="language-none">"F:\JAVA\JDK8.0\bin\java" -XX:+PrintFlagsFinal -version | findstr "GC"</code></pre>
 
@@ -1118,7 +1118,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>幸存区需要能够保存 <strong>当前活跃对象+需要晋升的对象</strong></li>
 <li>晋升阈值配置得当，让长时间存活的对象尽快晋升</li>
 </ul>
-<h4 id="老年代调优"><a href="#老年代调优" class="headerlink" title="老年代调优"></a><strong>老年代调优</strong></h4><h2 id="四、类加载与字节码技术"><a href="#四、类加载与字节码技术" class="headerlink" title="四、类加载与字节码技术"></a>四、类加载与字节码技术</h2><h3 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a><strong>结构图</strong></h3><img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/32.png" class="">
+<h4 id="老年代调优"><a href="#老年代调优" class="headerlink" title="老年代调优"></a><strong>老年代调优</strong></h4><h2 id="四、类加载与字节码技术"><a href="#四、类加载与字节码技术" class="headerlink" title="四、类加载与字节码技术"></a>四、类加载与字节码技术</h2><h3 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a><strong>结构图</strong></h3><img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/32.png" class="">
 
 <h3 id="1、类文件结构"><a href="#1、类文件结构" class="headerlink" title="1、类文件结构"></a><strong>1、类文件结构</strong></h3><p>首先获得.class字节码文件</p>
 <p>方法：</p>
@@ -1170,10 +1170,10 @@ u2 major_version;
         }</code></pre>
 
 <h5 id="二、常量池载入运行时常量池"><a href="#二、常量池载入运行时常量池" class="headerlink" title="二、常量池载入运行时常量池"></a><strong>二、常量池载入运行时常量池</strong></h5><p>常量池也属于方法区，只不过这里单独提出来了</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/33.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/33.png" class="">
 
 <h5 id="三、方法字节码载入方法区"><a href="#三、方法字节码载入方法区" class="headerlink" title="三、方法字节码载入方法区"></a>三、方法字节码载入方法区</h5><p>（stack=2，locals=4） 对应操作数栈有2个空间（每个空间4个字节），局部变量表中有4个槽位</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/34.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/34.png" class="">
 
 <h5 id="四、执行引擎开始执行字节码"><a href="#四、执行引擎开始执行字节码" class="headerlink" title="四、执行引擎开始执行字节码"></a>四、执行引擎开始执行字节码</h5><p><strong>bipush 10</strong></p>
 <ul>
@@ -1185,62 +1185,62 @@ u2 major_version;
 </ul>
 </li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/35.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/35.png" class="">
 
 <p><strong>istore 1</strong></p>
 <p>将操作数栈栈顶元素弹出，放入局部变量表的slot 1中</p>
 <p>对应代码中的</p>
 <pre class="language-none"><code class="language-none">a = 10</code></pre>
 
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/36.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/36.png" class="">
 
 <p><strong>ldc #3</strong></p>
 <p>读取运行时常量池中#3，即32768(超过short最大值范围的数会被放到运行时常量池中)，将其加载到操作数 栈中</p>
 <p><strong>注意：</strong> Short.MAX_VALUE 是 32767，所以 32768 = Short.MAX_VALUE + 1 实际是在编译期间计算好的</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/37.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/37.png" class="">
 
 <p><strong>istore 2</strong></p>
 <p>将操作数栈中的元素弹出，放到局部变量表的2号位置</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/38.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/38.png" class="">
 
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/39.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/39.png" class="">
 
 <p><strong>iload1 iload2</strong></p>
 <p>将局部变量表中1号位置和2号位置的元素放入操作数栈中</p>
 <ul>
 <li>因为只能在操作数栈中执行运算操作</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/40.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/40.png" class="">
 
 <p><strong>iadd</strong></p>
 <p>将操作数栈中的两个元素<strong>弹出栈</strong>并相加，结果在压入操作数栈中</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/41.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/41.png" class="">
 
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/42.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/42.png" class="">
 
 <p><strong>istore 3</strong></p>
 <p>将操作数栈中的元素弹出，放入局部变量表的3号位置</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/43.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/43.png" class="">
 
 <p><strong>getstatic #4</strong></p>
 <p>在运行时常量池中找到#4，发现是一个对象 在堆内存中找到该对象，并将其<strong>引用</strong>放入操作数栈中</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/44.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/44.png" class="">
 
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/45.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/45.png" class="">
 
 <p><strong>iload 3</strong></p>
 <p>将局部变量表中3号位置的元素压入操作数栈中</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/46.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/46.png" class="">
 
 <p><strong>invokevirtual 5</strong></p>
 <p>找到常量池 #5 项，定位到方法区 java/io/PrintStream.println:(I)V 方法</p>
 <p>生成新的栈帧（分配 locals、stack等）</p>
 <p>传递参数，执行新栈帧中的字节码</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/47.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/47.png" class="">
 
 <p>执行完毕，弹出栈帧 清除</p>
 <p>main 操作数栈内容</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/48.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/48.png" class="">
 
 <p><strong>return</strong></p>
 <p>完成 main 方法调用，弹出 main 栈帧，程序结束</p>
@@ -1691,7 +1691,7 @@ class Lock{}</code></pre>
 
 <h4 id="自动拆装箱"><a href="#自动拆装箱" class="headerlink" title="自动拆装箱"></a>自动拆装箱</h4><p>基本类型和其包装类型的相互转换过程，称为拆装箱</p>
 <p>在JDK 5以后，它们的转换可以在编译期自动完成</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/49.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/49.png" class="">
 
 <h4 id="泛型集合取值"><a href="#泛型集合取值" class="headerlink" title="泛型集合取值"></a><strong>泛型集合取值</strong></h4><p>泛型也是在 JDK 5 开始加入的特性，但 java 在<strong>编译泛型代码后</strong>会执行 <strong>泛型擦除</strong> 的动作，即泛型信息在编译为字节码之后就<strong>丢失</strong>了，实际的类型都当做了 <strong>Object</strong> 类型来处理：</p>
 <pre class="language-none"><code class="language-none">public class Demo3 {
@@ -2038,7 +2038,7 @@ class Lock{}</code></pre>
 <li>如果这个类还有父类没有加载，<strong>先加载父类</strong></li>
 <li>加载和链接可能是<strong>交替运行</strong>的</li>
 </ul>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/50.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/50.png" class="">
 
 <ul>
 <li>instanceKlass保存在<strong>方法区</strong>。JDK 8以后，方法区位于元空间中，而元空间又位于本地内存中</li>
@@ -2060,7 +2060,7 @@ class Lock{}</code></pre>
 <h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a><strong>初始化</strong></h4><p>初始化阶段就是<strong>执行类构造器clinit()方法的过程</strong>，虚拟机会保证这个类的『构造方法』的线程安全</p>
 <p>clinit()方法是由编译器自动收集类中的所有类变量的<strong>赋值动作和静态语句块（static{}块）</strong>中的语句合并产生的</p>
 <p>注意：编译器收集的顺序是由语句在源文件中<strong>出现的顺序决定</strong>的，静态语句块中只能访问到定义在静态语句块之前的 变量，定义在它<strong>之后</strong>的变量，在前面的静态语句块<strong>可以赋值，但是不能访问</strong>，如</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/51.png" class="">
+<img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/51.png" class="">
 
 <p><strong>发生时机</strong></p>
 <p><strong>类的初始化的懒惰的</strong>，以下情况会初始化</p>
@@ -2357,7 +2357,7 @@ class Lock{}</code></pre>
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://Lil-sum.github.io/2022/07/18/%E5%85%B3%E4%BA%8EJVM/">https://Lil-sum.github.io/2022/07/18/%E5%85%B3%E4%BA%8EJVM/</a>
+                    <a href="https://Lil-sum.github.io/2021/06/18/%E5%85%B3%E4%BA%8EJVM/">https://Lil-sum.github.io/2021/06/18/%E5%85%B3%E4%BA%8EJVM/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2829,18 +2829,17 @@ class Lock{}</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/07/18/%E5%85%B3%E4%BA%8EJVM/">
+                <a href="/2021/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Lil-sum/Lil-sum.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="关于JVM">
+                        <img src="https://cdn.jsdelivr.net/gh/Lil-sum/Lil-sum.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="后端开发工具之PyCharm安装教程">
                         
-                        <span class="card-title">关于JVM</span>
+                        <span class="card-title">后端开发工具之PyCharm安装教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2850,9 +2849,9 @@ class Lock{}</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -2861,12 +2860,11 @@ class Lock{}</code></pre>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E5%AE%9A%E4%B9%89%E7%B1%BB/">
-                        <span class="chip bg-color">术语定义类</span>
+                    <a href="/tags/%E6%95%99%E7%A8%8B%E7%B1%BB/">
+                        <span class="chip bg-color">教程类</span>
                     </a>
                     
                 </div>
@@ -2880,13 +2878,13 @@ class Lock{}</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/18/%E5%85%B3%E4%BA%8ESpark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
+                <a href="/2021/05/18/%E5%85%B3%E4%BA%8ESQL%E8%AF%AD%E8%A8%80/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Lil-sum/Lil-sum.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="关于Spark大数据开发">
+                        <img src="https://cdn.jsdelivr.net/gh/Lil-sum/Lil-sum.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="关于SQL语言">
                         
-                        <span class="card-title">关于Spark大数据开发</span>
+                        <span class="card-title">关于SQL语言</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2897,7 +2895,7 @@ class Lock{}</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
                             </span>
                         <span class="publish-author">
                             
