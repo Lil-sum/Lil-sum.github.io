@@ -443,7 +443,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    16.3k
+                    17.2k
                 </div>
                 
 
@@ -476,7 +476,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>​                                                                                    <strong>JVM结构图</strong></p>
 <h3 id="2-1、程序计数器"><a href="#2-1、程序计数器" class="headerlink" title="2.1、程序计数器"></a>2.1、程序计数器</h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a><strong>作用</strong></h4><p>用于保存JVM中下一条所要执行的指令的地址</p>
 <p>JAVA代码执行流程：</p>
-<p>JAVA代码 =&gt; 编译后得到二进制字节码（JVM指令）=&gt; 解释器 =&gt; 机器码（0101） =&gt; CPU执行</p>
+<p>JAVA代码 &#x3D;&gt; 编译后得到二进制字节码（JVM指令）&#x3D;&gt; 解释器 &#x3D;&gt; 机器码（0101） &#x3D;&gt; CPU执行</p>
 <p>其中程序计数器保存下一条JVM指令，当上一个指令完成时继续执行代码</p>
 <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a><strong>特点</strong></h4><ul>
 <li>线程私有<ul>
@@ -623,7 +623,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <h5 id="StringTable调优"><a href="#StringTable调优" class="headerlink" title="StringTable调优"></a><strong>StringTable调优</strong></h5><ul>
 <li>因为StringTable是由HashTable实现的，所以可以<strong>适当增加HashTable桶的个数</strong>，来减少字符串放入串池所需要的时间</li>
 </ul>
-<pre class="language-none"><code class="language-none">-XX:StringTableSize=xxxx</code></pre>
+<pre class="language-none"><code class="language-none">-XX:StringTableSize&#x3D;xxxx</code></pre>
 
 <ul>
 <li><p>考虑是否需要将字符串对象入池</p>
@@ -646,73 +646,73 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>​                                                                              <strong>文件读写流程</strong></p>
 <p>直接内存是操作系统和Java代码<strong>都可以访问的一块区域</strong>，无需将代码从系统内存复制到Java堆内存，从而提高 了效率</p>
 <h4 id="释放原理"><a href="#释放原理" class="headerlink" title="释放原理"></a>释放原理</h4><p>直接内存的回收不是通过JVM的垃圾回收来释放的，而是通过<strong>unsafe.freeMemory</strong>来手动释放</p>
-<pre class="language-none"><code class="language-none">//通过ByteBuffer申请1M的直接内存
-ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;通过ByteBuffer申请1M的直接内存
+ByteBuffer byteBuffer &#x3D; ByteBuffer.allocateDirect(_1M);</code></pre>
 
 <p>申请直接内存，但JVM并不能回收直接内存中的内容，它是如何实现回收的呢？</p>
 <p><strong>allocateDirect的实现</strong></p>
-<pre class="language-none"><code class="language-none">public static ByteBuffer allocateDirect(int capacity) {
+<pre class="language-none"><code class="language-none">public static ByteBuffer allocateDirect(int capacity) &#123;
  return new DirectByteBuffer(capacity);
-}</code></pre>
+&#125;</code></pre>
 
 <p><strong>DirectByteBuffer类</strong></p>
-<pre class="language-none"><code class="language-none">DirectByteBuffer(int cap) { // package-private
+<pre class="language-none"><code class="language-none">DirectByteBuffer(int cap) &#123; &#x2F;&#x2F; package-private
 
             super(-1, 0, cap, cap);
-            boolean pa = VM.isDirectMemoryPageAligned();
-            int ps = Bits.pageSize();
-            long size = Math.max(1L, (long)cap + (pa ? ps : 0));
+            boolean pa &#x3D; VM.isDirectMemoryPageAligned();
+            int ps &#x3D; Bits.pageSize();
+            long size &#x3D; Math.max(1L, (long)cap + (pa ? ps : 0));
             Bits.reserveMemory(size, cap);
-            long base = 0;
-            try {
-                base = unsafe.allocateMemory(size); //申请内存
-            } catch (OutOfMemoryError x) {
+            long base &#x3D; 0;
+            try &#123;
+                base &#x3D; unsafe.allocateMemory(size); &#x2F;&#x2F;申请内存
+            &#125; catch (OutOfMemoryError x) &#123;
                 Bits.unreserveMemory(size, cap);
                 throw x;
-            }
+            &#125;
             unsafe.setMemory(base, size, (byte) 0);
-            if (pa &amp;&amp; (base % ps != 0)) {
-                // Round up to page boundary
-                address = base + ps - (base &amp; (ps - 1));
-            } else {
-                address = base;
-            }
-            //通过虚引用，来实现直接内存的释放，this为虚引
-            cleaner = Cleaner.create(this, new Deallocator(base, size, cap)); 
-            att = null;
-        }</code></pre>
+            if (pa &amp;&amp; (base % ps !&#x3D; 0)) &#123;
+                &#x2F;&#x2F; Round up to page boundary
+                address &#x3D; base + ps - (base &amp; (ps - 1));
+            &#125; else &#123;
+                address &#x3D; base;
+            &#125;
+            &#x2F;&#x2F;通过虚引用，来实现直接内存的释放，this为虚引
+            cleaner &#x3D; Cleaner.create(this, new Deallocator(base, size, cap)); 
+            att &#x3D; null;
+        &#125;</code></pre>
 
 <p>这里调用了一个Cleaner的create方法，且后台线程还会对虚引用的对象监测</p>
 <p>如果虚引用的实际对象（这里是DirectByteBuffer）被回收以后，就会调用Cleaner的clean方法，来清除直接内存中占用的内存</p>
-<pre class="language-none"><code class="language-none">public void clean() {
-            if (remove(this)) {
-                try {
-                    this.thunk.run(); //调用run方法
-                } catch (final Throwable var2) {
-                    AccessController.doPrivileged(new PrivilegedAction&lt;Void&gt;() {
-                        public Void run() {
-                            if (System.err != null) {
-                                (new Error("Cleaner terminated abnormally", var2)).printStackTrace();
-                            }
+<pre class="language-none"><code class="language-none">public void clean() &#123;
+            if (remove(this)) &#123;
+                try &#123;
+                    this.thunk.run(); &#x2F;&#x2F;调用run方法
+                &#125; catch (final Throwable var2) &#123;
+                    AccessController.doPrivileged(new PrivilegedAction&lt;Void&gt;() &#123;
+                        public Void run() &#123;
+                            if (System.err !&#x3D; null) &#123;
+                                (new Error(&quot;Cleaner terminated abnormally&quot;, var2)).printStackTrace();
+                            &#125;
                             System.exit(1);
                             return null;
-                        }
-                    });
-                }
+                        &#125;
+                    &#125;);
+                &#125;
 
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
 
 <p>对应对象的run方法</p>
-<pre class="language-none"><code class="language-none">public void run() {
-           if (address == 0) {
-               // Paranoia
+<pre class="language-none"><code class="language-none">public void run() &#123;
+           if (address &#x3D;&#x3D; 0) &#123;
+               &#x2F;&#x2F; Paranoia
                return;
-           }
-           unsafe.freeMemory(address); //释放直接内存中占用的内存
-           address = 0;
+           &#125;
+           unsafe.freeMemory(address); &#x2F;&#x2F;释放直接内存中占用的内存
+           address &#x3D; 0;
            Bits.unreserveMemory(size, capacity);
-       }</code></pre>
+       &#125;</code></pre>
 
 <h4 id="直接内存的回收机制总结"><a href="#直接内存的回收机制总结" class="headerlink" title="直接内存的回收机制总结"></a>直接内存的回收机制总结</h4><ul>
 <li>使用了Unsafe类来完成直接内存的分配回收，回收需要主动调用freeMemory方法</li>
@@ -752,35 +752,35 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <ul>
 <li>软引用的使用</li>
 </ul>
-<pre class="language-none"><code class="language-none">public class Demo1 {
-            public static void main(String[] args) {
-                final int _4M = 4*1024*1024;
-				//使用软引用对象 list和SoftReference是强引用，而SoftReference和byte数组则是软引用
-                List&lt;SoftReference&lt;byte[]&gt;&gt; list = new ArrayList&lt;&gt;();
-                SoftReference&lt;byte[]&gt; ref= new SoftReference&lt;&gt;(new byte[_4M]);
-            }
-        }</code></pre>
+<pre class="language-none"><code class="language-none">public class Demo1 &#123;
+            public static void main(String[] args) &#123;
+                final int _4M &#x3D; 4*1024*1024;
+				&#x2F;&#x2F;使用软引用对象 list和SoftReference是强引用，而SoftReference和byte数组则是软引用
+                List&lt;SoftReference&lt;byte[]&gt;&gt; list &#x3D; new ArrayList&lt;&gt;();
+                SoftReference&lt;byte[]&gt; ref&#x3D; new SoftReference&lt;&gt;(new byte[_4M]);
+            &#125;
+        &#125;</code></pre>
 
 <p>如果在垃圾回收时发现内存不足，在回收软引用所指向的对象时，<strong>软引用本身不会被清理</strong></p>
 <p>如果想要<strong>清理软引用，需要使用引用队列</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo1 {
-            public static void main(String[] args) {
-                final int _4M = 4*1024*1024;
-                //使用引用队列，用于移除引用为空的软引用对象
-                ReferenceQueue&lt;byte[]&gt; queue = new ReferenceQueue&lt;&gt;();
-                //使用软引用对象 list和SoftReference是强引用，而SoftReference和byte数组则是软引用
-                List&lt;SoftReference&lt;byte[]&gt;&gt; list = new ArrayList&lt;&gt;();
-                SoftReference&lt;byte[]&gt; ref= new SoftReference&lt;&gt;(new byte[_4M]);
-                //遍历引用队列，如果有元素，则移除
-                Reference&lt;? extends byte[]&gt; poll = queue.poll();
-                while(poll != null) {
-                //引用队列不为空，则从集合中移除该元素
+<pre class="language-none"><code class="language-none">public class Demo1 &#123;
+            public static void main(String[] args) &#123;
+                final int _4M &#x3D; 4*1024*1024;
+                &#x2F;&#x2F;使用引用队列，用于移除引用为空的软引用对象
+                ReferenceQueue&lt;byte[]&gt; queue &#x3D; new ReferenceQueue&lt;&gt;();
+                &#x2F;&#x2F;使用软引用对象 list和SoftReference是强引用，而SoftReference和byte数组则是软引用
+                List&lt;SoftReference&lt;byte[]&gt;&gt; list &#x3D; new ArrayList&lt;&gt;();
+                SoftReference&lt;byte[]&gt; ref&#x3D; new SoftReference&lt;&gt;(new byte[_4M]);
+                &#x2F;&#x2F;遍历引用队列，如果有元素，则移除
+                Reference&lt;? extends byte[]&gt; poll &#x3D; queue.poll();
+                while(poll !&#x3D; null) &#123;
+                &#x2F;&#x2F;引用队列不为空，则从集合中移除该元素
                     list.remove(poll);
-                //移动到引用队列中的下一个元素
-                    poll = queue.poll();
-                }
-            }
-        }</code></pre>
+                &#x2F;&#x2F;移动到引用队列中的下一个元素
+                    poll &#x3D; queue.poll();
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <ul>
 <li><strong>大概思路为：</strong>查看引用队列中有无软引用，如果有，则将该软引用从存放它的集合中移除（这里为一个list集合）</li>
@@ -797,7 +797,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <p>如上图，B对象不再引用A4对象。这是终结器对象就会被放入引用队列中，引用队列会根据它，找到它所 引用的对象。然后调用被引用对象的finalize方法。调用以后，该对象就可以被垃圾回收了</p>
 <h5 id="引用队列"><a href="#引用队列" class="headerlink" title="引用队列"></a>引用队列</h5><ul>
 <li><p>软引用和弱引用可以配合引用队列</p>
-<p>在弱引用和虚引用所引用的对象被回收以后，会将这些引用放入引用队列中，方便一起回收这些软/ 弱引用对象</p>
+<p>在弱引用和虚引用所引用的对象被回收以后，会将这些引用放入引用队列中，方便一起回收这些软&#x2F; 弱引用对象</p>
 </li>
 <li><p>虚引用和终结器引用必须配合引用队列</p>
 </li>
@@ -854,7 +854,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <h3 id="4、垃圾回收器"><a href="#4、垃圾回收器" class="headerlink" title="4、垃圾回收器"></a>4、垃圾回收器</h3><h4 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a><strong>相关概念</strong></h4><p><strong>并行收集：</strong>指多条垃圾收集线程并行工作，但此时用户线程仍处于等待状态。</p>
 <p><strong>并发收集：</strong>指用户线程与垃圾收集线程同时工作（不一定是并行的可能会交替执行）。用户程序在继续运行， 而垃圾收集程序运行在另一个CPU上</p>
 <p><strong>吞吐量：</strong>即CPU用于<strong>运行用户代码的时间</strong>与<strong>CPU总消耗时间</strong>的比值</p>
-<p> （吞吐量 = 运行用户代码时间 / ( 运行用户 代码时间 + 垃圾收集时间 )）</p>
+<p> （吞吐量 &#x3D; 运行用户代码时间 &#x2F; ( 运行用户 代码时间 + 垃圾收集时间 )）</p>
 <p> 例如：虚拟机共运行100分钟，垃圾收集器花掉1分钟，那么吞吐量 就是99%</p>
 <p><strong>串行：</strong></p>
 <ul>
@@ -943,7 +943,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <p>基于标记-清除算法实现。并发收集、低停顿，但是会产生内存碎片</p>
 </li>
 <li><p><strong>应用场景</strong></p>
-<p>适用于注重服务的响应速度，希望系统停顿时间最短，给用户带来更好的体验等场景下。如web程 序、b/s服务</p>
+<p>适用于注重服务的响应速度，希望系统停顿时间最短，给用户带来更好的体验等场景下。如web程 序、b&#x2F;s服务</p>
 </li>
 </ul>
 <p><strong>CMS收集器的运行过程分为下列4步：</strong></p>
@@ -1065,7 +1065,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 </ul>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/31.png" class="">
 
-<h3 id="5、GC调优"><a href="#5、GC调优" class="headerlink" title="5、GC调优"></a>5、GC调优</h3><h4 id="查看虚拟机参数命令"><a href="#查看虚拟机参数命令" class="headerlink" title="查看虚拟机参数命令"></a><strong>查看虚拟机参数命令</strong></h4><pre class="language-none"><code class="language-none">"F:\JAVA\JDK8.0\bin\java" -XX:+PrintFlagsFinal -version | findstr "GC"</code></pre>
+<h3 id="5、GC调优"><a href="#5、GC调优" class="headerlink" title="5、GC调优"></a>5、GC调优</h3><h4 id="查看虚拟机参数命令"><a href="#查看虚拟机参数命令" class="headerlink" title="查看虚拟机参数命令"></a><strong>查看虚拟机参数命令</strong></h4><pre class="language-none"><code class="language-none">&quot;F:\JAVA\JDK8.0\bin\java&quot; -XX:+PrintFlagsFinal -version | findstr &quot;GC&quot;</code></pre>
 
 <p>可以根据参数去查询具体的信息</p>
 <h4 id="调优领域"><a href="#调优领域" class="headerlink" title="调优领域"></a><strong>调优领域</strong></h4><ul>
@@ -1075,7 +1075,7 @@ ByteBuffer byteBuffer = ByteBuffer.allocateDirect(_1M);</code></pre>
 <li>IO</li>
 <li>GC</li>
 </ul>
-<h4 id="确定目标"><a href="#确定目标" class="headerlink" title="确定目标"></a><strong>确定目标</strong></h4><p>低延迟/高吞吐量？ 选择合适的GC</p>
+<h4 id="确定目标"><a href="#确定目标" class="headerlink" title="确定目标"></a><strong>确定目标</strong></h4><p>低延迟&#x2F;高吞吐量？ 选择合适的GC</p>
 <ul>
 <li>CMS G1 ZGC</li>
 <li>ParallelGC</li>
@@ -1152,7 +1152,7 @@ attribute_info attributes[attributes_count];</code></pre>
 <pre class="language-none"><code class="language-none">u2 minor_version;
 u2 major_version;
 0000000 ca fe ba be 00 00 00 34 00 23 0a 00 06 00 15 09
-34H = 52，代表JDK8</code></pre>
+34H &#x3D; 52，代表JDK8</code></pre>
 
 <h3 id="2、字节码指令"><a href="#2、字节码指令" class="headerlink" title="2、字节码指令"></a>2、字节码指令</h3><p>可参考</p>
 <p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5</a></p>
@@ -1160,19 +1160,19 @@ u2 major_version;
 <p>Oracle 提供了 <strong>javap</strong> 工具来反编译 class 文件</p>
 <pre class="language-none"><code class="language-none">javap -v C:\study\src\com\nyima\JVM\day01\Main.class</code></pre>
 
-<h4 id="图解方法执行流程"><a href="#图解方法执行流程" class="headerlink" title="图解方法执行流程"></a><strong>图解方法执行流程</strong></h4><h5 id="一、执行的方法代码"><a href="#一、执行的方法代码" class="headerlink" title="一、执行的方法代码"></a>一、执行的方法代码</h5><pre class="language-none"><code class="language-none">public class Demo3_1 {
-            public static void main(String[] args) {
-                int a = 10;
-                int b = Short.MAX_VALUE + 1;
-                int c = a + b;
+<h4 id="图解方法执行流程"><a href="#图解方法执行流程" class="headerlink" title="图解方法执行流程"></a><strong>图解方法执行流程</strong></h4><h5 id="一、执行的方法代码"><a href="#一、执行的方法代码" class="headerlink" title="一、执行的方法代码"></a>一、执行的方法代码</h5><pre class="language-none"><code class="language-none">public class Demo3_1 &#123;
+            public static void main(String[] args) &#123;
+                int a &#x3D; 10;
+                int b &#x3D; Short.MAX_VALUE + 1;
+                int c &#x3D; a + b;
                 System.out.println(c);
-            }
-        }</code></pre>
+            &#125;
+        &#125;</code></pre>
 
 <h5 id="二、常量池载入运行时常量池"><a href="#二、常量池载入运行时常量池" class="headerlink" title="二、常量池载入运行时常量池"></a><strong>二、常量池载入运行时常量池</strong></h5><p>常量池也属于方法区，只不过这里单独提出来了</p>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/33.png" class="">
 
-<h5 id="三、方法字节码载入方法区"><a href="#三、方法字节码载入方法区" class="headerlink" title="三、方法字节码载入方法区"></a>三、方法字节码载入方法区</h5><p>（stack=2，locals=4） 对应操作数栈有2个空间（每个空间4个字节），局部变量表中有4个槽位</p>
+<h5 id="三、方法字节码载入方法区"><a href="#三、方法字节码载入方法区" class="headerlink" title="三、方法字节码载入方法区"></a>三、方法字节码载入方法区</h5><p>（stack&#x3D;2，locals&#x3D;4） 对应操作数栈有2个空间（每个空间4个字节），局部变量表中有4个槽位</p>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/34.png" class="">
 
 <h5 id="四、执行引擎开始执行字节码"><a href="#四、执行引擎开始执行字节码" class="headerlink" title="四、执行引擎开始执行字节码"></a>四、执行引擎开始执行字节码</h5><p><strong>bipush 10</strong></p>
@@ -1190,13 +1190,13 @@ u2 major_version;
 <p><strong>istore 1</strong></p>
 <p>将操作数栈栈顶元素弹出，放入局部变量表的slot 1中</p>
 <p>对应代码中的</p>
-<pre class="language-none"><code class="language-none">a = 10</code></pre>
+<pre class="language-none"><code class="language-none">a &#x3D; 10</code></pre>
 
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/36.png" class="">
 
 <p><strong>ldc #3</strong></p>
 <p>读取运行时常量池中#3，即32768(超过short最大值范围的数会被放到运行时常量池中)，将其加载到操作数 栈中</p>
-<p><strong>注意：</strong> Short.MAX_VALUE 是 32767，所以 32768 = Short.MAX_VALUE + 1 实际是在编译期间计算好的</p>
+<p><strong>注意：</strong> Short.MAX_VALUE 是 32767，所以 32768 &#x3D; Short.MAX_VALUE + 1 实际是在编译期间计算好的</p>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/37.png" class="">
 
 <p><strong>istore 2</strong></p>
@@ -1233,7 +1233,7 @@ u2 major_version;
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/46.png" class="">
 
 <p><strong>invokevirtual 5</strong></p>
-<p>找到常量池 #5 项，定位到方法区 java/io/PrintStream.println:(I)V 方法</p>
+<p>找到常量池 #5 项，定位到方法区 java&#x2F;io&#x2F;PrintStream.println:(I)V 方法</p>
 <p>生成新的栈帧（分配 locals、stack等）</p>
 <p>传递参数，执行新栈帧中的字节码</p>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/47.png" class="">
@@ -1245,127 +1245,127 @@ u2 major_version;
 <p><strong>return</strong></p>
 <p>完成 main 方法调用，弹出 main 栈帧，程序结束</p>
 <h4 id="通过字节码指令来分析问题"><a href="#通过字节码指令来分析问题" class="headerlink" title="通过字节码指令来分析问题"></a><strong>通过字节码指令来分析问题</strong></h4><p>代码</p>
-<pre class="language-none"><code class="language-none">public class Demo2 {
-            public static void main(String[] args) {
-                int i=0;
-                int x=0;
-                while(i&lt;10) {
-                    x = x++;
+<pre class="language-none"><code class="language-none">public class Demo2 &#123;
+            public static void main(String[] args) &#123;
+                int i&#x3D;0;
+                int x&#x3D;0;
+                while(i&lt;10) &#123;
+                    x &#x3D; x++;
                     i++;
-                }
-                System.out.println(x); //接过为0
-            }
-        }</code></pre>
+                &#125;
+                System.out.println(x); &#x2F;&#x2F;接过为0
+            &#125;
+        &#125;</code></pre>
 
 <p>为什么最终的x结果为0呢？ 通过分析字节码指令即可知晓</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=2, locals=3, args_size=1 //操作数栈分配2个空间，局部变量表分配3个空间
- 0: iconst_0 //准备一个常数0
- 1: istore_1 //将常数0放入局部变量表的1号槽位 i=0
- 2: iconst_0 //准备一个常数0
- 3: istore_2 //将常数0放入局部变量的2号槽位 x=0 
- 4: iload_1 //将局部变量表1号槽位的数放入操作数栈中
- 5: bipush 10 //将数字10放入操作数栈中，此时操作数栈中有2个数
- 7: if_icmpge 21 //比较操作数栈中的两个数，如果下面的数大于上面的数，就跳转到21。这里的比较是将两个数做减法。
- 10: iload_2 //将局部变量2号槽位的数放入操作数栈中，放入的值是0
- 11: iinc 2, 1 //将局部变量2号槽位的数加1，自增后，槽位中的值为1
- 14: istore_2 //将操作数栈中的数放入到局部变量表的2号槽位，2号槽位的值又变为了0
- 15: iinc 1, 1 //1号槽位的值自增1
- 18: goto 4 //跳转到第4条指令
- 21: getstatic #2 // Field java/lang/System.out:Ljava/io/PrintStream;
+ stack&#x3D;2, locals&#x3D;3, args_size&#x3D;1 &#x2F;&#x2F;操作数栈分配2个空间，局部变量表分配3个空间
+ 0: iconst_0 &#x2F;&#x2F;准备一个常数0
+ 1: istore_1 &#x2F;&#x2F;将常数0放入局部变量表的1号槽位 i&#x3D;0
+ 2: iconst_0 &#x2F;&#x2F;准备一个常数0
+ 3: istore_2 &#x2F;&#x2F;将常数0放入局部变量的2号槽位 x&#x3D;0 
+ 4: iload_1 &#x2F;&#x2F;将局部变量表1号槽位的数放入操作数栈中
+ 5: bipush 10 &#x2F;&#x2F;将数字10放入操作数栈中，此时操作数栈中有2个数
+ 7: if_icmpge 21 &#x2F;&#x2F;比较操作数栈中的两个数，如果下面的数大于上面的数，就跳转到21。这里的比较是将两个数做减法。
+ 10: iload_2 &#x2F;&#x2F;将局部变量2号槽位的数放入操作数栈中，放入的值是0
+ 11: iinc 2, 1 &#x2F;&#x2F;将局部变量2号槽位的数加1，自增后，槽位中的值为1
+ 14: istore_2 &#x2F;&#x2F;将操作数栈中的数放入到局部变量表的2号槽位，2号槽位的值又变为了0
+ 15: iinc 1, 1 &#x2F;&#x2F;1号槽位的值自增1
+ 18: goto 4 &#x2F;&#x2F;跳转到第4条指令
+ 21: getstatic #2 &#x2F;&#x2F; Field java&#x2F;lang&#x2F;System.out:Ljava&#x2F;io&#x2F;PrintStream;
  24: iload_2
- 25: invokevirtual #3 // Method java/io/PrintStream.println:(I)V
+ 25: invokevirtual #3 &#x2F;&#x2F; Method java&#x2F;io&#x2F;PrintStream.println:(I)V
  28: return</code></pre>
 
 <h5 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a><strong>构造方法</strong></h5><p><strong>cinit()V</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo3 {
-            static int i = 10;
-            static {
-                i = 20;
-            }
-            static {
-                i = 30;
-            }
-            public static void main(String[] args) {
-                System.out.println(i); //结果为30
-            }
-        }</code></pre>
+<pre class="language-none"><code class="language-none">public class Demo3 &#123;
+            static int i &#x3D; 10;
+            static &#123;
+                i &#x3D; 20;
+            &#125;
+            static &#123;
+                i &#x3D; 30;
+            &#125;
+            public static void main(String[] args) &#123;
+                System.out.println(i); &#x2F;&#x2F;结果为30
+            &#125;
+        &#125;</code></pre>
 
 <p>编译器会按<strong>从上至下</strong>的顺序，收集所有 static 静态代码块和静态成员赋值的代码，合并为一个特殊的方法 cinit()V</p>
-<pre class="language-none"><code class="language-none">stack=1, locals=0, args_size=0
+<pre class="language-none"><code class="language-none">stack&#x3D;1, locals&#x3D;0, args_size&#x3D;0
  0: bipush 10
- 2: putstatic #3 // Field i:I
+ 2: putstatic #3 &#x2F;&#x2F; Field i:I
  5: bipush 20
- 7: putstatic #3 // Field i:I
+ 7: putstatic #3 &#x2F;&#x2F; Field i:I
  10: bipush 30
- 12: putstatic #3 // Field i:I
+ 12: putstatic #3 &#x2F;&#x2F; Field i:I
  15: return</code></pre>
 
-<h5 id="init-V"><a href="#init-V" class="headerlink" title="init()V"></a><strong>init()V</strong></h5><pre class="language-none"><code class="language-none">public class Demo4 {
-            private String a = "s1";
-            {
-                b = 20;
-            }
-            private int b = 10;
-            {
-                a = "s2";
-            }
-            public Demo4(String a, int b) {
-                this.a = a;
-                this.b = b;
-            }
-            public static void main(String[] args) {
-                Demo4 d = new Demo4("s3", 30);
+<h5 id="init-V"><a href="#init-V" class="headerlink" title="init()V"></a><strong>init()V</strong></h5><pre class="language-none"><code class="language-none">public class Demo4 &#123;
+            private String a &#x3D; &quot;s1&quot;;
+            &#123;
+                b &#x3D; 20;
+            &#125;
+            private int b &#x3D; 10;
+            &#123;
+                a &#x3D; &quot;s2&quot;;
+            &#125;
+            public Demo4(String a, int b) &#123;
+                this.a &#x3D; a;
+                this.b &#x3D; b;
+            &#125;
+            public static void main(String[] args) &#123;
+                Demo4 d &#x3D; new Demo4(&quot;s3&quot;, 30);
                 System.out.println(d.a);
                 System.out.println(d.b);
-            }
-        }</code></pre>
+            &#125;
+        &#125;</code></pre>
 
 <p>编译器会按<strong>从上至下</strong>的顺序，收集所有 {} 代码块和成员变量赋值的代码，<strong>形成新的构造方法</strong>，但原始构造方法内的代码<strong>总是在后</strong></p>
 <pre class="language-none"><code class="language-none">Code:
- stack=2, locals=3, args_size=3
+ stack&#x3D;2, locals&#x3D;3, args_size&#x3D;3
  0: aload_0
- 1: invokespecial #1 // Method java/lang/Object."&lt;init&gt;":()V
+ 1: invokespecial #1 &#x2F;&#x2F; Method java&#x2F;lang&#x2F;Object.&quot;&lt;init&gt;&quot;:()V
  4: aload_0
- 5: ldc #2 // String s1
- 7: putfield #3 // Field a:Ljava/lang/String;
+ 5: ldc #2 &#x2F;&#x2F; String s1
+ 7: putfield #3 &#x2F;&#x2F; Field a:Ljava&#x2F;lang&#x2F;String;
  10: aload_0
  11: bipush 20
- 13: putfield #4 // Field b:I
+ 13: putfield #4 &#x2F;&#x2F; Field b:I
  16: aload_0
  17: bipush 10
- 19: putfield #4 // Field b:I
+ 19: putfield #4 &#x2F;&#x2F; Field b:I
  22: aload_0
- 23: ldc #5 // String s2
- 25: putfield #3 // Field a:Ljava/lang/String;
- //原始构造方法在最后执行
+ 23: ldc #5 &#x2F;&#x2F; String s2
+ 25: putfield #3 &#x2F;&#x2F; Field a:Ljava&#x2F;lang&#x2F;String;
+ &#x2F;&#x2F;原始构造方法在最后执行
  28: aload_0
  29: aload_1
- 30: putfield #3 // Field a:Ljava/lang/String;
+ 30: putfield #3 &#x2F;&#x2F; Field a:Ljava&#x2F;lang&#x2F;String;
  33: aload_0
  34: iload_2
- 35: putfield #4 // Field b:I
+ 35: putfield #4 &#x2F;&#x2F; Field b:I
  38: return</code></pre>
 
-<h5 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a><strong>方法调用</strong></h5><pre class="language-java" data-language="java"><code class="language-java">public class Demo5 {
-            public Demo5() {
-            }
-            private void test1() {
-            }
-            private final void test2() {
-            }
-            public void test3() {
-            }
-            public static void test4() {
-            }
-            public static void main(String[] args) {
-                Demo5 demo5 = new Demo5();
+<h5 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a><strong>方法调用</strong></h5><pre class="language-java" data-language="java"><code class="language-java">public class Demo5 &#123;
+            public Demo5() &#123;
+            &#125;
+            private void test1() &#123;
+            &#125;
+            private final void test2() &#123;
+            &#125;
+            public void test3() &#123;
+            &#125;
+            public static void test4() &#123;
+            &#125;
+            public static void main(String[] args) &#123;
+                Demo5 demo5 &#x3D; new Demo5();
                 demo5.test1();
                 demo5.test2();
                 demo5.test3();
                 Demo5.test4();
-            }
-        }</code></pre>
+            &#125;
+        &#125;</code></pre>
 
 <p>不同方法在调用时，对应的虚拟机指令有所区别</p>
 <ul>
@@ -1374,18 +1374,18 @@ u2 major_version;
 <li>静态方法在调用时使用invokestatic指令</li>
 </ul>
 <pre class="language-none"><code class="language-none">Code:
- stack=2, locals=2, args_size=1
- 0: new #2 // class com/nyima/JVM/day5/Demo5 
+ stack&#x3D;2, locals&#x3D;2, args_size&#x3D;1
+ 0: new #2 &#x2F;&#x2F; class com&#x2F;nyima&#x2F;JVM&#x2F;day5&#x2F;Demo5 
  3: dup
- 4: invokespecial #3 // Method "&lt;init&gt;":()V
+ 4: invokespecial #3 &#x2F;&#x2F; Method &quot;&lt;init&gt;&quot;:()V
  7: astore_1
  8: aload_1
- 9: invokespecial #4 // Method test1:()V
+ 9: invokespecial #4 &#x2F;&#x2F; Method test1:()V
  12: aload_1
- 13: invokespecial #5 // Method test2:()V
+ 13: invokespecial #5 &#x2F;&#x2F; Method test2:()V
  16: aload_1
- 17: invokevirtual #6 // Method test3:()V
- 20: invokestatic #7 // Method test4:()V
+ 17: invokevirtual #6 &#x2F;&#x2F; Method test3:()V
+ 20: invokestatic #7 &#x2F;&#x2F; Method test4:()V
  23: return</code></pre>
 
 <ul>
@@ -1404,20 +1404,20 @@ u2 major_version;
 <li>执行方法的字节码</li>
 </ul>
 <h5 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h5><p>try-catch</p>
-<pre class="language-none"><code class="language-none">public class Demo1 {
-            public static void main(String[] args) {
-                int i = 0;
-                try {
-                    i = 10;
-                }catch (Exception e) {
-                    i = 20;
-                }
-            }
-        }</code></pre>
+<pre class="language-none"><code class="language-none">public class Demo1 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; 0;
+                try &#123;
+                    i &#x3D; 10;
+                &#125;catch (Exception e) &#123;
+                    i &#x3D; 20;
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>对应字节码指令</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=1, locals=3, args_size=1
+ stack&#x3D;1, locals&#x3D;3, args_size&#x3D;1
  0: iconst_0
  1: istore_1
  2: bipush 10
@@ -1427,32 +1427,32 @@ u2 major_version;
  9: bipush 20
  11: istore_1
  12: return
- //多出来一个异常表
+ &#x2F;&#x2F;多出来一个异常表
  Exception table:
  from to target type
- 2 5 8 Class java/lang/Exception</code></pre>
+ 2 5 8 Class java&#x2F;lang&#x2F;Exception</code></pre>
 
 <ul>
 <li>可以看到多出来一个 Exception table 的结构，[from, to) 是<strong>前闭后开</strong>（也就是检测2~4行）的检测范 围，一旦这个范围内的字节码执行出现异常，则通过 type 匹配异常类型，如果一致，进入 target 所指 示行号</li>
 <li>8行的字节码指令 astore_2 是将异常对象引用存入局部变量表的2号位置（为e）</li>
 </ul>
 <p><strong>多个single-catch</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo1 {
-            public static void main(String[] args) {
-                int i = 0;
-                try {
-                    i = 10;
-                }catch (ArithmeticException e) {
-                    i = 20;
-                }catch (Exception e) {
-                    i = 30;
-                }
-            }
-        }</code></pre>
+<pre class="language-none"><code class="language-none">public class Demo1 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; 0;
+                try &#123;
+                    i &#x3D; 10;
+                &#125;catch (ArithmeticException e) &#123;
+                    i &#x3D; 20;
+                &#125;catch (Exception e) &#123;
+                    i &#x3D; 30;
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>对应的字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=1, locals=3, args_size=1
+ stack&#x3D;1, locals&#x3D;3, args_size&#x3D;1
  0: iconst_0
  1: istore_1
  2: bipush 10
@@ -1468,97 +1468,97 @@ u2 major_version;
  19: return
  Exception table:
  from to target type
- 2 5 8 Class java/lang/ArithmeticException
- 2 5 15 Class java/lang/Exception</code></pre>
+ 2 5 8 Class java&#x2F;lang&#x2F;ArithmeticException
+ 2 5 15 Class java&#x2F;lang&#x2F;Exception</code></pre>
 
 <ul>
 <li>因为异常出现时，只能进入 Exception table 中一个分支，所以局部变量表 slot 2 位置被共用</li>
 </ul>
 <p><strong>finally</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo2 {
-            public static void main(String[] args) {
-                int i = 0;
-                try {
-                    i = 10;
-                } catch (Exception e) {
-                    i = 20;
-                } finally {
-                    i = 30;
-                }
-            }
-        }</code></pre>
+<pre class="language-none"><code class="language-none">public class Demo2 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; 0;
+                try &#123;
+                    i &#x3D; 10;
+                &#125; catch (Exception e) &#123;
+                    i &#x3D; 20;
+                &#125; finally &#123;
+                    i &#x3D; 30;
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>对应字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=1, locals=4, args_size=1
+ stack&#x3D;1, locals&#x3D;4, args_size&#x3D;1
  0: iconst_0
  1: istore_1
- //try块
+ &#x2F;&#x2F;try块
  2: bipush 10
  4: istore_1
- //try块执行完后，会执行finally 
+ &#x2F;&#x2F;try块执行完后，会执行finally 
  5: bipush 30
  7: istore_1
  8: goto 27
- //catch块 
- 11: astore_2 //异常信息放入局部变量表的2号槽位
+ &#x2F;&#x2F;catch块 
+ 11: astore_2 &#x2F;&#x2F;异常信息放入局部变量表的2号槽位
  12: bipush 20
  14: istore_1
- //catch块执行完后，会执行finally 
+ &#x2F;&#x2F;catch块执行完后，会执行finally 
  15: bipush 30
  17: istore_1
  18: goto 27
- //出现异常，但未被Exception捕获，会抛出其他异常，这时也需要执行finally块中的代码 
+ &#x2F;&#x2F;出现异常，但未被Exception捕获，会抛出其他异常，这时也需要执行finally块中的代码 
  21: astore_3
  22: bipush 30
  24: istore_1
  25: aload_3
- 26: athrow //抛出异常
+ 26: athrow &#x2F;&#x2F;抛出异常
  27: return
  Exception table:
  from to target type
- 2 5 11 Class java/lang/Exception
+ 2 5 11 Class java&#x2F;lang&#x2F;Exception
  2 5 21 any
  11 15 21 any</code></pre>
 
 <p>可以看到 finally 中的代码被<strong>复制了 3 份</strong>，分别放入 try 流程，catch 流程以及 catch剩余的异常类型流程</p>
 <p><strong>注意：</strong>虽然从字节码指令看来，每个块中都有finally块，但是finally块中的代码只会被执行一次</p>
 <p><strong>finally中的return</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo3 {
-            public static void main(String[] args) {
-                int i = Demo3.test();
-                //结果为20
+<pre class="language-none"><code class="language-none">public class Demo3 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; Demo3.test();
+                &#x2F;&#x2F;结果为20
                 System.out.println(i);
-            }
-            public static int test() {
+            &#125;
+            public static int test() &#123;
                 int i;
-                try {
-                    i = 10;
+                try &#123;
+                    i &#x3D; 10;
                     return i;
-                } finally {
-                    i = 20;
+                &#125; finally &#123;
+                    i &#x3D; 20;
                     return i;
-                }
-            }
-        }</code></pre>
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>对应字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=1, locals=3, args_size=0
+ stack&#x3D;1, locals&#x3D;3, args_size&#x3D;0
  0: bipush 10
  2: istore_0
  3: iload_0
- 4: istore_1 //暂存返回值
+ 4: istore_1 &#x2F;&#x2F;暂存返回值
  5: bipush 20
  7: istore_0
  8: iload_0
- 9: ireturn //ireturn会返回操作数栈顶的整型值20
- //如果出现异常，还是会执行finally块中的内容，没有抛出异常
+ 9: ireturn &#x2F;&#x2F;ireturn会返回操作数栈顶的整型值20
+ &#x2F;&#x2F;如果出现异常，还是会执行finally块中的内容，没有抛出异常
  10: astore_2
  11: bipush 20
  13: istore_0
  14: iload_0
- 15: ireturn //这里没有athrow了，也就是如果在finally块中如果有返回操作的话，且try块中出现异常，会吞掉异常！
+ 15: ireturn &#x2F;&#x2F;这里没有athrow了，也就是如果在finally块中如果有返回操作的话，且try块中出现异常，会吞掉异常！
  Exception table:
  from to target type
  0 5 10 any</code></pre>
@@ -1573,103 +1573,103 @@ u2 major_version;
 </li>
 </ul>
 <p><strong>被吞掉的异常</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo3 {
-            public static void main(String[] args) {
-                int i = Demo3.test();
-                //最终结果为20
+<pre class="language-none"><code class="language-none">public class Demo3 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; Demo3.test();
+                &#x2F;&#x2F;最终结果为20
                 System.out.println(i);
-            }
-            public static int test() {
+            &#125;
+            public static int test() &#123;
                 int i;
-                try {
-                    i = 10;
-                    //这里应该会抛出异常
-                    i = i/0;
+                try &#123;
+                    i &#x3D; 10;
+                    &#x2F;&#x2F;这里应该会抛出异常
+                    i &#x3D; i&#x2F;0;
                     return i;
-                } finally {
-                    i = 20;
+                &#125; finally &#123;
+                    i &#x3D; 20;
                     return i;
-                }
-            }
-        }</code></pre>
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>会发现打印结果为20，并未抛出异常</p>
 <p><strong>finally不带return</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo4 {
-    public static void main(String[] args) {
-        int i = Demo4.test();
+<pre class="language-none"><code class="language-none">public class Demo4 &#123;
+    public static void main(String[] args) &#123;
+        int i &#x3D; Demo4.test();
         System.out.println(i);
-    }
-    public static int test() {
-        int i = 10;
-        try {
+    &#125;
+    public static int test() &#123;
+        int i &#x3D; 10;
+        try &#123;
             return i;
-        } finally {
-            i = 20;
-        }
-    }
-}</code></pre>
+        &#125; finally &#123;
+            i &#x3D; 20;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <p>对应字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=1, locals=3, args_size=0
+ stack&#x3D;1, locals&#x3D;3, args_size&#x3D;0
  0: bipush 10
- 2: istore_0 //赋值给i 10
- 3: iload_0 //加载到操作数栈顶
- 4: istore_1 //加载到局部变量表的1号位置
+ 2: istore_0 &#x2F;&#x2F;赋值给i 10
+ 3: iload_0 &#x2F;&#x2F;加载到操作数栈顶
+ 4: istore_1 &#x2F;&#x2F;加载到局部变量表的1号位置
  5: bipush 20
- 7: istore_0 //赋值给i 20
- 8: iload_1 //加载局部变量表1号位置的数10到操作数栈
- 9: ireturn //返回操作数栈顶元素 10
+ 7: istore_0 &#x2F;&#x2F;赋值给i 20
+ 8: iload_1 &#x2F;&#x2F;加载局部变量表1号位置的数10到操作数栈
+ 9: ireturn &#x2F;&#x2F;返回操作数栈顶元素 10
  10: astore_2
  11: bipush 20
  13: istore_0
- 14: aload_2 //加载异常
- 15: athrow //抛出异常
+ 14: aload_2 &#x2F;&#x2F;加载异常
+ 15: athrow &#x2F;&#x2F;抛出异常
  Exception table:
  from to target type
  3 5 10 any</code></pre>
 
-<h5 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a><strong>Synchronized</strong></h5><pre class="language-none"><code class="language-none">public class Demo5 {
-            public static void main(String[] args) {
-                int i = 10;
-                Lock lock = new Lock();
-                synchronized (lock) {
+<h5 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a><strong>Synchronized</strong></h5><pre class="language-none"><code class="language-none">public class Demo5 &#123;
+            public static void main(String[] args) &#123;
+                int i &#x3D; 10;
+                Lock lock &#x3D; new Lock();
+                synchronized (lock) &#123;
                     System.out.println(i);
-                }
-            }
-        }
-class Lock{}</code></pre>
+                &#125;
+            &#125;
+        &#125;
+class Lock&#123;&#125;</code></pre>
 
 <p>对应字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=2, locals=5, args_size=1
+ stack&#x3D;2, locals&#x3D;5, args_size&#x3D;1
  0: bipush 10
  2: istore_1
- 3: new #2 // class com/nyima/JVM/day06/Lock
- 6: dup //复制一份，放到操作数栈顶，用于构造函数消耗
- 7: invokespecial #3 // Method com/nyima/JVM/day06/Lock."&lt;init&gt;":()V
- 10: astore_2 //剩下的一份放到局部变量表的2号位置
- 11: aload_2 //加载到操作数栈
- 12: dup //复制一份，放到操作数栈，用于加锁时消耗
- 13: astore_3 //将操作数栈顶元素弹出，暂存到局部变量表的三号槽位。这时操作数栈中有一份对象的引用
- 14: monitorenter //加锁
- //锁住后代码块中的操作 
- 15: getstatic #4 // Field java/lang/System.out:Ljava/io/PrintStream;
+ 3: new #2 &#x2F;&#x2F; class com&#x2F;nyima&#x2F;JVM&#x2F;day06&#x2F;Lock
+ 6: dup &#x2F;&#x2F;复制一份，放到操作数栈顶，用于构造函数消耗
+ 7: invokespecial #3 &#x2F;&#x2F; Method com&#x2F;nyima&#x2F;JVM&#x2F;day06&#x2F;Lock.&quot;&lt;init&gt;&quot;:()V
+ 10: astore_2 &#x2F;&#x2F;剩下的一份放到局部变量表的2号位置
+ 11: aload_2 &#x2F;&#x2F;加载到操作数栈
+ 12: dup &#x2F;&#x2F;复制一份，放到操作数栈，用于加锁时消耗
+ 13: astore_3 &#x2F;&#x2F;将操作数栈顶元素弹出，暂存到局部变量表的三号槽位。这时操作数栈中有一份对象的引用
+ 14: monitorenter &#x2F;&#x2F;加锁
+ &#x2F;&#x2F;锁住后代码块中的操作 
+ 15: getstatic #4 &#x2F;&#x2F; Field java&#x2F;lang&#x2F;System.out:Ljava&#x2F;io&#x2F;PrintStream;
  18: iload_1
- 19: invokevirtual #5 // Method java/io/PrintStream.println:(I)V
- //加载局部变量表中三号槽位对象的引用，用于解锁 
+ 19: invokevirtual #5 &#x2F;&#x2F; Method java&#x2F;io&#x2F;PrintStream.println:(I)V
+ &#x2F;&#x2F;加载局部变量表中三号槽位对象的引用，用于解锁 
  22: aload_3 
- 23: monitorexit //解锁
+ 23: monitorexit &#x2F;&#x2F;解锁
  24: goto 34
- //异常操作 
+ &#x2F;&#x2F;异常操作 
  27: astore 4
  29: aload_3
- 30: monitorexit //解锁
+ 30: monitorexit &#x2F;&#x2F;解锁
  31: aload 4
  33: athrow
  34: return
- //可以看出，无论何时出现异常，都会跳转到27行，将异常放入局部变量中，并进行解锁操作，然后加载异常并抛出异常。 
+ &#x2F;&#x2F;可以看出，无论何时出现异常，都会跳转到27行，将异常放入局部变量中，并进行解锁操作，然后加载异常并抛出异常。 
  Exception table:
  from to target type
  15 24 27 any
@@ -1677,186 +1677,186 @@ class Lock{}</code></pre>
 
 <h3 id="3、编译期处理"><a href="#3、编译期处理" class="headerlink" title="3、编译期处理"></a>3、编译期处理</h3><p>所谓的 <strong>语法糖</strong> ，其实就是指 java 编译器把 .java 源码编译为 .class 字节码的过程中，自动生成和转换**的一 些代码，主要是为了减轻程序员的负担，算是 java 编译器给我们的一个额外福利</p>
 <p><strong>注意：</strong>以下代码的分析，借助了 javap 工具，idea 的反编译功能，idea 插件 jclasslib 等工具。另外， 编译器转换的结果直接就是 class 字节码，只是为了便于阅读，给出了几乎等价 的 java 源码方式，并不是编译器还会转换出中间的 java 源码，切记。</p>
-<h4 id="默认构造函数"><a href="#默认构造函数" class="headerlink" title="默认构造函数"></a><strong>默认构造函数</strong></h4><pre class="language-none"><code class="language-none">public class Candy1 {
-        }</code></pre>
+<h4 id="默认构造函数"><a href="#默认构造函数" class="headerlink" title="默认构造函数"></a><strong>默认构造函数</strong></h4><pre class="language-none"><code class="language-none">public class Candy1 &#123;
+        &#125;</code></pre>
 
 <p>经过编译期优化后</p>
-<pre class="language-none"><code class="language-none">public class Candy1 {
-           //这个无参构造器是java编译器帮我们加上的
-           public Candy1() {
-               //即调用父类 Object 的无参构造方法，即调用 java/lang/Object." &lt;init&gt;":()V
+<pre class="language-none"><code class="language-none">public class Candy1 &#123;
+           &#x2F;&#x2F;这个无参构造器是java编译器帮我们加上的
+           public Candy1() &#123;
+               &#x2F;&#x2F;即调用父类 Object 的无参构造方法，即调用 java&#x2F;lang&#x2F;Object.&quot; &lt;init&gt;&quot;:()V
                super();
-           }
-       }</code></pre>
+           &#125;
+       &#125;</code></pre>
 
 <h4 id="自动拆装箱"><a href="#自动拆装箱" class="headerlink" title="自动拆装箱"></a>自动拆装箱</h4><p>基本类型和其包装类型的相互转换过程，称为拆装箱</p>
 <p>在JDK 5以后，它们的转换可以在编译期自动完成</p>
 <img src="/2021/06/18/%E5%85%B3%E4%BA%8EJVM/49.png" class="">
 
 <h4 id="泛型集合取值"><a href="#泛型集合取值" class="headerlink" title="泛型集合取值"></a><strong>泛型集合取值</strong></h4><p>泛型也是在 JDK 5 开始加入的特性，但 java 在<strong>编译泛型代码后</strong>会执行 <strong>泛型擦除</strong> 的动作，即泛型信息在编译为字节码之后就<strong>丢失</strong>了，实际的类型都当做了 <strong>Object</strong> 类型来处理：</p>
-<pre class="language-none"><code class="language-none">public class Demo3 {
-            public static void main(String[] args) {
-                List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+<pre class="language-none"><code class="language-none">public class Demo3 &#123;
+            public static void main(String[] args) &#123;
+                List&lt;Integer&gt; list &#x3D; new ArrayList&lt;&gt;();
                 list.add(10);
-                Integer x = list.get(0);
-            }
-        }</code></pre>
+                Integer x &#x3D; list.get(0);
+            &#125;
+        &#125;</code></pre>
 
 <p>对应字节码</p>
 <pre class="language-none"><code class="language-none">Code:
- stack=2, locals=3, args_size=1
- 0: new #2 // class java/util/ArrayList
+ stack&#x3D;2, locals&#x3D;3, args_size&#x3D;1
+ 0: new #2 &#x2F;&#x2F; class java&#x2F;util&#x2F;ArrayList
  3: dup
- 4: invokespecial #3 // Method java/util/ArrayList."&lt;init&gt;":()V
+ 4: invokespecial #3 &#x2F;&#x2F; Method java&#x2F;util&#x2F;ArrayList.&quot;&lt;init&gt;&quot;:()V
  7: astore_1
  8: aload_1
  9: bipush 10
- 11: invokestatic #4 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
- //这里进行了泛型擦除，实际调用的是add(Objcet o)
- 14: invokeinterface #5, 2 // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+ 11: invokestatic #4 &#x2F;&#x2F; Method java&#x2F;lang&#x2F;Integer.valueOf:(I)Ljava&#x2F;lang&#x2F;Integer;
+ &#x2F;&#x2F;这里进行了泛型擦除，实际调用的是add(Objcet o)
+ 14: invokeinterface #5, 2 &#x2F;&#x2F; InterfaceMethod java&#x2F;util&#x2F;List.add:(Ljava&#x2F;lang&#x2F;Object;)Z
  19: pop
  20: aload_1
  21: iconst_0
- //这里也进行了泛型擦除，实际调用的是get(Object o) 
- 22: invokeinterface #6, 2 // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
-//这里进行了类型转换，将Object转换成了Integer
- 27: checkcast #7 // class java/lang/Integer
+ &#x2F;&#x2F;这里也进行了泛型擦除，实际调用的是get(Object o) 
+ 22: invokeinterface #6, 2 &#x2F;&#x2F; InterfaceMethod java&#x2F;util&#x2F;List.get:(I)Ljava&#x2F;lang&#x2F;Object;
+&#x2F;&#x2F;这里进行了类型转换，将Object转换成了Integer
+ 27: checkcast #7 &#x2F;&#x2F; class java&#x2F;lang&#x2F;Integer
  30: astore_2
  31: return</code></pre>
 
 <p>所以调用get函数取值时，有一个类型转换的操作</p>
-<pre class="language-none"><code class="language-none">Integer x = (Integer) list.get(0);</code></pre>
+<pre class="language-none"><code class="language-none">Integer x &#x3D; (Integer) list.get(0);</code></pre>
 
 <p>如果要将返回结果赋值给一个int类型的变量，则还有<strong>自动拆箱</strong>的操作</p>
-<pre class="language-none"><code class="language-none">int x = (Integer) list.get(0).intValue();</code></pre>
+<pre class="language-none"><code class="language-none">int x &#x3D; (Integer) list.get(0).intValue();</code></pre>
 
-<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a><strong>可变参数</strong></h4><pre class="language-none"><code class="language-none">public class Demo4 {
-            public static void foo(String... args) {
-                //将args赋值给arr，可以看出String...实际就是String[] 
-                String[] arr = args;
+<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a><strong>可变参数</strong></h4><pre class="language-none"><code class="language-none">public class Demo4 &#123;
+            public static void foo(String... args) &#123;
+                &#x2F;&#x2F;将args赋值给arr，可以看出String...实际就是String[] 
+                String[] arr &#x3D; args;
                 System.out.println(arr.length);
-            }
-            public static void main(String[] args) {
-                foo("hello", "world");
-            }
-        }</code></pre>
+            &#125;
+            public static void main(String[] args) &#123;
+                foo(&quot;hello&quot;, &quot;world&quot;);
+            &#125;
+        &#125;</code></pre>
 
 <p>可变参数 <strong>String…</strong> args 其实是一个 <strong>String[]</strong> args ，从代码中的赋值语句中就可以看出来。 同 样 java 编译 器会在编译期间将上述代码变换为：</p>
-<pre class="language-none"><code class="language-none">public class Demo4 {
-            public Demo4 {}
+<pre class="language-none"><code class="language-none">public class Demo4 &#123;
+            public Demo4 &#123;&#125;
 
-            public static void foo(String[] args) {
-                String[] arr = args;
+            public static void foo(String[] args) &#123;
+                String[] arr &#x3D; args;
                 System.out.println(arr.length);
-            }
-            public static void main(String[] args) {
-                foo(new String[]{"hello", "world"});
-            }
-        }</code></pre>
+            &#125;
+            public static void main(String[] args) &#123;
+                foo(new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;);
+            &#125;
+        &#125;</code></pre>
 
-<p>注意，如果调用的是foo()，即未传递参数时，等价代码为<code>foo(new String[]{})</code>，<strong>创建了一个空数组</strong>，而不是直接传递的null</p>
-<h4 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a><strong>foreach</strong></h4><pre class="language-none"><code class="language-none">public class Demo5 {
-            public static void main(String[] args) {
-                //数组赋初值的简化写法也是一种语法糖。
-                int[] arr = {1, 2, 3, 4, 5};
-                for(int x : arr) {
+<p>注意，如果调用的是foo()，即未传递参数时，等价代码为<code>foo(new String[]&#123;&#125;)</code>，<strong>创建了一个空数组</strong>，而不是直接传递的null</p>
+<h4 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a><strong>foreach</strong></h4><pre class="language-none"><code class="language-none">public class Demo5 &#123;
+            public static void main(String[] args) &#123;
+                &#x2F;&#x2F;数组赋初值的简化写法也是一种语法糖。
+                int[] arr &#x3D; &#123;1, 2, 3, 4, 5&#125;;
+                for(int x : arr) &#123;
                     System.out.println(x);
-                }
-            }
-        }</code></pre>
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>编译器会帮我们转换为</p>
-<pre class="language-none"><code class="language-none">public class Demo5 {
-            public Demo5 {}
-            public static void main(String[] args) {
-                int[] arr = new int[]{1, 2, 3, 4, 5};
-                for(int i=0; i&lt;arr.length; ++i) {
-                    int x = arr[i];
+<pre class="language-none"><code class="language-none">public class Demo5 &#123;
+            public Demo5 &#123;&#125;
+            public static void main(String[] args) &#123;
+                int[] arr &#x3D; new int[]&#123;1, 2, 3, 4, 5&#125;;
+                for(int i&#x3D;0; i&lt;arr.length; ++i) &#123;
+                    int x &#x3D; arr[i];
                     System.out.println(x);
-                }
-            }
-        }</code></pre>
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
 <p>如果是集合使用foreach</p>
-<pre class="language-none"><code class="language-none">public class Demo5 {
- public static void main(String[] args) {
- List&lt;Integer&gt; list = Arrays.asList(1, 2, 3, 4, 5);
- for (Integer x : list) {
+<pre class="language-none"><code class="language-none">public class Demo5 &#123;
+ public static void main(String[] args) &#123;
+ List&lt;Integer&gt; list &#x3D; Arrays.asList(1, 2, 3, 4, 5);
+ for (Integer x : list) &#123;
  System.out.println(x);
- }
- }
-}</code></pre>
+ &#125;
+ &#125;
+&#125;</code></pre>
 
 <p>集合要使用foreach，需要该集合类实现了<strong>Iterable接口</strong>，因为集合的遍历需要用到<strong>迭代器Iterator</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo5 {
-            public Demo5 {}
+<pre class="language-none"><code class="language-none">public class Demo5 &#123;
+            public Demo5 &#123;&#125;
 
-            public static void main(String[] args) {
-                List&lt;Integer&gt; list = Arrays.asList(1, 2, 3, 4, 5);
-                //获得该集合的迭代器
-                Iterator&lt;Integer&gt; iterator = list.iterator();
-                while(iterator.hasNext()) {
-                    Integer x = iterator.next();
+            public static void main(String[] args) &#123;
+                List&lt;Integer&gt; list &#x3D; Arrays.asList(1, 2, 3, 4, 5);
+                &#x2F;&#x2F;获得该集合的迭代器
+                Iterator&lt;Integer&gt; iterator &#x3D; list.iterator();
+                while(iterator.hasNext()) &#123;
+                    Integer x &#x3D; iterator.next();
                     System.out.println(x);
-                }
-            }
-        }</code></pre>
+                &#125;
+            &#125;
+        &#125;</code></pre>
 
-<h4 id="switch字符串"><a href="#switch字符串" class="headerlink" title="switch字符串"></a><strong>switch字符串</strong></h4><pre class="language-none"><code class="language-none">public class Demo6 {
-           public static void main(String[] args) {
-               String str = "hello";
-               switch (str) {
-                   case "hello" :
-                       System.out.println("h");
+<h4 id="switch字符串"><a href="#switch字符串" class="headerlink" title="switch字符串"></a><strong>switch字符串</strong></h4><pre class="language-none"><code class="language-none">public class Demo6 &#123;
+           public static void main(String[] args) &#123;
+               String str &#x3D; &quot;hello&quot;;
+               switch (str) &#123;
+                   case &quot;hello&quot; :
+                       System.out.println(&quot;h&quot;);
                        break;
-                   case "world" :
-                       System.out.println("w");
+                   case &quot;world&quot; :
+                       System.out.println(&quot;w&quot;);
                        break;
                    default:
                        break;
-               }
-           }
-       }</code></pre>
+               &#125;
+           &#125;
+       &#125;</code></pre>
 
 <p>在编译器中执行的操作</p>
-<pre class="language-none"><code class="language-none">public class Demo6 {
-           public Demo6() {
+<pre class="language-none"><code class="language-none">public class Demo6 &#123;
+           public Demo6() &#123;
 
-           }
-           public static void main(String[] args) {
-               String str = "hello";
-               int x = -1;
-               //通过字符串的hashCode+value来判断是否匹配
-               switch (str.hashCode()) {
-                   //hello的hashCode
+           &#125;
+           public static void main(String[] args) &#123;
+               String str &#x3D; &quot;hello&quot;;
+               int x &#x3D; -1;
+               &#x2F;&#x2F;通过字符串的hashCode+value来判断是否匹配
+               switch (str.hashCode()) &#123;
+                   &#x2F;&#x2F;hello的hashCode
                    case 99162322 :
-                       //再次比较，因为字符串的hashCode有可能相等
-                       if(str.equals("hello")) {
-                           x = 0;
-                       }
+                       &#x2F;&#x2F;再次比较，因为字符串的hashCode有可能相等
+                       if(str.equals(&quot;hello&quot;)) &#123;
+                           x &#x3D; 0;
+                       &#125;
                        break;
-                   //world的hashCode
+                   &#x2F;&#x2F;world的hashCode
                    case 11331880 :
-                       if(str.equals("world")) {
-                           x = 1;
-                       }
+                       if(str.equals(&quot;world&quot;)) &#123;
+                           x &#x3D; 1;
+                       &#125;
                        break;
                    default:
                        break;
-               }
-               //用第二个switch在进行输出判断
-               switch (x) {
+               &#125;
+               &#x2F;&#x2F;用第二个switch在进行输出判断
+               switch (x) &#123;
                    case 0:
-                       System.out.println("h");
+                       System.out.println(&quot;h&quot;);
                        break;
                    case 1:
-                       System.out.println("w");
+                       System.out.println(&quot;w&quot;);
                        break;
                    default:
                        break;
-               }
-           }
-       }</code></pre>
+               &#125;
+           &#125;
+       &#125;</code></pre>
 
 <p>过程说明：</p>
 <ul>
@@ -1870,158 +1870,158 @@ class Lock{}</code></pre>
 </ul>
 </li>
 </ul>
-<h4 id="switch枚举"><a href="#switch枚举" class="headerlink" title="switch枚举"></a><strong>switch枚举</strong></h4><pre class="language-none"><code class="language-none">public class Demo7 {
-           public static void main(String[] args) {
-               SEX sex = SEX.MALE;
-               switch (sex) {
+<h4 id="switch枚举"><a href="#switch枚举" class="headerlink" title="switch枚举"></a><strong>switch枚举</strong></h4><pre class="language-none"><code class="language-none">public class Demo7 &#123;
+           public static void main(String[] args) &#123;
+               SEX sex &#x3D; SEX.MALE;
+               switch (sex) &#123;
                    case MALE:
-                       System.out.println("man");
+                       System.out.println(&quot;man&quot;);
                        break;
                    case FEMALE:
-                       System.out.println("woman");
+                       System.out.println(&quot;woman&quot;);
                        break;
                    default:
                        break;
-               }
-           }
-       }
-       enum SEX {
+               &#125;
+           &#125;
+       &#125;
+       enum SEX &#123;
            MALE, FEMALE;
-       }</code></pre>
+       &#125;</code></pre>
 
 <p>编译器中执行的代码如下</p>
-<pre class="language-none"><code class="language-none">public class Demo7 {
-           /**
+<pre class="language-none"><code class="language-none">public class Demo7 &#123;
+           &#x2F;**
             * 定义一个合成类（仅 jvm 使用，对我们不可见） 
             * 用来映射枚举的 ordinal 与数组元素的关系 
             * 枚举的 ordinal 表示枚举对象的序号，从 0 开始 
-            * 即 MALE 的 ordinal()=0，FEMALE 的 ordinal()=1 
-            */
-           static class $MAP {
-               //数组大小即为枚举元素个数，里面存放了case用于比较的数字
-               static int[] map = new int[2];
-               static {
-                   //ordinal即枚举元素对应所在的位置，MALE为0，FEMALE为1
-                   map[SEX.MALE.ordinal()] = 1;
-                   map[SEX.FEMALE.ordinal()] = 2;
-               }
-           }
-           public static void main(String[] args) {
-               SEX sex = SEX.MALE;
-               //将对应位置枚举元素的值赋给x，用于case操作
-               int x = $MAP.map[sex.ordinal()];
-               switch (x) {
+            * 即 MALE 的 ordinal()&#x3D;0，FEMALE 的 ordinal()&#x3D;1 
+            *&#x2F;
+           static class $MAP &#123;
+               &#x2F;&#x2F;数组大小即为枚举元素个数，里面存放了case用于比较的数字
+               static int[] map &#x3D; new int[2];
+               static &#123;
+                   &#x2F;&#x2F;ordinal即枚举元素对应所在的位置，MALE为0，FEMALE为1
+                   map[SEX.MALE.ordinal()] &#x3D; 1;
+                   map[SEX.FEMALE.ordinal()] &#x3D; 2;
+               &#125;
+           &#125;
+           public static void main(String[] args) &#123;
+               SEX sex &#x3D; SEX.MALE;
+               &#x2F;&#x2F;将对应位置枚举元素的值赋给x，用于case操作
+               int x &#x3D; $MAP.map[sex.ordinal()];
+               switch (x) &#123;
                    case 1:
-                       System.out.println("man");
+                       System.out.println(&quot;man&quot;);
                        break;
                    case 2:
-                       System.out.println("woman");
+                       System.out.println(&quot;woman&quot;);
                        break;
                    default:
                        break;
-               }
-           }
-       }
-       enum SEX {
+               &#125;
+           &#125;
+       &#125;
+       enum SEX &#123;
            MALE, FEMALE;
-       }</code></pre>
+       &#125;</code></pre>
 
-<h4 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a><strong>枚举类</strong></h4><pre class="language-none"><code class="language-none">enum SEX {
+<h4 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a><strong>枚举类</strong></h4><pre class="language-none"><code class="language-none">enum SEX &#123;
  MALE, FEMALE;
-}</code></pre>
+&#125;</code></pre>
 
 <p>转换后的代码</p>
-<pre class="language-none"><code class="language-none">public final class Sex extends Enum&lt;Sex&gt; {
-           //对应枚举类中的元素
+<pre class="language-none"><code class="language-none">public final class Sex extends Enum&lt;Sex&gt; &#123;
+           &#x2F;&#x2F;对应枚举类中的元素
            public static final Sex MALE;
            public static final Sex FEMALE;
            private static final Sex[] $VALUES;
 
-           static {
-               //调用构造函数，传入枚举元素的值及ordinal
-               MALE = new Sex("MALE", 0);
-               FEMALE = new Sex("FEMALE", 1);
-               $VALUES = new Sex[]{MALE, FEMALE};
-           }
+           static &#123;
+               &#x2F;&#x2F;调用构造函数，传入枚举元素的值及ordinal
+               MALE &#x3D; new Sex(&quot;MALE&quot;, 0);
+               FEMALE &#x3D; new Sex(&quot;FEMALE&quot;, 1);
+               $VALUES &#x3D; new Sex[]&#123;MALE, FEMALE&#125;;
+           &#125;
 
-           //调用父类中的方法
-           private Sex(String name, int ordinal) {
+           &#x2F;&#x2F;调用父类中的方法
+           private Sex(String name, int ordinal) &#123;
                super(name, ordinal);
-           }
+           &#125;
 
-           public static Sex[] values() {
+           public static Sex[] values() &#123;
                return $VALUES.clone();
-           }
-           public static Sex valueOf(String name) {
+           &#125;
+           public static Sex valueOf(String name) &#123;
                return Enum.valueOf(Sex.class, name);
-           }
+           &#125;
 
-       }</code></pre>
+       &#125;</code></pre>
 
-<h4 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a><strong>匿名内部类</strong></h4><pre class="language-none"><code class="language-none">public class Demo8 {
-            public static void main(String[] args) {
-                Runnable runnable = new Runnable() {
+<h4 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a><strong>匿名内部类</strong></h4><pre class="language-none"><code class="language-none">public class Demo8 &#123;
+            public static void main(String[] args) &#123;
+                Runnable runnable &#x3D; new Runnable() &#123;
                     @Override
-                    public void run() {
-                        System.out.println("running...");
-                    }
-                };
-            }
-        }</code></pre>
+                    public void run() &#123;
+                        System.out.println(&quot;running...&quot;);
+                    &#125;
+                &#125;;
+            &#125;
+        &#125;</code></pre>
 
 <p>转换后的代码</p>
-<pre class="language-none"><code class="language-none">public class Demo8 {
-           public static void main(String[] args) {
-               //用额外创建的类来创建匿名内部类对象
-               Runnable runnable = new Demo8$1();
-           }
-       }
-       //创建了一个额外的类，实现了Runnable接口
-       final class Demo8$1 implements Runnable {
-           public Demo8$1() {}
+<pre class="language-none"><code class="language-none">public class Demo8 &#123;
+           public static void main(String[] args) &#123;
+               &#x2F;&#x2F;用额外创建的类来创建匿名内部类对象
+               Runnable runnable &#x3D; new Demo8$1();
+           &#125;
+       &#125;
+       &#x2F;&#x2F;创建了一个额外的类，实现了Runnable接口
+       final class Demo8$1 implements Runnable &#123;
+           public Demo8$1() &#123;&#125;
            @Override
-           public void run() {
-               System.out.println("running...");
-           }
-       }</code></pre>
+           public void run() &#123;
+               System.out.println(&quot;running...&quot;);
+           &#125;
+       &#125;</code></pre>
 
 <p>如果匿名内部类中引用了<strong>局部变量</strong></p>
-<pre class="language-none"><code class="language-none">public class Demo8 {
-          public static void main(String[] args) {
-              int x = 1;
-              Runnable runnable = new Runnable() {
+<pre class="language-none"><code class="language-none">public class Demo8 &#123;
+          public static void main(String[] args) &#123;
+              int x &#x3D; 1;
+              Runnable runnable &#x3D; new Runnable() &#123;
                   @Override
-                  public void run() {
+                  public void run() &#123;
                       System.out.println(x);
-                  }
-              };
-          }
-      }</code></pre>
+                  &#125;
+              &#125;;
+          &#125;
+      &#125;</code></pre>
 
 <p>转化后代码</p>
-<pre class="language-none"><code class="language-none">public class Demo8 {
-            public static void main(String[] args) {
-                int x = 1;
-                Runnable runnable = new Runnable() {
+<pre class="language-none"><code class="language-none">public class Demo8 &#123;
+            public static void main(String[] args) &#123;
+                int x &#x3D; 1;
+                Runnable runnable &#x3D; new Runnable() &#123;
                     @Override
-                    public void run() {
+                    public void run() &#123;
                         System.out.println(x);
-                    }
-                };
-            }
-        }
-        final class Demo8$1 implements Runnable {
-            //多创建了一个变量
+                    &#125;
+                &#125;;
+            &#125;
+        &#125;
+        final class Demo8$1 implements Runnable &#123;
+            &#x2F;&#x2F;多创建了一个变量
             int val$x;
-            //变为了有参构造器
-            public Demo8$1(int x) {
-                this.val$x = x;
-            }
+            &#x2F;&#x2F;变为了有参构造器
+            public Demo8$1(int x) &#123;
+                this.val$x &#x3D; x;
+            &#125;
             @Override
-            public void run() {
+            public void run() &#123;
                 System.out.println(val$x);
-            }
-        }</code></pre>
+            &#125;
+        &#125;</code></pre>
 
 <h3 id="4、类加载阶段"><a href="#4、类加载阶段" class="headerlink" title="4、类加载阶段"></a>4、类加载阶段</h3><h4 id="加载"><a href="#加载" class="headerlink" title="加载"></a><strong>加载</strong></h4><ul>
 <li>将类的字节码载入<strong>方法区</strong>（1.8后为元空间，在本地内存中）中，内部采用 C++ 的 instanceKlass 描述 java 类，它的重要 field 有：<ul>
@@ -2095,12 +2095,12 @@ class Lock{}</code></pre>
 </thead>
 <tbody><tr>
 <td align="center">Bootstrap ClassLoader（启动类加载器）</td>
-<td align="center">JAVA_HOME/jre/lib</td>
+<td align="center">JAVA_HOME&#x2F;jre&#x2F;lib</td>
 <td align="center">无法直接访问</td>
 </tr>
 <tr>
 <td align="center">Extension ClassLoader (拓展类加载器)</td>
-<td align="center">JAVA_HOME/jre/lib/ext</td>
+<td align="center">JAVA_HOME&#x2F;jre&#x2F;lib&#x2F;ext</td>
 <td align="center">上级为Bootstrap，显示为 null</td>
 </tr>
 <tr>
@@ -2115,47 +2115,47 @@ class Lock{}</code></pre>
 </tr>
 </tbody></table>
 <h5 id="启动类加载器"><a href="#启动类加载器" class="headerlink" title="启动类加载器"></a><strong>启动类加载器</strong></h5><p>可通过在控制台输入指令，使得类被启动类加器加载</p>
-<h5 id="拓展类加载"><a href="#拓展类加载" class="headerlink" title="拓展类加载"></a><strong>拓展类加载</strong></h5><p>如果classpath和JAVA_HOME/jre/lib/ext 下有同名类，加载时会使用<strong>拓展类加载器</strong>加载。当应用程序类加载 器发现拓展类加载器已将该同名类加载过了，则不会再次加载</p>
+<h5 id="拓展类加载"><a href="#拓展类加载" class="headerlink" title="拓展类加载"></a><strong>拓展类加载</strong></h5><p>如果classpath和JAVA_HOME&#x2F;jre&#x2F;lib&#x2F;ext 下有同名类，加载时会使用<strong>拓展类加载器</strong>加载。当应用程序类加载 器发现拓展类加载器已将该同名类加载过了，则不会再次加载</p>
 <h5 id="双亲委派模式（经典面试题）"><a href="#双亲委派模式（经典面试题）" class="headerlink" title="双亲委派模式（经典面试题）"></a><strong>双亲委派模式（经典面试题）</strong></h5><p>双亲委派模式，即调用类加载器ClassLoader 的 loadClass 方法时，查找类的规则</p>
 <p>loadClass源码</p>
 <pre class="language-none"><code class="language-none">protected Class&lt;?&gt; loadClass(String name, boolean resolve) throws ClassNotFoundException
-        {
-            synchronized (getClassLoadingLock(name)) {
-                // 首先查找该类是否已经被该类加载器加载过了
-                Class&lt;?&gt; c = findLoadedClass(name);
-                //如果没有被加载过
-                if (c == null) {
-                    long t0 = System.nanoTime();
-                    try {
-                        //看是否被它的上级加载器加载过了 Extension的上级是Bootstarp，但它显示为null
-                        if (parent != null) {
-                            c = parent.loadClass(name, false);
-                        } else {
-                            //看是否被启动类加载器加载过
-                            c = findBootstrapClassOrNull(name);
-                        }
-                    } catch (ClassNotFoundException e) {
-                        // ClassNotFoundException thrown if class not found
-                        // from the non-null parent class loader
-                        //捕获异常，但不做任何处理
-                    }
-                    if (c == null) {
-                        //如果还是没有找到，先让拓展类加载器调用findClass方法去找到该类，如果还是没找到，就抛出异常
-                        //然后让应用类加载器去找classpath下找该类
-                        long t1 = System.nanoTime();
-                        c = findClass(name);
-                        // 记录时间
+        &#123;
+            synchronized (getClassLoadingLock(name)) &#123;
+                &#x2F;&#x2F; 首先查找该类是否已经被该类加载器加载过了
+                Class&lt;?&gt; c &#x3D; findLoadedClass(name);
+                &#x2F;&#x2F;如果没有被加载过
+                if (c &#x3D;&#x3D; null) &#123;
+                    long t0 &#x3D; System.nanoTime();
+                    try &#123;
+                        &#x2F;&#x2F;看是否被它的上级加载器加载过了 Extension的上级是Bootstarp，但它显示为null
+                        if (parent !&#x3D; null) &#123;
+                            c &#x3D; parent.loadClass(name, false);
+                        &#125; else &#123;
+                            &#x2F;&#x2F;看是否被启动类加载器加载过
+                            c &#x3D; findBootstrapClassOrNull(name);
+                        &#125;
+                    &#125; catch (ClassNotFoundException e) &#123;
+                        &#x2F;&#x2F; ClassNotFoundException thrown if class not found
+                        &#x2F;&#x2F; from the non-null parent class loader
+                        &#x2F;&#x2F;捕获异常，但不做任何处理
+                    &#125;
+                    if (c &#x3D;&#x3D; null) &#123;
+                        &#x2F;&#x2F;如果还是没有找到，先让拓展类加载器调用findClass方法去找到该类，如果还是没找到，就抛出异常
+                        &#x2F;&#x2F;然后让应用类加载器去找classpath下找该类
+                        long t1 &#x3D; System.nanoTime();
+                        c &#x3D; findClass(name);
+                        &#x2F;&#x2F; 记录时间
                         sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
                         sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
                         sun.misc.PerfCounter.getFindClasses().increment();
-                    }
-                }
-                if (resolve) {
+                    &#125;
+                &#125;
+                if (resolve) &#123;
                     resolveClass(c);
-                }
+                &#125;
                 return c;
-            }
-        }</code></pre>
+            &#125;
+        &#125;</code></pre>
 
 <p><strong>总结：</strong>先由下到上询问，后由上到下加载</p>
 <h5 id="自定义类加载器"><a href="#自定义类加载器" class="headerlink" title="自定义类加载器"></a><strong>自定义类加载器</strong></h5><p><strong>使用场景</strong></p>
@@ -2265,58 +2265,58 @@ class Lock{}</code></pre>
 <p>当对象没有发生逃逸时，该<strong>对象</strong>就可以通过标量替换分解成成员标量分配在<strong>栈内存</strong>中，和方法的生命周期一 致，随着栈帧出栈时销毁，减少了 GC 压力，提高了应用程序性能</p>
 <h4 id="方法内联"><a href="#方法内联" class="headerlink" title="方法内联"></a><strong>方法内联</strong></h4><h5 id="1、内联函数"><a href="#1、内联函数" class="headerlink" title="1、内联函数"></a><strong>1、内联函数</strong></h5><p>内联函数就是在程序编译时，编译器将程序中出现的内联函数的调用表达式用内联函数的函数体来直接进行替换</p>
 <h5 id="2、JVM内联函数"><a href="#2、JVM内联函数" class="headerlink" title="2、JVM内联函数"></a><strong>2、JVM内联函数</strong></h5><p>C++是否为内联函数由自己决定，Java由<strong>编译器</strong>决定。Java不支持直接声明为内联函数的，如果想让他内 联，你只能够向编译器提出请求: 关键字<strong>final修饰</strong> 用来指明那个函数是希望被JVM内联的，如</p>
-<pre class="language-none"><code class="language-none">public final void doSomething() {
-           // to do something 
-       }</code></pre>
+<pre class="language-none"><code class="language-none">public final void doSomething() &#123;
+           &#x2F;&#x2F; to do something 
+       &#125;</code></pre>
 
 <p>总的来说，一般的函数都不会被当做内联函数，只有声明了final后，编译器才会考虑是不是要把你的函数变成内联函数</p>
 <p>JVM内建有许多运行时优化。首先<strong>短方法</strong>更利于JVM推断。流程更明显，作用域更短，副作用也更明显。如果是长方法JVM可能直接就跪了。</p>
 <p>第二个原因则更重要：<strong>方法内联</strong></p>
 <p>如果JVM监测到一些小方法被频繁的执行，它会把方法的调用替换成方法体本身，如：</p>
-<pre class="language-none"><code class="language-none">private int add4(int x1, int x2, int x3, int x4) {
-       //这里调用了add2方法
+<pre class="language-none"><code class="language-none">private int add4(int x1, int x2, int x3, int x4) &#123;
+       &#x2F;&#x2F;这里调用了add2方法
            return add2(x1, x2) + add2(x3, x4);
-       }
-       private int add2(int x1, int x2) {
+       &#125;
+       private int add2(int x1, int x2) &#123;
            return x1 + x2;
-       }</code></pre>
+       &#125;</code></pre>
 
 <p>方法调用被替换后</p>
-<pre class="language-none"><code class="language-none">private int add4(int x1, int x2, int x3, int x4) {
-           //被替换为了方法本身
+<pre class="language-none"><code class="language-none">private int add4(int x1, int x2, int x3, int x4) &#123;
+           &#x2F;&#x2F;被替换为了方法本身
            return x1 + x2 + x3 + x4;
-       }</code></pre>
+       &#125;</code></pre>
 
-<h4 id="反射优化"><a href="#反射优化" class="headerlink" title="反射优化"></a><strong>反射优化</strong></h4><pre class="language-none"><code class="language-none">public class Reflect1 {
-           public static void foo() {
-               System.out.println("foo...");
-           }
-           public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException{
-           Method foo = Demo3.class.getMethod("foo");
-                for(int i = 0; i&lt;=16; i++) {
+<h4 id="反射优化"><a href="#反射优化" class="headerlink" title="反射优化"></a><strong>反射优化</strong></h4><pre class="language-none"><code class="language-none">public class Reflect1 &#123;
+           public static void foo() &#123;
+               System.out.println(&quot;foo...&quot;);
+           &#125;
+           public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException&#123;
+           Method foo &#x3D; Demo3.class.getMethod(&quot;foo&quot;);
+                for(int i &#x3D; 0; i&lt;&#x3D;16; i++) &#123;
                     foo.invoke(null);
-                }
-           }
-       }</code></pre>
+                &#125;
+           &#125;
+       &#125;</code></pre>
 
 <p>foo.invoke 前面 0 ~ 15 次调用使用的是 MethodAccessor 的 NativeMethodAccessorImpl 实现， invoke方法源码</p>
 <pre class="language-none"><code class="language-none">@CallerSensitive
       public Object invoke(Object obj, Object... args)throws IllegalAccessException, IllegalArgumentException,
               InvocationTargetException
-      {
-          if (!override) {
-              if (!Reflection.quickCheckMemberAccess(clazz, modifiers)) {
-                  Class&lt;?&gt; caller = Reflection.getCallerClass();
+      &#123;
+          if (!override) &#123;
+              if (!Reflection.quickCheckMemberAccess(clazz, modifiers)) &#123;
+                  Class&lt;?&gt; caller &#x3D; Reflection.getCallerClass();
                   checkAccess(caller, clazz, obj, modifiers);
-              }
-          }
-          //MethodAccessor是一个接口，有3个实现类，其中有一个是抽象类
-          MethodAccessor ma = methodAccessor; // read volatile
-          if (ma == null) {
-              ma = acquireMethodAccessor();
-          }
+              &#125;
+          &#125;
+          &#x2F;&#x2F;MethodAccessor是一个接口，有3个实现类，其中有一个是抽象类
+          MethodAccessor ma &#x3D; methodAccessor; &#x2F;&#x2F; read volatile
+          if (ma &#x3D;&#x3D; null) &#123;
+              ma &#x3D; acquireMethodAccessor();
+          &#125;
           return ma.invoke(obj, args);
-      }</code></pre>
+      &#125;</code></pre>
 
 <p>会由DelegatingMehodAccessorImpl去调用NativeMethodAccessorImpl</p>
 <ul>
@@ -3135,7 +3135,7 @@ class Lock{}</code></pre>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.3k</span>
             
             
             

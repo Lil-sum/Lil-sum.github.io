@@ -446,7 +446,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -490,7 +490,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>黄丽萍,123,108,121,235</p>
 <p>赵越,132,100,112,210</p>
 <p>2）数据读取</p>
-<p>Windows平台中CSV文件的后缀名为.csv，可通过Office Excel或记事本打开<br>Python在程序中读取.csv文件后会以二维列表形式存储其中内容<br>csv_file = open(‘score.csv’)<br>lines = []<br>for line in csv_file:<br>        line = line.replace(‘\n’,’’)<br>        lines.append(line.split(‘,’))<br>print(lines)<br>csv_file.close()<br> 3）数据写入</p>
+<p>Windows平台中CSV文件的后缀名为.csv，可通过Office Excel或记事本打开<br>Python在程序中读取.csv文件后会以二维列表形式存储其中内容<br>csv_file &#x3D; open(‘score.csv’)<br>lines &#x3D; []<br>for line in csv_file:<br>        line &#x3D; line.replace(‘\n’,’’)<br>        lines.append(line.split(‘,’))<br>print(lines)<br>csv_file.close()<br> 3）数据写入</p>
 <p>将一、二维数据写入文件中，即按照数据的组织形式，在文件中添加新的数据。</p>
 <h2 id="（二）多维数据的格式化"><a href="#（二）多维数据的格式化" class="headerlink" title="（二）多维数据的格式化"></a>（二）多维数据的格式化</h2><p>为了直观地表示多维数据，也为了便于组织和操作，三维及以上的多维数据统一采用键值对的形式进行格式化。 网络平台上传递的数据大多是高维数据，JSON是网络中常见的高维数据格式。JSON格式的数据遵循以下语法规则：</p>
 <p>数据存储在键值对（key:value）中，例如“姓名”: “张华”。<br>数据的字段由逗号分隔，例如“姓名”: “张华”, “语文”: “116”。<br>一个花括号保存一个JSON对象，例如{“姓名”: “张华”, “语文”: “116”}。<br>一个方括号保存一个数组，例如[{“姓名”: “张华”, “语文”: “116”}]。</p>
@@ -553,22 +553,22 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>使用dumps()函数对Python对象进行转码：</p>
 <pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
 
-&gt;&gt;&gt; pyobj = [[1, 2, 3], 345, 23.12, 'qwe', {'key1':(1,2,3), 'key2':(2,3,4)}, True, False, None] &gt;&gt;&gt; jsonstr = json.dumps(pyobj)
+&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
 
 &gt;&gt;&gt; print(jsonstr)
 
-&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, "qwe", {"key1": [1, 2, 3], "key2": [2, 3, 4]}, true, false, null]
+&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]
 </code></pre>
 
 <p>loads()函数</p>
 <p>使用loads()函数将JSON数据转换为符合Python语法要求的数据类型。</p>
 <pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
 
-&gt;&gt;&gt; pyobj = [[1, 2, 3], 345, 23.12, 'qwe', {'key1':(1,2,3), 'key2':(2,3,4)}, True, False, None] &gt;&gt;&gt; jsonstr = json.dumps(pyobj)
+&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
 
 &gt;&gt;&gt; print(jsonstr)
 
-&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, "qwe", {"key1": [1, 2, 3], "key2": [2, 3, 4]}, true, false, null]</code></pre>
+&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]</code></pre>
 
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Python数据维度与格式化的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
@@ -1381,7 +1381,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.3k</span>
             
             
             

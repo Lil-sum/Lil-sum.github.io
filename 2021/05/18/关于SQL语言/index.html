@@ -648,39 +648,39 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </li>
 </ul>
 <h3 id="更新操作"><a href="#更新操作" class="headerlink" title="更新操作"></a>更新操作</h3><ul>
-<li><p>UPDATE 表名 SET 列名1=列值1，列名2=列值2 。。。 WHERE 列名=值</p>
+<li><p>UPDATE 表名 SET 列名1&#x3D;列值1，列名2&#x3D;列值2 。。。 WHERE 列名&#x3D;值</p>
 </li>
 <li><p>把所有学生的分数改为90</p>
 <ul>
-<li>update students set  score=90</li>
+<li>update students set  score&#x3D;90</li>
 </ul>
 </li>
 <li><p>把姓名为张三的学生分数改为60</p>
 <ul>
-<li>update student set score=60 where name=’张三’;</li>
+<li>update student set score&#x3D;60 where name&#x3D;’张三’;</li>
 </ul>
 </li>
 <li><p>把姓名为李四的年龄改为20和分数改为70</p>
 <ul>
-<li>update student set age=20,score=70 where name=’李四’;</li>
+<li>update student set age&#x3D;20,score&#x3D;70 where name&#x3D;’李四’;</li>
 </ul>
 </li>
 <li><p>把赵六的年龄在原来基础上加1岁</p>
 <ul>
-<li>update students set age=age+1 where name=’赵六’;</li>
+<li>update students set age&#x3D;age+1 where name&#x3D;’赵六’;</li>
 </ul>
 </li>
 <li><p>修改数据库密码</p>
 <ul>
 <li>use mysql;</li>
-<li>update user set password=password(‘abc’) WHERE User=’root’;</li>
+<li>update user set password&#x3D;password(‘abc’) WHERE User&#x3D;’root’;</li>
 <li>flush privileges;刷新MySQL的系统权限相关表</li>
 <li>mysqladmin -u root -p password 12356</li>
 </ul>
 </li>
 </ul>
 <h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><ul>
-<li><p>DELETE FROM 表名 【WHERE 列名=值】</p>
+<li><p>DELETE FROM 表名 【WHERE 列名&#x3D;值】</p>
 </li>
 <li><p>TRUNCATE TABLE 表名;</p>
 </li>
@@ -713,7 +713,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </li>
 <li><p>条件查询运行符及关键字</p>
 <ul>
-<li><p>=（等于）、!=（不等于）、&lt;&gt;（不等于）、&lt;（小于）、&lt;=（小于等于）、&gt;（大于）、&gt;=（大于等于）；</p>
+<li><p>&#x3D;（等于）、!&#x3D;（不等于）、&lt;&gt;（不等于）、&lt;（小于）、&lt;&#x3D;（小于等于）、&gt;（大于）、&gt;&#x3D;（大于等于）；</p>
 </li>
 <li><p>BETWEEN…AND；值在什么范围</p>
 </li>
@@ -736,17 +736,17 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <ul>
 <li><p>查询性别为男，并且年龄为20的学生记录</p>
 <ul>
-<li>SELECT * FROM students WHERE gender=’男’ AND age=20;</li>
+<li>SELECT * FROM students WHERE gender&#x3D;’男’ AND age&#x3D;20;</li>
 </ul>
 </li>
 <li><p>查询学号为1 或者 名为zs的记录</p>
 <ul>
-<li>SELECT * FROM students WHERE id =1 OR name=’zs’;</li>
+<li>SELECT * FROM students WHERE id &#x3D;1 OR name&#x3D;’zs’;</li>
 </ul>
 </li>
 <li><p>查询学号为1，2，3的记录</p>
 <ul>
-<li>SELECT * FROM students WHERE id=’1001’ OR id=’1002’ OR 1001=’1003’;</li>
+<li>SELECT * FROM students WHERE id&#x3D;’1001’ OR id&#x3D;’1002’ OR 1001&#x3D;’1003’;</li>
 <li>SELECT * FROM students WHERE id  IN(‘1001’,’1002’,’1003’);</li>
 <li>SELECT * FROM students WHERE id NOT IN (‘1001’,’1002’,’1003’);</li>
 </ul>
@@ -758,13 +758,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </li>
 <li><p>查询年龄在18到20之间的学生记录</p>
 <ul>
-<li>SELECT * FROM students WHERE age&gt;=18 AND age&lt;=20;</li>
+<li>SELECT * FROM students WHERE age&gt;&#x3D;18 AND age&lt;&#x3D;20;</li>
 <li>SELECT * FROM students WHERE age BETWEEN 18 AND 20;</li>
 </ul>
 </li>
 <li><p>查询性别非男的学生记录</p>
 <ul>
-<li>SELECT * FROM students WHERE gender !=’男’;</li>
+<li>SELECT * FROM students WHERE gender !&#x3D;’男’;</li>
 </ul>
 </li>
 <li><p>查询姓名不为null的学生记录</p>
@@ -844,7 +844,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
 <li><p>创建表</p>
 <ul>
-<li><p>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL<br>  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
+<li><p>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL<br>  ) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</p>
 </li>
 <li><p>INSERT INTO <code>employee</code> VALUES (1001, ‘张三’, ‘男’, ‘1991-7-25’, 2000, 200, 500, ‘营销部’);</p>
 </li>
@@ -1790,7 +1790,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.3k</span>
             
             
             

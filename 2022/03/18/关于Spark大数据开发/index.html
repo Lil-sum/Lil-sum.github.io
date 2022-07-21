@@ -442,7 +442,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    6.5k
                 </div>
                 
 
@@ -500,7 +500,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>FIFO调度：先进先出，这是Spark默认的调度模式。<br>FAIR调度：支持将作业分组到池中，并为每个池设置不同的调度权重，任务可以按照权重来决定执行顺序。</p>
 <h2 id="（2）Spark-SQL"><a href="#（2）Spark-SQL" class="headerlink" title="（2）Spark SQL"></a>（2）Spark SQL</h2><p>spark sql提供了基于sql的数据处理方法，使得分布式的数据集处理变的更加简单，这也是spark 广泛使用的重要原因。</p>
 <p>目前大数据相关计算引擎一个重要的评价指标就是：是否支持sql，这样才会降低使用者的门槛。spark sql提供了两种抽象的数据集合DataFrame和DataSet。</p>
-<p>DataFrame 是spark Sql 对结构化数据的抽象，可以简单的理解为spark中的表，相比较于RDD多了数据的表结构信息(schema).DataFrame = Data + schema</p>
+<p>DataFrame 是spark Sql 对结构化数据的抽象，可以简单的理解为spark中的表，相比较于RDD多了数据的表结构信息(schema).DataFrame &#x3D; Data + schema</p>
 <p>RDD是分布式对象集合，DataFrame是分布式Row的集合，提供了比RDD更丰富的算子，同时提升了数据的执行效率。</p>
 <p>DataSet 是数据的分布式集合 ，它具有RDD强类型的优点 和Spark SQL优化后执行的优点。DataSet可以由jvm对象构建，然后使用map，filter，flatmap等操作函数操作。</p>
 <h2 id="（3）Spark-Streaming"><a href="#（3）Spark-Streaming" class="headerlink" title="（3）Spark Streaming"></a>（3）Spark Streaming</h2><p>这个模块主要是对流数据的处理，支持流数据的可伸缩和容错处理，可以与Flume和Kafka等已建立的数据源集成。Spark Streaming的实现，也使用RDD抽象的概念，使得在为流数据编写应用程序时更为方便。</p>
@@ -536,7 +536,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <tr>
 <td align="center">standalone</td>
 <td align="center">集群模式</td>
-<td align="center">独立模式，在spark自己的资源调度管理框架上运行，该框架采用master/salve结构</td>
+<td align="center">独立模式，在spark自己的资源调度管理框架上运行，该框架采用master&#x2F;salve结构</td>
 </tr>
 <tr>
 <td align="center">yarn</td>
@@ -628,47 +628,47 @@ import scala.Tuple2;
 import java.util.Arrays;
 import java.util.Iterator;
 
-/**
+&#x2F;**
  * @author : 
  * @email :
  * @date : 
  * @time : 
- */
-public class WordCountJava {
-    public static void main(String[] args) {
+ *&#x2F;
+public class WordCountJava &#123;
+    public static void main(String[] args) &#123;
 
-        SparkConf sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local");
+        SparkConf sparkConf &#x3D; new SparkConf().setAppName(&quot;wordCountApp&quot;).setMaster(&quot;local&quot;);
 
-        JavaSparkContext sc = new JavaSparkContext(sparkConf);
+        JavaSparkContext sc &#x3D; new JavaSparkContext(sparkConf);
 
-        JavaRDD lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt");
+        JavaRDD lines &#x3D; sc.textFile(&quot;hdfs:&#x2F;&#x2F;bigdata-pro-m04:9000&#x2F;user&#x2F;caizhengjie&#x2F;datas&#x2F;wordcount.txt&quot;);
 
-        JavaRDD words = lines.flatMap(new FlatMapFunction&lt;String,String&gt;() {
-            public Iterator call(String line) throws Exception {
-                return Arrays.asList(line.split(" ")).iterator();
-            }
-        });
+        JavaRDD words &#x3D; lines.flatMap(new FlatMapFunction&lt;String,String&gt;() &#123;
+            public Iterator call(String line) throws Exception &#123;
+                return Arrays.asList(line.split(&quot; &quot;)).iterator();
+            &#125;
+        &#125;);
 
-        JavaPairRDD word = words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() {
-            public Tuple2 call(String word) throws Exception {
+        JavaPairRDD word &#x3D; words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() &#123;
+            public Tuple2 call(String word) throws Exception &#123;
                 return new Tuple2(word,1);
-            }
-        });
+            &#125;
+        &#125;);
 
-        JavaPairRDD wordcount = word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() {
-            public Integer call(Integer v1, Integer v2) throws Exception {
+        JavaPairRDD wordcount &#x3D; word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() &#123;
+            public Integer call(Integer v1, Integer v2) throws Exception &#123;
                 return v1+ v2;
-            }
-        });
+            &#125;
+        &#125;);
 
-        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() {
-            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception {
-                System.out.println(o._1 + " : " + o._2);
-            }
-        });
+        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() &#123;
+            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception &#123;
+                System.out.println(o._1 + &quot; : &quot; + o._2);
+            &#125;
+        &#125;);
 
-    }
-}
+    &#125;
+&#125;
 </code></pre>
 
 <p>运行结果：</p>
@@ -684,31 +684,31 @@ hbase : 1
 
 <h2 id="（2）Scala开发WordCount程序"><a href="#（2）Scala开发WordCount程序" class="headerlink" title="（2）Scala开发WordCount程序"></a>（2）Scala开发WordCount程序</h2><pre class="language-none"><code class="language-none">package com.kfk.spark
 
-import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.&#123;SparkConf, SparkContext&#125;
 
-/**
+&#x2F;**
  * @author : 
  * @email :
  * @date : 
  * @time : 
- */
-object WordCountScala {
-    def main(args: Array[String]): Unit = {
-        val sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local")
-        val sc = new SparkContext(sparkConf)
-        val lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt")
+ *&#x2F;
+object WordCountScala &#123;
+    def main(args: Array[String]): Unit &#x3D; &#123;
+        val sparkConf &#x3D; new SparkConf().setAppName(&quot;wordCountApp&quot;).setMaster(&quot;local&quot;)
+        val sc &#x3D; new SparkContext(sparkConf)
+        val lines &#x3D; sc.textFile(&quot;hdfs:&#x2F;&#x2F;bigdata-pro-m04:9000&#x2F;user&#x2F;caizhengjie&#x2F;datas&#x2F;wordcount.txt&quot;)
 
-        // val wordcount = lines.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word,1)).reduceByKey((x,y) =&gt; (x+y)).foreach((_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
+        &#x2F;&#x2F; val wordcount &#x3D; lines.flatMap(line &#x3D;&gt; line.split(&quot; &quot;)).map(word &#x3D;&gt; (word,1)).reduceByKey((x,y) &#x3D;&gt; (x+y)).foreach((_wordcount &#x3D;&gt; println(_wordcount._1 + &quot; : &quot; + _wordcount._2))
 
-        val words = lines.flatMap(line =&gt; line.split(" "))
-        val word = words.map(word =&gt; (word,1))
-        val wordcount = word.reduceByKey((x,y) =&gt; (x+y))
+        val words &#x3D; lines.flatMap(line &#x3D;&gt; line.split(&quot; &quot;))
+        val word &#x3D; words.map(word &#x3D;&gt; (word,1))
+        val wordcount &#x3D; word.reduceByKey((x,y) &#x3D;&gt; (x+y))
 
-        // println(wordcount.collect().toList)
+        &#x2F;&#x2F; println(wordcount.collect().toList)
 
-        wordcount.foreach(_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
-    }
-}
+        wordcount.foreach(_wordcount &#x3D;&gt; println(_wordcount._1 + &quot; : &quot; + _wordcount._2))
+    &#125;
+&#125;
 </code></pre>
 
 <p>运行结果：</p>
@@ -722,7 +722,7 @@ storm : 1
 hbase : 1
 </code></pre>
 
-<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><pre class="language-none"><code class="language-none">bin/spark-submit --class com.kfk.spark.WordCountJava --master local[2] /opt/jars/wordcountjava.jar 
+<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><pre class="language-none"><code class="language-none">bin&#x2F;spark-submit --class com.kfk.spark.WordCountJava --master local[2] &#x2F;opt&#x2F;jars&#x2F;wordcountjava.jar 
 </code></pre>
 
 <p>运行结果：</p>
@@ -1544,7 +1544,7 @@ hbase : 1
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.3k</span>
             
             
             

@@ -443,7 +443,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.5k
                 </div>
                 
 
@@ -506,9 +506,9 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>二级区块</p>
 <p>三级区块</p>
 <p>要退出区块，同样使用Enter键即可。</p>
-<h2 id="2-6-代码"><a href="#2-6-代码" class="headerlink" title="2.6 代码"></a>2.6 代码</h2><p>如果是一行代码，可以使用段内代码块来表示，用一对 `（数字1旁边的符号）括住代码。</p>
+<h2 id="2-6-代码"><a href="#2-6-代码" class="headerlink" title="2.6 代码"></a>2.6 代码</h2><p>如果是一行代码，可以使用段内代码块来表示，用一对 &#96;（数字1旁边的符号）括住代码。</p>
 <p>比如printf(“Hello World!”)</p>
-<p>如果是代码段，那么可以使用三个 ` 加Enter/空格+编程语言来表示。如：</p>
+<p>如果是代码段，那么可以使用三个 &#96; 加Enter&#x2F;空格+编程语言来表示。如：</p>
 <p>include &lt;stdio.h&gt;</p>
 <p>void main(){<br>    printf(“Hello world!\n”);<br>}</p>
 <p>可以在代码块的右下角选择编程语言。</p>
@@ -523,9 +523,9 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p><a href="./LinkTest.md">打开LinkTest.md文档</a><br><a href="./img/LinkTest.png">打开LinkTest.png照片</a><br>1<br>2<br>结果如下：</p>
 <p>打开LinkTest.md文档</p>
 <p>打开LinkTest.png照片</p>
-<p>经测试可以打开相应的文件。但是不能使用&lt;要打开的文件地址&gt;来打开相应的文件，比如&lt;./LinkTest.md&gt;并没有表现为可链接状态。</p>
+<p>经测试可以打开相应的文件。但是不能使用&lt;要打开的文件地址&gt;来打开相应的文件，比如&lt;.&#x2F;LinkTest.md&gt;并没有表现为可链接状态。</p>
 <p>补充知识：</p>
-<p>一个小圆点.表示当前目录，故./LinkTest.md表示当前目录下的LinkTest.md文件，./img/LinkTest.png表示当前目录下的img文件下的LinkTest.png文件。</p>
+<p>一个小圆点.表示当前目录，故.&#x2F;LinkTest.md表示当前目录下的LinkTest.md文件，.&#x2F;img&#x2F;LinkTest.png表示当前目录下的img文件下的LinkTest.png文件。</p>
 <p>两个小圆点..表示上一级目录。</p>
 <p>我们也可以使用链接来实现页内跳转，语法为：</p>
 <p><a href="#%E6%A0%87%E9%A2%98%E6%96%87%E5%AD%97">链接文字</a><br>1<br>示例：</p>
@@ -543,7 +543,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>在Typora中，也可以直接使用Ctrl+C，Ctrl+V来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
 <p>点击文件 –&gt; 偏好设置 –&gt; 图像，如下：</p>
 <p>可以自行设置选择将图片复制到哪个文件夹。</p>
-<p>这里选择复制到指定路径，然后在下面一栏中填写./img，表示将图片复制到你正在编辑的文档同一级的img文件夹下。在下面的选项中，勾选第一、二、三项。正因为勾选了第二项，所以当我们在插入网络图片时，Typora会自动帮我们将网络图片下载到指定的路径下，前面的”菜鸟教程”图片便是如此。</p>
+<p>这里选择复制到指定路径，然后在下面一栏中填写.&#x2F;img，表示将图片复制到你正在编辑的文档同一级的img文件夹下。在下面的选项中，勾选第一、二、三项。正因为勾选了第二项，所以当我们在插入网络图片时，Typora会自动帮我们将网络图片下载到指定的路径下，前面的”菜鸟教程”图片便是如此。</p>
 <p>由于Markdown的特殊语法，故经常会出现图片加载失败的情况，很大的可能就是因为在指定的路径上找不到相应的图片，当然，有时候也是由于Typora的原因，重启Typora即可。</p>
 <h2 id="2-9-表格"><a href="#2-9-表格" class="headerlink" title="2.9 表格"></a>2.9 表格</h2><p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
 <p>结果如下：</p>
@@ -590,15 +590,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>在Typora中，我们可以使用快捷键Ctrl+T来插入表格，并选择行列，当选中表格某一单元格时，可以在表格左上角手动设置对齐方式，右上角选择更多操作。</p>
 <h1 id="三、Typora与数学公式"><a href="#三、Typora与数学公式" class="headerlink" title="三、Typora与数学公式"></a>三、Typora与数学公式</h1><p>在本章中，重点不在于介绍如何插入数学公式，而在于如何表示数学符号。</p>
 <h3 id="3-1-如何插入数学公式"><a href="#3-1-如何插入数学公式" class="headerlink" title="3.1 如何插入数学公式"></a>3.1 如何插入数学公式</h3><p>在Typora中，有两种方法插入数学公式，语法为：</p>
-<p>第一种方法：$数学公式$<br>第二种方法：<br>$$<br>数学公式<br>$$<br>1<br>2<br>3<br>4<br>5<br>第一种方法表示插入行内公式（内联公式），即可以将公式插入到一行中，比如1 + 2 = 3 1+2=31+2=3这样的公式。</p>
-<p>第二种方法表示插入行间公式（外联公式），即可以将公式插入到行与行之间，单独占据一行或者数行的空间，并且居中放置。<br>1 + 2 = 3 1+2=3<br>1+2=3</p>
+<p>第一种方法：$数学公式$<br>第二种方法：<br>$$<br>数学公式<br>$$<br>1<br>2<br>3<br>4<br>5<br>第一种方法表示插入行内公式（内联公式），即可以将公式插入到一行中，比如1 + 2 &#x3D; 3 1+2&#x3D;31+2&#x3D;3这样的公式。</p>
+<p>第二种方法表示插入行间公式（外联公式），即可以将公式插入到行与行之间，单独占据一行或者数行的空间，并且居中放置。<br>1 + 2 &#x3D; 3 1+2&#x3D;3<br>1+2&#x3D;3</p>
 <p>如果要在行间公式内换行，在换行的位置使用\。</p>
 <p>接下来重点介绍如何表示数学符号。</p>
 <h3 id="3-2-上标下标"><a href="#3-2-上标下标" class="headerlink" title="3.2 上标下标"></a>3.2 上标下标</h3><p>上下标可以使用^，_后跟相应的符号来实现。如：</p>
 <p>上 标 ： a 1 ， 下 标 ： a 1 上标：a^1，下标：a_1上标：a<br>1<br> ，下标：a<br>1</p>
 <p>如果作为上标、下标的符号不止一个，则需要用花括号{}将其括起来。如：</p>
 <p>上 标 为 12 ： a 12 , 下 标 为 34 ： a 34 上标为12：a^{12},下标为34：a_{34}上标为12：a<br>12<br> ,下标为34：a<br>34</p>
-<p>更多例子：<br>f ( x ) = x x x e x 2 e x 2 f(x)=x^{x^x}\ e^{x2}\ e^{x^2}\<br>f(x)=x<br>x<br>x</p>
+<p>更多例子：<br>f ( x ) &#x3D; x x x e x 2 e x 2 f(x)&#x3D;x^{x^x}\ e^{x2}\ e^{x^2}\<br>f(x)&#x3D;x<br>x<br>x</p>
 <p>e<br>x2</p>
 <p>e<br>x<br>2</p>
 <h3 id="3-3-根号"><a href="#3-3-根号" class="headerlink" title="3.3 根号"></a>3.3 根号</h3><p>我们可以使用\sqrt{}来表示根号。如：</p>
@@ -645,16 +645,16 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>$\int$<br>$\int_{1}^{2}$<br>1<br>2<br>结果为：</p>
 <p>∫ \int∫<br>∫ 1 2 \int_{1}^{2}∫<br>1<br>2</p>
 <h3 id="3-9-求和运算符"><a href="#3-9-求和运算符" class="headerlink" title="3.9 求和运算符"></a>3.9 求和运算符</h3><p>求和运算符可以使用\sum来生成，用\sum_{}^{}来表示求和上下界，如：</p>
-<p>$\sum$<br>$\sum_{i=1}^{10}x_i$<br>1<br>2<br>结果为：</p>
-<p>∑ \sum∑<br>∑ i = 1 10 x i \sum_{i=1}^{10}x_i∑<br>i=1<br>10</p>
+<p>$\sum$<br>$\sum_{i&#x3D;1}^{10}x_i$<br>1<br>2<br>结果为：</p>
+<p>∑ \sum∑<br>∑ i &#x3D; 1 10 x i \sum_{i&#x3D;1}^{10}x_i∑<br>i&#x3D;1<br>10</p>
 <p> x<br>i</p>
-<p>求和符号的上下标在内联公式里，表现为上面那样，当在外联公式里时，表现如下：<br>∑ i = 1 10 x i \sum_{i=1}^{10}x_i<br>i=1<br>∑<br>10</p>
+<p>求和符号的上下标在内联公式里，表现为上面那样，当在外联公式里时，表现如下：<br>∑ i &#x3D; 1 10 x i \sum_{i&#x3D;1}^{10}x_i<br>i&#x3D;1<br>∑<br>10</p>
 <p> x<br>i</p>
 <h3 id="3-10-连乘运算符"><a href="#3-10-连乘运算符" class="headerlink" title="3.10 连乘运算符"></a>3.10 连乘运算符</h3><p>连乘运算符用\prod{}表示，同样地，上下标用prod_{}^{}表示，如：</p>
-<p>$\prod$<br>$\prod_{i=1}^{10}x_i$<br>$$<br>\prod_{i=1}^{10}x_i<br>$$<br>1<br>2<br>3<br>4<br>5<br>结果为：</p>
-<p>∏ \prod∏<br>∏ i = 1 10 x i \prod_{i=1}^{10}x_i∏<br>i=1<br>10</p>
+<p>$\prod$<br>$\prod_{i&#x3D;1}^{10}x_i$<br>$$<br>\prod_{i&#x3D;1}^{10}x_i<br>$$<br>1<br>2<br>3<br>4<br>5<br>结果为：</p>
+<p>∏ \prod∏<br>∏ i &#x3D; 1 10 x i \prod_{i&#x3D;1}^{10}x_i∏<br>i&#x3D;1<br>10</p>
 <p> x<br>i</p>
-<p>∏ i = 1 10 x i \prod_{i=1}^{10}x_i<br>i=1<br>∏<br>10</p>
+<p>∏ i &#x3D; 1 10 x i \prod_{i&#x3D;1}^{10}x_i<br>i&#x3D;1<br>∏<br>10</p>
 <p> x<br>i</p>
 <h3 id="3-11-特殊符号"><a href="#3-11-特殊符号" class="headerlink" title="3.11 特殊符号"></a>3.11 特殊符号</h3><p>希腊字母</p>
 <p>α \alphaα为\alpha，β \betaβ为\beta，γ \gammaγ为\gamma，θ \thetaθ为\theta，ρ \rhoρ为\rho，λ \lambdaλ为\lambda，μ \muμ为\mu</p>
@@ -662,8 +662,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>关系运算符</p>
 <p>大于&gt;，大于等于≥ \geq≥为\geq或\ge</p>
 <p>小于&lt;，小于等于≤ \leq≤为\leq或\le</p>
-<p>等于=，不等于≠ \neq<br></p>
-<p> =为\neq或\ne</p>
+<p>等于&#x3D;，不等于≠ \neq<br></p>
+<p> &#x3D;为\neq或\ne</p>
 <p>加减乘除</p>
 <p>加+ 减-</p>
 <p>乘× \times×为\times 除÷ \div÷为\div</p>
@@ -686,7 +686,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>3<br>6</p>
 <p>∣<br>∣<br>∣<br>∣</p>
 <p>这里仅仅介绍简单的矩阵表示，如果要了解更多矩阵表示法，请自行搜索了解，网上的资料很多。</p>
-<h3 id="3-13-方程组"><a href="#3-13-方程组" class="headerlink" title="3.13 方程组"></a>3.13 方程组</h3><p>$$<br>\begin{equation}<br>\left{<br>             \begin{array}{lr}<br>             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &amp;  \<br>             y=s, &amp; 0\leq s\leq L,|t|\leq1.\<br>             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &amp;<br>             \end{array}<br>\right.<br>\end{equation}<br>$$</p>
+<h3 id="3-13-方程组"><a href="#3-13-方程组" class="headerlink" title="3.13 方程组"></a>3.13 方程组</h3><p>$$<br>\begin{equation}<br>\left{<br>             \begin{array}{lr}<br>             x&#x3D;\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &amp;  \<br>             y&#x3D;s, &amp; 0\leq s\leq L,|t|\leq1.\<br>             z&#x3D;\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &amp;<br>             \end{array}<br>\right.<br>\end{equation}<br>$$</p>
 <p>结果如下：<br>KaTeX parse error: No such environment: equation at position 8: \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲ \left{ …</p>
 <p>现在我们一一来解释：</p>
 <p>begin{equation}与\end{euqation}表示它们之间的为方程组。</p>
@@ -694,21 +694,21 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <p>\begin{array}和\end{array}表示它们之间的是数组，其实这也可以用来表示矩阵。</p>
 <p>{lr}表示有两列，第一列的值靠左排列，用l表示，第二列的值靠右排列，用r表示，如果是中间对齐则为c。</p>
 <p>然后下面三行是方程式，用&amp;分割，用\换行。</p>
-<h3 id="3-14-分段函数"><a href="#3-14-分段函数" class="headerlink" title="3.14 分段函数"></a>3.14 分段函数</h3><p>其实分段函数与方程组类似，示例如下：<br>$$<br>y=<br>\begin{equation}<br>    \left{<br>        \begin{array}{lr}<br>        x-1 &amp; x \leq 0<br>        x+1 &amp; x&gt;0<br>        \end{array}<br>    \right.<br>\end{equation}<br>$$</p>
-<p>结果如下：<br>KaTeX parse error: No such environment: equation at position 11: y= \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲ \left{ \be…<br>就是在\begin{equation}前加y=即可。</p>
+<h3 id="3-14-分段函数"><a href="#3-14-分段函数" class="headerlink" title="3.14 分段函数"></a>3.14 分段函数</h3><p>其实分段函数与方程组类似，示例如下：<br>$$<br>y&#x3D;<br>\begin{equation}<br>    \left{<br>        \begin{array}{lr}<br>        x-1 &amp; x \leq 0<br>        x+1 &amp; x&gt;0<br>        \end{array}<br>    \right.<br>\end{equation}<br>$$</p>
+<p>结果如下：<br>KaTeX parse error: No such environment: equation at position 11: y&#x3D; \begin{̲e̲q̲u̲a̲t̲i̲o̲n̲}̲ \left{ \be…<br>就是在\begin{equation}前加y&#x3D;即可。</p>
 <h1 id="四、Typora与HTML"><a href="#四、Typora与HTML" class="headerlink" title="四、Typora与HTML"></a>四、Typora与HTML</h1><h3 id="4-1-改变字体颜色及大小"><a href="#4-1-改变字体颜色及大小" class="headerlink" title="4.1 改变字体颜色及大小"></a>4.1 改变字体颜色及大小</h3><p>我们可以使用<font> </font>标签来改变字体的颜色及大小，如：</p>
-<p><font size="3" color="red">字体颜色为红色，大小为3</font></p>
-<p><font size="4" color="blue">字体颜色为蓝色，大小为4</font></p>
-<p><font size="6" color="violet">字体颜色为紫罗兰，大小为6</font></p>
+<p><font size=3 color="red">字体颜色为红色，大小为3</font></p>
+<p><font size=4 color="blue">字体颜色为蓝色，大小为4</font></p>
+<p><font size=6 color="violet">字体颜色为紫罗兰，大小为6</font></p>
 <p>属性size表示字体大小，color表示颜色。</p>
-<h3 id="4-2-改变对齐方式"><a href="#4-2-改变对齐方式" class="headerlink" title="4.2 改变对齐方式"></a>4.2 改变对齐方式</h3><p>我们可以改变字体的对齐方式，用标签</p><p> </p>加上属性align，如：<p></p>
-<p>1 </p><p align="left">左对齐</p><br>2 <p align="center">中间对齐</p><br>3 <p align="right">右对齐</p><br>结果为：<p></p>
+<h3 id="4-2-改变对齐方式"><a href="#4-2-改变对齐方式" class="headerlink" title="4.2 改变对齐方式"></a>4.2 改变对齐方式</h3><p>我们可以改变字体的对齐方式，用标签<p> </p>加上属性align，如：</p>
+<p>1 <p align="left">左对齐</p><br>2 <p align="center">中间对齐</p><br>3 <p align="right">右对齐</p><br>结果为：</p>
 <p align="left">左对齐</p>
 <p align="center">中间对齐</p>
 <p align="right">右对齐</p>
 
-<h3 id="4-3-插入图像"><a href="#4-3-插入图像" class="headerlink" title="4.3 插入图像"></a>4.3 插入图像</h3><p>大家可以自己在Typora中测试。<br>我们可以通过标签<img src="url">来插入图片，如：</p>
-<img src="img/1.jpg">
+<h3 id="4-3-插入图像"><a href="#4-3-插入图像" class="headerlink" title="4.3 插入图像"></a>4.3 插入图像</h3><p>大家可以自己在Typora中测试。<br>我们可以通过标签<img src=url />来插入图片，如：</p>
+<img src="img/1.jpg" />
 结果为：
 
 
@@ -718,22 +718,22 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 <p>我们可以改变<img>标签的属性，来改变图片的大小。</p>
-<img src="img/1.jpg" width="100" height="100/">
+<img src="img/1.jpg" width=100 height=100/>
 1
 将图片的宽高均设为100
 
 
 
 <p>也可以改变图片的位置，如：</p>
-<p><img src="img/1.jpg" width="30" height="30" style="float:left">图片在左边<br><img src="img/1.jpg" width="30" height="30" style="float:right">图片在右边</p>
+<p><img src="img/1.jpg" width=30 height=30 style="float:left"/>图片在左边<br><img src="img/1.jpg" width=30 height=30 style="float:right"/>图片在右边</p>
 <h1 id="五、扩展用法"><a href="#五、扩展用法" class="headerlink" title="五、扩展用法"></a>五、扩展用法</h1><h3 id="5-1-插入emoji表情"><a href="#5-1-插入emoji表情" class="headerlink" title="5.1 插入emoji表情"></a>5.1 插入emoji表情</h3><p>我们可以使用:emoji:的语法来插入表情，比如：</p>
 <p>:happy:的语法为:happy:</p>
-<p>🦀的语法为<span class="github-emoji"><span>🦀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f980.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<p>🐴的语法为<span class="github-emoji"><span>🐴</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f434.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>🦀的语法为:crab:</p>
+<p>🐴的语法为:horse:</p>
 <h3 id="5-2-插入目录"><a href="#5-2-插入目录" class="headerlink" title="5.2 插入目录"></a>5.2 插入目录</h3><p>当我们为使用标题将文分章节后，可以在输入[toc]命令的地方自动根据标题生成目录。</p>
 <h3 id="5-3-导出"><a href="#5-3-导出" class="headerlink" title="5.3 导出"></a>5.3 导出</h3><p>选择文件 –&gt; 导出，可以选择导出的文件格式，有pdf,html,word等格式。</p>
-<h3 id="5-4-文本高亮"><a href="#5-4-文本高亮" class="headerlink" title="5.4 文本高亮"></a>5.4 文本高亮</h3><p>在Typora中，可以用一对==将要高亮的文本括起来，如：</p>
-<p>==要高亮的文本==<br>==背景会用黄色填充==<br>1<br>2<br>结果为：</p>
+<h3 id="5-4-文本高亮"><a href="#5-4-文本高亮" class="headerlink" title="5.4 文本高亮"></a>5.4 文本高亮</h3><p>在Typora中，可以用一对&#x3D;&#x3D;将要高亮的文本括起来，如：</p>
+<p>&#x3D;&#x3D;要高亮的文本&#x3D;&#x3D;<br>&#x3D;&#x3D;背景会用黄色填充&#x3D;&#x3D;<br>1<br>2<br>结果为：</p>
 <p>要高亮的文本<br>背景会用黄色填充</p>
 <p>这个功能可在偏好设置 –&gt; Markdown扩展语法中设置。</p>
 <h3 id="5-5-上下标"><a href="#5-5-上下标" class="headerlink" title="5.5 上下标"></a>5.5 上下标</h3><p>在Typora中，可以用一对<del>将下标括起来，如：H</del>2~O表示H2O</p>
@@ -1553,7 +1553,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.3k</span>
             
             
             
