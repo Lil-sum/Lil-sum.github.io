@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GitHub开发者交流平台注册教程</title>
-    <url>/2020/09/08/GitHub%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="GitHub食用教程："><a href="#GitHub食用教程：" class="headerlink" title="GitHub食用教程："></a>GitHub食用教程：</h1><p>GitHub 是一个由美国公司开发的面向开源及私有软件项目的托管平台，<br>因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。</p>
-<p>想要成为一个合格的程序员必须要掌握 GitHub 的用法！</p>
-<p>由于github是美国公司开发的网站，现在是半墙状态，中国网络限制访问外国网站，有条件的可以开ssh，科学上网<br>优先推荐使用chrome（谷歌浏览器）或者微软edge浏览器</p>
-<h3 id="注册github流程"><a href="#注册github流程" class="headerlink" title="注册github流程"></a>注册github流程</h3><p>1.首先进入github官网 <a href="https://github.com/">https://github.com/</a></p>
-<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/1.png"></p>
-<p>2.点击绿色框Sign up for GitHub进行注册<br>注意：<br>Sign in，登录<br>Sign up，注册</p>
-<p><img src="/github%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/2.png"></p>
-<p>3.注册页面第一栏email（邮箱），第二栏password（密码），第三栏username（用户名）</p>
-<p>进行验证后即可完成注册</p>
-<p>如果看不懂英文可以用网页翻译器，浏览网站内的项目内容</p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是玩转GitHub开发者社区的教程了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>教程类</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于Hadoop大数据技术</title>
     <url>/2021/12/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术:"></a>关于Hadoop大数据技术:</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
@@ -53,6 +30,29 @@
 ]]></content>
       <tags>
         <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub开发者交流平台注册教程</title>
+    <url>/2020/09/08/GitHub%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="GitHub食用教程："><a href="#GitHub食用教程：" class="headerlink" title="GitHub食用教程："></a>GitHub食用教程：</h1><p>GitHub 是一个由美国公司开发的面向开源及私有软件项目的托管平台，<br>因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。</p>
+<p>想要成为一个合格的程序员必须要掌握 GitHub 的用法！</p>
+<p>由于github是美国公司开发的网站，现在是半墙状态，中国网络限制访问外国网站，有条件的可以开ssh，科学上网<br>优先推荐使用chrome（谷歌浏览器）或者微软edge浏览器</p>
+<h3 id="注册github流程"><a href="#注册github流程" class="headerlink" title="注册github流程"></a>注册github流程</h3><p>1.首先进入github官网 <a href="https://github.com/">https://github.com/</a></p>
+<p><img src="/GitHub%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/1.png"></p>
+<p>2.点击绿色框Sign up for GitHub进行注册<br>注意：<br>Sign in，登录<br>Sign up，注册</p>
+<p><img src="/GitHub%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/2.png"></p>
+<p>3.注册页面第一栏email（邮箱），第二栏password（密码），第三栏username（用户名）</p>
+<p>进行验证后即可完成注册</p>
+<p>如果看不懂英文可以用网页翻译器，浏览网站内的项目内容</p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是玩转GitHub开发者社区的教程了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>教程类</tag>
       </tags>
   </entry>
   <entry>
@@ -577,6 +577,463 @@
 </ul>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对sql语句使用的详细操作说明了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Spark大数据开发</title>
+    <url>/2022/03/18/%E5%85%B3%E4%BA%8ESpark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="关于Spark大数据开发"><a href="#关于Spark大数据开发" class="headerlink" title="关于Spark大数据开发:"></a>关于Spark大数据开发:</h1><h1 id="一、Spark概述"><a href="#一、Spark概述" class="headerlink" title="一、Spark概述"></a>一、Spark概述</h1><h2 id="（1）概述"><a href="#（1）概述" class="headerlink" title="（1）概述"></a>（1）概述</h2><p>Spark，是一种”One Stack to rule them all”的大数据计算框架，期望使用一个技术堆栈就完美地解决大数据领域的各种计算任务。Apache官方，对Spark的定义就是：通用的大数据快速处理引擎。<br>Spark使用Spark RDD、Spark SQL、 Spark Streaming，MLlib，GraphX成功解决了大数据领城中，离线批处理、交互式查询、实时流计算、机器学习与图计算等最重要的任务和问题。<br>Spark除了一站式的特点之外，另外一个最重要的特点，就是基于内存进行计算，从而让它的速度可以达到MapReduce、Hive的数倍甚至数十倍！<br>现在已经有很多大公司正在生产环境下深度地使用Spark作为大数据的计算框架，包括eBay.Yahool、 BAT、网易、京东、华为、大众点评、优酷土豆、搜狗等等。<br>Spark同时也获得了多个世界顶级IT厂商的支持，包括IBM、 Intel等。</p>
+<p>Spark，是一种通用的大数据计算框架，I正如传统大数据技术Hadoop的MapReduce、Hive引擎，以及Storm流式实时计算引擎等，<br>Spark包含了大数据领城常见的各种计算框架：比如Spark Core用于离线计算，Spark SQL用于交互式查询，Spark Streaming用于实时流式计算，Spark MILlib用于机器学习，Spark GraphX用于图计算。<br>Spark主要用于大数据的计算，而Hadoop以后主要用于大数据的存储（比如HDFS、Hive，HBase等），以及资源调度（Yarn）。</p>
+<p>Spark+Hadoop的组合，是未来大数据领域最热门的组合，也是最有前景的组合！</p>
+<h2 id="（2）Spark整体架构"><a href="#（2）Spark整体架构" class="headerlink" title="（2）Spark整体架构"></a>（2）Spark整体架构</h2><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/1.png"></p>
+<h2 id="（3）Spark特性："><a href="#（3）Spark特性：" class="headerlink" title="（3）Spark特性："></a>（3）Spark特性：</h2><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/2.png"></p>
+<h4 id="（1）spark-计算速度快"><a href="#（1）spark-计算速度快" class="headerlink" title="（1）spark 计算速度快"></a>（1）spark 计算速度快</h4><p>spark将每个任务构建成DAG进行计算，内部的计算过程通过弹性式分布式数据集RDD在内存在进行计算，相比于hadoop的mapreduce效率提升了100倍。</p>
+<h4 id="（2）易于使用"><a href="#（2）易于使用" class="headerlink" title="（2）易于使用"></a>（2）易于使用</h4><p>spark 提供了大量的算子，开发只需调用相关api进行实现无法关注底层的实现原理。</p>
+<p>通用的大数据解决方案</p>
+<p>相较于以前离线任务采用mapreduce实现，实时任务采用storm实现，目前这些都可以通过spark来实现，降低来开发的成本。同时spark 通过spark SQL降低了用户的学习使用门槛，还提供了机器学习，图计算引擎等。</p>
+<h4 id="（3）支持多种的资源管理模式"><a href="#（3）支持多种的资源管理模式" class="headerlink" title="（3）支持多种的资源管理模式"></a>（3）支持多种的资源管理模式</h4><p>学习使用中可以采用local 模型进行任务的调试，在正式环境中又提供了standalone，yarn等模式，方便用户选择合适的资源管理模式进行适配。</p>
+<h4 id="（4）社区支持"><a href="#（4）社区支持" class="headerlink" title="（4）社区支持"></a>（4）社区支持</h4><p>spark 生态圈丰富，迭代更新快，成为大数据领域必备的计算引擎。</p>
+<h2 id="（4）Spark与MR"><a href="#（4）Spark与MR" class="headerlink" title="（4）Spark与MR"></a>（4）Spark与MR</h2><p>MapReduce能够完成的各种离线批处理功能，以及常见算法（比如二次排序、topn等），基于Spark RDD的核心编程，都可以实现，并且可以更好地、更容易地实现。而且基于Spark RDD编写的离线批处理程序，运行速度是MapReduce的数倍，速度上有非常明显的优势。</p>
+<p>Spark相较于MapReduce速度快的最主要原因就在于，MapReduce的计算模型太死板，必须是map-reduce模式，有时候即使完成一些诸如过滤之类的操作，也必须经过map-reduce过程，这样就必须经过shuffle过程。而<br>MapReduce的shuffle过程是最消耗性能的，因为shuffle中间的过程必须基于磁盘来读写。而Spark的shuffle虽然也要基于磁盘，但是其大量transformation操作，比如单纯的map或者filter等操作，可以直接基于内存进行pipeline操作，速度性能自然大大提升。</p>
+<p>但是Spark也有其劣势。由于Spark基于内存进行计算，虽然开发容易，但是真正面对大数据的时候（比如一次操作针对10亿以上级别），在没有进行调优的情况下，可能会出现各种各样的问题，比如OOM内存溢出等等。导致Spark程序可能都无法完全运行起来，就报错挂掉了，而MapReduce即使是运行缓慢，但是至少可以慢慢运行完。</p>
+<p>此外，Spark由于是新崛起的技术新秀，因此在大数据领域的完善程度，肯定不如MapReduce，比如基于HBase、Hive作为离线批处理程序的输入输出，Spark就远没有MapReduce来的完善。实现起来非常麻烦。</p>
+<h2 id="（5）Spark-Streaming与Storm"><a href="#（5）Spark-Streaming与Storm" class="headerlink" title="（5）Spark Streaming与Storm"></a>（5）Spark Streaming与Storm</h2><p>Spark Streaming 与Storm都可以用于进行实时流计算。但是他们两者的区别是非常大的。其中区别之一，就是，Spark<br>Streaming 和Storm的计算模型完全不一样，Spark Streaming是基于RDD的，因此需要将一小段时间内的，比如1秒内的数据，收集起来，作为一个RDD，然后再针对这个batch的数据进行处理。而Storm却可以做到每来一条数据，都可以立即进行处理和计算。因此，Spark Streaming实际上严格意义上来说，只能称作准实时的流计算框架；西Storm是真正意义上的实时计算框架<br>此外，Storm支持的一项高级特性，是Spark Streaming暂时不具备的，即Storm支持在分布式流式计算程序（Topolopy）在运行过程中，可以动态地调整并行度，从而动态提高并发处理能力。而Spark Streaming是无法动态调整并行度的。<br>但是Spark Streaming也有其优点，首先Spark Streaming由于是基于batch进行处理的，因此相较于Storm基于单条数据进行处理，具有数倍甚至数十倍的吞吐量。<br>此外，Spark Streaming由于也身处于Spark生态圈内，因此Spark Streaming可以与Spark Core、 Spark SQL，甚至是Spark Mllib.Spark GraphX进行无缝整合。流式处理完的数据，可以立即进行各种map、reduce转换操作，可以立即使用sql进行查询，甚至可以立即使用machine learning或者图计算算法进行处理。这种一站式的大数据处理功能和优势，是Storm无法匹敌的。<br>因此，综合上述来看，通常在对实时性要求特别高，而且实时数据量不稳定，比如在白天有高峰期的情况下，可以选择使用Storm。但是如果是对实时性要求一般，允许1秒的准实时处理，而且不要求动态调整并行度的话，选择Spark Streaming是更好的选择。</p>
+<h2 id="（6）Spark-SQL与Hive"><a href="#（6）Spark-SQL与Hive" class="headerlink" title="（6）Spark SQL与Hive"></a>（6）Spark SQL与Hive</h2><p>Spark SQL实际上并不能完全替代Hive,因为Hive是一种基于HDFS的数据仓库,并且提供了基于SQL模型的,针对存储了大数据的数据仓库,进行分布式交互查询的查询引擎。<br>严格的来说, Spark SQL能够替代的,是ive的查询引擎,而不是Hive本身,实际上即使在生产环境下, SparkSQL也是针对Hive数据仓库中的数据进行查询, Spark本身自己是不提供存储的,自然也不可能替代Hive作为数据仓库的这个功能。<br>Spark SQL的一个优点,相较于Hive查询引擎来说,就是速度快,同样的SQL语句,可能使用Hive的查询引擎,由于其底层基于 MapReduce,必须经过 shuffle过程走磁盘,因此速度是非常缓慢的。很多复杂的SQL语句,在hive中执行都需要一个小时以上的时间。而 Spark SQLSpark由于其底层基于自身的基于内存的特点,因此速度达到了Hive查询引擎的数倍以上。<br>而 Spark SQL相较于Hive的另外一个优点,就是支持大量不同的数据源,包括ive、json、 parquet、jdbc等等此外, Spark SQLSpark由于身处技术堆栈内,也是基于RDD来工作,因此可以与 Spark的其他组件无缝整合使用,配合起来实现许多复杂的功能。比如 Spark SQL支持可以直接针对hdfs文件执行sq语句!</p>
+<h1 id="二、Spark基本原理"><a href="#二、Spark基本原理" class="headerlink" title="二、Spark基本原理"></a>二、Spark基本原理</h1><h2 id="（1）Spark-Core"><a href="#（1）Spark-Core" class="headerlink" title="（1）Spark Core"></a>（1）Spark Core</h2><p>Spark Core是Spark的核心，其包含如下几个部分：</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/3.png"></p>
+<h3 id="（1）spark-基础配置"><a href="#（1）spark-基础配置" class="headerlink" title="（1）spark 基础配置"></a>（1）spark 基础配置</h3><p>sparkContext是spark应用程序的入口，spark应用程序的提交和执行离不开sparkContext，它隐藏了网络通信，分布式部署，消息通信，存储体系，计算存储等，开发人员只需要通过sparkContext等api进行开发即可。</p>
+<p>sparkRpc 基于netty实现，分为异步和同步两种方式。事件总线主要用于sparkContext组件间的交换，它属于监听者模式，采用异步调用。度量系统主要用于系统的运行监控。</p>
+<p>（2）spark 存储系统</p>
+<p>它用于管理spark运行中依赖的数据存储方式和存储位置，spark的存储系统优先考虑在各节点以内存的方式存储数据，内存不足时将数据写入磁盘中，这也是spark计算性能高的重要原因。</p>
+<p>我们可以灵活的控制数据存储在内存还是磁盘中，同时可以通过远程网络调用将结果输出到远程存储中，比如hdfs，hbase等。</p>
+<p>（3）spark 调度系统</p>
+<p>spark 调度系统主要由DAGScheduler和TaskScheduler组成。</p>
+<p>DAGScheduler 主要是把一个Job根据RDD间的依赖关系，划分为多个Stage，对于划分后的每个Stage都抽象为一个或多个Task组成的任务集，并交给TaskScheduler来进行进一步的任务调度。而TaskScheduler 负责对每个具体的Task进行调度。</p>
+<p>具体调度算法有FIFO，FAIR：</p>
+<p>FIFO调度：先进先出，这是Spark默认的调度模式。<br>FAIR调度：支持将作业分组到池中，并为每个池设置不同的调度权重，任务可以按照权重来决定执行顺序。</p>
+<h2 id="（2）Spark-SQL"><a href="#（2）Spark-SQL" class="headerlink" title="（2）Spark SQL"></a>（2）Spark SQL</h2><p>spark sql提供了基于sql的数据处理方法，使得分布式的数据集处理变的更加简单，这也是spark 广泛使用的重要原因。</p>
+<p>目前大数据相关计算引擎一个重要的评价指标就是：是否支持sql，这样才会降低使用者的门槛。spark sql提供了两种抽象的数据集合DataFrame和DataSet。</p>
+<p>DataFrame 是spark Sql 对结构化数据的抽象，可以简单的理解为spark中的表，相比较于RDD多了数据的表结构信息(schema).DataFrame = Data + schema</p>
+<p>RDD是分布式对象集合，DataFrame是分布式Row的集合，提供了比RDD更丰富的算子，同时提升了数据的执行效率。</p>
+<p>DataSet 是数据的分布式集合 ，它具有RDD强类型的优点 和Spark SQL优化后执行的优点。DataSet可以由jvm对象构建，然后使用map，filter，flatmap等操作函数操作。</p>
+<h2 id="（3）Spark-Streaming"><a href="#（3）Spark-Streaming" class="headerlink" title="（3）Spark Streaming"></a>（3）Spark Streaming</h2><p>这个模块主要是对流数据的处理，支持流数据的可伸缩和容错处理，可以与Flume和Kafka等已建立的数据源集成。Spark Streaming的实现，也使用RDD抽象的概念，使得在为流数据编写应用程序时更为方便。</p>
+<h2 id="（4）Spark基本工作原理"><a href="#（4）Spark基本工作原理" class="headerlink" title="（4）Spark基本工作原理"></a>（4）Spark基本工作原理</h2><p>Spark基本工作原理的理解，其最主要的是要搞清楚什么是RDD以及RDD的特性。深刻理解了RDD的特性，也就理解了数据在spark中是如何被处理的（spark的基本工作原理）</p>
+<p>那么RDD是什么，官方说法：<br>RDD是Spark提供的核心抽象，全称为Resillient Distributed Dataset，即弹性分布式数据集。</p>
+<p>最简单的理解：<br>RDD就是源数据的抽象，或者叫映射，或者就代表。也就是说，数据要被spark进行处理，在处理之前的首要任务就是要将数据映射成RDD，对于spark来说，RDD才是我们处理数据的规则，我只认RDD，只有RDD，通过我spark的计算引擎，才能发挥巨大的威力！</p>
+<h3 id="（1）分布式数据集"><a href="#（1）分布式数据集" class="headerlink" title="（1）分布式数据集"></a>（1）分布式数据集</h3><p>RDD是Spark提供的核心抽象，全称为Resillient Distributed Dataset，即弹性分布式数据集。</p>
+<p>RDD在抽象上来说是一种元素集合，包含了数据。它是被分区的，分为多个分区，每个分区分布在集群中的不同节点上，从而让RDD中的数据可以被并行操作。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/4.png"></p>
+<h3 id="（2）弹性"><a href="#（2）弹性" class="headerlink" title="（2）弹性"></a>（2）弹性</h3><p>RDD的数据默认情况下存放在内存中的，但是在内存资源不足时，Spark会自动将RDD数据写入磁盘。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/5.png"></p>
+<h3 id="（3）迭代式处理"><a href="#（3）迭代式处理" class="headerlink" title="（3）迭代式处理"></a>（3）迭代式处理</h3><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/6.png"></p>
+<p>对节点1、2、3、4上的数据进行处理完成之后，可能会移动到其他的节点内存中继续处理！Spark 与Mr最大的不同在与迭代式计算模型：Mr分为两个阶段，map和reduce，两个阶段处理完了就结束了，所以我们在一个job中能做的处理很有限，只能在map和reduce中处理；而spark计算过程可以分为n个阶段，因为他是内存迭代式的，我们在处理完一个阶段之后，可以继续往下处理很多阶段，而不是两个阶段。所以Spark相较于MR，计算模型可以提供更强大的功能。</p>
+<h3 id="（4）容错性"><a href="#（4）容错性" class="headerlink" title="（4）容错性"></a>（4）容错性</h3><p>RDD最重要的特性就是，提供了容错性，可以自动从节点失败中恢复过来。即如果某个节点上的RDD partition，因为节点故障，导致数据丢了，那么RDD会自动通过自己的数据来源重新计算该partition。这一切对使用者是透明的。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/7.png"></p>
+<h1 id="三、Spark-运行模式及集群角色"><a href="#三、Spark-运行模式及集群角色" class="headerlink" title="三、Spark 运行模式及集群角色"></a>三、Spark 运行模式及集群角色</h1><h2 id="（1）Spark运行模式"><a href="#（1）Spark运行模式" class="headerlink" title="（1）Spark运行模式"></a>（1）Spark运行模式</h2><table>
+<thead>
+<tr>
+<th align="center"><strong>运行模式</strong></th>
+<th align="center"><strong>运行类型</strong></th>
+<th align="center"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">local</td>
+<td align="center">本地模式</td>
+<td align="center">常用于本地开发测试，分为local单线程和local-cluster多线程模式</td>
+</tr>
+<tr>
+<td align="center">standalone</td>
+<td align="center">集群模式</td>
+<td align="center">独立模式，在spark自己的资源调度管理框架上运行，该框架采用master/salve结构</td>
+</tr>
+<tr>
+<td align="center">yarn</td>
+<td align="center">集群模式</td>
+<td align="center">在yarn资源管理器框架上运行，由yarn负责资源管理，spark负责任务调度和计算</td>
+</tr>
+<tr>
+<td align="center">mesos</td>
+<td align="center">集群模式</td>
+<td align="center">在mesos资源管理器框架上运行，由mesos负责资源管理，spark负责任务调度和计算</td>
+</tr>
+<tr>
+<td align="center">k8s</td>
+<td align="center">集群模式</td>
+<td align="center">在k8s上运行</td>
+</tr>
+</tbody></table>
+<h2 id="（2）Spark集群角色"><a href="#（2）Spark集群角色" class="headerlink" title="（2）Spark集群角色"></a>（2）Spark集群角色</h2><p>下图是spark的集群角色图，主要有集群管理节点cluster manager，工作节点worker，执行器executor，驱动器driver和应用程序application 五部分组成，下面详细说明每部分的特点。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/8.png"></p>
+<h3 id="（1）Cluster-Manager"><a href="#（1）Cluster-Manager" class="headerlink" title="（1）Cluster Manager"></a>（1）Cluster Manager</h3><p>集群管理器，它存在于Master进程中，主要用来对应用程序申请的资源进行管理，根据其部署模式的不同，可以分为local，standalone，yarn，mesos等模式。</p>
+<h3 id="（2）worker"><a href="#（2）worker" class="headerlink" title="（2）worker"></a>（2）worker</h3><p>worker是spark的工作节点，用于执行任务的提交，主要工作职责有下面四点：</p>
+<p>worker节点通过注册机向cluster manager汇报自身的cpu，内存等信息。<br>worker 节点在spark master作用下创建并启用executor，executor是真正的计算单元。<br>spark master将任务Task分配给worker节点上的executor并执行运用。<br>worker节点同步资源信息和executor状态信息给cluster manager。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/9.png"></p>
+<p>在yarn 模式下运行worker节点一般指的是NodeManager节点，standalone模式下运行一般指的是slave节点。</p>
+<h3 id="（3）executor"><a href="#（3）executor" class="headerlink" title="（3）executor"></a>（3）executor</h3><p>executor 是真正执行计算任务的组件，它是application运行在worker上的一个进程。这个进程负责Task的运行，它能够将数据保存在内存或磁盘存储中，也能够将结果数据返回给Driver。</p>
+<h3 id="（4）Application"><a href="#（4）Application" class="headerlink" title="（4）Application"></a>（4）Application</h3><p>application是Spark API 编程的应用程序，它包括实现Driver功能的代码和在程序中各个executor上要执行的代码，一个application由多个job组成。其中应用程序的入口为用户所定义的main方法。</p>
+<h3 id="（5）Driver"><a href="#（5）Driver" class="headerlink" title="（5）Driver"></a>（5）Driver</h3><p>驱动器节点，它是一个运行Application中main函数并创建SparkContext的进程。application通过Driver 和Cluster Manager及executor进行通讯。它可以运行在application节点上，也可以由application提交给Cluster Manager，再由Cluster Manager安排worker进行运行。</p>
+<p>Driver节点也负责提交Job，并将Job转化为Task，在各个Executor进程间协调Task的调度。</p>
+<h3 id="（6）sparkContext"><a href="#（6）sparkContext" class="headerlink" title="（6）sparkContext"></a>（6）sparkContext</h3><p>sparkContext是整个spark应用程序最关键的一个对象，是Spark所有功能的主要入口点。核心作用是初始化spark应用程序所需要的组件，同时还负责向master程序进行注册等。</p>
+<h2 id="（3）Spark其他核心概念"><a href="#（3）Spark其他核心概念" class="headerlink" title="（3）Spark其他核心概念"></a>（3）Spark其他核心概念</h2><h3 id="（1）RDD"><a href="#（1）RDD" class="headerlink" title="（1）RDD"></a>（1）RDD</h3><p>它是Spark中最重要的一个概念，是弹性分布式数据集，是一种容错的、可以被并行操作的元素集合，是Spark对所有数据处理的一种基本抽象。可以通过一系列的算子对rdd进行操作，主要分为Transformation和Action两种操作。</p>
+<p>‍‍‍‍‍Transformation(转换)：是对已有的RDD进行换行生成新的RDD，对于转换过程采用惰性计算机制，不会立即计算出结果。常用的方法有map，filter，flatmap等。<br>Action(执行)：对已有对RDD对数据执行计算产生结果，并将结果返回Driver或者写入到外部存储中。常用到方法有reduce，collect，saveAsTextFile等。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/10.png"></p>
+<h3 id="（2）DAG"><a href="#（2）DAG" class="headerlink" title="（2）DAG"></a>（2）DAG</h3><p>DAG是一个有向无环图，在Spark中， 使用 DAG 来描述我们的计算逻辑。主要分为DAG Scheduler 和Task Scheduler。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/11.png"></p>
+<h3 id="（3）DAG-Scheduler"><a href="#（3）DAG-Scheduler" class="headerlink" title="（3）DAG Scheduler"></a>（3）DAG Scheduler</h3><p>DAG Scheduler 是面向stage的高层级的调度器，DAG Scheduler把DAG拆分为多个Task，每组Task都是一个stage，解析时是以shuffle为边界进行反向构建的，每当遇见一个shuffle，spark就会产生一个新的stage，接着以TaskSet的形式提交给底层的调度器（task scheduler），每个stage封装成一个TaskSet。DAG Scheduler需要记录RDD被存入磁盘物化等动作，同时会需要Task寻找最优等调度逻辑，以及监控因shuffle跨节点输出导致的失败。<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/12.png"></p>
+<h3 id="（4）Task-Scheduler"><a href="#（4）Task-Scheduler" class="headerlink" title="（4）Task Scheduler"></a>（4）Task Scheduler</h3><p>Task Scheduler 负责每一个具体任务的执行。它的主要职责包括</p>
+<p>任务集的调度管理<br>状态结果跟踪<br>物理资源调度管理<br>任务执行<br>获取结果</p>
+<h3 id="（5）Job"><a href="#（5）Job" class="headerlink" title="（5）Job"></a>（5）Job</h3><p>job是有多个stage构建的并行的计算任务，job是由spark的action操作来触发的，在spark中一个job包含多个RDD以及作用在RDD的各种操作算子。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/13.png"></p>
+<h3 id="（6）stage"><a href="#（6）stage" class="headerlink" title="（6）stage"></a>（6）stage</h3><p>DAG Scheduler会把DAG切割成多个相互依赖的Stage，划分Stage的一个依据是RDD间的宽窄依赖。</p>
+<p>在对Job中的所有操作划分Stage时，一般会按照倒序进行，即从Action开始，遇到窄依赖操作，则划分到同一个执行阶段，遇到宽依赖操作，则划分一个新的执行阶段，且新的阶段为之前阶段的parent，然后依次类推递归执行。</p>
+<p>child Stage需要等待所有的parent Stage执行完之后才可以执行，这时Stage之间根据依赖关系构成了一个大粒度的DAG。在一个Stage内，所有的操作以串行的Pipeline的方式，由一组Task完成计算。</p>
+<h3 id="（7）TaskSet-Task"><a href="#（7）TaskSet-Task" class="headerlink" title="（7）TaskSet Task"></a>（7）TaskSet Task</h3><p>TaskSet 可以理解为一种任务，对应一个stage，是Task组成的任务集。一个TaskSet中的所有Task没有shuffle依赖可以并行计算。</p>
+<p>Task是spark中最独立的计算单元，由Driver Manager发送到executer执行，通常情况一个task处理spark RDD一个partition。Task分为ShuffleMapTask和ResultTask两种，位于最后一个Stage的Task为ResultTask，其他阶段的属于ShuffleMapTask。</p>
+<h1 id="四、Spark作业运行流程"><a href="#四、Spark作业运行流程" class="headerlink" title="四、Spark作业运行流程"></a>四、Spark作业运行流程</h1><h2 id="1-Spark作业运行流程"><a href="#1-Spark作业运行流程" class="headerlink" title="(1)Spark作业运行流程"></a>(1)Spark作业运行流程</h2><p>spark应用程序以进程集合为单位在分布式集群上运行，通过driver程序的main方法创建sparkContext的对象与集群进行交互。具体运行流程如下：</p>
+<p>sparkContext向cluster Manager申请CPU，内存等计算资源。<br>cluster Manager分配应用程序执行所需要的资源，在worker节点创建executor。<br>sparkContext将程序代码和task任务发送到executor上进行执行，代码可以是编译成的jar包或者python文件等。接着sparkContext会收集结果到Driver端。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/14.png"></p>
+<h2 id="（2）-Spark-RDD迭代过程"><a href="#（2）-Spark-RDD迭代过程" class="headerlink" title="（2） Spark RDD迭代过程"></a>（2） Spark RDD迭代过程</h2><p>sparkContext创建RDD对象，计算RDD间的依赖关系，并组成一个DAG有向无环图。<br>DAGScheduler将DAG划分为多个stage，并将stage对应的TaskSet提交到集群的管理中心，stage的划分依据是RDD中的宽窄依赖，spark遇见宽依赖就会划分为一个stage，每个stage中包含来一个或多个task任务，避免多个stage之间消息传递产生的系统开销。<br>taskScheduler 通过集群管理中心为每一个task申请资源并将task提交到worker的节点上进行执行。<br>worker上的executor执行具体的任务。<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/15.png"></p>
+<h2 id="（3）Yarn资源管理器介绍"><a href="#（3）Yarn资源管理器介绍" class="headerlink" title="（3）Yarn资源管理器介绍"></a>（3）Yarn资源管理器介绍</h2><p>spark 程序一般是运行在集群上的，spark on yarn是工作或生产上用的非常多的一种运行模式。</p>
+<p>没有yarn模式前，每个分布式框架都要跑在一个集群上面，比如说Hadoop要跑在一个集群上，Spark用集群的时候跑在standalone上。这样的话整个集群的资源的利用率低，且管理起来比较麻烦。</p>
+<p>yarn是分布式资源管理和任务管理管理，主要由ResourceManager，NodeManager和ApplicationMaster三个模块组成。</p>
+<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/16.png"></p>
+<p>ResourceManager 主要负责集群的资源管理，监控和分配。对于所有的应用它有绝对的控制权和资源管理权限。</p>
+<p>NodeManager 负责节点的维护，执行和监控task运行状况。会通过心跳的方式向ResourceManager汇报自己的资源使用情况。</p>
+<p>yarn资源管理器的每个节点都运行着一个NodeManager，是ResourceManager的代理。如果主节点的ResourceManager宕机后，会连接ResourceManager的备用节点。</p>
+<p>ApplicationMaster 负责具体应用程序的调度和资源的协调，它会与ResourceManager协商进行资源申请。ResourceManager以container容器的形式将资源分配给application进行运行。同时负责任务的启停。</p>
+<p>container 是资源的抽象，它封装着每个节点上的资源信息(cpu,内存，磁盘，网络等)，yarn将任务分配到container上运行，同时该任务只能使用container描述的资源，达到各个任务间资源的隔离。</p>
+<h2 id="（4）Spark程序在Yarn上执行流程"><a href="#（4）Spark程序在Yarn上执行流程" class="headerlink" title="（4）Spark程序在Yarn上执行流程"></a>（4）Spark程序在Yarn上执行流程</h2><p>spark on yarn分为两种模式yarn-client模式，和yarn—cluster模式，一般线上采用的是yarn-cluster模式。</p>
+<h3 id="（1）yarn-client模式"><a href="#（1）yarn-client模式" class="headerlink" title="（1）yarn-client模式"></a>（1）yarn-client模式</h3><p>driver在客户端本地执行，这种模式可以使得spark application和客户端进行交互，因为driver在客户端可以通过webUI访问driver的状态。同时Driver会与yarn集群中的Executor进行大量的通信，会造成客户机网卡流量的大量增加。</p>
+<h3 id="（2）yarn-cluster模式"><a href="#（2）yarn-cluster模式" class="headerlink" title="（2）yarn-cluster模式"></a>（2）yarn-cluster模式</h3><p>Yarn-Cluster主要用于生产环境中，因为Driver运行在Yarn集群中某一台NodeManager中，每次提交任务的Driver所在的机器都是随机的，不会产生某一台机器网卡流量激增的现象，缺点是任务提交后不能看到日志。只能通过yarn查看日志。</p>
+<p>下图是yarn-cluster运行模式：<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/17.png"></p>
+<p>client 向yarn提交应用程序，包含ApplicationMaster程序、启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster程序启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster向ResourceManager注册，这样用户可以直接通过ResourceManage查看应用程序的运行状态。<br>ApplicationMaster申请到资源（也就是Container）后，便与对应的NodeManager通信，启动Task。<br>Task向ApplicationMaster汇报运行的状态和进度，以让ApplicationMaster随时掌握各个任务的运行状态，从而可以在任务失败时重新启动任务。<br>应用程序运行完成后，ApplicationMaster向ResourceManager申请注销并关闭自己。</p>
+<h1 id="五、基于WordCount程序开发"><a href="#五、基于WordCount程序开发" class="headerlink" title="五、基于WordCount程序开发"></a>五、基于WordCount程序开发</h1><p>下面使用Java和Scala语言编写WordCount程序</p>
+<h2 id="（1）Java开发WordCount程序"><a href="#（1）Java开发WordCount程序" class="headerlink" title="（1）Java开发WordCount程序"></a>（1）Java开发WordCount程序</h2><pre class="language-none"><code class="language-none">package com.kfk.spark;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.FlatMapFunction;
+import org.apache.spark.api.java.function.Function2;
+import org.apache.spark.api.java.function.PairFunction;
+import org.apache.spark.api.java.function.VoidFunction;
+import scala.Tuple2;
+
+import java.util.Arrays;
+import java.util.Iterator;
+
+/**
+ * @author : 
+ * @email :
+ * @date : 
+ * @time : 
+ */
+public class WordCountJava {
+    public static void main(String[] args) {
+
+        SparkConf sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local");
+
+        JavaSparkContext sc = new JavaSparkContext(sparkConf);
+
+        JavaRDD lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt");
+
+        JavaRDD words = lines.flatMap(new FlatMapFunction&lt;String,String&gt;() {
+            public Iterator call(String line) throws Exception {
+                return Arrays.asList(line.split(" ")).iterator();
+            }
+        });
+
+        JavaPairRDD word = words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() {
+            public Tuple2 call(String word) throws Exception {
+                return new Tuple2(word,1);
+            }
+        });
+
+        JavaPairRDD wordcount = word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() {
+            public Integer call(Integer v1, Integer v2) throws Exception {
+                return v1+ v2;
+            }
+        });
+
+        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() {
+            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception {
+                System.out.println(o._1 + " : " + o._2);
+            }
+        });
+
+    }
+}
+</code></pre>
+
+<p>运行结果：</p>
+<pre class="language-none"><code class="language-none">spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
+
+<h2 id="（2）Scala开发WordCount程序"><a href="#（2）Scala开发WordCount程序" class="headerlink" title="（2）Scala开发WordCount程序"></a>（2）Scala开发WordCount程序</h2><pre class="language-none"><code class="language-none">package com.kfk.spark
+
+import org.apache.spark.{SparkConf, SparkContext}
+
+/**
+ * @author : 
+ * @email :
+ * @date : 
+ * @time : 
+ */
+object WordCountScala {
+    def main(args: Array[String]): Unit = {
+        val sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local")
+        val sc = new SparkContext(sparkConf)
+        val lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt")
+
+        // val wordcount = lines.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word,1)).reduceByKey((x,y) =&gt; (x+y)).foreach((_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
+
+        val words = lines.flatMap(line =&gt; line.split(" "))
+        val word = words.map(word =&gt; (word,1))
+        val wordcount = word.reduceByKey((x,y) =&gt; (x+y))
+
+        // println(wordcount.collect().toList)
+
+        wordcount.foreach(_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
+    }
+}
+</code></pre>
+
+<p>运行结果：</p>
+<pre class="language-none"><code class="language-none">spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
+
+<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><pre class="language-none"><code class="language-none">bin/spark-submit --class com.kfk.spark.WordCountJava --master local[2] /opt/jars/wordcountjava.jar 
+</code></pre>
+
+<p>运行结果：</p>
+<pre class="language-none"><code class="language-none">spark : 1
+hive : 3
+hadoop : 3
+python : 1
+flink : 2
+java : 5
+storm : 1
+hbase : 1
+</code></pre>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Spark大数据技术的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于数据库</title>
+    <url>/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="关于数据库"><a href="#关于数据库" class="headerlink" title="关于数据库:"></a>关于数据库:</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h3><ul>
+<li>是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，简称DBMS。<br>它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。<br>用户通过DBMS访问数据库中的数据，数据库管理员也通过dbms进行数据库的维护工作。<br>数据库管理系统是数据库系统的核心，是管理数据库的软件。<br>我们一般说的数据库,就是指的DBMS: 数据库管理系统</li>
+</ul>
+<h3 id="常见的数据库"><a href="#常见的数据库" class="headerlink" title="常见的数据库"></a>常见的数据库</h3><ul>
+<li><p>Oracle</p>
+<ul>
+<li>运行稳定，可移植性高，功能齐全，性能超群！适用于大型企业领域。</li>
+</ul>
+</li>
+<li><p>DB2</p>
+<ul>
+<li>速度快、可靠性好，适于海量数据，恢复性极强。适用于大中型企业领域。</li>
+</ul>
+</li>
+<li><p>MySQL</p>
+<ul>
+<li>开源，跨平台、体积小，速度快。适用于于中小型企业领域。</li>
+</ul>
+</li>
+<li><p>SQL Server</p>
+<ul>
+<li>全面，效率高，界面友好，操作容易，但是不跨平台。适用于于中小型企业领域。</li>
+</ul>
+</li>
+</ul>
+<h3 id="结构化查询语言SQL"><a href="#结构化查询语言SQL" class="headerlink" title="结构化查询语言SQL"></a>结构化查询语言SQL</h3><ul>
+<li>SQL语言的功能包括查询、操纵、定义和控制，是一个综合的、通用的关系数据库语言，同时又是一种高度非过程化的语言，只要求用户指出做什么而不需要指出怎么做。</li>
+</ul>
+<h3 id="非关系型数据库NoSql"><a href="#非关系型数据库NoSql" class="headerlink" title="非关系型数据库NoSql"></a>非关系型数据库NoSql</h3><ul>
+<li>MongoDB,Redis,HBase…</li>
+</ul>
+<h2 id="RDBMS专业术语"><a href="#RDBMS专业术语" class="headerlink" title="RDBMS专业术语"></a>RDBMS专业术语</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
+<li>具有固定的列数,和任意的行数</li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
+<li>数据库是一些关联表的集合</li>
+</ul>
+<h3 id="列"><a href="#列" class="headerlink" title="列"></a>列</h3><ul>
+<li>一个数据项 Field   字段</li>
+</ul>
+<h3 id="行"><a href="#行" class="headerlink" title="行"></a>行</h3><ul>
+<li>一条记录  row</li>
+</ul>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><ul>
+<li>主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据。</li>
+</ul>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><ul>
+<li>外键用于关联两个表</li>
+</ul>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
+<li>使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录。</li>
+</ul>
+<h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><h3 id="MySQL介绍"><a href="#MySQL介绍" class="headerlink" title="MySQL介绍"></a>MySQL介绍</h3><ul>
+<li>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</li>
+<li>MySQL是开源的，所以你不需要支付额外的费用。</li>
+<li>MySQL支持大型的数据库。可以处理拥有上千万条记录的大型数据库。</li>
+<li>MySQL使用标准的SQL数据语言形式。</li>
+<li>MySQL可以安装在多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等。</li>
+</ul>
+<h3 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h3><ul>
+<li>windows安装</li>
+<li>Mac安装</li>
+</ul>
+<h3 id="MySQL的存储引擎"><a href="#MySQL的存储引擎" class="headerlink" title="MySQL的存储引擎"></a>MySQL的存储引擎</h3><ul>
+<li><p>什么是存储引擎</p>
+<ul>
+<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。这些技术中的每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
+<li>不同的存储引擎性能是不一样的</li>
+</ul>
+</li>
+<li><p>什么是事务</p>
+<ul>
+<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
+</ul>
+</li>
+<li><p>存储引擎分类</p>
+<ul>
+<li><p>MYISAM</p>
+<ul>
+<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
+</li>
+<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
+<ul>
+<li>.frm(存储表定义)</li>
+<li>MYD(MYData，存储数据)</li>
+<li>MYI(MYIndex，存储索引)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>INNODB</p>
+<ul>
+<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
+</ul>
+</li>
+<li><p>MEMORY</p>
+<ul>
+<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
+<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="常用数据库命令"><a href="#常用数据库命令" class="headerlink" title="常用数据库命令"></a>常用数据库命令</h2><h3 id="MySQL数据库分为两种"><a href="#MySQL数据库分为两种" class="headerlink" title="MySQL数据库分为两种"></a>MySQL数据库分为两种</h3><h4 id="一、系统数据库-数据库服务器自带的-自带的4个"><a href="#一、系统数据库-数据库服务器自带的-自带的4个" class="headerlink" title="一、系统数据库(数据库服务器自带的,自带的4个)"></a>一、系统数据库(数据库服务器自带的,自带的4个)</h4><ul>
+<li><p>information_schema</p>
+<ul>
+<li>存储数据库对象信息</li>
+</ul>
+</li>
+</ul>
+<p>如用户表信息,列信息,根除,字符,分区<br>里面的内容我们不能动.</p>
+<ul>
+<li><p>performance_schema</p>
+<ul>
+<li>存储数据库服务器性能参数信息</li>
+</ul>
+</li>
+<li><p>MySQL</p>
+<ul>
+<li>存储数据库用户权限信息</li>
+</ul>
+</li>
+<li><p>test</p>
+<ul>
+<li>一个空的数据库，用户可以使用它也可以不使用它</li>
+</ul>
+</li>
+</ul>
+<h4 id="二、用户数据库"><a href="#二、用户数据库" class="headerlink" title="二、用户数据库"></a>二、用户数据库</h4><ul>
+<li>用户自己创建的数据库,一个项目用一个数据库</li>
+</ul>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
+<li>create database 数据库名称;</li>
+</ul>
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
+<li>drop database 数据库名称;</li>
+</ul>
+<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><ul>
+<li>show databases;</li>
+</ul>
+<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><ul>
+<li>use 数据库名;</li>
+</ul>
+<h3 id="查看数据库当中有多少张表"><a href="#查看数据库当中有多少张表" class="headerlink" title="查看数据库当中有多少张表"></a>查看数据库当中有多少张表</h3><ul>
+<li>show  tables;</li>
+</ul>
+<p><strong>请注意”写的顺序,先使用数据库,再去查有多少张表”</strong></p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对MySQL数据库的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于二叉树</title>
+    <url>/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="关于二叉树的种类"><a href="#关于二叉树的种类" class="headerlink" title="关于二叉树的种类:"></a>关于二叉树的种类:</h1><hr>
+<h3 id="一、满二叉树"><a href="#一、满二叉树" class="headerlink" title="一、满二叉树"></a>一、满二叉树</h3><hr>
+<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
+<h3 id="二、完全二叉树"><a href="#二、完全二叉树" class="headerlink" title="二、完全二叉树"></a>二、完全二叉树</h3><hr>
+<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
+<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
+<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
+<hr>
+<h1 id="二叉树的最大宽度"><a href="#二叉树的最大宽度" class="headerlink" title="二叉树的最大宽度"></a>二叉树的最大宽度</h1><h3 id="一、序列化二叉树"><a href="#一、序列化二叉树" class="headerlink" title="一、序列化二叉树"></a>一、序列化二叉树</h3><h5 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h5><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
+<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
+<p>它的左、右子树也分别为二叉排序树</p>
+<h3 id="二、平衡二叉搜索树"><a href="#二、平衡二叉搜索树" class="headerlink" title="二、平衡二叉搜索树"></a>二、平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
+<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
+<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h5 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h5><h6 id="验证二叉搜索树"><a href="#验证二叉搜索树" class="headerlink" title="验证二叉搜索树"></a>验证二叉搜索树</h6><h6 id="二叉搜索树迭代器"><a href="#二叉搜索树迭代器" class="headerlink" title="二叉搜索树迭代器"></a>二叉搜索树迭代器</h6><h6 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h6><h6 id="一个中心"><a href="#一个中心" class="headerlink" title="一个中心"></a>一个中心</h6><h3 id="三、树的遍历："><a href="#三、树的遍历：" class="headerlink" title="三、树的遍历："></a>三、树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
+<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
+<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
+<h5 id="其中有两个重要知识点："><a href="#其中有两个重要知识点：" class="headerlink" title="其中有两个重要知识点："></a>其中有两个重要知识点：</h5><h6 id="DFS（深度优先遍历）"><a href="#DFS（深度优先遍历）" class="headerlink" title="DFS（深度优先遍历）"></a>DFS（深度优先遍历）</h6><h6 id="BFS（宽度优先遍历）"><a href="#BFS（宽度优先遍历）" class="headerlink" title="BFS（宽度优先遍历）"></a>BFS（宽度优先遍历）</h6><h1 id="二叉树的遍历结构：就是找根节点"><a href="#二叉树的遍历结构：就是找根节点" class="headerlink" title="二叉树的遍历结构：就是找根节点"></a>二叉树的遍历结构：就是找根节点</h1><p>前序：根-左-右<br>中序：左-根-右<br>后序：左-右-根</p>
+<p>举个例子：</p>
+<p><img src="/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/1.png"></p>
+<p>前序就是根节点在前<br>中序就是根节点在中<br>后序就是根在后</p>
+<p><img src="/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/2.png"></p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对二叉树的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
@@ -2380,460 +2837,40 @@ class Lock{}</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>关于数据库</title>
-    <url>/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="关于数据库"><a href="#关于数据库" class="headerlink" title="关于数据库:"></a>关于数据库:</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h3><ul>
-<li>是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，简称DBMS。<br>它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。<br>用户通过DBMS访问数据库中的数据，数据库管理员也通过dbms进行数据库的维护工作。<br>数据库管理系统是数据库系统的核心，是管理数据库的软件。<br>我们一般说的数据库,就是指的DBMS: 数据库管理系统</li>
-</ul>
-<h3 id="常见的数据库"><a href="#常见的数据库" class="headerlink" title="常见的数据库"></a>常见的数据库</h3><ul>
-<li><p>Oracle</p>
-<ul>
-<li>运行稳定，可移植性高，功能齐全，性能超群！适用于大型企业领域。</li>
-</ul>
-</li>
-<li><p>DB2</p>
-<ul>
-<li>速度快、可靠性好，适于海量数据，恢复性极强。适用于大中型企业领域。</li>
-</ul>
-</li>
-<li><p>MySQL</p>
-<ul>
-<li>开源，跨平台、体积小，速度快。适用于于中小型企业领域。</li>
-</ul>
-</li>
-<li><p>SQL Server</p>
-<ul>
-<li>全面，效率高，界面友好，操作容易，但是不跨平台。适用于于中小型企业领域。</li>
-</ul>
-</li>
-</ul>
-<h3 id="结构化查询语言SQL"><a href="#结构化查询语言SQL" class="headerlink" title="结构化查询语言SQL"></a>结构化查询语言SQL</h3><ul>
-<li>SQL语言的功能包括查询、操纵、定义和控制，是一个综合的、通用的关系数据库语言，同时又是一种高度非过程化的语言，只要求用户指出做什么而不需要指出怎么做。</li>
-</ul>
-<h3 id="非关系型数据库NoSql"><a href="#非关系型数据库NoSql" class="headerlink" title="非关系型数据库NoSql"></a>非关系型数据库NoSql</h3><ul>
-<li>MongoDB,Redis,HBase…</li>
-</ul>
-<h2 id="RDBMS专业术语"><a href="#RDBMS专业术语" class="headerlink" title="RDBMS专业术语"></a>RDBMS专业术语</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
-<li>具有固定的列数,和任意的行数</li>
-</ul>
-<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
-<li>数据库是一些关联表的集合</li>
-</ul>
-<h3 id="列"><a href="#列" class="headerlink" title="列"></a>列</h3><ul>
-<li>一个数据项 Field   字段</li>
-</ul>
-<h3 id="行"><a href="#行" class="headerlink" title="行"></a>行</h3><ul>
-<li>一条记录  row</li>
-</ul>
-<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><ul>
-<li>主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据。</li>
-</ul>
-<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><ul>
-<li>外键用于关联两个表</li>
-</ul>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
-<li>使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录。</li>
-</ul>
-<h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><h3 id="MySQL介绍"><a href="#MySQL介绍" class="headerlink" title="MySQL介绍"></a>MySQL介绍</h3><ul>
-<li>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</li>
-<li>MySQL是开源的，所以你不需要支付额外的费用。</li>
-<li>MySQL支持大型的数据库。可以处理拥有上千万条记录的大型数据库。</li>
-<li>MySQL使用标准的SQL数据语言形式。</li>
-<li>MySQL可以安装在多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等。</li>
-</ul>
-<h3 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h3><ul>
-<li>windows安装</li>
-<li>Mac安装</li>
-</ul>
-<h3 id="MySQL的存储引擎"><a href="#MySQL的存储引擎" class="headerlink" title="MySQL的存储引擎"></a>MySQL的存储引擎</h3><ul>
-<li><p>什么是存储引擎</p>
-<ul>
-<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。这些技术中的每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
-<li>不同的存储引擎性能是不一样的</li>
-</ul>
-</li>
-<li><p>什么是事务</p>
-<ul>
-<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
-</ul>
-</li>
-<li><p>存储引擎分类</p>
-<ul>
-<li><p>MYISAM</p>
-<ul>
-<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
-</li>
-<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
-<ul>
-<li>.frm(存储表定义)</li>
-<li>MYD(MYData，存储数据)</li>
-<li>MYI(MYIndex，存储索引)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>INNODB</p>
-<ul>
-<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
-</ul>
-</li>
-<li><p>MEMORY</p>
-<ul>
-<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
-<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="常用数据库命令"><a href="#常用数据库命令" class="headerlink" title="常用数据库命令"></a>常用数据库命令</h2><h3 id="MySQL数据库分为两种"><a href="#MySQL数据库分为两种" class="headerlink" title="MySQL数据库分为两种"></a>MySQL数据库分为两种</h3><h4 id="一、系统数据库-数据库服务器自带的-自带的4个"><a href="#一、系统数据库-数据库服务器自带的-自带的4个" class="headerlink" title="一、系统数据库(数据库服务器自带的,自带的4个)"></a>一、系统数据库(数据库服务器自带的,自带的4个)</h4><ul>
-<li><p>information_schema</p>
-<ul>
-<li>存储数据库对象信息</li>
-</ul>
-</li>
-</ul>
-<p>如用户表信息,列信息,根除,字符,分区<br>里面的内容我们不能动.</p>
-<ul>
-<li><p>performance_schema</p>
-<ul>
-<li>存储数据库服务器性能参数信息</li>
-</ul>
-</li>
-<li><p>MySQL</p>
-<ul>
-<li>存储数据库用户权限信息</li>
-</ul>
-</li>
-<li><p>test</p>
-<ul>
-<li>一个空的数据库，用户可以使用它也可以不使用它</li>
-</ul>
-</li>
-</ul>
-<h4 id="二、用户数据库"><a href="#二、用户数据库" class="headerlink" title="二、用户数据库"></a>二、用户数据库</h4><ul>
-<li>用户自己创建的数据库,一个项目用一个数据库</li>
-</ul>
-<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
-<li>create database 数据库名称;</li>
-</ul>
-<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
-<li>drop database 数据库名称;</li>
-</ul>
-<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><ul>
-<li>show databases;</li>
-</ul>
-<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><ul>
-<li>use 数据库名;</li>
-</ul>
-<h3 id="查看数据库当中有多少张表"><a href="#查看数据库当中有多少张表" class="headerlink" title="查看数据库当中有多少张表"></a>查看数据库当中有多少张表</h3><ul>
-<li>show  tables;</li>
-</ul>
-<p><strong>请注意”写的顺序,先使用数据库,再去查有多少张表”</strong></p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对MySQL数据库的详细介绍了，</strong></p>
+    <title>后端开发工具之IDEA安装教程</title>
+    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
+<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
+<p>(厉害的开发者都用记事本，哈哈)</p>
+<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
+<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。<br>因为是歪果仁开发的软件，</p>
+<p>所以使用的语言就是英文的，这对于国内很多用户来说都很不友好。安装完成后顺便教大家怎么给PyCharm设置成中文界面。</p>
+<p>活不多说，开启教程：</p>
+<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
+<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.jpg"></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.jpg"></p>
+<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
+<p><strong>双击下载的安装包打开安装即可：</strong></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png"></p>
+<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpg"></p>
+<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
+<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png"></p>
+<h1 id="四、改中文界面"><a href="#四、改中文界面" class="headerlink" title="四、改中文界面"></a>四、改中文界面</h1><p><strong>IDEA可以加载插件，</strong></p>
+<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
+<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)->Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)->MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese->选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/6.png"></p>
+<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
+<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
+<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
+<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
 ]]></content>
       <tags>
-        <tag>术语定义类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于Spark大数据开发</title>
-    <url>/2022/03/18/%E5%85%B3%E4%BA%8ESpark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<h1 id="关于Spark大数据开发"><a href="#关于Spark大数据开发" class="headerlink" title="关于Spark大数据开发:"></a>关于Spark大数据开发:</h1><h1 id="一、Spark概述"><a href="#一、Spark概述" class="headerlink" title="一、Spark概述"></a>一、Spark概述</h1><h2 id="（1）概述"><a href="#（1）概述" class="headerlink" title="（1）概述"></a>（1）概述</h2><p>Spark，是一种”One Stack to rule them all”的大数据计算框架，期望使用一个技术堆栈就完美地解决大数据领域的各种计算任务。Apache官方，对Spark的定义就是：通用的大数据快速处理引擎。<br>Spark使用Spark RDD、Spark SQL、 Spark Streaming，MLlib，GraphX成功解决了大数据领城中，离线批处理、交互式查询、实时流计算、机器学习与图计算等最重要的任务和问题。<br>Spark除了一站式的特点之外，另外一个最重要的特点，就是基于内存进行计算，从而让它的速度可以达到MapReduce、Hive的数倍甚至数十倍！<br>现在已经有很多大公司正在生产环境下深度地使用Spark作为大数据的计算框架，包括eBay.Yahool、 BAT、网易、京东、华为、大众点评、优酷土豆、搜狗等等。<br>Spark同时也获得了多个世界顶级IT厂商的支持，包括IBM、 Intel等。</p>
-<p>Spark，是一种通用的大数据计算框架，I正如传统大数据技术Hadoop的MapReduce、Hive引擎，以及Storm流式实时计算引擎等，<br>Spark包含了大数据领城常见的各种计算框架：比如Spark Core用于离线计算，Spark SQL用于交互式查询，Spark Streaming用于实时流式计算，Spark MILlib用于机器学习，Spark GraphX用于图计算。<br>Spark主要用于大数据的计算，而Hadoop以后主要用于大数据的存储（比如HDFS、Hive，HBase等），以及资源调度（Yarn）。</p>
-<p>Spark+Hadoop的组合，是未来大数据领域最热门的组合，也是最有前景的组合！</p>
-<h2 id="（2）Spark整体架构"><a href="#（2）Spark整体架构" class="headerlink" title="（2）Spark整体架构"></a>（2）Spark整体架构</h2><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/1.png"></p>
-<h2 id="（3）Spark特性："><a href="#（3）Spark特性：" class="headerlink" title="（3）Spark特性："></a>（3）Spark特性：</h2><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/2.png"></p>
-<h4 id="（1）spark-计算速度快"><a href="#（1）spark-计算速度快" class="headerlink" title="（1）spark 计算速度快"></a>（1）spark 计算速度快</h4><p>spark将每个任务构建成DAG进行计算，内部的计算过程通过弹性式分布式数据集RDD在内存在进行计算，相比于hadoop的mapreduce效率提升了100倍。</p>
-<h4 id="（2）易于使用"><a href="#（2）易于使用" class="headerlink" title="（2）易于使用"></a>（2）易于使用</h4><p>spark 提供了大量的算子，开发只需调用相关api进行实现无法关注底层的实现原理。</p>
-<p>通用的大数据解决方案</p>
-<p>相较于以前离线任务采用mapreduce实现，实时任务采用storm实现，目前这些都可以通过spark来实现，降低来开发的成本。同时spark 通过spark SQL降低了用户的学习使用门槛，还提供了机器学习，图计算引擎等。</p>
-<h4 id="（3）支持多种的资源管理模式"><a href="#（3）支持多种的资源管理模式" class="headerlink" title="（3）支持多种的资源管理模式"></a>（3）支持多种的资源管理模式</h4><p>学习使用中可以采用local 模型进行任务的调试，在正式环境中又提供了standalone，yarn等模式，方便用户选择合适的资源管理模式进行适配。</p>
-<h4 id="（4）社区支持"><a href="#（4）社区支持" class="headerlink" title="（4）社区支持"></a>（4）社区支持</h4><p>spark 生态圈丰富，迭代更新快，成为大数据领域必备的计算引擎。</p>
-<h2 id="（4）Spark与MR"><a href="#（4）Spark与MR" class="headerlink" title="（4）Spark与MR"></a>（4）Spark与MR</h2><p>MapReduce能够完成的各种离线批处理功能，以及常见算法（比如二次排序、topn等），基于Spark RDD的核心编程，都可以实现，并且可以更好地、更容易地实现。而且基于Spark RDD编写的离线批处理程序，运行速度是MapReduce的数倍，速度上有非常明显的优势。</p>
-<p>Spark相较于MapReduce速度快的最主要原因就在于，MapReduce的计算模型太死板，必须是map-reduce模式，有时候即使完成一些诸如过滤之类的操作，也必须经过map-reduce过程，这样就必须经过shuffle过程。而<br>MapReduce的shuffle过程是最消耗性能的，因为shuffle中间的过程必须基于磁盘来读写。而Spark的shuffle虽然也要基于磁盘，但是其大量transformation操作，比如单纯的map或者filter等操作，可以直接基于内存进行pipeline操作，速度性能自然大大提升。</p>
-<p>但是Spark也有其劣势。由于Spark基于内存进行计算，虽然开发容易，但是真正面对大数据的时候（比如一次操作针对10亿以上级别），在没有进行调优的情况下，可能会出现各种各样的问题，比如OOM内存溢出等等。导致Spark程序可能都无法完全运行起来，就报错挂掉了，而MapReduce即使是运行缓慢，但是至少可以慢慢运行完。</p>
-<p>此外，Spark由于是新崛起的技术新秀，因此在大数据领域的完善程度，肯定不如MapReduce，比如基于HBase、Hive作为离线批处理程序的输入输出，Spark就远没有MapReduce来的完善。实现起来非常麻烦。</p>
-<h2 id="（5）Spark-Streaming与Storm"><a href="#（5）Spark-Streaming与Storm" class="headerlink" title="（5）Spark Streaming与Storm"></a>（5）Spark Streaming与Storm</h2><p>Spark Streaming 与Storm都可以用于进行实时流计算。但是他们两者的区别是非常大的。其中区别之一，就是，Spark<br>Streaming 和Storm的计算模型完全不一样，Spark Streaming是基于RDD的，因此需要将一小段时间内的，比如1秒内的数据，收集起来，作为一个RDD，然后再针对这个batch的数据进行处理。而Storm却可以做到每来一条数据，都可以立即进行处理和计算。因此，Spark Streaming实际上严格意义上来说，只能称作准实时的流计算框架；西Storm是真正意义上的实时计算框架<br>此外，Storm支持的一项高级特性，是Spark Streaming暂时不具备的，即Storm支持在分布式流式计算程序（Topolopy）在运行过程中，可以动态地调整并行度，从而动态提高并发处理能力。而Spark Streaming是无法动态调整并行度的。<br>但是Spark Streaming也有其优点，首先Spark Streaming由于是基于batch进行处理的，因此相较于Storm基于单条数据进行处理，具有数倍甚至数十倍的吞吐量。<br>此外，Spark Streaming由于也身处于Spark生态圈内，因此Spark Streaming可以与Spark Core、 Spark SQL，甚至是Spark Mllib.Spark GraphX进行无缝整合。流式处理完的数据，可以立即进行各种map、reduce转换操作，可以立即使用sql进行查询，甚至可以立即使用machine learning或者图计算算法进行处理。这种一站式的大数据处理功能和优势，是Storm无法匹敌的。<br>因此，综合上述来看，通常在对实时性要求特别高，而且实时数据量不稳定，比如在白天有高峰期的情况下，可以选择使用Storm。但是如果是对实时性要求一般，允许1秒的准实时处理，而且不要求动态调整并行度的话，选择Spark Streaming是更好的选择。</p>
-<h2 id="（6）Spark-SQL与Hive"><a href="#（6）Spark-SQL与Hive" class="headerlink" title="（6）Spark SQL与Hive"></a>（6）Spark SQL与Hive</h2><p>Spark SQL实际上并不能完全替代Hive,因为Hive是一种基于HDFS的数据仓库,并且提供了基于SQL模型的,针对存储了大数据的数据仓库,进行分布式交互查询的查询引擎。<br>严格的来说, Spark SQL能够替代的,是ive的查询引擎,而不是Hive本身,实际上即使在生产环境下, SparkSQL也是针对Hive数据仓库中的数据进行查询, Spark本身自己是不提供存储的,自然也不可能替代Hive作为数据仓库的这个功能。<br>Spark SQL的一个优点,相较于Hive查询引擎来说,就是速度快,同样的SQL语句,可能使用Hive的查询引擎,由于其底层基于 MapReduce,必须经过 shuffle过程走磁盘,因此速度是非常缓慢的。很多复杂的SQL语句,在hive中执行都需要一个小时以上的时间。而 Spark SQLSpark由于其底层基于自身的基于内存的特点,因此速度达到了Hive查询引擎的数倍以上。<br>而 Spark SQL相较于Hive的另外一个优点,就是支持大量不同的数据源,包括ive、json、 parquet、jdbc等等此外, Spark SQLSpark由于身处技术堆栈内,也是基于RDD来工作,因此可以与 Spark的其他组件无缝整合使用,配合起来实现许多复杂的功能。比如 Spark SQL支持可以直接针对hdfs文件执行sq语句!</p>
-<h1 id="二、Spark基本原理"><a href="#二、Spark基本原理" class="headerlink" title="二、Spark基本原理"></a>二、Spark基本原理</h1><h2 id="（1）Spark-Core"><a href="#（1）Spark-Core" class="headerlink" title="（1）Spark Core"></a>（1）Spark Core</h2><p>Spark Core是Spark的核心，其包含如下几个部分：</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/3.png"></p>
-<h3 id="（1）spark-基础配置"><a href="#（1）spark-基础配置" class="headerlink" title="（1）spark 基础配置"></a>（1）spark 基础配置</h3><p>sparkContext是spark应用程序的入口，spark应用程序的提交和执行离不开sparkContext，它隐藏了网络通信，分布式部署，消息通信，存储体系，计算存储等，开发人员只需要通过sparkContext等api进行开发即可。</p>
-<p>sparkRpc 基于netty实现，分为异步和同步两种方式。事件总线主要用于sparkContext组件间的交换，它属于监听者模式，采用异步调用。度量系统主要用于系统的运行监控。</p>
-<p>（2）spark 存储系统</p>
-<p>它用于管理spark运行中依赖的数据存储方式和存储位置，spark的存储系统优先考虑在各节点以内存的方式存储数据，内存不足时将数据写入磁盘中，这也是spark计算性能高的重要原因。</p>
-<p>我们可以灵活的控制数据存储在内存还是磁盘中，同时可以通过远程网络调用将结果输出到远程存储中，比如hdfs，hbase等。</p>
-<p>（3）spark 调度系统</p>
-<p>spark 调度系统主要由DAGScheduler和TaskScheduler组成。</p>
-<p>DAGScheduler 主要是把一个Job根据RDD间的依赖关系，划分为多个Stage，对于划分后的每个Stage都抽象为一个或多个Task组成的任务集，并交给TaskScheduler来进行进一步的任务调度。而TaskScheduler 负责对每个具体的Task进行调度。</p>
-<p>具体调度算法有FIFO，FAIR：</p>
-<p>FIFO调度：先进先出，这是Spark默认的调度模式。<br>FAIR调度：支持将作业分组到池中，并为每个池设置不同的调度权重，任务可以按照权重来决定执行顺序。</p>
-<h2 id="（2）Spark-SQL"><a href="#（2）Spark-SQL" class="headerlink" title="（2）Spark SQL"></a>（2）Spark SQL</h2><p>spark sql提供了基于sql的数据处理方法，使得分布式的数据集处理变的更加简单，这也是spark 广泛使用的重要原因。</p>
-<p>目前大数据相关计算引擎一个重要的评价指标就是：是否支持sql，这样才会降低使用者的门槛。spark sql提供了两种抽象的数据集合DataFrame和DataSet。</p>
-<p>DataFrame 是spark Sql 对结构化数据的抽象，可以简单的理解为spark中的表，相比较于RDD多了数据的表结构信息(schema).DataFrame = Data + schema</p>
-<p>RDD是分布式对象集合，DataFrame是分布式Row的集合，提供了比RDD更丰富的算子，同时提升了数据的执行效率。</p>
-<p>DataSet 是数据的分布式集合 ，它具有RDD强类型的优点 和Spark SQL优化后执行的优点。DataSet可以由jvm对象构建，然后使用map，filter，flatmap等操作函数操作。</p>
-<h2 id="（3）Spark-Streaming"><a href="#（3）Spark-Streaming" class="headerlink" title="（3）Spark Streaming"></a>（3）Spark Streaming</h2><p>这个模块主要是对流数据的处理，支持流数据的可伸缩和容错处理，可以与Flume和Kafka等已建立的数据源集成。Spark Streaming的实现，也使用RDD抽象的概念，使得在为流数据编写应用程序时更为方便。</p>
-<h2 id="（4）Spark基本工作原理"><a href="#（4）Spark基本工作原理" class="headerlink" title="（4）Spark基本工作原理"></a>（4）Spark基本工作原理</h2><p>Spark基本工作原理的理解，其最主要的是要搞清楚什么是RDD以及RDD的特性。深刻理解了RDD的特性，也就理解了数据在spark中是如何被处理的（spark的基本工作原理）</p>
-<p>那么RDD是什么，官方说法：<br>RDD是Spark提供的核心抽象，全称为Resillient Distributed Dataset，即弹性分布式数据集。</p>
-<p>最简单的理解：<br>RDD就是源数据的抽象，或者叫映射，或者就代表。也就是说，数据要被spark进行处理，在处理之前的首要任务就是要将数据映射成RDD，对于spark来说，RDD才是我们处理数据的规则，我只认RDD，只有RDD，通过我spark的计算引擎，才能发挥巨大的威力！</p>
-<h3 id="（1）分布式数据集"><a href="#（1）分布式数据集" class="headerlink" title="（1）分布式数据集"></a>（1）分布式数据集</h3><p>RDD是Spark提供的核心抽象，全称为Resillient Distributed Dataset，即弹性分布式数据集。</p>
-<p>RDD在抽象上来说是一种元素集合，包含了数据。它是被分区的，分为多个分区，每个分区分布在集群中的不同节点上，从而让RDD中的数据可以被并行操作。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/4.png"></p>
-<h3 id="（2）弹性"><a href="#（2）弹性" class="headerlink" title="（2）弹性"></a>（2）弹性</h3><p>RDD的数据默认情况下存放在内存中的，但是在内存资源不足时，Spark会自动将RDD数据写入磁盘。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/5.png"></p>
-<h3 id="（3）迭代式处理"><a href="#（3）迭代式处理" class="headerlink" title="（3）迭代式处理"></a>（3）迭代式处理</h3><p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/6.png"></p>
-<p>对节点1、2、3、4上的数据进行处理完成之后，可能会移动到其他的节点内存中继续处理！Spark 与Mr最大的不同在与迭代式计算模型：Mr分为两个阶段，map和reduce，两个阶段处理完了就结束了，所以我们在一个job中能做的处理很有限，只能在map和reduce中处理；而spark计算过程可以分为n个阶段，因为他是内存迭代式的，我们在处理完一个阶段之后，可以继续往下处理很多阶段，而不是两个阶段。所以Spark相较于MR，计算模型可以提供更强大的功能。</p>
-<h3 id="（4）容错性"><a href="#（4）容错性" class="headerlink" title="（4）容错性"></a>（4）容错性</h3><p>RDD最重要的特性就是，提供了容错性，可以自动从节点失败中恢复过来。即如果某个节点上的RDD partition，因为节点故障，导致数据丢了，那么RDD会自动通过自己的数据来源重新计算该partition。这一切对使用者是透明的。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/7.png"></p>
-<h1 id="三、Spark-运行模式及集群角色"><a href="#三、Spark-运行模式及集群角色" class="headerlink" title="三、Spark 运行模式及集群角色"></a>三、Spark 运行模式及集群角色</h1><h2 id="（1）Spark运行模式"><a href="#（1）Spark运行模式" class="headerlink" title="（1）Spark运行模式"></a>（1）Spark运行模式</h2><table>
-<thead>
-<tr>
-<th align="center"><strong>运行模式</strong></th>
-<th align="center"><strong>运行类型</strong></th>
-<th align="center"><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">local</td>
-<td align="center">本地模式</td>
-<td align="center">常用于本地开发测试，分为local单线程和local-cluster多线程模式</td>
-</tr>
-<tr>
-<td align="center">standalone</td>
-<td align="center">集群模式</td>
-<td align="center">独立模式，在spark自己的资源调度管理框架上运行，该框架采用master/salve结构</td>
-</tr>
-<tr>
-<td align="center">yarn</td>
-<td align="center">集群模式</td>
-<td align="center">在yarn资源管理器框架上运行，由yarn负责资源管理，spark负责任务调度和计算</td>
-</tr>
-<tr>
-<td align="center">mesos</td>
-<td align="center">集群模式</td>
-<td align="center">在mesos资源管理器框架上运行，由mesos负责资源管理，spark负责任务调度和计算</td>
-</tr>
-<tr>
-<td align="center">k8s</td>
-<td align="center">集群模式</td>
-<td align="center">在k8s上运行</td>
-</tr>
-</tbody></table>
-<h2 id="（2）Spark集群角色"><a href="#（2）Spark集群角色" class="headerlink" title="（2）Spark集群角色"></a>（2）Spark集群角色</h2><p>下图是spark的集群角色图，主要有集群管理节点cluster manager，工作节点worker，执行器executor，驱动器driver和应用程序application 五部分组成，下面详细说明每部分的特点。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/8.png"></p>
-<h3 id="（1）Cluster-Manager"><a href="#（1）Cluster-Manager" class="headerlink" title="（1）Cluster Manager"></a>（1）Cluster Manager</h3><p>集群管理器，它存在于Master进程中，主要用来对应用程序申请的资源进行管理，根据其部署模式的不同，可以分为local，standalone，yarn，mesos等模式。</p>
-<h3 id="（2）worker"><a href="#（2）worker" class="headerlink" title="（2）worker"></a>（2）worker</h3><p>worker是spark的工作节点，用于执行任务的提交，主要工作职责有下面四点：</p>
-<p>worker节点通过注册机向cluster manager汇报自身的cpu，内存等信息。<br>worker 节点在spark master作用下创建并启用executor，executor是真正的计算单元。<br>spark master将任务Task分配给worker节点上的executor并执行运用。<br>worker节点同步资源信息和executor状态信息给cluster manager。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/9.png"></p>
-<p>在yarn 模式下运行worker节点一般指的是NodeManager节点，standalone模式下运行一般指的是slave节点。</p>
-<h3 id="（3）executor"><a href="#（3）executor" class="headerlink" title="（3）executor"></a>（3）executor</h3><p>executor 是真正执行计算任务的组件，它是application运行在worker上的一个进程。这个进程负责Task的运行，它能够将数据保存在内存或磁盘存储中，也能够将结果数据返回给Driver。</p>
-<h3 id="（4）Application"><a href="#（4）Application" class="headerlink" title="（4）Application"></a>（4）Application</h3><p>application是Spark API 编程的应用程序，它包括实现Driver功能的代码和在程序中各个executor上要执行的代码，一个application由多个job组成。其中应用程序的入口为用户所定义的main方法。</p>
-<h3 id="（5）Driver"><a href="#（5）Driver" class="headerlink" title="（5）Driver"></a>（5）Driver</h3><p>驱动器节点，它是一个运行Application中main函数并创建SparkContext的进程。application通过Driver 和Cluster Manager及executor进行通讯。它可以运行在application节点上，也可以由application提交给Cluster Manager，再由Cluster Manager安排worker进行运行。</p>
-<p>Driver节点也负责提交Job，并将Job转化为Task，在各个Executor进程间协调Task的调度。</p>
-<h3 id="（6）sparkContext"><a href="#（6）sparkContext" class="headerlink" title="（6）sparkContext"></a>（6）sparkContext</h3><p>sparkContext是整个spark应用程序最关键的一个对象，是Spark所有功能的主要入口点。核心作用是初始化spark应用程序所需要的组件，同时还负责向master程序进行注册等。</p>
-<h2 id="（3）Spark其他核心概念"><a href="#（3）Spark其他核心概念" class="headerlink" title="（3）Spark其他核心概念"></a>（3）Spark其他核心概念</h2><h3 id="（1）RDD"><a href="#（1）RDD" class="headerlink" title="（1）RDD"></a>（1）RDD</h3><p>它是Spark中最重要的一个概念，是弹性分布式数据集，是一种容错的、可以被并行操作的元素集合，是Spark对所有数据处理的一种基本抽象。可以通过一系列的算子对rdd进行操作，主要分为Transformation和Action两种操作。</p>
-<p>‍‍‍‍‍Transformation(转换)：是对已有的RDD进行换行生成新的RDD，对于转换过程采用惰性计算机制，不会立即计算出结果。常用的方法有map，filter，flatmap等。<br>Action(执行)：对已有对RDD对数据执行计算产生结果，并将结果返回Driver或者写入到外部存储中。常用到方法有reduce，collect，saveAsTextFile等。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/10.png"></p>
-<h3 id="（2）DAG"><a href="#（2）DAG" class="headerlink" title="（2）DAG"></a>（2）DAG</h3><p>DAG是一个有向无环图，在Spark中， 使用 DAG 来描述我们的计算逻辑。主要分为DAG Scheduler 和Task Scheduler。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/11.png"></p>
-<h3 id="（3）DAG-Scheduler"><a href="#（3）DAG-Scheduler" class="headerlink" title="（3）DAG Scheduler"></a>（3）DAG Scheduler</h3><p>DAG Scheduler 是面向stage的高层级的调度器，DAG Scheduler把DAG拆分为多个Task，每组Task都是一个stage，解析时是以shuffle为边界进行反向构建的，每当遇见一个shuffle，spark就会产生一个新的stage，接着以TaskSet的形式提交给底层的调度器（task scheduler），每个stage封装成一个TaskSet。DAG Scheduler需要记录RDD被存入磁盘物化等动作，同时会需要Task寻找最优等调度逻辑，以及监控因shuffle跨节点输出导致的失败。<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/12.png"></p>
-<h3 id="（4）Task-Scheduler"><a href="#（4）Task-Scheduler" class="headerlink" title="（4）Task Scheduler"></a>（4）Task Scheduler</h3><p>Task Scheduler 负责每一个具体任务的执行。它的主要职责包括</p>
-<p>任务集的调度管理<br>状态结果跟踪<br>物理资源调度管理<br>任务执行<br>获取结果</p>
-<h3 id="（5）Job"><a href="#（5）Job" class="headerlink" title="（5）Job"></a>（5）Job</h3><p>job是有多个stage构建的并行的计算任务，job是由spark的action操作来触发的，在spark中一个job包含多个RDD以及作用在RDD的各种操作算子。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/13.png"></p>
-<h3 id="（6）stage"><a href="#（6）stage" class="headerlink" title="（6）stage"></a>（6）stage</h3><p>DAG Scheduler会把DAG切割成多个相互依赖的Stage，划分Stage的一个依据是RDD间的宽窄依赖。</p>
-<p>在对Job中的所有操作划分Stage时，一般会按照倒序进行，即从Action开始，遇到窄依赖操作，则划分到同一个执行阶段，遇到宽依赖操作，则划分一个新的执行阶段，且新的阶段为之前阶段的parent，然后依次类推递归执行。</p>
-<p>child Stage需要等待所有的parent Stage执行完之后才可以执行，这时Stage之间根据依赖关系构成了一个大粒度的DAG。在一个Stage内，所有的操作以串行的Pipeline的方式，由一组Task完成计算。</p>
-<h3 id="（7）TaskSet-Task"><a href="#（7）TaskSet-Task" class="headerlink" title="（7）TaskSet Task"></a>（7）TaskSet Task</h3><p>TaskSet 可以理解为一种任务，对应一个stage，是Task组成的任务集。一个TaskSet中的所有Task没有shuffle依赖可以并行计算。</p>
-<p>Task是spark中最独立的计算单元，由Driver Manager发送到executer执行，通常情况一个task处理spark RDD一个partition。Task分为ShuffleMapTask和ResultTask两种，位于最后一个Stage的Task为ResultTask，其他阶段的属于ShuffleMapTask。</p>
-<h1 id="四、Spark作业运行流程"><a href="#四、Spark作业运行流程" class="headerlink" title="四、Spark作业运行流程"></a>四、Spark作业运行流程</h1><h2 id="1-Spark作业运行流程"><a href="#1-Spark作业运行流程" class="headerlink" title="(1)Spark作业运行流程"></a>(1)Spark作业运行流程</h2><p>spark应用程序以进程集合为单位在分布式集群上运行，通过driver程序的main方法创建sparkContext的对象与集群进行交互。具体运行流程如下：</p>
-<p>sparkContext向cluster Manager申请CPU，内存等计算资源。<br>cluster Manager分配应用程序执行所需要的资源，在worker节点创建executor。<br>sparkContext将程序代码和task任务发送到executor上进行执行，代码可以是编译成的jar包或者python文件等。接着sparkContext会收集结果到Driver端。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/14.png"></p>
-<h2 id="（2）-Spark-RDD迭代过程"><a href="#（2）-Spark-RDD迭代过程" class="headerlink" title="（2） Spark RDD迭代过程"></a>（2） Spark RDD迭代过程</h2><p>sparkContext创建RDD对象，计算RDD间的依赖关系，并组成一个DAG有向无环图。<br>DAGScheduler将DAG划分为多个stage，并将stage对应的TaskSet提交到集群的管理中心，stage的划分依据是RDD中的宽窄依赖，spark遇见宽依赖就会划分为一个stage，每个stage中包含来一个或多个task任务，避免多个stage之间消息传递产生的系统开销。<br>taskScheduler 通过集群管理中心为每一个task申请资源并将task提交到worker的节点上进行执行。<br>worker上的executor执行具体的任务。<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/15.png"></p>
-<h2 id="（3）Yarn资源管理器介绍"><a href="#（3）Yarn资源管理器介绍" class="headerlink" title="（3）Yarn资源管理器介绍"></a>（3）Yarn资源管理器介绍</h2><p>spark 程序一般是运行在集群上的，spark on yarn是工作或生产上用的非常多的一种运行模式。</p>
-<p>没有yarn模式前，每个分布式框架都要跑在一个集群上面，比如说Hadoop要跑在一个集群上，Spark用集群的时候跑在standalone上。这样的话整个集群的资源的利用率低，且管理起来比较麻烦。</p>
-<p>yarn是分布式资源管理和任务管理管理，主要由ResourceManager，NodeManager和ApplicationMaster三个模块组成。</p>
-<p><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/16.png"></p>
-<p>ResourceManager 主要负责集群的资源管理，监控和分配。对于所有的应用它有绝对的控制权和资源管理权限。</p>
-<p>NodeManager 负责节点的维护，执行和监控task运行状况。会通过心跳的方式向ResourceManager汇报自己的资源使用情况。</p>
-<p>yarn资源管理器的每个节点都运行着一个NodeManager，是ResourceManager的代理。如果主节点的ResourceManager宕机后，会连接ResourceManager的备用节点。</p>
-<p>ApplicationMaster 负责具体应用程序的调度和资源的协调，它会与ResourceManager协商进行资源申请。ResourceManager以container容器的形式将资源分配给application进行运行。同时负责任务的启停。</p>
-<p>container 是资源的抽象，它封装着每个节点上的资源信息(cpu,内存，磁盘，网络等)，yarn将任务分配到container上运行，同时该任务只能使用container描述的资源，达到各个任务间资源的隔离。</p>
-<h2 id="（4）Spark程序在Yarn上执行流程"><a href="#（4）Spark程序在Yarn上执行流程" class="headerlink" title="（4）Spark程序在Yarn上执行流程"></a>（4）Spark程序在Yarn上执行流程</h2><p>spark on yarn分为两种模式yarn-client模式，和yarn—cluster模式，一般线上采用的是yarn-cluster模式。</p>
-<h3 id="（1）yarn-client模式"><a href="#（1）yarn-client模式" class="headerlink" title="（1）yarn-client模式"></a>（1）yarn-client模式</h3><p>driver在客户端本地执行，这种模式可以使得spark application和客户端进行交互，因为driver在客户端可以通过webUI访问driver的状态。同时Driver会与yarn集群中的Executor进行大量的通信，会造成客户机网卡流量的大量增加。</p>
-<h3 id="（2）yarn-cluster模式"><a href="#（2）yarn-cluster模式" class="headerlink" title="（2）yarn-cluster模式"></a>（2）yarn-cluster模式</h3><p>Yarn-Cluster主要用于生产环境中，因为Driver运行在Yarn集群中某一台NodeManager中，每次提交任务的Driver所在的机器都是随机的，不会产生某一台机器网卡流量激增的现象，缺点是任务提交后不能看到日志。只能通过yarn查看日志。</p>
-<p>下图是yarn-cluster运行模式：<br><img src="/%E5%85%B3%E4%BA%8Espark%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/17.png"></p>
-<p>client 向yarn提交应用程序，包含ApplicationMaster程序、启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster程序启动ApplicationMaster的命令、需要在Executor中运行的程序等。<br>ApplicationMaster向ResourceManager注册，这样用户可以直接通过ResourceManage查看应用程序的运行状态。<br>ApplicationMaster申请到资源（也就是Container）后，便与对应的NodeManager通信，启动Task。<br>Task向ApplicationMaster汇报运行的状态和进度，以让ApplicationMaster随时掌握各个任务的运行状态，从而可以在任务失败时重新启动任务。<br>应用程序运行完成后，ApplicationMaster向ResourceManager申请注销并关闭自己。</p>
-<h1 id="五、基于WordCount程序开发"><a href="#五、基于WordCount程序开发" class="headerlink" title="五、基于WordCount程序开发"></a>五、基于WordCount程序开发</h1><p>下面使用Java和Scala语言编写WordCount程序</p>
-<h2 id="（1）Java开发WordCount程序"><a href="#（1）Java开发WordCount程序" class="headerlink" title="（1）Java开发WordCount程序"></a>（1）Java开发WordCount程序</h2><pre class="language-none"><code class="language-none">package com.kfk.spark;
-
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.FlatMapFunction;
-import org.apache.spark.api.java.function.Function2;
-import org.apache.spark.api.java.function.PairFunction;
-import org.apache.spark.api.java.function.VoidFunction;
-import scala.Tuple2;
-
-import java.util.Arrays;
-import java.util.Iterator;
-
-/**
- * @author : 
- * @email :
- * @date : 
- * @time : 
- */
-public class WordCountJava {
-    public static void main(String[] args) {
-
-        SparkConf sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local");
-
-        JavaSparkContext sc = new JavaSparkContext(sparkConf);
-
-        JavaRDD lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt");
-
-        JavaRDD words = lines.flatMap(new FlatMapFunction&lt;String,String&gt;() {
-            public Iterator call(String line) throws Exception {
-                return Arrays.asList(line.split(" ")).iterator();
-            }
-        });
-
-        JavaPairRDD word = words.mapToPair(new PairFunction&lt;String,String,Integer&gt;() {
-            public Tuple2 call(String word) throws Exception {
-                return new Tuple2(word,1);
-            }
-        });
-
-        JavaPairRDD wordcount = word.reduceByKey(new Function2&lt;Integer,Integer,Integer&gt;() {
-            public Integer call(Integer v1, Integer v2) throws Exception {
-                return v1+ v2;
-            }
-        });
-
-        wordcount.foreach(new VoidFunction&lt;Tuple2&lt;String,Integer&gt;&gt;() {
-            public void call(Tuple2&lt;String,Integer&gt; o) throws Exception {
-                System.out.println(o._1 + " : " + o._2);
-            }
-        });
-
-    }
-}
-</code></pre>
-
-<p>运行结果：</p>
-<pre class="language-none"><code class="language-none">spark : 1
-hive : 3
-hadoop : 3
-python : 1
-flink : 2
-java : 5
-storm : 1
-hbase : 1
-</code></pre>
-
-<h2 id="（2）Scala开发WordCount程序"><a href="#（2）Scala开发WordCount程序" class="headerlink" title="（2）Scala开发WordCount程序"></a>（2）Scala开发WordCount程序</h2><pre class="language-none"><code class="language-none">package com.kfk.spark
-
-import org.apache.spark.{SparkConf, SparkContext}
-
-/**
- * @author : 
- * @email :
- * @date : 
- * @time : 
- */
-object WordCountScala {
-    def main(args: Array[String]): Unit = {
-        val sparkConf = new SparkConf().setAppName("wordCountApp").setMaster("local")
-        val sc = new SparkContext(sparkConf)
-        val lines = sc.textFile("hdfs://bigdata-pro-m04:9000/user/caizhengjie/datas/wordcount.txt")
-
-        // val wordcount = lines.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word,1)).reduceByKey((x,y) =&gt; (x+y)).foreach((_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
-
-        val words = lines.flatMap(line =&gt; line.split(" "))
-        val word = words.map(word =&gt; (word,1))
-        val wordcount = word.reduceByKey((x,y) =&gt; (x+y))
-
-        // println(wordcount.collect().toList)
-
-        wordcount.foreach(_wordcount =&gt; println(_wordcount._1 + " : " + _wordcount._2))
-    }
-}
-</code></pre>
-
-<p>运行结果：</p>
-<pre class="language-none"><code class="language-none">spark : 1
-hive : 3
-hadoop : 3
-python : 1
-flink : 2
-java : 5
-storm : 1
-hbase : 1
-</code></pre>
-
-<h2 id="（3）程序打包提交Spark集群测试"><a href="#（3）程序打包提交Spark集群测试" class="headerlink" title="（3）程序打包提交Spark集群测试"></a>（3）程序打包提交Spark集群测试</h2><pre class="language-none"><code class="language-none">bin/spark-submit --class com.kfk.spark.WordCountJava --master local[2] /opt/jars/wordcountjava.jar 
-</code></pre>
-
-<p>运行结果：</p>
-<pre class="language-none"><code class="language-none">spark : 1
-hive : 3
-hadoop : 3
-python : 1
-flink : 2
-java : 5
-storm : 1
-hbase : 1
-</code></pre>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Spark大数据技术的详细介绍了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于二叉树</title>
-    <url>/2020/11/18/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
-    <content><![CDATA[<h1 id="关于二叉树的种类"><a href="#关于二叉树的种类" class="headerlink" title="关于二叉树的种类:"></a>关于二叉树的种类:</h1><hr>
-<h3 id="一、满二叉树"><a href="#一、满二叉树" class="headerlink" title="一、满二叉树"></a>一、满二叉树</h3><hr>
-<p>满二叉树：<br>如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。深度为k，有2^k-1个节点的二叉树。</p>
-<h3 id="二、完全二叉树"><a href="#二、完全二叉树" class="headerlink" title="二、完全二叉树"></a>二、完全二叉树</h3><hr>
-<p>完全二叉树：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2^h -1 个节点。</p>
-<p>我们可以给完全二叉树编号，这样父子之间就可以通过编号轻松求出。<br>比如我给所有节点从左到右从上到下依次从 1 开始编号。</p>
-<p>那么已知一个节点的编号是 i，那么其左子节点就是 2 i，右子节点就是 2 1 + 1，父节点就是 (i + 1) / 2。</p>
-<hr>
-<h1 id="二叉树的最大宽度"><a href="#二叉树的最大宽度" class="headerlink" title="二叉树的最大宽度"></a>二叉树的最大宽度</h1><h3 id="一、序列化二叉树"><a href="#一、序列化二叉树" class="headerlink" title="一、序列化二叉树"></a>一、序列化二叉树</h3><h5 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h5><p>二叉搜索树是有数值的了，二叉搜索树是一个有序树。</p>
-<p>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；<br>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</p>
-<p>它的左、右子树也分别为二叉排序树</p>
-<h3 id="二、平衡二叉搜索树"><a href="#二、平衡二叉搜索树" class="headerlink" title="二、平衡二叉搜索树"></a>二、平衡二叉搜索树</h3><p>平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：</p>
-<p>它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。<br>对于一个二叉查找树，常规操作有插入，查找，删除，找父节点，求最大值，求最小值。</p>
-<h5 id="核心：二叉搜索树的中序遍历的结果是一个有序数组"><a href="#核心：二叉搜索树的中序遍历的结果是一个有序数组" class="headerlink" title="核心：二叉搜索树的中序遍历的结果是一个有序数组"></a>核心：二叉搜索树的中序遍历的结果是一个有序数组</h5><h5 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h5><h6 id="验证二叉搜索树"><a href="#验证二叉搜索树" class="headerlink" title="验证二叉搜索树"></a>验证二叉搜索树</h6><h6 id="二叉搜索树迭代器"><a href="#二叉搜索树迭代器" class="headerlink" title="二叉搜索树迭代器"></a>二叉搜索树迭代器</h6><h6 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h6><h6 id="一个中心"><a href="#一个中心" class="headerlink" title="一个中心"></a>一个中心</h6><h3 id="三、树的遍历："><a href="#三、树的遍历：" class="headerlink" title="三、树的遍历："></a>三、树的遍历：</h3><p>遍历不是目的，遍历是为了更好地做处理，这里的处理包括搜索，修改树等。</p>
-<p>树虽然只能从根开始访问，但是可以选择在访问完毕回来的时候做处理，</p>
-<p>还是在访问回来之前做处理，这两种不同的方式就是后序遍历和先序遍历。</p>
-<h5 id="其中有两个重要知识点："><a href="#其中有两个重要知识点：" class="headerlink" title="其中有两个重要知识点："></a>其中有两个重要知识点：</h5><h6 id="DFS（深度优先遍历）"><a href="#DFS（深度优先遍历）" class="headerlink" title="DFS（深度优先遍历）"></a>DFS（深度优先遍历）</h6><h6 id="BFS（宽度优先遍历）"><a href="#BFS（宽度优先遍历）" class="headerlink" title="BFS（宽度优先遍历）"></a>BFS（宽度优先遍历）</h6><h1 id="二叉树的遍历结构：就是找根节点"><a href="#二叉树的遍历结构：就是找根节点" class="headerlink" title="二叉树的遍历结构：就是找根节点"></a>二叉树的遍历结构：就是找根节点</h1><p>前序：根-左-右<br>中序：左-根-右<br>后序：左-右-根</p>
-<p>举个例子：</p>
-<p><img src="/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/1.png"></p>
-<p>前序就是根节点在前<br>中序就是根节点在中<br>后序就是根在后</p>
-<p><img src="/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%8F%89%E6%A0%91/2.png"></p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对二叉树的详细介绍了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
+        <tag>工具浅玩类</tag>
       </tags>
   </entry>
   <entry>
@@ -3239,40 +3276,35 @@ hbase : 1
       </tags>
   </entry>
   <entry>
-    <title>后端开发工具之IDEA安装教程</title>
-    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
-<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
-<p>(厉害的开发者都用记事本，哈哈)</p>
-<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
-<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。</p>
-<p>活不多说，开启教程：</p>
-<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
-<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.jpg"></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.jpg"></p>
-<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
-<p><strong>双击下载的安装包打开安装即可：</strong></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png"></p>
-<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpg"></p>
-<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
-<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3><p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png"></p>
-<h1 id="四、关于中文汉化问题解决方案"><a href="#四、关于中文汉化问题解决方案" class="headerlink" title="四、关于中文汉化问题解决方案"></a>四、关于中文汉化问题解决方案</h1><p><strong>汉化插件对于英文不是很好的开发者来说，开发项目简直不要太轻松</strong></p>
-<p><strong>IDEA可以加载插件，</strong></p>
-<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
-<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)->Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)->MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese->选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
-<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/6.png"></p>
-<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
-<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
-<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
-<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
+    <title>后端开发工具之PyCharm安装教程</title>
+    <url>/2020/10/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>PyCharm 是我认为的最好用的python编辑器，没有之一。</p>
+<p>PyCharm是一种Python IDE（Integrated Development Environment，集成开发环境），带有一整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、项目管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。</p>
+<p>PyCharm 是我用过的python编辑器中，比较顺手的一个。而且可以跨平台，在macos和windows下面都可以用，这点比较好。</p>
+<p>因为是歪果仁开发的软件，</p>
+<p>所以使用的语言就是英文的，这对于国内很多用户来说都很不友好。安装完成后顺便教大家怎么给PyCharm设置成中文界面。</p>
+<h1 id="一-下载PyCharm"><a href="#一-下载PyCharm" class="headerlink" title="一.下载PyCharm"></a>一.下载PyCharm</h1><p>1.官网下载：</p>
+<p><a href="https://www.jetbrains.com.cn/pycharm/download/#section=windows">下载 PyCharm：JetBrains 为专业开发者提供的 Python IDE</a></p>
+<p>2.专业版是收费的，一般我们做开发，下载专业版本比较合适。</p>
+<p>3.社区版是免费的，社区版功能对新手足够使用，我们这里就下载社区版的。</p>
+<h1 id="二-安装PyCharm"><a href="#二-安装PyCharm" class="headerlink" title="二.安装PyCharm"></a>二.安装PyCharm</h1><p>1.下载完成后点击安装，根据自己电脑情况，选择安装在哪个盘，建议优先装在固态盘，机械盘除系统盘。</p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png"></p>
+<p><img src="/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png"></p>
+<p>2.一路next</p>
+<p>3.至此，PyCharm安装成功。</p>
+<h1 id="三-改中文界面"><a href="#三-改中文界面" class="headerlink" title="三.改中文界面"></a>三.改中文界面</h1><p>具体步骤：</p>
+<p>　　1、点击pycharm右上角的file。</p>
+<p>​		2、在下拉框中选择settings。</p>
+<p>​		3、点击plugins。</p>
+<p>​		4、在搜索框中输入Chinese，安装简体中文插件即可。</p>
+<h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是PyCharm的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
 <p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
 ]]></content>
       <tags>
-        <tag>工具浅玩类</tag>
+        <tag>教程类</tag>
       </tags>
   </entry>
 </search>
