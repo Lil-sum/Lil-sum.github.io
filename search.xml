@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于Hadoop大数据技术</title>
+    <url>/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术:"></a>关于Hadoop大数据技术:</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
+<h2 id="1-2-Hadoop-优势"><a href="#1-2-Hadoop-优势" class="headerlink" title="1.2 Hadoop 优势"></a>1.2 Hadoop 优势</h2><p>（1）高可靠性：Hadoop底层维护多个数据副本，所以即使Hadoop某个计算元素或存储出现故障，也不会导致数据的丢失。<br>（2）高扩展性：在集群间分配任务数据，可方便的扩展数以千计的节点。<br>（3）高效性：在MapReduce的思想下，Hadoop是并行工作的，以加快任务处理速度。<br>（4）高容错性：能够自动将失败的任务重新分配。</p>
+<h2 id="1-3-Hadoop-组成★★★★★"><a href="#1-3-Hadoop-组成★★★★★" class="headerlink" title="1.3 Hadoop 组成★★★★★"></a>1.3 Hadoop 组成★★★★★</h2><img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/1.png" class="">
+
+<p>在Hadoop1.x 时代，Hadoop中的MapReduce同时处理业务逻辑运算和资源的调度，耦合性较大。<br>在Hadoop2.x时代，增加了Yarn。Yarn只负责资源的调度，MapReduce 只负责运算。<br>Hadoop3.x在组成上没有变化。</p>
+<h3 id="1-3-1-HDFS-架构概述"><a href="#1-3-1-HDFS-架构概述" class="headerlink" title="1.3.1 HDFS 架构概述"></a>1.3.1 HDFS 架构概述</h3><p>Hadoop Distributed File System，简称HDFS，是一个分布式文件系统。</p>
+<p>（1）NameNode（nn）：存储文件的元数据，如文件名，文件目录结构，文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和块所在的DataNode等。<br>（2）DataNode(dn)：在本地文件系统存储文件块数据，以及块数据的校验和。<br>（3）Secondary NameNode(2nn)：每隔一段时间对NameNode元数据备份。</p>
+<h3 id="1-3-2-YARN-架构概述"><a href="#1-3-2-YARN-架构概述" class="headerlink" title="1.3.2 YARN 架构概述"></a>1.3.2 YARN 架构概述</h3><p>Yet Another Resource Negotiator 简称YARN ，另一种资源协调者，是Hadoop 的资源管理器。</p>
+<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/2.png" class="">
+
+<p>ResourceManager(RM)：整个集群资源（内存、CPU等）的管理者<br>NodeManager(NM)：单个节点服务器资源的管理者。<br>ApplicationMaster(AM)：单个任务运行的管理者。<br>Container：容器，相当于一台独立的服务器，里面封装了任务运行所需要的资源，如内存、CPU、磁盘、网络等。</p>
+<p>说明：<br>（1）客户端可以有多个<br>（2）集群上可以运行多个ApplicationMaster<br>（3）每个NodeManager上可以有多个Container</p>
+<h3 id="1-3-3-MapReduce-架构概述"><a href="#1-3-3-MapReduce-架构概述" class="headerlink" title="1.3.3 MapReduce 架构概述"></a>1.3.3 MapReduce 架构概述</h3><p>MapReduce 将计算过程分为两个阶段：Map 和Reduce<br>1）Map 阶段并行处理输入数据<br>2）Reduce 阶段对Map 结果进行汇总</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/3.png" class=""></h3><h3 id="1-3-4-HDFS、YARN、MapReduce-三者关系"><a href="#1-3-4-HDFS、YARN、MapReduce-三者关系" class="headerlink" title="1.3.4 HDFS、YARN、MapReduce 三者关系"></a>1.3.4 HDFS、YARN、MapReduce 三者关系</h3><p>如图所示：</p>
+<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/4.png" class="">
+
+<h3 id="1-3-5-大数据技术生态体系"><a href="#1-3-5-大数据技术生态体系" class="headerlink" title="1.3.5 大数据技术生态体系"></a>1.3.5 大数据技术生态体系</h3><p>如图所示：</p>
+<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/5.png" class="">
+
+<p>图中涉及的技术名词解释如下：</p>
+<p>（1）Sqoop：Sqoop 是一款开源的工具，主要用于在Hadoop、Hive 与传统的数据库（MySQL）间进行数据的传递，可以将一个关系型数据库（例如 ：MySQL，Oracle 等）中的数据导进到Hadoop 的HDFS 中，也可以将HDFS 的数据导进到关系型数据库中。<br>（2）Flume：Flume 是一个高可用的，高可靠的，分布式的海量日志采集、聚合和传输的系统，Flume 支持在日志系统中定制各类数据发送方，用于收集数据。<br>（3）Kafka：Kafka 是一种高吞吐量的分布式发布订阅消息系统。<br>（4）Spark：Spark 是当前最流行的开源大数据内存计算框架。可以基于Hadoop 上存储的大数据进行计算。<br>（5）Flink：Flink 是当前最流行的开源大数据内存计算框架。用于实时计算的场景较多。<br>（6）Oozie：Oozie 是一个管理Hadoop 作业（job）的工作流程调度管理系统。<br>（7）HBase：HBase 是一个分布式的、面向列的开源数据库。HBase 不同于一般的关系数据库，它是一个适合于非结构化数据存储的数据库。<br>（8）Hive：Hive 是基于Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的SQL 查询功能，可以将SQL 语句转换为MapReduce 任务进行运行。其优点是学习成本低，可以通过类SQL 语句快速实现简单的MapReduce 统计，不必开发专门的MapReduce 应用，十分适合数据仓库的统计分析。<br>（9）ZooKeeper：它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。</p>
+<h3 id="1-3-6-推荐系统框架图"><a href="#1-3-6-推荐系统框架图" class="headerlink" title="1.3.6 推荐系统框架图"></a>1.3.6 推荐系统框架图</h3><p>推荐系统项目框架</p>
+<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/6.png" class="">
+
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Hadoop的详细介绍了，</strong></p>
+<p><strong>详细的环境搭建教程，可以上csdn开发者论坛，博客园或者百度进行搜索，这里就不过多演示了.</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub开发者交流平台注册教程</title>
     <url>/2020/09/08/GitHub%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="GitHub食用教程："><a href="#GitHub食用教程：" class="headerlink" title="GitHub食用教程："></a>GitHub食用教程：</h1><p>GitHub 是一个由美国公司开发的面向开源及私有软件项目的托管平台，<br>因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及基本的 Web 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。</p>
@@ -23,653 +61,6 @@
 ]]></content>
       <tags>
         <tag>教程类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于Python数据维度与数据格式化</title>
-    <url>/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="关于Python数据维度与数据格式化"><a href="#关于Python数据维度与数据格式化" class="headerlink" title="关于Python数据维度与数据格式化"></a>关于Python数据维度与数据格式化</h1><h2 id="（一）维度"><a href="#（一）维度" class="headerlink" title="（一）维度"></a><strong>（一）维度</strong></h2><p><strong>维度是与事物“有联系”的概念的数量，根据“有联系”的概念的数量，事物可分为不同维度。</strong></p>
-<h2 id="1-基于维度的数据分类"><a href="#1-基于维度的数据分类" class="headerlink" title="1.基于维度的数据分类"></a><strong>1.基于维度的数据分类</strong></h2><p>根据组织数据时与数据有联系的参数的数量，数据可分为一维数据、二维数据和多维数据。</p>
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/1.png" class="">
-
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/2.png" class="">
-
-<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/3.png" class="">
-
-<h2 id="1-2-一二维数据的存储与读写"><a href="#1-2-一二维数据的存储与读写" class="headerlink" title="1.2 一二维数据的存储与读写"></a>1.2 一二维数据的存储与读写</h2><p>1）数据存储</p>
-<p> 一维数据呈线性排列，一般用特殊字符分隔。</p>
-<p>例如：</p>
-<p>使用空格分隔：成都 杭州 重庆 武汉 苏州 西安 天津<br>使用逗号分隔：成都,杭州,重庆,武汉,苏州,西安,天津<br>使用&amp;分隔：成都&amp;杭州&amp;重庆&amp;武汉&amp;苏州&amp;西安&amp;天津<br> 一维数据的存储需要注意以下几点：</p>
-<p> 同一文件或同组文件一般使用同一分隔符分隔。<br>分隔数据的分隔符不应出现在数据中。<br>分隔符为英文半角符号，一般不使用中文符号作为分隔符。<br> 二维数据可视为多条一维数据的集合，当二维数据只有一个元素时，这个二维数据就是一维数据。</p>
-<p>CSV（Commae-Separeted Values，逗号分隔值）是国际上通用的一二维数据存储格式。</p>
-<p>CSV格式规范：</p>
-<p>以纯文本形式存储表格数据<br>文件的每一行对应表格中的一条数据记录<br>每条记录由一个或多个字段组成<br>字段之间使用逗号（英文、半角）分隔<br>CSV也称字符分隔值，具体示例如下：</p>
-<p>姓名,语文,数学,英语,理综</p>
-<p>刘婧,124,137,145,260</p>
-<p>张华,116,143,139,263</p>
-<p>邢昭林,120,130,148,255</p>
-<p>鞠依依,115,145,131,240</p>
-<p>黄丽萍,123,108,121,235</p>
-<p>赵越,132,100,112,210</p>
-<p>2）数据读取</p>
-<p>Windows平台中CSV文件的后缀名为.csv，可通过Office Excel或记事本打开<br>Python在程序中读取.csv文件后会以二维列表形式存储其中内容<br>csv_file &#x3D; open(‘score.csv’)<br>lines &#x3D; []<br>for line in csv_file:<br>        line &#x3D; line.replace(‘\n’,’’)<br>        lines.append(line.split(‘,’))<br>print(lines)<br>csv_file.close()<br> 3）数据写入</p>
-<p>将一、二维数据写入文件中，即按照数据的组织形式，在文件中添加新的数据。</p>
-<h2 id="（二）多维数据的格式化"><a href="#（二）多维数据的格式化" class="headerlink" title="（二）多维数据的格式化"></a>（二）多维数据的格式化</h2><p>为了直观地表示多维数据，也为了便于组织和操作，三维及以上的多维数据统一采用键值对的形式进行格式化。 网络平台上传递的数据大多是高维数据，JSON是网络中常见的高维数据格式。JSON格式的数据遵循以下语法规则：</p>
-<p>数据存储在键值对（key:value）中，例如“姓名”: “张华”。<br>数据的字段由逗号分隔，例如“姓名”: “张华”, “语文”: “116”。<br>一个花括号保存一个JSON对象，例如{“姓名”: “张华”, “语文”: “116”}。<br>一个方括号保存一个数组，例如[{“姓名”: “张华”, “语文”: “116”}]。</p>
-<p> <strong>JSON模块——json</strong></p>
-<p>利用json模块的dumps()函数和loads()函数可以实现Python对象和JSON数据之间的转换。</p>
-<table>
-<thead>
-<tr>
-<th align="center">函数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">dumps()</td>
-<td align="center">对Python对象进行转码，将其转化为JSON字符串</td>
-</tr>
-<tr>
-<td align="center">loads()</td>
-<td align="center">将JSON字符串解析为Python对象</td>
-</tr>
-</tbody></table>
-<p>Python对象与JSON数据转化时的类型对照表</p>
-<table>
-<thead>
-<tr>
-<th align="center">Python对象</th>
-<th align="center">JSON数据</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">dict</td>
-<td align="center">object</td>
-</tr>
-<tr>
-<td align="center">list,tuple</td>
-<td align="center">array</td>
-</tr>
-<tr>
-<td align="center">str,unicode</td>
-<td align="center">string</td>
-</tr>
-<tr>
-<td align="center">int,long,float</td>
-<td align="center">number</td>
-</tr>
-<tr>
-<td align="center">True</td>
-<td align="center">true</td>
-</tr>
-<tr>
-<td align="center">False</td>
-<td align="center">false</td>
-</tr>
-<tr>
-<td align="center">None</td>
-<td align="center">null</td>
-</tr>
-</tbody></table>
-<p>dumps()函数</p>
-<p>使用dumps()函数对Python对象进行转码：</p>
-<pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
-
-&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
-
-&gt;&gt;&gt; print(jsonstr)
-
-&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]
-</code></pre>
-
-<p>loads()函数</p>
-<p>使用loads()函数将JSON数据转换为符合Python语法要求的数据类型。</p>
-<pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
-
-&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
-
-&gt;&gt;&gt; print(jsonstr)
-
-&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]</code></pre>
-
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Python数据维度与格式化的详细介绍了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于SQL语言</title>
-    <url>/2021/05/18/%E5%85%B3%E4%BA%8ESQL%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[<h1 id="关于SQL语言"><a href="#关于SQL语言" class="headerlink" title="关于SQL语言:"></a>关于SQL语言:</h1><h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><h3 id="字符集的由来"><a href="#字符集的由来" class="headerlink" title="字符集的由来"></a>字符集的由来</h3><ul>
-<li>计算机只能识别二进制代码无论是计算机程序还是数据，最终都会转换成二进制，计算机才能认识。</li>
-<li>为了计算机不只能做科学计算，也能处理文字信息。<br>人们想出了给每一个文字符号编码以便于计算识别处理的办法，这就是计算机字符集的由来。</li>
-</ul>
-<h3 id="ASSCII"><a href="#ASSCII" class="headerlink" title="ASSCII"></a>ASSCII</h3><ul>
-<li><p>一套文字符号及其编码,比较规则 的集合。</p>
-<ul>
-<li>20世纪60年代初。美国标准化组织ANSI发布了第一个字符集。ASCII</li>
-<li>后来又进一步变成了国际标准ISO-646</li>
-</ul>
-</li>
-<li><p>各大字符集</p>
-<ul>
-<li><p>自ASCII后。为了处理不同的文字。各大计算机公司，各国，标准化政府，组织先后发明了几百种字符集。</p>
-<ul>
-<li>ISO-8859</li>
-<li>GB2312-80</li>
-<li>GBK</li>
-<li>BIG5</li>
-</ul>
-</li>
-<li><p>这些五花八门的字符集从收录的字符集到编码规则各不相同。给计算机软件开发和移值带来了很大的困难。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>一个软件要在使用不同文字的国家和地区发布，必须得要做本地化开发。<br>    - 基于这个原因，要统一字符编码。</p>
-<h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><ul>
-<li>为了统一字符编码。国际标准化组织ISO的一些成员国于1984年发起制定了新的国际字符集标准。容纳全世界各种语言，文字，和  符号。最后产生了这个标准ISO-10646</li>
-<li>ISO-10646发布后，遭到了美国计算机公司的反对。</li>
-<li>1988年，Xerox公司提议制定了新的以16位编码人统一字符集。并联合了Apple,IBM,SUN，Microsoft等公司成立了Unicode技术委员会。专门负责收集，整理，和编码。于1991年推出了Unicode1.0</li>
-<li>针对字符编码统一问题，ISO和Unicode协会推出了各自不同的标准。这显然是不利的。后来双方开始谈判。1991年10月达成协议。ISO将Unicode收编。起了个名BMP</li>
-</ul>
-<h3 id="UTF-16"><a href="#UTF-16" class="headerlink" title="UTF-16"></a>UTF-16</h3><ul>
-<li>ISO-10646编码空间足以容纳从古自今使用过的文字和字符。但很多文字字符已经很少用了。<br>超过99%的在用文字字符都编入了BMP.因此，绝大部分情况下，Unicode双字节方式都能满足需求。<br>而且比双字节编码方式4字节原始编码来说，更节省内存和处理时间 。这也是Unicode流行的原因。</li>
-<li>万一使用了BMP以外的文字怎么办？<br>Unicode提出了UTF-16的解决办法。</li>
-</ul>
-<h3 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h3><ul>
-<li>虽然UTF-16解决了上面问题。但当时的计算机和网络世界还是ASCII的天下。只能处理单字节数据流。UTF-16离开了Unicode环境后。在传输和处理中，都存在问题。</li>
-<li>于是又提出了UTF-8的解决文案，</li>
-<li>UTF-8按一定的规则，将一个ISO10646或Unicode转换成1至4个字节的编码</li>
-<li>其中ASCII转成单字节编码。也就严格兼容了ASCII字符集。</li>
-<li>UTF-8的2，3，4字节用以转换ISO-10646标准的UCS-4原始码。</li>
-</ul>
-<h3 id="汉字的一些常见字符集"><a href="#汉字的一些常见字符集" class="headerlink" title="汉字的一些常见字符集"></a>汉字的一些常见字符集</h3><ul>
-<li>GB2312</li>
-<li>GB13000</li>
-<li>GBK</li>
-<li>GB18030</li>
-</ul>
-<h2 id="MySql存储引擎"><a href="#MySql存储引擎" class="headerlink" title="MySql存储引擎"></a>MySql存储引擎</h2><h3 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h3><ul>
-<li>存储，管理和使用数据的不同结构形式，如：表、视图、存储过程、函数、触发器、事件等。</li>
-</ul>
-<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
-<li>存储数据库对象的容器。</li>
-</ul>
-<h3 id="什么是存储引擎"><a href="#什么是存储引擎" class="headerlink" title="什么是存储引擎"></a>什么是存储引擎</h3><ul>
-<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。</li>
-<li>每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。</li>
-<li>通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
-<li>不同的存储引擎性能是不一样的</li>
-</ul>
-<h3 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h3><ul>
-<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
-</ul>
-<h3 id="存储引擎分类"><a href="#存储引擎分类" class="headerlink" title="存储引擎分类"></a>存储引擎分类</h3><ul>
-<li><p>MYISAM</p>
-<ul>
-<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
-</li>
-<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
-<ul>
-<li>.frm(存储表定义)</li>
-<li>MYD(MYData，存储数据)</li>
-<li>MYI(MYIndex，存储索引)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>INNODB</p>
-<ul>
-<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
-</ul>
-</li>
-<li><p>MEMORY</p>
-<ul>
-<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
-<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
-</ul>
-</li>
-</ul>
-<h2 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h2><h3 id="SQL是Structured-Quevy-Language-结构化查询语言-的缩写。"><a href="#SQL是Structured-Quevy-Language-结构化查询语言-的缩写。" class="headerlink" title="SQL是Structured Quevy Language(结构化查询语言)的缩写。"></a>SQL是Structured Quevy Language(结构化查询语言)的缩写。</h3><h3 id="SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。"><a href="#SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。" class="headerlink" title="SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。"></a>SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。</h3><h3 id="在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。"><a href="#在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。" class="headerlink" title="在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。"></a>在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。</h3><h3 id="SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT-REVOKE-。"><a href="#SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT-REVOKE-。" class="headerlink" title="SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT(REVOKE)。"></a>SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT(REVOKE)。</h3><h2 id="sql功能分类"><a href="#sql功能分类" class="headerlink" title="sql功能分类"></a>sql功能分类</h2><h3 id="DDL-数据定义语言"><a href="#DDL-数据定义语言" class="headerlink" title="DDL:数据定义语言"></a>DDL:数据定义语言</h3><ul>
-<li>用来定义数据库对象：创建库，表，列等。</li>
-</ul>
-<h3 id="DML：数据操作语言"><a href="#DML：数据操作语言" class="headerlink" title="DML：数据操作语言"></a>DML：数据操作语言</h3><ul>
-<li>用来操作数据库表中的记录</li>
-</ul>
-<h3 id="DQL：数据查询语言"><a href="#DQL：数据查询语言" class="headerlink" title="DQL：数据查询语言"></a>DQL：数据查询语言</h3><ul>
-<li>用来查询数据</li>
-</ul>
-<h3 id="DCL：数据控制语言"><a href="#DCL：数据控制语言" class="headerlink" title="DCL：数据控制语言"></a>DCL：数据控制语言</h3><ul>
-<li>用来定义访问权限和安全级别</li>
-</ul>
-<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><h3 id="MySQL中定义数据字段的类型对你数据库的优化是非常重要的。"><a href="#MySQL中定义数据字段的类型对你数据库的优化是非常重要的。" class="headerlink" title="MySQL中定义数据字段的类型对你数据库的优化是非常重要的。"></a>MySQL中定义数据字段的类型对你数据库的优化是非常重要的。</h3><h3 id="MySQL支持所有标准SQL数值数据类型。"><a href="#MySQL支持所有标准SQL数值数据类型。" class="headerlink" title="MySQL支持所有标准SQL数值数据类型。"></a>MySQL支持所有标准SQL数值数据类型。</h3><h3 id="MySQL支持多种类型，大致可以分为三类"><a href="#MySQL支持多种类型，大致可以分为三类" class="headerlink" title="MySQL支持多种类型，大致可以分为三类"></a>MySQL支持多种类型，大致可以分为三类</h3><ul>
-<li><p>数值类型</p>
-</li>
-<li><p>字符串类型</p>
-</li>
-<li><p>日期和时间类型</p>
-</li>
-</ul>
-<h3 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h3><ul>
-<li>double：浮点型，例如double(5,2)表示最多5位，其中必须有2位小数，即最大值为999.99；</li>
-<li>char：固定长度字符串类型； char(10)  ‘abc       ‘</li>
-<li>varchar：可变长度字符串类型；varchar(10) ‘abc’</li>
-<li>text：字符串类型;</li>
-<li>blob：二进制类型；</li>
-<li>date：日期类型，格式为：yyyy-MM-dd；</li>
-<li>time：时间类型，格式为：hh:mm:ss</li>
-<li>datetime:日期时间类型 yyyy-MM-dd hh:mm:ss</li>
-</ul>
-<h3 id="在mysql中，字符串类型和日期类型都要用单引号括起来。"><a href="#在mysql中，字符串类型和日期类型都要用单引号括起来。" class="headerlink" title="在mysql中，字符串类型和日期类型都要用单引号括起来。"></a>在mysql中，字符串类型和日期类型都要用单引号括起来。</h3><p>‘Myxq’  ‘2020-01-01’</p>
-<h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
-<li>create database 数据库名  character set utf8;</li>
-</ul>
-<h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><ul>
-<li>alter database 数据库名 charactor set gbk;</li>
-</ul>
-<h3 id="显示当前数据库"><a href="#显示当前数据库" class="headerlink" title="显示当前数据库"></a>显示当前数据库</h3><ul>
-<li>select  database( );</li>
-</ul>
-<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
-<li>drop  database  数据库名；</li>
-</ul>
-<h3 id="创建学生表"><a href="#创建学生表" class="headerlink" title="创建学生表"></a>创建学生表</h3><h3 id="添加一列"><a href="#添加一列" class="headerlink" title="添加一列"></a>添加一列</h3><ul>
-<li>ALTER TABLE 表名 ADD 列名 数据类型;</li>
-</ul>
-<h3 id="查看表的字段信息"><a href="#查看表的字段信息" class="headerlink" title="查看表的字段信息"></a>查看表的字段信息</h3><ul>
-<li>DESC 表名;</li>
-</ul>
-<h3 id="修改一个表的字段类型"><a href="#修改一个表的字段类型" class="headerlink" title="修改一个表的字段类型"></a>修改一个表的字段类型</h3><ul>
-<li>ALTER TABLE 表名 MODIFY 字段名  数据类型;</li>
-</ul>
-<h3 id="删除一列"><a href="#删除一列" class="headerlink" title="删除一列"></a>删除一列</h3><ul>
-<li>ALTER TABLE 表名 DROP 字段名;</li>
-</ul>
-<h3 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h3><ul>
-<li>RENAME TABLE 原始表名 TO  要修改的表名;</li>
-</ul>
-<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><ul>
-<li>create table 新表名 like 参照表名；</li>
-</ul>
-<h3 id="查看表的创建细节"><a href="#查看表的创建细节" class="headerlink" title="查看表的创建细节"></a>查看表的创建细节</h3><ul>
-<li>SHOW CREATE TABLE 表名;</li>
-</ul>
-<h3 id="修改表的字符集为gbk"><a href="#修改表的字符集为gbk" class="headerlink" title="修改表的字符集为gbk"></a>修改表的字符集为gbk</h3><ul>
-<li>ALTER TABLE 表名 CHARACTER SET 字符集名称;</li>
-</ul>
-<h3 id="修改表的列名"><a href="#修改表的列名" class="headerlink" title="修改表的列名"></a>修改表的列名</h3><ul>
-<li>ALTER TABLE 表名 CHANGE 原始列名 新列名 数据类型;</li>
-</ul>
-<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><ul>
-<li>DROP TABLE 表名;</li>
-</ul>
-<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><h3 id="查询表中的所有数据"><a href="#查询表中的所有数据" class="headerlink" title="查询表中的所有数据"></a>查询表中的所有数据</h3><ul>
-<li>SELECT * FROM 表名;</li>
-</ul>
-<h3 id="DML是对表中的数据进行增、删、改的操作"><a href="#DML是对表中的数据进行增、删、改的操作" class="headerlink" title="DML是对表中的数据进行增、删、改的操作"></a>DML是对表中的数据进行增、删、改的操作</h3><h3 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h3><ul>
-<li><p>INSERT INTO 表名（列名1，列名2 …）VALUES  (列值1，列值2…);</p>
-</li>
-<li><p>注意事项</p>
-<ul>
-<li>列名与列值的类型、个数、顺序要一一对应。</li>
-<li>值不要超出列定义的长度。</li>
-<li>插入的日期和字符一样，都使用引号括起来。</li>
-</ul>
-</li>
-<li><p>批量插入</p>
-<ul>
-<li>INSERT INTO 表名（列名1，列名2 …）VALUES (列值1，列值2…)，(列值1，列值2…);</li>
-</ul>
-</li>
-</ul>
-<h3 id="更新操作"><a href="#更新操作" class="headerlink" title="更新操作"></a>更新操作</h3><ul>
-<li><p>UPDATE 表名 SET 列名1&#x3D;列值1，列名2&#x3D;列值2 。。。 WHERE 列名&#x3D;值</p>
-</li>
-<li><p>把所有学生的分数改为90</p>
-<ul>
-<li>update students set  score&#x3D;90</li>
-</ul>
-</li>
-<li><p>把姓名为张三的学生分数改为60</p>
-<ul>
-<li>update student set score&#x3D;60 where name&#x3D;’张三’;</li>
-</ul>
-</li>
-<li><p>把姓名为李四的年龄改为20和分数改为70</p>
-<ul>
-<li>update student set age&#x3D;20,score&#x3D;70 where name&#x3D;’李四’;</li>
-</ul>
-</li>
-<li><p>把赵六的年龄在原来基础上加1岁</p>
-<ul>
-<li>update students set age&#x3D;age+1 where name&#x3D;’赵六’;</li>
-</ul>
-</li>
-<li><p>修改数据库密码</p>
-<ul>
-<li>use mysql;</li>
-<li>update user set password&#x3D;password(‘abc’) WHERE User&#x3D;’root’;</li>
-<li>flush privileges;刷新MySQL的系统权限相关表</li>
-<li>mysqladmin -u root -p password 12356</li>
-</ul>
-</li>
-</ul>
-<h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><ul>
-<li><p>DELETE FROM 表名 【WHERE 列名&#x3D;值】</p>
-</li>
-<li><p>TRUNCATE TABLE 表名;</p>
-</li>
-<li><p>DELETED 与TRUNCATE的区别</p>
-<ul>
-<li>DELETE 删除表中的数据，表结构还在;删除后的数据可以找回</li>
-<li>TRUNCATE 删除是把表直接DROP掉，然后再创建一个同样的新表。</li>
-</ul>
-</li>
-</ul>
-<p>删除的数据不能找回。执行速度比DELETE快。</p>
-<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><h3 id="查询所有列"><a href="#查询所有列" class="headerlink" title="查询所有列"></a>查询所有列</h3><ul>
-<li>SELECT * FROM 表名;</li>
-</ul>
-<h3 id="结果集"><a href="#结果集" class="headerlink" title="结果集"></a>结果集</h3><ul>
-<li><p>数据库执行DQL语句不会对数据进行改变，而是让数据库发送结果集给客户端。</p>
-</li>
-<li><p>结果集</p>
-<ul>
-<li>通过查询语句查询出来的数据以表的形式展示我们称这个表为虚拟结果集。存放在内存中。</li>
-<li>查询返回的结果集是一张虚拟表。</li>
-</ul>
-</li>
-</ul>
-<h3 id="查询指定列的数据"><a href="#查询指定列的数据" class="headerlink" title="查询指定列的数据"></a>查询指定列的数据</h3><ul>
-<li>SELECT 列名1，列表2… FROM 表名;</li>
-</ul>
-<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><ul>
-<li><p>条件查询就是在查询时给出WHERE子句，在WHERE子句中可以使用一些运算符及关键字：</p>
-</li>
-<li><p>条件查询运行符及关键字</p>
-<ul>
-<li><p>&#x3D;（等于）、!&#x3D;（不等于）、&lt;&gt;（不等于）、&lt;（小于）、&lt;&#x3D;（小于等于）、&gt;（大于）、&gt;&#x3D;（大于等于）；</p>
-</li>
-<li><p>BETWEEN…AND；值在什么范围</p>
-</li>
-<li><p>IN(set)；</p>
-<ul>
-<li>固定的范围值</li>
-</ul>
-</li>
-<li><p>IS NULL；（为空） IS NOT NULL（不为空）   </p>
-</li>
-<li><p>AND；与</p>
-</li>
-<li><p>OR；或</p>
-</li>
-<li><p>NOT； 非</p>
-</li>
-</ul>
-</li>
-<li><p>使用</p>
-<ul>
-<li><p>查询性别为男，并且年龄为20的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE gender&#x3D;’男’ AND age&#x3D;20;</li>
-</ul>
-</li>
-<li><p>查询学号为1 或者 名为zs的记录</p>
-<ul>
-<li>SELECT * FROM students WHERE id &#x3D;1 OR name&#x3D;’zs’;</li>
-</ul>
-</li>
-<li><p>查询学号为1，2，3的记录</p>
-<ul>
-<li>SELECT * FROM students WHERE id&#x3D;’1001’ OR id&#x3D;’1002’ OR 1001&#x3D;’1003’;</li>
-<li>SELECT * FROM students WHERE id  IN(‘1001’,’1002’,’1003’);</li>
-<li>SELECT * FROM students WHERE id NOT IN (‘1001’,’1002’,’1003’);</li>
-</ul>
-</li>
-<li><p>查询年龄为null的记录</p>
-<ul>
-<li>SELECT * FROM students WHERE age IS NULL;</li>
-</ul>
-</li>
-<li><p>查询年龄在18到20之间的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE age&gt;&#x3D;18 AND age&lt;&#x3D;20;</li>
-<li>SELECT * FROM students WHERE age BETWEEN 18 AND 20;</li>
-</ul>
-</li>
-<li><p>查询性别非男的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE gender !&#x3D;’男’;</li>
-</ul>
-</li>
-<li><p>查询姓名不为null的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE  name IS NOT  NULL;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><ul>
-<li><p>根据指定的关键进行查询</p>
-</li>
-<li><p>使用LIKE关键字后跟通配符</p>
-</li>
-<li><p>通配符</p>
-<ul>
-<li>_  ：任意一个字符</li>
-<li>%：任意0~n个字符</li>
-</ul>
-</li>
-<li><p>使用</p>
-<ul>
-<li><p>查询姓名由5个字母构成的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE name LIKE ‘_____’;</li>
-<li>模糊查询必须使用LIKE关键字。其中 “_”匹配任意一个字母，5个“_”表示5个任意字母。</li>
-</ul>
-</li>
-<li><p>查询姓名由5个字母构成，并且第5个字母为“s”的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE name LIKE ‘____s’;</li>
-</ul>
-</li>
-<li><p>查询姓名以“m”开头的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE name LIKE ‘m%’;</li>
-<li>其中“%”匹配0~n个任何字母。</li>
-</ul>
-</li>
-<li><p>查询姓名中第2个字母为“u”的学生记录</p>
-<ul>
-<li>SELECT * FROM students WHERE name LIKE ‘_u%’;</li>
-</ul>
-</li>
-<li><p>查询姓名中包含“s”字母的学生记录</p>
-<ul>
-<li>SELECT * FROM stu WHERE name LIKE ‘%s%’;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="字段控制查询"><a href="#字段控制查询" class="headerlink" title="字段控制查询"></a>字段控制查询</h3><ul>
-<li><p>去除重复字段</p>
-<ul>
-<li>SELECT DISTINCT name FROM students;</li>
-</ul>
-</li>
-<li><p>把查询字段的结果进行运算，必须都要是数据型</p>
-<ul>
-<li>SELECT *,字段1+字段2 FROM 表名;</li>
-<li>列有很多记录的值为NULL，</li>
-</ul>
-</li>
-</ul>
-<p>因为任何东西与NULL相加结果还是NULL，所以结算结果可能会出现NULL。<br>下面使用了把NULL转换成数值0的函数IFNULL：<br>    - SELECT *,age+IFNULL(score,0) FROM students;</p>
-<ul>
-<li><p>对查询结果起别名</p>
-<ul>
-<li>在上面查询中出现列名为sx+IFNULL(yw,0)，这很不美观，现在我们给这一列给出一个别名，为total：</li>
-<li>SELECT *, yw+IFNULL(sx,0) AS total FROM score;</li>
-<li>省略 AS SELECT *, yw+IFNULL(sx,0)  total FROM score;</li>
-</ul>
-</li>
-</ul>
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
-<li><p>创建表</p>
-<ul>
-<li><p>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL<br>  ) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1001, ‘张三’, ‘男’, ‘1991-7-25’, 2000, 200, 500, ‘营销部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1002, ‘李四’, ‘男’, ‘2017-7-5’, 4000, 500, NULL, ‘营销部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1003, ‘王五’, ‘女’, ‘2018-5-1’, 6000, 100, 5000, ‘研发部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1004, ‘赵六’, ‘男’, ‘1991-6-1’, 1000, 3000, 4000, ‘财务部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1005, ‘孙七’, ‘女’, ‘2018-3-23’, 8000, 1000, NULL, ‘研发部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1006, ‘周八’, ‘男’, ‘2010-9-8’, 5000, 500, 1000, ‘人事部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1007, ‘吴九’, ‘女’, ‘2017-7-5’, 8000, 601, NULL, ‘研发部’);</p>
-</li>
-<li><p>INSERT INTO <code>employee</code> VALUES (1008, ‘郑十’, ‘女’, ‘2014-4-6’, 4000, 1801, NULL, ‘人事部’);</p>
-</li>
-</ul>
-</li>
-<li><p>对查询的结果进行排序</p>
-</li>
-<li><p>使用关键字ORDER BY</p>
-</li>
-<li><p>排序类型</p>
-<ul>
-<li><p>升序ASC</p>
-<ul>
-<li>从小到大  默认</li>
-</ul>
-</li>
-<li><p>降序DESC</p>
-<ul>
-<li>从大到小</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>使用</p>
-<ul>
-<li><p>对所有员工的薪水进行排序</p>
-<ul>
-<li>SELECT *FROM employee ORDER BY salary ASC;</li>
-</ul>
-</li>
-<li><p>查询所有员工记录，按年龄降序排序</p>
-<ul>
-<li>SELECT * FROM employee ORDER BY salary DESC;</li>
-</ul>
-</li>
-<li><p>查询所有雇员，按月薪降序排序，如果月薪相同时，按编号升序排序</p>
-<ul>
-<li>SELECT * FROM employee ORDER BY salary DESC, id ASC;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><ul>
-<li><p>对查询的结果进行统计计算</p>
-</li>
-<li><p>常用聚合函数</p>
-<ul>
-<li>COUNT()：统计指定列不为NULL的记录行数；</li>
-<li>MAX()：计算指定列的最大值，如果指定列是字符串类型，那么使用字符串排序运算；</li>
-<li>MIN()：计算指定列的最小值，如果指定列是字符串类型，那么使用字符串排序运算；</li>
-<li>SUM()：计算指定列的数值和，如果指定列类型不是数值类型，那么计算结果为0；</li>
-<li>AVG()：计算指定列的平均值，如果指定列类型不是数值类型，那么计算结果为0；</li>
-</ul>
-</li>
-<li><p>使用</p>
-<ul>
-<li><p>COUNT</p>
-<ul>
-<li><p>查询employee表中记录数：</p>
-<ul>
-<li>SELECT COUNT(*) AS total_record FROM employee;</li>
-</ul>
-</li>
-<li><p>查询员工表中有绩效的人数</p>
-<ul>
-<li>SELECT COUNT(performance)  FROM employee;</li>
-</ul>
-</li>
-<li><p>查询员工表中月薪大于2500的人数：</p>
-<ul>
-<li>SELECT COUNT(*) FROM employee WHERE salary &gt; 2500;</li>
-</ul>
-</li>
-<li><p>统计月薪与管理费之和大于5000元的人数：</p>
-<ul>
-<li>SELECT COUNT(*)  FROM employee WHERE salary+IFNULL(manage,0) &gt; 5000;</li>
-</ul>
-</li>
-<li><p>查询有绩效的人数，和有管理费的人数：</p>
-<ul>
-<li>SELECT COUNT(performance), COUNT(manage) FROM employee;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>SUM和AVG</p>
-<ul>
-<li><p>查询所有雇员月薪和：</p>
-<ul>
-<li>SELECT SUM(salary) FROM employee;</li>
-</ul>
-</li>
-<li><p>查询所有雇员月薪和，以及所有雇员绩效和</p>
-<ul>
-<li>SELECT SUM(salary), SUM(performance) FROM employee;</li>
-</ul>
-</li>
-<li><p>查询所有雇员月薪+绩效和：</p>
-<ul>
-<li>SELECT SUM(salary+IFNULL(performance,0)) FROM employee;</li>
-</ul>
-</li>
-<li><p>统计所有员工平均工资：</p>
-<ul>
-<li>SELECT AVG(salary) FROM employee;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>MAX和MIN</p>
-<ul>
-<li><p>查询最高工资和最低工资：</p>
-<ul>
-<li>SELECT MAX(salary), MIN(salary) FROM employee;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对sql语句使用的详细操作说明了，</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
       </tags>
   </entry>
   <entry>
@@ -949,6 +340,123 @@ storm : 1
 hbase : 1
 </code></pre>
 <h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Spark大数据技术的详细介绍了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Python数据维度与数据格式化</title>
+    <url>/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="关于Python数据维度与数据格式化"><a href="#关于Python数据维度与数据格式化" class="headerlink" title="关于Python数据维度与数据格式化"></a>关于Python数据维度与数据格式化</h1><h2 id="（一）维度"><a href="#（一）维度" class="headerlink" title="（一）维度"></a><strong>（一）维度</strong></h2><p><strong>维度是与事物“有联系”的概念的数量，根据“有联系”的概念的数量，事物可分为不同维度。</strong></p>
+<h2 id="1-基于维度的数据分类"><a href="#1-基于维度的数据分类" class="headerlink" title="1.基于维度的数据分类"></a><strong>1.基于维度的数据分类</strong></h2><p>根据组织数据时与数据有联系的参数的数量，数据可分为一维数据、二维数据和多维数据。</p>
+<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/1.png" class="">
+
+<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/2.png" class="">
+
+<img src="/2022/07/18/%E5%85%B3%E4%BA%8EPython%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/3.png" class="">
+
+<h2 id="1-2-一二维数据的存储与读写"><a href="#1-2-一二维数据的存储与读写" class="headerlink" title="1.2 一二维数据的存储与读写"></a>1.2 一二维数据的存储与读写</h2><p>1）数据存储</p>
+<p> 一维数据呈线性排列，一般用特殊字符分隔。</p>
+<p>例如：</p>
+<p>使用空格分隔：成都 杭州 重庆 武汉 苏州 西安 天津<br>使用逗号分隔：成都,杭州,重庆,武汉,苏州,西安,天津<br>使用&amp;分隔：成都&amp;杭州&amp;重庆&amp;武汉&amp;苏州&amp;西安&amp;天津<br> 一维数据的存储需要注意以下几点：</p>
+<p> 同一文件或同组文件一般使用同一分隔符分隔。<br>分隔数据的分隔符不应出现在数据中。<br>分隔符为英文半角符号，一般不使用中文符号作为分隔符。<br> 二维数据可视为多条一维数据的集合，当二维数据只有一个元素时，这个二维数据就是一维数据。</p>
+<p>CSV（Commae-Separeted Values，逗号分隔值）是国际上通用的一二维数据存储格式。</p>
+<p>CSV格式规范：</p>
+<p>以纯文本形式存储表格数据<br>文件的每一行对应表格中的一条数据记录<br>每条记录由一个或多个字段组成<br>字段之间使用逗号（英文、半角）分隔<br>CSV也称字符分隔值，具体示例如下：</p>
+<p>姓名,语文,数学,英语,理综</p>
+<p>刘婧,124,137,145,260</p>
+<p>张华,116,143,139,263</p>
+<p>邢昭林,120,130,148,255</p>
+<p>鞠依依,115,145,131,240</p>
+<p>黄丽萍,123,108,121,235</p>
+<p>赵越,132,100,112,210</p>
+<p>2）数据读取</p>
+<p>Windows平台中CSV文件的后缀名为.csv，可通过Office Excel或记事本打开<br>Python在程序中读取.csv文件后会以二维列表形式存储其中内容<br>csv_file &#x3D; open(‘score.csv’)<br>lines &#x3D; []<br>for line in csv_file:<br>        line &#x3D; line.replace(‘\n’,’’)<br>        lines.append(line.split(‘,’))<br>print(lines)<br>csv_file.close()<br> 3）数据写入</p>
+<p>将一、二维数据写入文件中，即按照数据的组织形式，在文件中添加新的数据。</p>
+<h2 id="（二）多维数据的格式化"><a href="#（二）多维数据的格式化" class="headerlink" title="（二）多维数据的格式化"></a>（二）多维数据的格式化</h2><p>为了直观地表示多维数据，也为了便于组织和操作，三维及以上的多维数据统一采用键值对的形式进行格式化。 网络平台上传递的数据大多是高维数据，JSON是网络中常见的高维数据格式。JSON格式的数据遵循以下语法规则：</p>
+<p>数据存储在键值对（key:value）中，例如“姓名”: “张华”。<br>数据的字段由逗号分隔，例如“姓名”: “张华”, “语文”: “116”。<br>一个花括号保存一个JSON对象，例如{“姓名”: “张华”, “语文”: “116”}。<br>一个方括号保存一个数组，例如[{“姓名”: “张华”, “语文”: “116”}]。</p>
+<p> <strong>JSON模块——json</strong></p>
+<p>利用json模块的dumps()函数和loads()函数可以实现Python对象和JSON数据之间的转换。</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">dumps()</td>
+<td align="center">对Python对象进行转码，将其转化为JSON字符串</td>
+</tr>
+<tr>
+<td align="center">loads()</td>
+<td align="center">将JSON字符串解析为Python对象</td>
+</tr>
+</tbody></table>
+<p>Python对象与JSON数据转化时的类型对照表</p>
+<table>
+<thead>
+<tr>
+<th align="center">Python对象</th>
+<th align="center">JSON数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">dict</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="center">list,tuple</td>
+<td align="center">array</td>
+</tr>
+<tr>
+<td align="center">str,unicode</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="center">int,long,float</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="center">True</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">None</td>
+<td align="center">null</td>
+</tr>
+</tbody></table>
+<p>dumps()函数</p>
+<p>使用dumps()函数对Python对象进行转码：</p>
+<pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
+
+&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
+
+&gt;&gt;&gt; print(jsonstr)
+
+&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]
+</code></pre>
+
+<p>loads()函数</p>
+<p>使用loads()函数将JSON数据转换为符合Python语法要求的数据类型。</p>
+<pre class="language-none"><code class="language-none">&gt;&gt;&gt; import json
+
+&gt;&gt;&gt; pyobj &#x3D; [[1, 2, 3], 345, 23.12, &#39;qwe&#39;, &#123;&#39;key1&#39;:(1,2,3), &#39;key2&#39;:(2,3,4)&#125;, True, False, None] &gt;&gt;&gt; jsonstr &#x3D; json.dumps(pyobj)
+
+&gt;&gt;&gt; print(jsonstr)
+
+&gt;&gt;&gt; [[1, 2, 3], 345, 23.12, &quot;qwe&quot;, &#123;&quot;key1&quot;: [1, 2, 3], &quot;key2&quot;: [2, 3, 4]&#125;, true, false, null]</code></pre>
+
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Python数据维度与格式化的详细介绍了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
@@ -2835,6 +2343,536 @@ class Lock&#123;&#125;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>关于SQL语言</title>
+    <url>/2021/05/18/%E5%85%B3%E4%BA%8ESQL%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<h1 id="关于SQL语言"><a href="#关于SQL语言" class="headerlink" title="关于SQL语言:"></a>关于SQL语言:</h1><h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><h3 id="字符集的由来"><a href="#字符集的由来" class="headerlink" title="字符集的由来"></a>字符集的由来</h3><ul>
+<li>计算机只能识别二进制代码无论是计算机程序还是数据，最终都会转换成二进制，计算机才能认识。</li>
+<li>为了计算机不只能做科学计算，也能处理文字信息。<br>人们想出了给每一个文字符号编码以便于计算识别处理的办法，这就是计算机字符集的由来。</li>
+</ul>
+<h3 id="ASSCII"><a href="#ASSCII" class="headerlink" title="ASSCII"></a>ASSCII</h3><ul>
+<li><p>一套文字符号及其编码,比较规则 的集合。</p>
+<ul>
+<li>20世纪60年代初。美国标准化组织ANSI发布了第一个字符集。ASCII</li>
+<li>后来又进一步变成了国际标准ISO-646</li>
+</ul>
+</li>
+<li><p>各大字符集</p>
+<ul>
+<li><p>自ASCII后。为了处理不同的文字。各大计算机公司，各国，标准化政府，组织先后发明了几百种字符集。</p>
+<ul>
+<li>ISO-8859</li>
+<li>GB2312-80</li>
+<li>GBK</li>
+<li>BIG5</li>
+</ul>
+</li>
+<li><p>这些五花八门的字符集从收录的字符集到编码规则各不相同。给计算机软件开发和移值带来了很大的困难。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>一个软件要在使用不同文字的国家和地区发布，必须得要做本地化开发。<br>    - 基于这个原因，要统一字符编码。</p>
+<h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><ul>
+<li>为了统一字符编码。国际标准化组织ISO的一些成员国于1984年发起制定了新的国际字符集标准。容纳全世界各种语言，文字，和  符号。最后产生了这个标准ISO-10646</li>
+<li>ISO-10646发布后，遭到了美国计算机公司的反对。</li>
+<li>1988年，Xerox公司提议制定了新的以16位编码人统一字符集。并联合了Apple,IBM,SUN，Microsoft等公司成立了Unicode技术委员会。专门负责收集，整理，和编码。于1991年推出了Unicode1.0</li>
+<li>针对字符编码统一问题，ISO和Unicode协会推出了各自不同的标准。这显然是不利的。后来双方开始谈判。1991年10月达成协议。ISO将Unicode收编。起了个名BMP</li>
+</ul>
+<h3 id="UTF-16"><a href="#UTF-16" class="headerlink" title="UTF-16"></a>UTF-16</h3><ul>
+<li>ISO-10646编码空间足以容纳从古自今使用过的文字和字符。但很多文字字符已经很少用了。<br>超过99%的在用文字字符都编入了BMP.因此，绝大部分情况下，Unicode双字节方式都能满足需求。<br>而且比双字节编码方式4字节原始编码来说，更节省内存和处理时间 。这也是Unicode流行的原因。</li>
+<li>万一使用了BMP以外的文字怎么办？<br>Unicode提出了UTF-16的解决办法。</li>
+</ul>
+<h3 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h3><ul>
+<li>虽然UTF-16解决了上面问题。但当时的计算机和网络世界还是ASCII的天下。只能处理单字节数据流。UTF-16离开了Unicode环境后。在传输和处理中，都存在问题。</li>
+<li>于是又提出了UTF-8的解决文案，</li>
+<li>UTF-8按一定的规则，将一个ISO10646或Unicode转换成1至4个字节的编码</li>
+<li>其中ASCII转成单字节编码。也就严格兼容了ASCII字符集。</li>
+<li>UTF-8的2，3，4字节用以转换ISO-10646标准的UCS-4原始码。</li>
+</ul>
+<h3 id="汉字的一些常见字符集"><a href="#汉字的一些常见字符集" class="headerlink" title="汉字的一些常见字符集"></a>汉字的一些常见字符集</h3><ul>
+<li>GB2312</li>
+<li>GB13000</li>
+<li>GBK</li>
+<li>GB18030</li>
+</ul>
+<h2 id="MySql存储引擎"><a href="#MySql存储引擎" class="headerlink" title="MySql存储引擎"></a>MySql存储引擎</h2><h3 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h3><ul>
+<li>存储，管理和使用数据的不同结构形式，如：表、视图、存储过程、函数、触发器、事件等。</li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
+<li>存储数据库对象的容器。</li>
+</ul>
+<h3 id="什么是存储引擎"><a href="#什么是存储引擎" class="headerlink" title="什么是存储引擎"></a>什么是存储引擎</h3><ul>
+<li>MySQL中的数据用各种不同的技术存储在文件（或者内存）中。</li>
+<li>每一种技术都使用不同的存储机制、索引技巧、锁定水平并且最终提供广泛的不同的功能和能力。</li>
+<li>通过选择不同的技术，你能够获得额外的速度或者功能，从而改善你的应用的整体功能。</li>
+<li>不同的存储引擎性能是不一样的</li>
+</ul>
+<h3 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h3><ul>
+<li>是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。</li>
+</ul>
+<h3 id="存储引擎分类"><a href="#存储引擎分类" class="headerlink" title="存储引擎分类"></a>存储引擎分类</h3><ul>
+<li><p>MYISAM</p>
+<ul>
+<li><p>它不支持事务，也不支持外键，尤其是访问速度快，对事务完整性没有要求或者以SELECT、INSERT为主的应用基本都可以使用这个引擎来创建表。</p>
+</li>
+<li><p>每个MyISAM在磁盘上存储成3个文件，其中文件名和表名都相同，但是扩展名分别为：</p>
+<ul>
+<li>.frm(存储表定义)</li>
+<li>MYD(MYData，存储数据)</li>
+<li>MYI(MYIndex，存储索引)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>INNODB</p>
+<ul>
+<li>InnoDB存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比MyISAM的存储引擎，InnoDB写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。</li>
+</ul>
+</li>
+<li><p>MEMORY</p>
+<ul>
+<li>memory使用存在内存中的内容来创建表。每个MEMORY表实际对应一个磁盘文件，格式是.frm</li>
+<li>MEMORY类型的表访问非常快，因为它到数据是放在内存中的，并且默认使用HASH索引，但是一旦服务器关闭，表中的数据就会丢失，但表还会继续存在。</li>
+</ul>
+</li>
+</ul>
+<h2 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h2><h3 id="SQL是Structured-Quevy-Language-结构化查询语言-的缩写。"><a href="#SQL是Structured-Quevy-Language-结构化查询语言-的缩写。" class="headerlink" title="SQL是Structured Quevy Language(结构化查询语言)的缩写。"></a>SQL是Structured Quevy Language(结构化查询语言)的缩写。</h3><h3 id="SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。"><a href="#SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。" class="headerlink" title="SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。"></a>SQL是专为数据库而建立的操作命令集，是一种功能齐全的数据库语言。</h3><h3 id="在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。"><a href="#在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。" class="headerlink" title="在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。"></a>在使用它时，只需要发出“做什么”的命令，“怎么做”是不用使用者考虑的。</h3><h3 id="SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT-REVOKE-。"><a href="#SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT-REVOKE-。" class="headerlink" title="SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT(REVOKE)。"></a>SQL语言功能很强，其核心功能只用了6个命令，分别是SELECT、CREATE、INSERT、DELETE、UPDATE、和GRANT(REVOKE)。</h3><h2 id="sql功能分类"><a href="#sql功能分类" class="headerlink" title="sql功能分类"></a>sql功能分类</h2><h3 id="DDL-数据定义语言"><a href="#DDL-数据定义语言" class="headerlink" title="DDL:数据定义语言"></a>DDL:数据定义语言</h3><ul>
+<li>用来定义数据库对象：创建库，表，列等。</li>
+</ul>
+<h3 id="DML：数据操作语言"><a href="#DML：数据操作语言" class="headerlink" title="DML：数据操作语言"></a>DML：数据操作语言</h3><ul>
+<li>用来操作数据库表中的记录</li>
+</ul>
+<h3 id="DQL：数据查询语言"><a href="#DQL：数据查询语言" class="headerlink" title="DQL：数据查询语言"></a>DQL：数据查询语言</h3><ul>
+<li>用来查询数据</li>
+</ul>
+<h3 id="DCL：数据控制语言"><a href="#DCL：数据控制语言" class="headerlink" title="DCL：数据控制语言"></a>DCL：数据控制语言</h3><ul>
+<li>用来定义访问权限和安全级别</li>
+</ul>
+<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><h3 id="MySQL中定义数据字段的类型对你数据库的优化是非常重要的。"><a href="#MySQL中定义数据字段的类型对你数据库的优化是非常重要的。" class="headerlink" title="MySQL中定义数据字段的类型对你数据库的优化是非常重要的。"></a>MySQL中定义数据字段的类型对你数据库的优化是非常重要的。</h3><h3 id="MySQL支持所有标准SQL数值数据类型。"><a href="#MySQL支持所有标准SQL数值数据类型。" class="headerlink" title="MySQL支持所有标准SQL数值数据类型。"></a>MySQL支持所有标准SQL数值数据类型。</h3><h3 id="MySQL支持多种类型，大致可以分为三类"><a href="#MySQL支持多种类型，大致可以分为三类" class="headerlink" title="MySQL支持多种类型，大致可以分为三类"></a>MySQL支持多种类型，大致可以分为三类</h3><ul>
+<li><p>数值类型</p>
+</li>
+<li><p>字符串类型</p>
+</li>
+<li><p>日期和时间类型</p>
+</li>
+</ul>
+<h3 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h3><ul>
+<li>double：浮点型，例如double(5,2)表示最多5位，其中必须有2位小数，即最大值为999.99；</li>
+<li>char：固定长度字符串类型； char(10)  ‘abc       ‘</li>
+<li>varchar：可变长度字符串类型；varchar(10) ‘abc’</li>
+<li>text：字符串类型;</li>
+<li>blob：二进制类型；</li>
+<li>date：日期类型，格式为：yyyy-MM-dd；</li>
+<li>time：时间类型，格式为：hh:mm:ss</li>
+<li>datetime:日期时间类型 yyyy-MM-dd hh:mm:ss</li>
+</ul>
+<h3 id="在mysql中，字符串类型和日期类型都要用单引号括起来。"><a href="#在mysql中，字符串类型和日期类型都要用单引号括起来。" class="headerlink" title="在mysql中，字符串类型和日期类型都要用单引号括起来。"></a>在mysql中，字符串类型和日期类型都要用单引号括起来。</h3><p>‘Myxq’  ‘2020-01-01’</p>
+<h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><ul>
+<li>create database 数据库名  character set utf8;</li>
+</ul>
+<h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><ul>
+<li>alter database 数据库名 charactor set gbk;</li>
+</ul>
+<h3 id="显示当前数据库"><a href="#显示当前数据库" class="headerlink" title="显示当前数据库"></a>显示当前数据库</h3><ul>
+<li>select  database( );</li>
+</ul>
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><ul>
+<li>drop  database  数据库名；</li>
+</ul>
+<h3 id="创建学生表"><a href="#创建学生表" class="headerlink" title="创建学生表"></a>创建学生表</h3><h3 id="添加一列"><a href="#添加一列" class="headerlink" title="添加一列"></a>添加一列</h3><ul>
+<li>ALTER TABLE 表名 ADD 列名 数据类型;</li>
+</ul>
+<h3 id="查看表的字段信息"><a href="#查看表的字段信息" class="headerlink" title="查看表的字段信息"></a>查看表的字段信息</h3><ul>
+<li>DESC 表名;</li>
+</ul>
+<h3 id="修改一个表的字段类型"><a href="#修改一个表的字段类型" class="headerlink" title="修改一个表的字段类型"></a>修改一个表的字段类型</h3><ul>
+<li>ALTER TABLE 表名 MODIFY 字段名  数据类型;</li>
+</ul>
+<h3 id="删除一列"><a href="#删除一列" class="headerlink" title="删除一列"></a>删除一列</h3><ul>
+<li>ALTER TABLE 表名 DROP 字段名;</li>
+</ul>
+<h3 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h3><ul>
+<li>RENAME TABLE 原始表名 TO  要修改的表名;</li>
+</ul>
+<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><ul>
+<li>create table 新表名 like 参照表名；</li>
+</ul>
+<h3 id="查看表的创建细节"><a href="#查看表的创建细节" class="headerlink" title="查看表的创建细节"></a>查看表的创建细节</h3><ul>
+<li>SHOW CREATE TABLE 表名;</li>
+</ul>
+<h3 id="修改表的字符集为gbk"><a href="#修改表的字符集为gbk" class="headerlink" title="修改表的字符集为gbk"></a>修改表的字符集为gbk</h3><ul>
+<li>ALTER TABLE 表名 CHARACTER SET 字符集名称;</li>
+</ul>
+<h3 id="修改表的列名"><a href="#修改表的列名" class="headerlink" title="修改表的列名"></a>修改表的列名</h3><ul>
+<li>ALTER TABLE 表名 CHANGE 原始列名 新列名 数据类型;</li>
+</ul>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><ul>
+<li>DROP TABLE 表名;</li>
+</ul>
+<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><h3 id="查询表中的所有数据"><a href="#查询表中的所有数据" class="headerlink" title="查询表中的所有数据"></a>查询表中的所有数据</h3><ul>
+<li>SELECT * FROM 表名;</li>
+</ul>
+<h3 id="DML是对表中的数据进行增、删、改的操作"><a href="#DML是对表中的数据进行增、删、改的操作" class="headerlink" title="DML是对表中的数据进行增、删、改的操作"></a>DML是对表中的数据进行增、删、改的操作</h3><h3 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h3><ul>
+<li><p>INSERT INTO 表名（列名1，列名2 …）VALUES  (列值1，列值2…);</p>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>列名与列值的类型、个数、顺序要一一对应。</li>
+<li>值不要超出列定义的长度。</li>
+<li>插入的日期和字符一样，都使用引号括起来。</li>
+</ul>
+</li>
+<li><p>批量插入</p>
+<ul>
+<li>INSERT INTO 表名（列名1，列名2 …）VALUES (列值1，列值2…)，(列值1，列值2…);</li>
+</ul>
+</li>
+</ul>
+<h3 id="更新操作"><a href="#更新操作" class="headerlink" title="更新操作"></a>更新操作</h3><ul>
+<li><p>UPDATE 表名 SET 列名1&#x3D;列值1，列名2&#x3D;列值2 。。。 WHERE 列名&#x3D;值</p>
+</li>
+<li><p>把所有学生的分数改为90</p>
+<ul>
+<li>update students set  score&#x3D;90</li>
+</ul>
+</li>
+<li><p>把姓名为张三的学生分数改为60</p>
+<ul>
+<li>update student set score&#x3D;60 where name&#x3D;’张三’;</li>
+</ul>
+</li>
+<li><p>把姓名为李四的年龄改为20和分数改为70</p>
+<ul>
+<li>update student set age&#x3D;20,score&#x3D;70 where name&#x3D;’李四’;</li>
+</ul>
+</li>
+<li><p>把赵六的年龄在原来基础上加1岁</p>
+<ul>
+<li>update students set age&#x3D;age+1 where name&#x3D;’赵六’;</li>
+</ul>
+</li>
+<li><p>修改数据库密码</p>
+<ul>
+<li>use mysql;</li>
+<li>update user set password&#x3D;password(‘abc’) WHERE User&#x3D;’root’;</li>
+<li>flush privileges;刷新MySQL的系统权限相关表</li>
+<li>mysqladmin -u root -p password 12356</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><ul>
+<li><p>DELETE FROM 表名 【WHERE 列名&#x3D;值】</p>
+</li>
+<li><p>TRUNCATE TABLE 表名;</p>
+</li>
+<li><p>DELETED 与TRUNCATE的区别</p>
+<ul>
+<li>DELETE 删除表中的数据，表结构还在;删除后的数据可以找回</li>
+<li>TRUNCATE 删除是把表直接DROP掉，然后再创建一个同样的新表。</li>
+</ul>
+</li>
+</ul>
+<p>删除的数据不能找回。执行速度比DELETE快。</p>
+<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><h3 id="查询所有列"><a href="#查询所有列" class="headerlink" title="查询所有列"></a>查询所有列</h3><ul>
+<li>SELECT * FROM 表名;</li>
+</ul>
+<h3 id="结果集"><a href="#结果集" class="headerlink" title="结果集"></a>结果集</h3><ul>
+<li><p>数据库执行DQL语句不会对数据进行改变，而是让数据库发送结果集给客户端。</p>
+</li>
+<li><p>结果集</p>
+<ul>
+<li>通过查询语句查询出来的数据以表的形式展示我们称这个表为虚拟结果集。存放在内存中。</li>
+<li>查询返回的结果集是一张虚拟表。</li>
+</ul>
+</li>
+</ul>
+<h3 id="查询指定列的数据"><a href="#查询指定列的数据" class="headerlink" title="查询指定列的数据"></a>查询指定列的数据</h3><ul>
+<li>SELECT 列名1，列表2… FROM 表名;</li>
+</ul>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><ul>
+<li><p>条件查询就是在查询时给出WHERE子句，在WHERE子句中可以使用一些运算符及关键字：</p>
+</li>
+<li><p>条件查询运行符及关键字</p>
+<ul>
+<li><p>&#x3D;（等于）、!&#x3D;（不等于）、&lt;&gt;（不等于）、&lt;（小于）、&lt;&#x3D;（小于等于）、&gt;（大于）、&gt;&#x3D;（大于等于）；</p>
+</li>
+<li><p>BETWEEN…AND；值在什么范围</p>
+</li>
+<li><p>IN(set)；</p>
+<ul>
+<li>固定的范围值</li>
+</ul>
+</li>
+<li><p>IS NULL；（为空） IS NOT NULL（不为空）   </p>
+</li>
+<li><p>AND；与</p>
+</li>
+<li><p>OR；或</p>
+</li>
+<li><p>NOT； 非</p>
+</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>查询性别为男，并且年龄为20的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE gender&#x3D;’男’ AND age&#x3D;20;</li>
+</ul>
+</li>
+<li><p>查询学号为1 或者 名为zs的记录</p>
+<ul>
+<li>SELECT * FROM students WHERE id &#x3D;1 OR name&#x3D;’zs’;</li>
+</ul>
+</li>
+<li><p>查询学号为1，2，3的记录</p>
+<ul>
+<li>SELECT * FROM students WHERE id&#x3D;’1001’ OR id&#x3D;’1002’ OR 1001&#x3D;’1003’;</li>
+<li>SELECT * FROM students WHERE id  IN(‘1001’,’1002’,’1003’);</li>
+<li>SELECT * FROM students WHERE id NOT IN (‘1001’,’1002’,’1003’);</li>
+</ul>
+</li>
+<li><p>查询年龄为null的记录</p>
+<ul>
+<li>SELECT * FROM students WHERE age IS NULL;</li>
+</ul>
+</li>
+<li><p>查询年龄在18到20之间的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE age&gt;&#x3D;18 AND age&lt;&#x3D;20;</li>
+<li>SELECT * FROM students WHERE age BETWEEN 18 AND 20;</li>
+</ul>
+</li>
+<li><p>查询性别非男的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE gender !&#x3D;’男’;</li>
+</ul>
+</li>
+<li><p>查询姓名不为null的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE  name IS NOT  NULL;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><ul>
+<li><p>根据指定的关键进行查询</p>
+</li>
+<li><p>使用LIKE关键字后跟通配符</p>
+</li>
+<li><p>通配符</p>
+<ul>
+<li>_  ：任意一个字符</li>
+<li>%：任意0~n个字符</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>查询姓名由5个字母构成的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE name LIKE ‘_____’;</li>
+<li>模糊查询必须使用LIKE关键字。其中 “_”匹配任意一个字母，5个“_”表示5个任意字母。</li>
+</ul>
+</li>
+<li><p>查询姓名由5个字母构成，并且第5个字母为“s”的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE name LIKE ‘____s’;</li>
+</ul>
+</li>
+<li><p>查询姓名以“m”开头的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE name LIKE ‘m%’;</li>
+<li>其中“%”匹配0~n个任何字母。</li>
+</ul>
+</li>
+<li><p>查询姓名中第2个字母为“u”的学生记录</p>
+<ul>
+<li>SELECT * FROM students WHERE name LIKE ‘_u%’;</li>
+</ul>
+</li>
+<li><p>查询姓名中包含“s”字母的学生记录</p>
+<ul>
+<li>SELECT * FROM stu WHERE name LIKE ‘%s%’;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="字段控制查询"><a href="#字段控制查询" class="headerlink" title="字段控制查询"></a>字段控制查询</h3><ul>
+<li><p>去除重复字段</p>
+<ul>
+<li>SELECT DISTINCT name FROM students;</li>
+</ul>
+</li>
+<li><p>把查询字段的结果进行运算，必须都要是数据型</p>
+<ul>
+<li>SELECT *,字段1+字段2 FROM 表名;</li>
+<li>列有很多记录的值为NULL，</li>
+</ul>
+</li>
+</ul>
+<p>因为任何东西与NULL相加结果还是NULL，所以结算结果可能会出现NULL。<br>下面使用了把NULL转换成数值0的函数IFNULL：<br>    - SELECT *,age+IFNULL(score,0) FROM students;</p>
+<ul>
+<li><p>对查询结果起别名</p>
+<ul>
+<li>在上面查询中出现列名为sx+IFNULL(yw,0)，这很不美观，现在我们给这一列给出一个别名，为total：</li>
+<li>SELECT *, yw+IFNULL(sx,0) AS total FROM score;</li>
+<li>省略 AS SELECT *, yw+IFNULL(sx,0)  total FROM score;</li>
+</ul>
+</li>
+</ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
+<li><p>创建表</p>
+<ul>
+<li><p>CREATE TABLE <code>employee</code> (<br><code>id</code> int(11) NOT NULL,<br><code>name</code> varchar(50) DEFAULT NULL,<br><code>gender</code> varchar(1) DEFAULT NULL,<br><code>hire_date</code> date DEFAULT NULL,<br><code>salary</code> decimal(10,0) DEFAULT NULL,<br><code>performance</code> double(255,0) DEFAULT NULL,<br><code>manage</code> double(255,0) DEFAULT NULL,<br><code>department</code> varchar(255) DEFAULT NULL<br>  ) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1001, ‘张三’, ‘男’, ‘1991-7-25’, 2000, 200, 500, ‘营销部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1002, ‘李四’, ‘男’, ‘2017-7-5’, 4000, 500, NULL, ‘营销部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1003, ‘王五’, ‘女’, ‘2018-5-1’, 6000, 100, 5000, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1004, ‘赵六’, ‘男’, ‘1991-6-1’, 1000, 3000, 4000, ‘财务部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1005, ‘孙七’, ‘女’, ‘2018-3-23’, 8000, 1000, NULL, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1006, ‘周八’, ‘男’, ‘2010-9-8’, 5000, 500, 1000, ‘人事部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1007, ‘吴九’, ‘女’, ‘2017-7-5’, 8000, 601, NULL, ‘研发部’);</p>
+</li>
+<li><p>INSERT INTO <code>employee</code> VALUES (1008, ‘郑十’, ‘女’, ‘2014-4-6’, 4000, 1801, NULL, ‘人事部’);</p>
+</li>
+</ul>
+</li>
+<li><p>对查询的结果进行排序</p>
+</li>
+<li><p>使用关键字ORDER BY</p>
+</li>
+<li><p>排序类型</p>
+<ul>
+<li><p>升序ASC</p>
+<ul>
+<li>从小到大  默认</li>
+</ul>
+</li>
+<li><p>降序DESC</p>
+<ul>
+<li>从大到小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>对所有员工的薪水进行排序</p>
+<ul>
+<li>SELECT *FROM employee ORDER BY salary ASC;</li>
+</ul>
+</li>
+<li><p>查询所有员工记录，按年龄降序排序</p>
+<ul>
+<li>SELECT * FROM employee ORDER BY salary DESC;</li>
+</ul>
+</li>
+<li><p>查询所有雇员，按月薪降序排序，如果月薪相同时，按编号升序排序</p>
+<ul>
+<li>SELECT * FROM employee ORDER BY salary DESC, id ASC;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><ul>
+<li><p>对查询的结果进行统计计算</p>
+</li>
+<li><p>常用聚合函数</p>
+<ul>
+<li>COUNT()：统计指定列不为NULL的记录行数；</li>
+<li>MAX()：计算指定列的最大值，如果指定列是字符串类型，那么使用字符串排序运算；</li>
+<li>MIN()：计算指定列的最小值，如果指定列是字符串类型，那么使用字符串排序运算；</li>
+<li>SUM()：计算指定列的数值和，如果指定列类型不是数值类型，那么计算结果为0；</li>
+<li>AVG()：计算指定列的平均值，如果指定列类型不是数值类型，那么计算结果为0；</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>COUNT</p>
+<ul>
+<li><p>查询employee表中记录数：</p>
+<ul>
+<li>SELECT COUNT(*) AS total_record FROM employee;</li>
+</ul>
+</li>
+<li><p>查询员工表中有绩效的人数</p>
+<ul>
+<li>SELECT COUNT(performance)  FROM employee;</li>
+</ul>
+</li>
+<li><p>查询员工表中月薪大于2500的人数：</p>
+<ul>
+<li>SELECT COUNT(*) FROM employee WHERE salary &gt; 2500;</li>
+</ul>
+</li>
+<li><p>统计月薪与管理费之和大于5000元的人数：</p>
+<ul>
+<li>SELECT COUNT(*)  FROM employee WHERE salary+IFNULL(manage,0) &gt; 5000;</li>
+</ul>
+</li>
+<li><p>查询有绩效的人数，和有管理费的人数：</p>
+<ul>
+<li>SELECT COUNT(performance), COUNT(manage) FROM employee;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SUM和AVG</p>
+<ul>
+<li><p>查询所有雇员月薪和：</p>
+<ul>
+<li>SELECT SUM(salary) FROM employee;</li>
+</ul>
+</li>
+<li><p>查询所有雇员月薪和，以及所有雇员绩效和</p>
+<ul>
+<li>SELECT SUM(salary), SUM(performance) FROM employee;</li>
+</ul>
+</li>
+<li><p>查询所有雇员月薪+绩效和：</p>
+<ul>
+<li>SELECT SUM(salary+IFNULL(performance,0)) FROM employee;</li>
+</ul>
+</li>
+<li><p>统计所有员工平均工资：</p>
+<ul>
+<li>SELECT AVG(salary) FROM employee;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MAX和MIN</p>
+<ul>
+<li><p>查询最高工资和最低工资：</p>
+<ul>
+<li>SELECT MAX(salary), MIN(salary) FROM employee;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对sql语句使用的详细操作说明了，</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>术语定义类</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于数据库</title>
     <url>/2021/03/18/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<h1 id="关于数据库"><a href="#关于数据库" class="headerlink" title="关于数据库:"></a>关于数据库:</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h3><ul>
@@ -3034,32 +3072,150 @@ class Lock&#123;&#125;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>后端开发工具之PyCharm安装教程</title>
-    <url>/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>PyCharm 是我认为的最好用的python编辑器，没有之一。</p>
-<p>PyCharm是一种Python IDE（Integrated Development Environment，集成开发环境），带有一整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、项目管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。</p>
-<p>PyCharm 是我用过的python编辑器中，比较顺手的一个。而且可以跨平台，在macos和windows下面都可以用，这点比较好。</p>
-<p>因为是歪果仁开发的软件，</p>
+    <title>前端网页开发工具之VSCode使用教程</title>
+    <url>/2020/10/18/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BVSCode%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="VSCode开发工具安装教程"><a href="#VSCode开发工具安装教程" class="headerlink" title="VSCode开发工具安装教程:"></a>VSCode开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。</p>
+<p>但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,</p>
+<p>其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端开发者的青睐。</p>
+<p>活不多说，开启教程：</p>
+<hr>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><h3 id="直接在官网进行下载"><a href="#直接在官网进行下载" class="headerlink" title="直接在官网进行下载"></a>直接在官网进行下载</h3><p>Visual Studio Code - Code Editing. Redefined<br>​code.visualstudio.com&#x2F;</p>
+<h3 id="可以将vscode设置成中文"><a href="#可以将vscode设置成中文" class="headerlink" title="可以将vscode设置成中文"></a>可以将vscode设置成中文</h3><p>vscode默认的语言是英文，对于英文不好的小伙伴可能不太友好。<br>简单几步教大家如何将vscode设置成中文。</p>
+<p>按快捷键“Ctrl+Shift+P”。<br>在“vscode”顶部会出现一个搜索框。<br>输入“configure language”，然后回车。<br>“vscode”里面就会打开一个语言配置文件。<br>将“en-us”修改成“zh-cn”。<br>按“Ctrl+S”保存设置。<br>关闭“vscode”，再次打开就可以看到中文界面了。<br>当然如果你不愿意设置，也可以直接安装它的中文插件，还是很人性化的。</p>
+<h3 id="VScode用户设置"><a href="#VScode用户设置" class="headerlink" title="VScode用户设置"></a>VScode用户设置</h3><ol>
+<li>打开设置</li>
+</ol>
+<p>文件–首选项–设置，打开用户设置。VScode支持选择配置，也支持编辑setting.json文件修改默认配置。个人更倾向于编写json的方式进行配置，下面会附上我个人的配置代码</p>
+<p>这里解析几个常用配置项：</p>
+<p>（1）editor.fontsize用来设置字体大小，可以设置editor.fontsize : 14;</p>
+<p>（2）files.autoSave这个属性是表示文件是否进行自动保存，推荐设置为onFocusChange——文件焦点变化时自动保存。</p>
+<p>（3）editor.tabCompletion用来在出现推荐值时，按下Tab键是否自动填入最佳推荐值，推荐设置为on;</p>
+<p>（4）editor.codeActionsOnSave中的source.organizeImports属性，这个属性能够在保存时，自动调整 import 语句相关顺序，能够让你的 import 语句按照字母顺序进行排列，推荐设置为true,即”editor.codeActionsOnSave”: { “source.organizeImports”: true }；</p>
+<p>（5）editor.lineNumbers设置代码行号,即editor.lineNumbers ：true；</p>
+<p>我的个人配置，供参考：</p>
+<p>{<br>  “files.associations”: {<br>  “<em>.vue”: “vue”,<br>  “</em>.wpy”: “vue”,<br>  “<em>.wxml”: “html”,<br>  “</em>.wxss”: “css”<br>  },<br>  “terminal.integrated.shell.windows”: “C:\Windows\System32\cmd.exe”,<br>  “git.enableSmartCommit”: true,<br>  “git.autofetch”: true,<br>  “emmet.triggerExpansionOnTab”: true,<br>  “emmet.showAbbreviationSuggestions”: true,<br>  “emmet.showExpandedAbbreviation”: “always”,<br>  “emmet.includeLanguages”: {<br>  “vue-html”: “html”,<br>  “vue”: “html”,<br>  “wpy”: “html”<br>  },<br>  &#x2F;&#x2F;主题颜色<br>  &#x2F;&#x2F;“workbench.colorTheme”: “Monokai”,<br>  “git.confirmSync”: false,<br>  “explorer.confirmDelete”: false,<br>  “editor.fontSize”: 14,<br>  “window.zoomLevel”: 1,<br>  “editor.wordWrap”: “on”,<br>  “editor.detectIndentation”: false,<br>  &#x2F;&#x2F; 重新设定tabsize<br>  “editor.tabSize”: 2,<br>  &#x2F;&#x2F;失去焦点后自动保存<br>  “files.autoSave”: “onFocusChange”,<br>  &#x2F;&#x2F; #值设置为true时，每次保存的时候自动格式化；<br>  “editor.formatOnSave”: false,<br>   &#x2F;&#x2F;每120行就显示一条线<br>  “editor.rulers”: [<br>  ],<br>  &#x2F;&#x2F; 在使用搜索功能时，将这些文件夹&#x2F;文件排除在外<br>  “search.exclude”: {<br>      “<strong>&#x2F;node_modules”: true,<br>      “</strong>&#x2F;bower_components”: true,<br>      “<strong>&#x2F;target”: true,<br>      “</strong>&#x2F;logs”: true,<br>  },<br>  &#x2F;&#x2F; 这些文件将不会显示在工作空间中<br>  “files.exclude”: {<br>      “<strong>&#x2F;.git”: true,<br>      “</strong>&#x2F;.svn”: true,<br>      “<strong>&#x2F;.hg”: true,<br>      “</strong>&#x2F;CVS”: true,<br>      “<strong>&#x2F;.DS_Store”: true,<br>      “</strong>&#x2F;*.js”: {<br>          “when”: “$(basename).ts” &#x2F;&#x2F;ts编译后生成的js文件将不会显示在工作空中<br>      },<br>      “**&#x2F;node_modules”: true<br>  },<br>  &#x2F;&#x2F; #让vue中的js按”prettier”格式进行格式化<br>  “vetur.format.defaultFormatter.html”: “js-beautify-html”,<br>  “vetur.format.defaultFormatter.js”: “prettier”,<br>  “vetur.format.defaultFormatterOptions”: {<br>      “js-beautify-html”: {<br>          &#x2F;&#x2F; #vue组件中html代码格式化样式<br>          “wrap_attributes”: “force-aligned”, &#x2F;&#x2F;也可以设置为“auto”，效果会不一样<br>          “wrap_line_length”: 200,<br>          “end_with_newline”: false,<br>          “semi”: false,<br>          “singleQuote”: true<br>      },<br>      “prettier”: {<br>          “semi”: false,<br>          “singleQuote”: true<br>      }<br>  }<br>}</p>
+<p>新版的vscode设置默认为UI的设置，而非之前的json设置。如果你想复制我上面这段代码进行配置，可以进行下面的修改</p>
+<p>文件&gt;首选项&gt;设置 &gt; 搜索workbench.settings.editor，选中json即可改成json设置；</p>
+<h3 id="禁用自动更新"><a href="#禁用自动更新" class="headerlink" title="禁用自动更新"></a>禁用自动更新</h3><p>文件 &gt; 首选项 &gt; 设置（macOS：代码 &gt; 首选项 &gt; 设置，搜索update mode并将设置更改为none。</p>
+<p>开启代码提示设置</p>
+<p>第一步：点击左下角点击设置图标，找到并点击“setting”</p>
+<p>第二步：到搜索框里搜索“prevent”—&gt;并取消此项的勾选</p>
+<p>常用的快捷键<br>高效的使用vscode,记住一些常用的快捷键是必不可少的，我给大家罗列了一些日常工作过程中用的多的快捷键。</p>
+<p>以下以Windows为主，windows的 Ctrl，mac下换成Command就行了</p>
+<p>对于 行 的操作：</p>
+<p>重开一行：光标在行尾的话，回车即可；不在行尾，ctrl + enter 向下重开一行；ctrl+shift + enter 则是在上一行重开一行<br>删除一行：光标没有选择内容时，ctrl + x 剪切一行；ctrl +shift + k 直接删除一行<br>移动一行：alt + ↑ 向上移动一行；alt + ↓ 向下移动一行<br>复制一行：shift + alt + ↓ 向下复制一行；shift + alt + ↑ 向上复制一行<br>ctrl + z 回退<br>对于 词 的操作：</p>
+<p>选中一个词：ctrl + d<br>搜索或者替换：</p>
+<p>ctrl + f ：搜索<br>ctrl + alt + f： 替换<br>ctrl + shift + f：在项目内搜索<br>通过Ctrl + &#96; 可以打开或关闭终端</p>
+<p>Ctrl+P 快速打开最近打开的文件</p>
+<p>Ctrl+Shift+N 打开新的编辑器窗口</p>
+<p>Ctrl+Shift+W 关闭编辑器</p>
+<p>Home 光标跳转到行头</p>
+<p>End 光标跳转到行尾</p>
+<p>Ctrl + Home 跳转到页头</p>
+<p>Ctrl + End 跳转到页尾</p>
+<p>Ctrl + Shift + [ 折叠区域代码</p>
+<p>Ctrl + Shift + ] 展开区域代码</p>
+<p>Ctrl + &#x2F; 添加关闭行注释</p>
+<p>Shift + Alt +A 块区域注释</p>
+<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><p>在输入框中输入想要安装的插件名称，点击安装即可。安装后没有效果，可以重启vscode</p>
+<h4 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h4><p>1、View In Browser</p>
+<p>在浏览器里预览网页必备。运行html文件</p>
+<p>动图封面<br>2、vscode-icons<br>改变编辑器里面的文件图标</p>
+<p>3、Bracket Pair Colorizer<br>给嵌套的各种括号加上不同的颜色。</p>
+<p>4、Auto Rename Tag<br>自动修改匹配的 HTML 标签。</p>
+<p>动图封面<br>5、Path Intellisense<br>智能路径提示，可以在你输入文件路径时智能提示。</p>
+<p>动图封面<br>6、Markdown Preview<br>实时预览 markdown。</p>
+<p>7、stylelint<br>CSS &#x2F; SCSS &#x2F; Less 语法检查</p>
+<p>8、Import Cost<br>引入包大小计算,对于项目打包后体积掌握很有帮助</p>
+<p>动图封面<br>9、Prettier<br>比Beautify更好用的代码格式化插件<br>Vue插件<br>vetur<br>语法高亮、智能感知、Emmet等</p>
+<p>VueHelper<br>snippet代码片段</p>
+<p>动图封面</p>
+<h4 id="其它插件"><a href="#其它插件" class="headerlink" title="其它插件"></a>其它插件</h4><p>1、CSScomb</p>
+<p>CSS 书写顺序规则，这里我推荐腾讯 AollyTeam 团队的规范：</p>
+<p><a href="http://alloyteam.github.io/CodeGuide/#css-declaration-order">http://alloyteam.github.io/CodeGuide/#css-declaration-order</a><br>​alloyteam.github.io&#x2F;CodeGuide&#x2F;#css-declaration-order<br>简单说下这个插件怎么用：</p>
+<p>在项目的根目录下创建一个名为csscomb.json的文件，然后添加一些配置项。也可以将配置项写入项目的 package.json 文件中的 csscombConfig 字段。</p>
+<p>至于添加的配置项，CSScomb 提供了示例配置文件：</p>
+<p><a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json</a><br>​github.com&#x2F;csscomb&#x2F;csscomb.js&#x2F;blob&#x2F;master&#x2F;config&#x2F;csscomb.json<br>其中的 sort-order 就是 CSS 属性书写顺序，可以按照自己遵循的规范设置，所以我直接替换成了腾讯的。</p>
+<p>这个配置文件里面各个字段的作用可以戳这里查看：</p>
+<p>csscomb&#x2F;csscomb.js<br>​github.com&#x2F;csscomb&#x2F;csscomb.js&#x2F;blob&#x2F;master&#x2F;doc&#x2F;options.md<br>2、Turbo Console Log</p>
+<p>快捷添加 console.log，一键 注释 &#x2F; 启用 &#x2F; 删除 所有 console.log。这也是我最常用的一个插件</p>
+<p>动图封面<br>简单说下这个插件要用到的快捷键:</p>
+<p>ctrl + alt + l 选中变量之后，使用这个快捷键生成 console.log<br>alt + shift + c 注释所有 console.log<br>alt + shift + u 启用所有 console.log<br>alt + shift + d 删除所有 console.log<br>3、GitLens</p>
+<p>详细的 Git 提交日志。</p>
+<p>Git 重度使用者必备，尤其是多人协作时：哪一行代码，何时、何人提交都有记录。</p>
+<p>妈妈再也不用担心我背锅了！</p>
+<p>4、css-auto-prefix<br>自动添加 CSS 私有前缀。</p>
+<p>动图封面<br>5、change-case<br>转换命名风格。</p>
+<p>动图封面<br>6、CSS Peek</p>
+<p>定位 CSS 类名。</p>
+<p>动图封面<br>7、vscode-json</p>
+<p>处理 JSON 文件，用法看图：</p>
+<p>动图封面<br>8、Regex Previewer<br>实时预览正则表达式的效果。</p>
+<p>动图封面</p>
+<h3 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h3><p>花了一天终于把vscode配置成自己满意的样子，如果每换一次电脑就要重新来一次，大家一定会手撕了我。放心，早就帮大家准备好了。Settings Sync，在不同电脑间同步你的插件。</p>
+<p>首先要想在不同的设备间同步你的插件, 需要用到 Token 和Gist id</p>
+<p>Token 就是你把插件上传到 github 上时, 让你保存的那段字符，Gist id 在你上传插件的那台电脑上保存着。</p>
+<p>先给大家来三个快捷键，后面会用到</p>
+<p>1、CTRL+SHIFT+P 我也不知道叫什么，暂且就叫它功能搜索功能吧<br>2、ALT+SHIFT+D 下载配置<br>3、ALT+SHIFT+U 上传配置<br>现在手把手教大家配置：</p>
+<p>1、安装Settings Sync<br>2、登陆Github&gt;settings&gt;Developer settings&gt;personal access tokens&gt;generate new token，输入名称，勾选Gist，提交</p>
+<p>3、保存Github Access Token<br>4、打开vscode，Ctrl+Shift+P打开命令框–&gt;输入sync–&gt;选择高级设置–&gt;编辑本地扩展设置–&gt;编辑token</p>
+<p>5、Ctrl+Shift+P打开命令框–&gt;输入sync–&gt;找到update&#x2F;upload settings，上传成功后会返回Gist ID，保存此Gist ID.</p>
+<p>动图封面<br>6、在 VSCode 里，依次打开: 文件 -&gt; 首选项 -&gt; 设置，然后输入 Sync 进行搜索:能找到你gist id</p>
+<p>7、若需在其他机器上DownLoad插件的话，同样，Ctrl+Shift+P打开命令框，输入sync，找到Download settings，会跳转到Github的Token编辑界面，点Edit，regenerate token，保存新生成的token，在vscode命令框中输入此Token，回车，再输入之前的Gist ID，即可同步插件和设置</p>
+<h3 id="开启本地服务"><a href="#开启本地服务" class="headerlink" title="开启本地服务"></a>开启本地服务</h3><h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><p>1.安装Debugger for Chrome插件</p>
+<p>2.使用ctrl+&#96;快捷键打开终端，然后输入npm install -g live-server</p>
+<p>3.在命令行里输入 live-server即可</p>
+<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>在写前端页面中，经常会在浏览器运行HTML页面，从本地文件夹中直接打开的一般都是file协议，当代码中存在http或https的链接时，HTML页面就无法正常打开，为了解决这种情况，需要在在本地开启一个本地的服务器。 本文是利用node.js中的http-server，开启本地服务，步骤如下：</p>
+<p>1.安装http-server</p>
+<p>在终端输入： $ npm install http-server -g</p>
+<p>2.开启 http-server服务</p>
+<p>终端进入目标文件夹，然后在终端输入：</p>
+<p>$ http-server -c-1   （⚠️只输入http-server的话，更新了代码后，页面不会同步更新）<br>Starting up http-server, serving .&#x2F;<br>Available on:<br>  <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>  <a href="http://192.168.8.196:8080/">http://192.168.8.196:8080</a><br>Hit CTRL-C to stop the server<br>3.关闭 http-server服务</p>
+<p>按快捷键CTRL-C 终端显示^Chttp-server stopped.即关闭服务成功。</p>
+<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是VSCode的安装和介绍教程了,</strong></p>
+<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
+<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
+<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
+<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
+]]></content>
+      <tags>
+        <tag>工具浅玩类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>后端开发工具之IDEA安装教程</title>
+    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
+<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
+<p>(厉害的开发者都用记事本，哈哈)</p>
+<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
+<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。<br>因为是歪果仁开发的软件，</p>
 <p>所以使用的语言就是英文的，这对于国内很多用户来说都很不友好。安装完成后顺便教大家怎么给PyCharm设置成中文界面。</p>
-<h1 id="一-下载PyCharm"><a href="#一-下载PyCharm" class="headerlink" title="一.下载PyCharm"></a>一.下载PyCharm</h1><p>1.官网下载：</p>
-<p><a href="https://www.jetbrains.com.cn/pycharm/download/#section=windows">下载 PyCharm：JetBrains 为专业开发者提供的 Python IDE</a></p>
-<p>2.专业版是收费的，一般我们做开发，下载专业版本比较合适。</p>
-<p>3.社区版是免费的，社区版功能对新手足够使用，我们这里就下载社区版的。</p>
-<h1 id="二-安装PyCharm"><a href="#二-安装PyCharm" class="headerlink" title="二.安装PyCharm"></a>二.安装PyCharm</h1><p>1.下载完成后点击安装，根据自己电脑情况，选择安装在哪个盘，建议优先装在固态盘，机械盘除系统盘。</p>
-<img src="/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="">
-
-<img src="/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="">
+<p>活不多说，开启教程：</p>
+<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
+<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
 
 
 
-<p>2.一路next</p>
-<p>3.至此，PyCharm安装成功。</p>
-<h1 id="三-改中文界面"><a href="#三-改中文界面" class="headerlink" title="三.改中文界面"></a>三.改中文界面</h1><p>具体步骤：</p>
-<p>　　1、点击pycharm右上角的file。</p>
-<p>​		2、在下拉框中选择settings。</p>
-<p>​		3、点击plugins。</p>
-<p>​		4、在搜索框中输入Chinese，安装简体中文插件即可。</p>
-<h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是PyCharm的安装和介绍教程了，</strong></p>
+
+<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
+<p><strong>双击下载的安装包打开安装即可：</strong></p>
+
+
+<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3>
+
+<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
+<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3>
+
+<h1 id="四、改中文界面"><a href="#四、改中文界面" class="headerlink" title="四、改中文界面"></a>四、改中文界面</h1><p><strong>IDEA可以加载插件，</strong></p>
+<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
+<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
+
+
+<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
+<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
+<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
+<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
@@ -3364,39 +3520,32 @@ class Lock&#123;&#125;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>后端开发工具之IDEA安装教程</title>
-    <url>/2020/09/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BIDEA%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="IDEA开发工具安装教程"><a href="#IDEA开发工具安装教程" class="headerlink" title="IDEA开发工具安装教程:"></a>IDEA开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款后端开发工具。</p>
-<p>但后端开发工具数不胜数，像Eclipse,Notepad++，MobaXterm,Maven,Tomcat…</p>
-<p>(厉害的开发者都用记事本，哈哈)</p>
-<p>IntelliJ IDEA被认为是当前Java开发效率最快的IDE工具。它整合了开发过程中实用的众多功能，几乎可以不用鼠标可以方便的完成你要做的任何事情，最大程度的加快开发的速度。简单而又功能强大。与其他的一些繁冗而复杂的IDE工具有鲜明的对比。</p>
-<p>IDEA以其强大的代码编辑功能，代码补全功能和丰富的插件生态系统，独受后端开发者的青睐。<br>因为是歪果仁开发的软件，</p>
+    <title>后端开发工具之PyCharm安装教程</title>
+    <url>/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>PyCharm 是我认为的最好用的python编辑器，没有之一。</p>
+<p>PyCharm是一种Python IDE（Integrated Development Environment，集成开发环境），带有一整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、项目管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。</p>
+<p>PyCharm 是我用过的python编辑器中，比较顺手的一个。而且可以跨平台，在macos和windows下面都可以用，这点比较好。</p>
+<p>因为是歪果仁开发的软件，</p>
 <p>所以使用的语言就是英文的，这对于国内很多用户来说都很不友好。安装完成后顺便教大家怎么给PyCharm设置成中文界面。</p>
-<p>活不多说，开启教程：</p>
-<h1 id="一、下载-IDEA"><a href="#一、下载-IDEA" class="headerlink" title="一、下载 IDEA"></a>一、下载 IDEA</h1><p>官方下载地址:<a href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">https://www.jetbrains.com/zh-cn/idea/download/#section=windows</a></p>
-<p>历史版本下载：<a href="https://www.jetbrains.com/zh-cn/idea/download/other.html">https://www.jetbrains.com/zh-cn/idea/download/other.html</a></p>
+<h1 id="一-下载PyCharm"><a href="#一-下载PyCharm" class="headerlink" title="一.下载PyCharm"></a>一.下载PyCharm</h1><p>1.官网下载：</p>
+<p><a href="https://www.jetbrains.com.cn/pycharm/download/#section=windows">下载 PyCharm：JetBrains 为专业开发者提供的 Python IDE</a></p>
+<p>2.专业版是收费的，一般我们做开发，下载专业版本比较合适。</p>
+<p>3.社区版是免费的，社区版功能对新手足够使用，我们这里就下载社区版的。</p>
+<h1 id="二-安装PyCharm"><a href="#二-安装PyCharm" class="headerlink" title="二.安装PyCharm"></a>二.安装PyCharm</h1><p>1.下载完成后点击安装，根据自己电脑情况，选择安装在哪个盘，建议优先装在固态盘，机械盘除系统盘。</p>
+<img src="/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="">
+
+<img src="/2022/01/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BPyCharm%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="">
 
 
 
-
-<h1 id="二、安装-IDEA"><a href="#二、安装-IDEA" class="headerlink" title="二、安装 IDEA"></a>二、安装 IDEA</h1><p><strong>注：安装IDEA之前需要我们机器上有JDK环境！！！</strong> </p>
-<p><strong>双击下载的安装包打开安装即可：</strong></p>
-
-
-<h3 id="1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。"><a href="#1、安装IDEA，一路next-即可，遇到安装路径时，记得修改安装路径。" class="headerlink" title="1、安装IDEA，一路next 即可，遇到安装路径时，记得修改安装路径。"></a>1、安装IDEA，一路<strong>next</strong> 即可，遇到安装路径时，记得修改安装路径。</h3>
-
-<h3 id="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面"><a href="#2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate-for-free，点击-Evaluate，然后进入主界面" class="headerlink" title="2、安装完成，打开IDEA，会先弹出一个注册框，勾选Evaluate for free，点击 Evaluate，然后进入主界面"></a>2、安装完成，打开IDEA，会先弹出一个注册框，勾选<strong>Evaluate for free</strong>，点击 <strong>Evaluate</strong>，然后进入主界面</h3><h1 id="三、软件收费相关问题解决方案"><a href="#三、软件收费相关问题解决方案" class="headerlink" title="三、软件收费相关问题解决方案"></a>三、软件收费相关问题解决方案</h1><p>建议有条件的购买正版支持，也可以使用破解版，具体的破解流程，百度一下</p>
-<h2 id="1、可以对IDEA进行破解，目前有两种方式："><a href="#1、可以对IDEA进行破解，目前有两种方式：" class="headerlink" title="1、可以对IDEA进行破解，目前有两种方式："></a>1、可以对IDEA进行破解，目前有两种方式：</h2><h3 id="1-无限重置30天的插件"><a href="#1-无限重置30天的插件" class="headerlink" title="1.无限重置30天的插件"></a>1.无限重置30天的插件</h3><h3 id="2-激活到2099的文件包，需要保存在计算机中"><a href="#2-激活到2099的文件包，需要保存在计算机中" class="headerlink" title="2.激活到2099的文件包，需要保存在计算机中"></a>2.激活到2099的文件包，需要保存在计算机中</h3>
-
-<h1 id="四、改中文界面"><a href="#四、改中文界面" class="headerlink" title="四、改中文界面"></a>四、改中文界面</h1><p><strong>IDEA可以加载插件，</strong></p>
-<p><em><strong>所以汉化只需要下载一个汉化插件就可以实现将英文显示为中文。</strong></em></p>
-<h3 id="1-创建项目或打开项目；"><a href="#1-创建项目或打开项目；" class="headerlink" title="1.创建项目或打开项目；"></a>1.创建项目或打开项目；</h3><h3 id="2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S"><a href="#2-单击File-文件-gt-Settings-设置-或者Ctrl-Alt-S" class="headerlink" title="2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;"></a>2.单击File(文件)-&gt;Settings(设置)或者Ctrl+Alt+S;</h3><h3 id="3-选中plugins-插件管理-gt-MarketPlace-插件市场"><a href="#3-选中plugins-插件管理-gt-MarketPlace-插件市场" class="headerlink" title="3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);"></a>3.选中plugins(插件管理)-&gt;MarketPlace(插件市场);</h3><h3 id="4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；"><a href="#4-搜索Chinese-gt-选中下载Chinese-Simplified-简体中文语言包；" class="headerlink" title="4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；"></a>4.搜索Chinese-&gt;选中下载Chinese(Simplified)简体中文语言包；</h3><p><strong>结果如下图:</strong></p>
-
-
-<h3 id="5-下载完成后，应用，重新启动IDEA；"><a href="#5-下载完成后，应用，重新启动IDEA；" class="headerlink" title="5.下载完成后，应用，重新启动IDEA；"></a>5.下载完成后，应用，重新启动IDEA；</h3><p><strong>不过还是建议使用英文版，最好不要过分依赖中文</strong></p>
-<p><strong>毕竟很多项目开发都是英文，需要对英语十分熟悉</strong></p>
-<p><strong>英文版不仅可以提高对英语的兴趣，而且有助于熟练英文.</strong></p>
-<h1 id="五、接下来就可以愉快地敲写代码了"><a href="#五、接下来就可以愉快地敲写代码了" class="headerlink" title="五、接下来就可以愉快地敲写代码了"></a>五、接下来就可以愉快地敲写代码了</h1><h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是IDEA的安装和介绍教程了，</strong></p>
+<p>2.一路next</p>
+<p>3.至此，PyCharm安装成功。</p>
+<h1 id="三-改中文界面"><a href="#三-改中文界面" class="headerlink" title="三.改中文界面"></a>三.改中文界面</h1><p>具体步骤：</p>
+<p>　　1、点击pycharm右上角的file。</p>
+<p>​		2、在下拉框中选择settings。</p>
+<p>​		3、点击plugins。</p>
+<p>​		4、在搜索框中输入Chinese，安装简体中文插件即可。</p>
+<h1 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h1><p><strong>以上就是PyCharm的安装和介绍教程了，</strong></p>
 <p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
 <p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
 <p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
@@ -3404,155 +3553,6 @@ class Lock&#123;&#125;</code></pre>
 ]]></content>
       <tags>
         <tag>教程类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端网页开发工具之VSCode使用教程</title>
-    <url>/2020/10/18/%E5%89%8D%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BVSCode%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="VSCode开发工具安装教程"><a href="#VSCode开发工具安装教程" class="headerlink" title="VSCode开发工具安装教程:"></a>VSCode开发工具安装教程:</h1><p>工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。</p>
-<p>但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code……等等,</p>
-<p>其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端开发者的青睐。</p>
-<p>活不多说，开启教程：</p>
-<hr>
-<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><h3 id="直接在官网进行下载"><a href="#直接在官网进行下载" class="headerlink" title="直接在官网进行下载"></a>直接在官网进行下载</h3><p>Visual Studio Code - Code Editing. Redefined<br>​code.visualstudio.com&#x2F;</p>
-<h3 id="可以将vscode设置成中文"><a href="#可以将vscode设置成中文" class="headerlink" title="可以将vscode设置成中文"></a>可以将vscode设置成中文</h3><p>vscode默认的语言是英文，对于英文不好的小伙伴可能不太友好。<br>简单几步教大家如何将vscode设置成中文。</p>
-<p>按快捷键“Ctrl+Shift+P”。<br>在“vscode”顶部会出现一个搜索框。<br>输入“configure language”，然后回车。<br>“vscode”里面就会打开一个语言配置文件。<br>将“en-us”修改成“zh-cn”。<br>按“Ctrl+S”保存设置。<br>关闭“vscode”，再次打开就可以看到中文界面了。<br>当然如果你不愿意设置，也可以直接安装它的中文插件，还是很人性化的。</p>
-<h3 id="VScode用户设置"><a href="#VScode用户设置" class="headerlink" title="VScode用户设置"></a>VScode用户设置</h3><ol>
-<li>打开设置</li>
-</ol>
-<p>文件–首选项–设置，打开用户设置。VScode支持选择配置，也支持编辑setting.json文件修改默认配置。个人更倾向于编写json的方式进行配置，下面会附上我个人的配置代码</p>
-<p>这里解析几个常用配置项：</p>
-<p>（1）editor.fontsize用来设置字体大小，可以设置editor.fontsize : 14;</p>
-<p>（2）files.autoSave这个属性是表示文件是否进行自动保存，推荐设置为onFocusChange——文件焦点变化时自动保存。</p>
-<p>（3）editor.tabCompletion用来在出现推荐值时，按下Tab键是否自动填入最佳推荐值，推荐设置为on;</p>
-<p>（4）editor.codeActionsOnSave中的source.organizeImports属性，这个属性能够在保存时，自动调整 import 语句相关顺序，能够让你的 import 语句按照字母顺序进行排列，推荐设置为true,即”editor.codeActionsOnSave”: { “source.organizeImports”: true }；</p>
-<p>（5）editor.lineNumbers设置代码行号,即editor.lineNumbers ：true；</p>
-<p>我的个人配置，供参考：</p>
-<p>{<br>  “files.associations”: {<br>  “<em>.vue”: “vue”,<br>  “</em>.wpy”: “vue”,<br>  “<em>.wxml”: “html”,<br>  “</em>.wxss”: “css”<br>  },<br>  “terminal.integrated.shell.windows”: “C:\Windows\System32\cmd.exe”,<br>  “git.enableSmartCommit”: true,<br>  “git.autofetch”: true,<br>  “emmet.triggerExpansionOnTab”: true,<br>  “emmet.showAbbreviationSuggestions”: true,<br>  “emmet.showExpandedAbbreviation”: “always”,<br>  “emmet.includeLanguages”: {<br>  “vue-html”: “html”,<br>  “vue”: “html”,<br>  “wpy”: “html”<br>  },<br>  &#x2F;&#x2F;主题颜色<br>  &#x2F;&#x2F;“workbench.colorTheme”: “Monokai”,<br>  “git.confirmSync”: false,<br>  “explorer.confirmDelete”: false,<br>  “editor.fontSize”: 14,<br>  “window.zoomLevel”: 1,<br>  “editor.wordWrap”: “on”,<br>  “editor.detectIndentation”: false,<br>  &#x2F;&#x2F; 重新设定tabsize<br>  “editor.tabSize”: 2,<br>  &#x2F;&#x2F;失去焦点后自动保存<br>  “files.autoSave”: “onFocusChange”,<br>  &#x2F;&#x2F; #值设置为true时，每次保存的时候自动格式化；<br>  “editor.formatOnSave”: false,<br>   &#x2F;&#x2F;每120行就显示一条线<br>  “editor.rulers”: [<br>  ],<br>  &#x2F;&#x2F; 在使用搜索功能时，将这些文件夹&#x2F;文件排除在外<br>  “search.exclude”: {<br>      “<strong>&#x2F;node_modules”: true,<br>      “</strong>&#x2F;bower_components”: true,<br>      “<strong>&#x2F;target”: true,<br>      “</strong>&#x2F;logs”: true,<br>  },<br>  &#x2F;&#x2F; 这些文件将不会显示在工作空间中<br>  “files.exclude”: {<br>      “<strong>&#x2F;.git”: true,<br>      “</strong>&#x2F;.svn”: true,<br>      “<strong>&#x2F;.hg”: true,<br>      “</strong>&#x2F;CVS”: true,<br>      “<strong>&#x2F;.DS_Store”: true,<br>      “</strong>&#x2F;*.js”: {<br>          “when”: “$(basename).ts” &#x2F;&#x2F;ts编译后生成的js文件将不会显示在工作空中<br>      },<br>      “**&#x2F;node_modules”: true<br>  },<br>  &#x2F;&#x2F; #让vue中的js按”prettier”格式进行格式化<br>  “vetur.format.defaultFormatter.html”: “js-beautify-html”,<br>  “vetur.format.defaultFormatter.js”: “prettier”,<br>  “vetur.format.defaultFormatterOptions”: {<br>      “js-beautify-html”: {<br>          &#x2F;&#x2F; #vue组件中html代码格式化样式<br>          “wrap_attributes”: “force-aligned”, &#x2F;&#x2F;也可以设置为“auto”，效果会不一样<br>          “wrap_line_length”: 200,<br>          “end_with_newline”: false,<br>          “semi”: false,<br>          “singleQuote”: true<br>      },<br>      “prettier”: {<br>          “semi”: false,<br>          “singleQuote”: true<br>      }<br>  }<br>}</p>
-<p>新版的vscode设置默认为UI的设置，而非之前的json设置。如果你想复制我上面这段代码进行配置，可以进行下面的修改</p>
-<p>文件&gt;首选项&gt;设置 &gt; 搜索workbench.settings.editor，选中json即可改成json设置；</p>
-<h3 id="禁用自动更新"><a href="#禁用自动更新" class="headerlink" title="禁用自动更新"></a>禁用自动更新</h3><p>文件 &gt; 首选项 &gt; 设置（macOS：代码 &gt; 首选项 &gt; 设置，搜索update mode并将设置更改为none。</p>
-<p>开启代码提示设置</p>
-<p>第一步：点击左下角点击设置图标，找到并点击“setting”</p>
-<p>第二步：到搜索框里搜索“prevent”—&gt;并取消此项的勾选</p>
-<p>常用的快捷键<br>高效的使用vscode,记住一些常用的快捷键是必不可少的，我给大家罗列了一些日常工作过程中用的多的快捷键。</p>
-<p>以下以Windows为主，windows的 Ctrl，mac下换成Command就行了</p>
-<p>对于 行 的操作：</p>
-<p>重开一行：光标在行尾的话，回车即可；不在行尾，ctrl + enter 向下重开一行；ctrl+shift + enter 则是在上一行重开一行<br>删除一行：光标没有选择内容时，ctrl + x 剪切一行；ctrl +shift + k 直接删除一行<br>移动一行：alt + ↑ 向上移动一行；alt + ↓ 向下移动一行<br>复制一行：shift + alt + ↓ 向下复制一行；shift + alt + ↑ 向上复制一行<br>ctrl + z 回退<br>对于 词 的操作：</p>
-<p>选中一个词：ctrl + d<br>搜索或者替换：</p>
-<p>ctrl + f ：搜索<br>ctrl + alt + f： 替换<br>ctrl + shift + f：在项目内搜索<br>通过Ctrl + &#96; 可以打开或关闭终端</p>
-<p>Ctrl+P 快速打开最近打开的文件</p>
-<p>Ctrl+Shift+N 打开新的编辑器窗口</p>
-<p>Ctrl+Shift+W 关闭编辑器</p>
-<p>Home 光标跳转到行头</p>
-<p>End 光标跳转到行尾</p>
-<p>Ctrl + Home 跳转到页头</p>
-<p>Ctrl + End 跳转到页尾</p>
-<p>Ctrl + Shift + [ 折叠区域代码</p>
-<p>Ctrl + Shift + ] 展开区域代码</p>
-<p>Ctrl + &#x2F; 添加关闭行注释</p>
-<p>Shift + Alt +A 块区域注释</p>
-<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><p>在输入框中输入想要安装的插件名称，点击安装即可。安装后没有效果，可以重启vscode</p>
-<h4 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h4><p>1、View In Browser</p>
-<p>在浏览器里预览网页必备。运行html文件</p>
-<p>动图封面<br>2、vscode-icons<br>改变编辑器里面的文件图标</p>
-<p>3、Bracket Pair Colorizer<br>给嵌套的各种括号加上不同的颜色。</p>
-<p>4、Auto Rename Tag<br>自动修改匹配的 HTML 标签。</p>
-<p>动图封面<br>5、Path Intellisense<br>智能路径提示，可以在你输入文件路径时智能提示。</p>
-<p>动图封面<br>6、Markdown Preview<br>实时预览 markdown。</p>
-<p>7、stylelint<br>CSS &#x2F; SCSS &#x2F; Less 语法检查</p>
-<p>8、Import Cost<br>引入包大小计算,对于项目打包后体积掌握很有帮助</p>
-<p>动图封面<br>9、Prettier<br>比Beautify更好用的代码格式化插件<br>Vue插件<br>vetur<br>语法高亮、智能感知、Emmet等</p>
-<p>VueHelper<br>snippet代码片段</p>
-<p>动图封面</p>
-<h4 id="其它插件"><a href="#其它插件" class="headerlink" title="其它插件"></a>其它插件</h4><p>1、CSScomb</p>
-<p>CSS 书写顺序规则，这里我推荐腾讯 AollyTeam 团队的规范：</p>
-<p><a href="http://alloyteam.github.io/CodeGuide/#css-declaration-order">http://alloyteam.github.io/CodeGuide/#css-declaration-order</a><br>​alloyteam.github.io&#x2F;CodeGuide&#x2F;#css-declaration-order<br>简单说下这个插件怎么用：</p>
-<p>在项目的根目录下创建一个名为csscomb.json的文件，然后添加一些配置项。也可以将配置项写入项目的 package.json 文件中的 csscombConfig 字段。</p>
-<p>至于添加的配置项，CSScomb 提供了示例配置文件：</p>
-<p><a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json</a><br>​github.com&#x2F;csscomb&#x2F;csscomb.js&#x2F;blob&#x2F;master&#x2F;config&#x2F;csscomb.json<br>其中的 sort-order 就是 CSS 属性书写顺序，可以按照自己遵循的规范设置，所以我直接替换成了腾讯的。</p>
-<p>这个配置文件里面各个字段的作用可以戳这里查看：</p>
-<p>csscomb&#x2F;csscomb.js<br>​github.com&#x2F;csscomb&#x2F;csscomb.js&#x2F;blob&#x2F;master&#x2F;doc&#x2F;options.md<br>2、Turbo Console Log</p>
-<p>快捷添加 console.log，一键 注释 &#x2F; 启用 &#x2F; 删除 所有 console.log。这也是我最常用的一个插件</p>
-<p>动图封面<br>简单说下这个插件要用到的快捷键:</p>
-<p>ctrl + alt + l 选中变量之后，使用这个快捷键生成 console.log<br>alt + shift + c 注释所有 console.log<br>alt + shift + u 启用所有 console.log<br>alt + shift + d 删除所有 console.log<br>3、GitLens</p>
-<p>详细的 Git 提交日志。</p>
-<p>Git 重度使用者必备，尤其是多人协作时：哪一行代码，何时、何人提交都有记录。</p>
-<p>妈妈再也不用担心我背锅了！</p>
-<p>4、css-auto-prefix<br>自动添加 CSS 私有前缀。</p>
-<p>动图封面<br>5、change-case<br>转换命名风格。</p>
-<p>动图封面<br>6、CSS Peek</p>
-<p>定位 CSS 类名。</p>
-<p>动图封面<br>7、vscode-json</p>
-<p>处理 JSON 文件，用法看图：</p>
-<p>动图封面<br>8、Regex Previewer<br>实时预览正则表达式的效果。</p>
-<p>动图封面</p>
-<h3 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h3><p>花了一天终于把vscode配置成自己满意的样子，如果每换一次电脑就要重新来一次，大家一定会手撕了我。放心，早就帮大家准备好了。Settings Sync，在不同电脑间同步你的插件。</p>
-<p>首先要想在不同的设备间同步你的插件, 需要用到 Token 和Gist id</p>
-<p>Token 就是你把插件上传到 github 上时, 让你保存的那段字符，Gist id 在你上传插件的那台电脑上保存着。</p>
-<p>先给大家来三个快捷键，后面会用到</p>
-<p>1、CTRL+SHIFT+P 我也不知道叫什么，暂且就叫它功能搜索功能吧<br>2、ALT+SHIFT+D 下载配置<br>3、ALT+SHIFT+U 上传配置<br>现在手把手教大家配置：</p>
-<p>1、安装Settings Sync<br>2、登陆Github&gt;settings&gt;Developer settings&gt;personal access tokens&gt;generate new token，输入名称，勾选Gist，提交</p>
-<p>3、保存Github Access Token<br>4、打开vscode，Ctrl+Shift+P打开命令框–&gt;输入sync–&gt;选择高级设置–&gt;编辑本地扩展设置–&gt;编辑token</p>
-<p>5、Ctrl+Shift+P打开命令框–&gt;输入sync–&gt;找到update&#x2F;upload settings，上传成功后会返回Gist ID，保存此Gist ID.</p>
-<p>动图封面<br>6、在 VSCode 里，依次打开: 文件 -&gt; 首选项 -&gt; 设置，然后输入 Sync 进行搜索:能找到你gist id</p>
-<p>7、若需在其他机器上DownLoad插件的话，同样，Ctrl+Shift+P打开命令框，输入sync，找到Download settings，会跳转到Github的Token编辑界面，点Edit，regenerate token，保存新生成的token，在vscode命令框中输入此Token，回车，再输入之前的Gist ID，即可同步插件和设置</p>
-<h3 id="开启本地服务"><a href="#开启本地服务" class="headerlink" title="开启本地服务"></a>开启本地服务</h3><h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><p>1.安装Debugger for Chrome插件</p>
-<p>2.使用ctrl+&#96;快捷键打开终端，然后输入npm install -g live-server</p>
-<p>3.在命令行里输入 live-server即可</p>
-<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>在写前端页面中，经常会在浏览器运行HTML页面，从本地文件夹中直接打开的一般都是file协议，当代码中存在http或https的链接时，HTML页面就无法正常打开，为了解决这种情况，需要在在本地开启一个本地的服务器。 本文是利用node.js中的http-server，开启本地服务，步骤如下：</p>
-<p>1.安装http-server</p>
-<p>在终端输入： $ npm install http-server -g</p>
-<p>2.开启 http-server服务</p>
-<p>终端进入目标文件夹，然后在终端输入：</p>
-<p>$ http-server -c-1   （⚠️只输入http-server的话，更新了代码后，页面不会同步更新）<br>Starting up http-server, serving .&#x2F;<br>Available on:<br>  <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>  <a href="http://192.168.8.196:8080/">http://192.168.8.196:8080</a><br>Hit CTRL-C to stop the server<br>3.关闭 http-server服务</p>
-<p>按快捷键CTRL-C 终端显示^Chttp-server stopped.即关闭服务成功。</p>
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是VSCode的安装和介绍教程了,</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>工具浅玩类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于Hadoop大数据技术</title>
-    <url>/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</url>
-    <content><![CDATA[<h1 id="关于Hadoop大数据技术"><a href="#关于Hadoop大数据技术" class="headerlink" title="关于Hadoop大数据技术:"></a>关于Hadoop大数据技术:</h1><h1 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h1><h2 id="1-1-Hadoop-是什么"><a href="#1-1-Hadoop-是什么" class="headerlink" title="1.1 Hadoop 是什么"></a>1.1 Hadoop 是什么</h2><p>（1）Hadoop是一个由Apache基金会所开发的分布式系统基础架构<br>（2）主要解决海量数据的存储和海量数据的分析计算问题<br>（3）广义上来说，Hadoop通常是指一个更广泛的概念——Hadoop生态圈</p>
-<h2 id="1-2-Hadoop-优势"><a href="#1-2-Hadoop-优势" class="headerlink" title="1.2 Hadoop 优势"></a>1.2 Hadoop 优势</h2><p>（1）高可靠性：Hadoop底层维护多个数据副本，所以即使Hadoop某个计算元素或存储出现故障，也不会导致数据的丢失。<br>（2）高扩展性：在集群间分配任务数据，可方便的扩展数以千计的节点。<br>（3）高效性：在MapReduce的思想下，Hadoop是并行工作的，以加快任务处理速度。<br>（4）高容错性：能够自动将失败的任务重新分配。</p>
-<h2 id="1-3-Hadoop-组成★★★★★"><a href="#1-3-Hadoop-组成★★★★★" class="headerlink" title="1.3 Hadoop 组成★★★★★"></a>1.3 Hadoop 组成★★★★★</h2><img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/1.png" class="">
-
-<p>在Hadoop1.x 时代，Hadoop中的MapReduce同时处理业务逻辑运算和资源的调度，耦合性较大。<br>在Hadoop2.x时代，增加了Yarn。Yarn只负责资源的调度，MapReduce 只负责运算。<br>Hadoop3.x在组成上没有变化。</p>
-<h3 id="1-3-1-HDFS-架构概述"><a href="#1-3-1-HDFS-架构概述" class="headerlink" title="1.3.1 HDFS 架构概述"></a>1.3.1 HDFS 架构概述</h3><p>Hadoop Distributed File System，简称HDFS，是一个分布式文件系统。</p>
-<p>（1）NameNode（nn）：存储文件的元数据，如文件名，文件目录结构，文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和块所在的DataNode等。<br>（2）DataNode(dn)：在本地文件系统存储文件块数据，以及块数据的校验和。<br>（3）Secondary NameNode(2nn)：每隔一段时间对NameNode元数据备份。</p>
-<h3 id="1-3-2-YARN-架构概述"><a href="#1-3-2-YARN-架构概述" class="headerlink" title="1.3.2 YARN 架构概述"></a>1.3.2 YARN 架构概述</h3><p>Yet Another Resource Negotiator 简称YARN ，另一种资源协调者，是Hadoop 的资源管理器。</p>
-<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/2.png" class="">
-
-<p>ResourceManager(RM)：整个集群资源（内存、CPU等）的管理者<br>NodeManager(NM)：单个节点服务器资源的管理者。<br>ApplicationMaster(AM)：单个任务运行的管理者。<br>Container：容器，相当于一台独立的服务器，里面封装了任务运行所需要的资源，如内存、CPU、磁盘、网络等。</p>
-<p>说明：<br>（1）客户端可以有多个<br>（2）集群上可以运行多个ApplicationMaster<br>（3）每个NodeManager上可以有多个Container</p>
-<h3 id="1-3-3-MapReduce-架构概述"><a href="#1-3-3-MapReduce-架构概述" class="headerlink" title="1.3.3 MapReduce 架构概述"></a>1.3.3 MapReduce 架构概述</h3><p>MapReduce 将计算过程分为两个阶段：Map 和Reduce<br>1）Map 阶段并行处理输入数据<br>2）Reduce 阶段对Map 结果进行汇总</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a><img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/3.png" class=""></h3><h3 id="1-3-4-HDFS、YARN、MapReduce-三者关系"><a href="#1-3-4-HDFS、YARN、MapReduce-三者关系" class="headerlink" title="1.3.4 HDFS、YARN、MapReduce 三者关系"></a>1.3.4 HDFS、YARN、MapReduce 三者关系</h3><p>如图所示：</p>
-<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/4.png" class="">
-
-<h3 id="1-3-5-大数据技术生态体系"><a href="#1-3-5-大数据技术生态体系" class="headerlink" title="1.3.5 大数据技术生态体系"></a>1.3.5 大数据技术生态体系</h3><p>如图所示：</p>
-<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/5.png" class="">
-
-<p>图中涉及的技术名词解释如下：</p>
-<p>（1）Sqoop：Sqoop 是一款开源的工具，主要用于在Hadoop、Hive 与传统的数据库（MySQL）间进行数据的传递，可以将一个关系型数据库（例如 ：MySQL，Oracle 等）中的数据导进到Hadoop 的HDFS 中，也可以将HDFS 的数据导进到关系型数据库中。<br>（2）Flume：Flume 是一个高可用的，高可靠的，分布式的海量日志采集、聚合和传输的系统，Flume 支持在日志系统中定制各类数据发送方，用于收集数据。<br>（3）Kafka：Kafka 是一种高吞吐量的分布式发布订阅消息系统。<br>（4）Spark：Spark 是当前最流行的开源大数据内存计算框架。可以基于Hadoop 上存储的大数据进行计算。<br>（5）Flink：Flink 是当前最流行的开源大数据内存计算框架。用于实时计算的场景较多。<br>（6）Oozie：Oozie 是一个管理Hadoop 作业（job）的工作流程调度管理系统。<br>（7）HBase：HBase 是一个分布式的、面向列的开源数据库。HBase 不同于一般的关系数据库，它是一个适合于非结构化数据存储的数据库。<br>（8）Hive：Hive 是基于Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的SQL 查询功能，可以将SQL 语句转换为MapReduce 任务进行运行。其优点是学习成本低，可以通过类SQL 语句快速实现简单的MapReduce 统计，不必开发专门的MapReduce 应用，十分适合数据仓库的统计分析。<br>（9）ZooKeeper：它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。</p>
-<h3 id="1-3-6-推荐系统框架图"><a href="#1-3-6-推荐系统框架图" class="headerlink" title="1.3.6 推荐系统框架图"></a>1.3.6 推荐系统框架图</h3><p>推荐系统项目框架</p>
-<img src="/2022/05/18/%E5%85%B3%E4%BA%8EHadoop%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/6.png" class="">
-
-<h1 id="ps："><a href="#ps：" class="headerlink" title="ps："></a>ps：</h1><p><strong>以上就是对Hadoop的详细介绍了，</strong></p>
-<p><strong>详细的环境搭建教程，可以上csdn开发者论坛，博客园或者百度进行搜索，这里就不过多演示了.</strong></p>
-<p><strong>如果这篇文章对您有帮助，可以在下方进行留言;</strong></p>
-<p><strong>下面的赏是对我最大的鼓励。</strong><br><strong>您的鼓励就是我最大的动力！</strong></p>
-<p><strong>资料参考于课本，csdn开发者论坛，博客园开发者论坛…</strong></p>
-<p><strong>转载请注明出处<a href="https://lil-sum.github.io/%EF%BC%8C">https://lil-sum.github.io/，</a> 感谢配合.</strong></p>
-]]></content>
-      <tags>
-        <tag>术语定义类</tag>
       </tags>
   </entry>
 </search>
